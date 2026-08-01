@@ -73,3 +73,11 @@
   --tg-card-border:rgba(255,255,255,.08);
   --tg-card-bg:linear-gradient(180deg,#161616,#0d0d0d);
 }
+
+
+/* Membership card system */
+:root {
+  --tg-membership-accent: rgba(229, 189, 114, 0.72);
+  --tg-membership-border: rgba(229, 189, 114, 0.34);
+  --tg-membership-surface: linear-gradient(180deg, rgba(28, 28, 28, 0.98), rgba(12, 12, 12, 0.98));
+}
