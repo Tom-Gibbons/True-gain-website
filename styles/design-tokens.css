@@ -40,6 +40,12 @@
   --tg-space-7: 96px;
   --tg-space-8: 120px;
 
+  /* Section rhythm */
+  --tg-section-gap: 72px;
+  --tg-card-padding: 44px;
+  --tg-card-gap: 22px;
+  --tg-form-gap: 18px;
+
   /* Layout */
   --tg-content-width: 1240px;
   --tg-section-padding: 120px;
