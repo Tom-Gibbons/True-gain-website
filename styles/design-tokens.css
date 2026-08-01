@@ -88,3 +88,11 @@
   --tg-studio-glow: rgba(199, 151, 72, 0.16);
   --tg-studio-card: rgba(10, 10, 10, 0.92);
 }
+
+
+/* Contact section */
+:root {
+  --tg-contact-surface: rgba(10, 10, 10, 0.94);
+  --tg-contact-border: rgba(229, 189, 114, 0.24);
+  --tg-contact-glow: rgba(199, 151, 72, 0.12);
+}
