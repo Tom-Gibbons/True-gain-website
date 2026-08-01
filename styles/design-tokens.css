@@ -81,3 +81,10 @@
   --tg-membership-border: rgba(229, 189, 114, 0.34);
   --tg-membership-surface: linear-gradient(180deg, rgba(28, 28, 28, 0.98), rgba(12, 12, 12, 0.98));
 }
+
+
+/* Studio section */
+:root {
+  --tg-studio-glow: rgba(199, 151, 72, 0.16);
+  --tg-studio-card: rgba(10, 10, 10, 0.92);
+}
