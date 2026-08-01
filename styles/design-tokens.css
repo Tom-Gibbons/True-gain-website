@@ -118,3 +118,11 @@
   --tg-membership-gold-border: rgba(229, 189, 114, 0.34);
   --tg-membership-soft-gold: rgba(199, 151, 72, 0.12);
 }
+
+
+/* Results Phase 12 */
+:root {
+  --tg-results-panel: rgba(14, 14, 14, 0.96);
+  --tg-results-border: rgba(229, 189, 114, 0.22);
+  --tg-results-glow: rgba(199, 151, 72, 0.11);
+}
