@@ -126,3 +126,10 @@
   --tg-results-border: rgba(229, 189, 114, 0.22);
   --tg-results-glow: rgba(199, 151, 72, 0.11);
 }
+
+
+/* Onboarding clarity update */
+:root {
+  --tg-onboarding-panel: rgba(14, 14, 14, 0.96);
+  --tg-onboarding-border: rgba(229, 189, 114, 0.24);
+}
