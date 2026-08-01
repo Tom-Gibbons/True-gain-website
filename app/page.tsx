@@ -79,7 +79,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <main data-site-version="onboarding-v2">
+    <main data-site-version="onboarding-v2" data-service-label-version="2">
       <header className="siteHeader">
         <a className="brand" href="#top" aria-label="True Gain home">
           <img src="/true-gain-logo.png" alt="True Gain Performance" />
