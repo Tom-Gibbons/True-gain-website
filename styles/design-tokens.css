@@ -139,3 +139,11 @@
 :root {
   --tg-onboarding-v2: 2;
 }
+
+
+/* Studio Experience Phase 13 */
+:root {
+  --tg-studio-phase13: rgba(14, 14, 14, 0.97);
+  --tg-studio-phase13-border: rgba(229, 189, 114, 0.24);
+  --tg-studio-phase13-glow: rgba(199, 151, 72, 0.12);
+}
