@@ -319,7 +319,7 @@ export default function Home() {
           <div className="membershipHeroNote">
             <p className="planStrap">Every membership includes</p>
             <strong>Assessment. Programme. Progression.</strong>
-            <span>All memberships begin with a free consultation and individual assessment.</span>
+            <span>Start with a free 30-minute consultation. Once a membership is purchased, you will receive a complimentary initial assessment before regular coaching begins.</span>
           </div>
         </div>
 
@@ -371,6 +371,58 @@ export default function Home() {
               </a>
             </article>
           ))}
+        </div>
+
+        
+        <div className="onboardingNotice">
+          <div>
+            <p className="eyebrow">Your onboarding process</p>
+            <h3>Consult first. Assess after joining. Then begin coaching.</h3>
+            <p>
+              The free consultation is a conversation about your goals, training history,
+              current challenges and the most suitable membership. No exercise takes place.
+            </p>
+          </div>
+
+          <div className="onboardingSteps">
+            <article>
+              <span>01</span>
+              <div>
+                <h4>Free consultation</h4>
+                <p>Discuss your goals, ask questions and decide whether True Gain is the right fit.</p>
+              </div>
+            </article>
+
+            <article>
+              <span>02</span>
+              <div>
+                <h4>Membership begins</h4>
+                <p>Choose the level of support that best suits your goals, availability and preferences.</p>
+              </div>
+            </article>
+
+            <article>
+              <span>03</span>
+              <div>
+                <h4>Complimentary assessment</h4>
+                <p>
+                  Once you have joined, complete a full initial assessment covering movement,
+                  mobility, strength, training history and programme planning.
+                </p>
+              </div>
+            </article>
+
+            <article>
+              <span>04</span>
+              <div>
+                <h4>Regular coaching starts</h4>
+                <p>
+                  Your assessment is separate and does not count towards your weekly coaching
+                  sessions, so you still receive your full session allocation.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
 
         <div className="membershipComparison">
@@ -737,8 +789,8 @@ export default function Home() {
             <li>
               <span>02</span>
               <div>
-                <h4>Assessment</h4>
-                <p>Establish a clear starting point for movement, strength and confidence.</p>
+                <h4>Assessment after joining</h4>
+                <p>Complete a complimentary initial assessment once your membership has begun. This is separate from your weekly coaching sessions.</p>
               </div>
             </li>
             <li>
@@ -775,8 +827,7 @@ export default function Home() {
           <p className="eyebrow">Your next step</p>
           <h2>Start with a conversation.</h2>
           <p>
-            Book a free 30-minute consultation to discuss your goals, training history
-            and the most suitable way to work together at the private True Gain studio.
+            Book a free 30-minute consultation to discuss your goals, training history and the most suitable way to work together. If you join, your complimentary initial assessment will be arranged separately before regular coaching begins.
           </p>
 
           <div className="contactHighlights">
