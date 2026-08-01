@@ -104,3 +104,9 @@
   --tg-coach-border: rgba(229, 189, 114, 0.25);
   --tg-coach-glow: rgba(199, 151, 72, 0.14);
 }
+
+:root {
+  --tg-services-surface: rgba(14, 14, 14, 0.96);
+  --tg-services-border: rgba(229, 189, 114, 0.22);
+  --tg-services-glow: rgba(199, 151, 72, 0.12);
+}
