@@ -271,19 +271,19 @@ export default function Home() {
 
         <div className="servicesComparison">
           <article>
-            <p className="planStrap">Train</p>
+            <p className="planStrap">Coach</p>
             <h3>Personal training</h3>
             <p>Expert one-to-one coaching for strength, movement and confidence.</p>
             <span>From £55/session</span>
           </article>
           <article>
-            <p className="planStrap">Recover</p>
+            <p className="planStrap">Treat</p>
             <h3>Sports massage</h3>
             <p>Focused treatment and recovery support to help you move and feel better.</p>
             <span>From £35/session</span>
           </article>
           <article className="featured">
-            <p className="planStrap">Perform</p>
+            <p className="planStrap">Transform</p>
             <h3>Complete coaching</h3>
             <p>Training, recovery and accountability combined into one premium service.</p>
             <span>From £279/month</span>
