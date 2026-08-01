@@ -539,69 +539,148 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <section className="section studioSection" id="studio">
-        <div className="studioCopy">
-          <p className="eyebrow">Private studio experience</p>
-          <h2>Private studio. Complete focus.</h2>
-          <p>
-            A purpose-built, appointment-only coaching space on Bushmead, Luton,
-            created for focused one-to-one training without the noise and distraction of a commercial gym.
-          </p>
-
-          <div className="studioStats">
-            <div>
-              <strong>1:1</strong>
-              <span>Private coaching</span>
-            </div>
-            <div>
-              <strong>100%</strong>
-              <span>Personal attention</span>
-            </div>
-            <div>
-              <strong>Local</strong>
-              <span>Bedfordshire & Hertfordshire</span>
-            </div>
+      <section className="section studioSection studioExperienceSection" id="studio">
+        <div className="studioExperienceHero">
+          <div className="studioExperienceCopy">
+            <p className="eyebrow">The studio experience</p>
+            <h2>Private by design. Built for progress.</h2>
+            <p>
+              A purpose-built, appointment-only coaching studio in Bushmead, Luton,
+              designed for focused one-to-one training, recovery and complete personal attention.
+            </p>
           </div>
 
-          <div className="studioPoints">
-            <span>Strength training</span>
-            <span>Recovery and mobility</span>
-            <span>Premium equipment</span>
-            <span>Calm, professional environment</span>
+          <div className="studioExperienceBadge">
+            <strong>1:1</strong>
+            <span>No crowds. No waiting. No distractions.</span>
           </div>
-
-          <a className="button buttonOutline studioCta" href="#contact">
-            Arrange a studio consultation
-          </a>
         </div>
 
-        <div className="studioVisual">
-          <div className="studioGallery">
-            <div className="studioMain" aria-label="Wide view of the complete True Gain studio">
-              <span className="imageLabel">Studio as a whole</span>
-            </div>
-            <div className="studioSmall studioTwo" aria-label="Premium strength equipment in the True Gain studio">
+        <div className="studioExperienceGallery">
+          <div className="studioExperienceMain">
+            <span className="imageLabel">Complete private studio</span>
+          </div>
+
+          <div className="studioExperienceSide">
+            <div className="studioExperienceStrength">
               <span className="imageLabel">Strength equipment</span>
             </div>
-            <div className="studioSmall studioThree" aria-label="Dedicated sports massage and recovery area">
+            <div className="studioExperienceRecovery">
               <span className="imageLabel">Recovery area</span>
             </div>
           </div>
+        </div>
 
-          <div className="studioLocationCard">
-            <div className="locationInfo">
-              <p className="planStrap">Location</p>
-              <p>
-                Conveniently positioned for clients travelling from across
-                Bedfordshire and Hertfordshire.
-              </p>
+        <div className="studioFeatureGrid">
+          <article>
+            <span>01</span>
+            <h3>Private coaching space</h3>
+            <p>
+              Every appointment is focused entirely on you, without the interruption,
+              noise or pressure of a busy commercial gym.
+            </p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Purposeful equipment</h3>
+            <p>
+              Carefully selected strength, conditioning and mobility equipment supports
+              effective training without unnecessary clutter.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Integrated recovery</h3>
+            <p>
+              Training and recovery can work together in one setting, with dedicated space
+              for sports massage, mobility and movement support.
+            </p>
+          </article>
+        </div>
+
+        <div className="studioEquipmentPanel">
+          <div className="studioEquipmentIntro">
+            <p className="eyebrow">Equipment and training zones</p>
+            <h3>Everything needed for focused, progressive coaching.</h3>
+            <p>
+              The studio is designed around the work that matters most: building strength,
+              improving movement, developing confidence and supporting long-term consistency.
+            </p>
+          </div>
+
+          <div className="studioEquipmentList">
+            <div>
+              <strong>Strength zone</strong>
+              <span>Power rack, barbell training, adjustable bench and free weights.</span>
             </div>
-
-            <div className="locationContent">
-              <h3>Bushmead, Luton</h3>
+            <div>
+              <strong>Functional zone</strong>
+              <span>Cable training, kettlebells, resistance bands, sled and turf work.</span>
+            </div>
+            <div>
+              <strong>Recovery zone</strong>
+              <span>Sports massage, mobility work and guided recovery sessions.</span>
+            </div>
+            <div>
+              <strong>Progress zone</strong>
+              <span>Assessments, coaching reviews and individual programme planning.</span>
             </div>
           </div>
+        </div>
+
+        <div className="studioJourney">
+          <div>
+            <p className="eyebrow">Your studio experience</p>
+            <h3>Calm, structured and entirely personal.</h3>
+          </div>
+
+          <ol>
+            <li>
+              <span>01</span>
+              <div>
+                <h4>Arrive</h4>
+                <p>Enter a private environment prepared specifically for your session.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h4>Train</h4>
+                <p>Follow a clear session plan with continuous coaching and technique support.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h4>Review</h4>
+                <p>Track progress, discuss feedback and adjust the next stage of your programme.</p>
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <h4>Recover</h4>
+                <p>Use mobility or recovery support where appropriate to stay consistent.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div className="studioLocationFeature">
+          <div>
+            <p className="planStrap">Private studio location</p>
+            <h3>Bushmead, Luton</h3>
+            <p>
+              Conveniently positioned for clients travelling from across Bedfordshire
+              and Hertfordshire.
+            </p>
+          </div>
+
+          <a className="button buttonGold" href="#contact">
+            Arrange a studio consultation
+          </a>
         </div>
       </section>
       <section className="section coachSection" id="coach">
