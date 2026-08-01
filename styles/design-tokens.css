@@ -110,3 +110,11 @@
   --tg-services-border: rgba(229, 189, 114, 0.22);
   --tg-services-glow: rgba(199, 151, 72, 0.12);
 }
+
+
+/* Memberships Phase 11 */
+:root {
+  --tg-membership-panel: rgba(14, 14, 14, 0.97);
+  --tg-membership-gold-border: rgba(229, 189, 114, 0.34);
+  --tg-membership-soft-gold: rgba(199, 151, 72, 0.12);
+}
