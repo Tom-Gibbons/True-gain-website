@@ -79,7 +79,7 @@ export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <main>
+    <main data-site-version="onboarding-v2">
       <header className="siteHeader">
         <a className="brand" href="#top" aria-label="True Gain home">
           <img src="/true-gain-logo.png" alt="True Gain Performance" />
@@ -319,7 +319,7 @@ export default function Home() {
           <div className="membershipHeroNote">
             <p className="planStrap">Every membership includes</p>
             <strong>Assessment. Programme. Progression.</strong>
-            <span>Start with a free 30-minute consultation. Once a membership is purchased, you will receive a complimentary initial assessment before regular coaching begins.</span>
+            <span>Begin with a free 30-minute consultation. Your complimentary initial assessment is arranged only after membership purchase and is separate from your weekly coaching allocation.</span>
           </div>
         </div>
 
@@ -374,14 +374,24 @@ export default function Home() {
         </div>
 
         
-        <div className="onboardingNotice">
-          <div>
-            <p className="eyebrow">Your onboarding process</p>
-            <h3>Consult first. Assess after joining. Then begin coaching.</h3>
+        <div className="onboardingNotice onboardingNoticeV2">
+          <div className="onboardingIntro">
+            <p className="eyebrow">How joining works</p>
+            <h3>Free consultation first. Assessment after membership purchase.</h3>
             <p>
-              The free consultation is a conversation about your goals, training history,
-              current challenges and the most suitable membership. No exercise takes place.
+              Your free consultation is a 30-minute conversation about your goals,
+              training history and whether True Gain is the right fit. It does not
+              include exercise or physical testing.
             </p>
+
+            <div className="assessmentClarifier">
+              <strong>Complimentary initial assessment</strong>
+              <p>
+                Once you have purchased a membership, your initial assessment is arranged
+                separately before regular coaching starts. It is included at no extra cost
+                and does not use one of your weekly coaching sessions.
+              </p>
+            </div>
           </div>
 
           <div className="onboardingSteps">
@@ -389,37 +399,31 @@ export default function Home() {
               <span>01</span>
               <div>
                 <h4>Free consultation</h4>
-                <p>Discuss your goals, ask questions and decide whether True Gain is the right fit.</p>
+                <p>Discuss your goals, training background, availability and preferred level of support.</p>
               </div>
             </article>
 
             <article>
               <span>02</span>
               <div>
-                <h4>Membership begins</h4>
-                <p>Choose the level of support that best suits your goals, availability and preferences.</p>
+                <h4>Choose your membership</h4>
+                <p>Select Train, Recover or Perform based on the support that best suits you.</p>
               </div>
             </article>
 
             <article>
               <span>03</span>
               <div>
-                <h4>Complimentary assessment</h4>
-                <p>
-                  Once you have joined, complete a full initial assessment covering movement,
-                  mobility, strength, training history and programme planning.
-                </p>
+                <h4>Initial assessment</h4>
+                <p>Complete movement, mobility, strength and baseline checks after joining.</p>
               </div>
             </article>
 
             <article>
               <span>04</span>
               <div>
-                <h4>Regular coaching starts</h4>
-                <p>
-                  Your assessment is separate and does not count towards your weekly coaching
-                  sessions, so you still receive your full session allocation.
-                </p>
+                <h4>Begin regular coaching</h4>
+                <p>Your weekly coaching allocation starts in full after the assessment is complete.</p>
               </div>
             </article>
           </div>
@@ -827,7 +831,7 @@ export default function Home() {
           <p className="eyebrow">Your next step</p>
           <h2>Start with a conversation.</h2>
           <p>
-            Book a free 30-minute consultation to discuss your goals, training history and the most suitable way to work together. If you join, your complimentary initial assessment will be arranged separately before regular coaching begins.
+            Book a free 30-minute consultation to discuss your goals, training history and the most suitable way to work together. If you become a member, your complimentary initial assessment is booked separately and does not replace a weekly coaching session.
           </p>
 
           <div className="contactHighlights">
