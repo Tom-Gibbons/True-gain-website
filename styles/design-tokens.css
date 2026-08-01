@@ -65,3 +65,11 @@
   --tg-shadow-card: 0 24px 60px rgba(0, 0, 0, 0.35);
   --tg-shadow-featured: 0 30px 80px rgba(0, 0, 0, 0.45);
 }
+
+
+/* Card system */
+:root{
+  --tg-card-radius-xl:24px;
+  --tg-card-border:rgba(255,255,255,.08);
+  --tg-card-bg:linear-gradient(180deg,#161616,#0d0d0d);
+}
