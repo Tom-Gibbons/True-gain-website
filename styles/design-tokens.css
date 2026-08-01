@@ -133,3 +133,9 @@
   --tg-onboarding-panel: rgba(14, 14, 14, 0.96);
   --tg-onboarding-border: rgba(229, 189, 114, 0.24);
 }
+
+
+/* Onboarding clarity v2 */
+:root {
+  --tg-onboarding-v2: 2;
+}
