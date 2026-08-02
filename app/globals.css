@@ -4786,3 +4786,277 @@ main[data-site-version="onboarding-v2"] {
     grid-column: auto !important;
   }
 }
+
+
+
+/* PHASE 15 PREMIUM MOTION */
+
+/*
+  Subtle motion only:
+  - entrance animation for the navigation and hero
+  - gentle reveal for major sections
+  - premium card and image hover movement
+  - refined button and link interaction
+  - reduced-motion accessibility support
+*/
+
+:root {
+  --tg-motion-fast: 180ms;
+  --tg-motion-standard: 320ms;
+  --tg-motion-slow: 720ms;
+  --tg-motion-ease: cubic-bezier(.22, .8, .24, 1);
+}
+
+/* Initial page reveal */
+.siteHeader,
+header {
+  animation: tg-header-reveal var(--tg-motion-slow) var(--tg-motion-ease) both;
+}
+
+.heroCopy,
+.heroMedia,
+.heroImage,
+.heroVisual {
+  animation: tg-hero-reveal 880ms var(--tg-motion-ease) both;
+}
+
+.heroMedia,
+.heroImage,
+.heroVisual {
+  animation-delay: 120ms;
+}
+
+@keyframes tg-header-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tg-hero-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section entrance */
+.section {
+  animation: tg-section-reveal var(--tg-motion-slow) var(--tg-motion-ease) both;
+  animation-timeline: view();
+  animation-range: entry 8% cover 26%;
+}
+
+@keyframes tg-section-reveal {
+  from {
+    opacity: .25;
+    transform: translateY(34px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cards */
+.serviceFeature,
+.servicesComparison article,
+.membershipPlan,
+.resultCard,
+.studioFeatureGrid article,
+.studioEquipmentList div,
+.contactJourneyPanel,
+.contactForm,
+.contactDetailsRow article,
+.testimonialCards blockquote,
+.onboardingSteps article,
+.resultsTimeline li,
+.studioJourney li {
+  transition:
+    transform var(--tg-motion-standard) var(--tg-motion-ease),
+    border-color var(--tg-motion-standard) var(--tg-motion-ease),
+    box-shadow var(--tg-motion-standard) var(--tg-motion-ease),
+    background var(--tg-motion-standard) var(--tg-motion-ease);
+}
+
+.serviceFeature:hover,
+.servicesComparison article:hover,
+.membershipPlan:hover,
+.resultCard:hover,
+.studioFeatureGrid article:hover,
+.studioEquipmentList div:hover,
+.contactDetailsRow article:hover,
+.testimonialCards blockquote:hover,
+.onboardingSteps article:hover,
+.resultsTimeline li:hover,
+.studioJourney li:hover {
+  transform: translateY(-7px);
+  border-color: rgba(229, 189, 114, .34);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, .34);
+}
+
+/* Images */
+.serviceFeatureImage,
+.studioExperienceMain,
+.studioExperienceStrength,
+.studioExperienceRecovery {
+  transition:
+    transform 850ms var(--tg-motion-ease),
+    filter 500ms var(--tg-motion-ease);
+  will-change: transform;
+}
+
+.serviceFeature:hover .serviceFeatureImage,
+.studioExperienceMain:hover,
+.studioExperienceStrength:hover,
+.studioExperienceRecovery:hover {
+  transform: scale(1.018);
+  filter: brightness(1.04);
+}
+
+/* Buttons */
+.button,
+button,
+nav a,
+.siteNav a {
+  transition:
+    transform var(--tg-motion-fast) var(--tg-motion-ease),
+    border-color var(--tg-motion-fast) var(--tg-motion-ease),
+    background var(--tg-motion-fast) var(--tg-motion-ease),
+    color var(--tg-motion-fast) var(--tg-motion-ease),
+    box-shadow var(--tg-motion-fast) var(--tg-motion-ease);
+}
+
+.button:hover,
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .28);
+}
+
+.button:active,
+button:active {
+  transform: translateY(0) scale(.985);
+}
+
+nav a,
+.siteNav a {
+  position: relative;
+}
+
+nav a::after,
+.siteNav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -7px;
+  height: 1px;
+  background: var(--tg-gold-light);
+  transition: right var(--tg-motion-standard) var(--tg-motion-ease);
+}
+
+nav a:hover::after,
+.siteNav a:hover::after {
+  right: 0;
+}
+
+/* FAQ */
+.contactFaq details {
+  transition:
+    background var(--tg-motion-standard) var(--tg-motion-ease),
+    border-color var(--tg-motion-standard) var(--tg-motion-ease);
+}
+
+.contactFaq details[open] {
+  background: rgba(255, 255, 255, .018);
+}
+
+.contactFaq details p {
+  animation: tg-faq-open var(--tg-motion-standard) var(--tg-motion-ease) both;
+}
+
+@keyframes tg-faq-open {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form focus */
+.contactFields input,
+.contactFields select,
+.contactFields textarea {
+  transition:
+    transform var(--tg-motion-fast) var(--tg-motion-ease),
+    border-color var(--tg-motion-fast) var(--tg-motion-ease),
+    box-shadow var(--tg-motion-fast) var(--tg-motion-ease),
+    background var(--tg-motion-fast) var(--tg-motion-ease);
+}
+
+.contactFields input:focus,
+.contactFields select:focus,
+.contactFields textarea:focus {
+  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px rgba(199, 151, 72, .1);
+}
+
+/* Logo */
+.brand img,
+.footer img {
+  transition:
+    opacity var(--tg-motion-standard) var(--tg-motion-ease),
+    transform var(--tg-motion-standard) var(--tg-motion-ease);
+}
+
+.brand:hover img {
+  transform: scale(1.025);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+
+  .section {
+    animation: none !important;
+  }
+
+  .serviceFeature:hover,
+  .servicesComparison article:hover,
+  .membershipPlan:hover,
+  .resultCard:hover,
+  .studioFeatureGrid article:hover,
+  .studioEquipmentList div:hover,
+  .contactDetailsRow article:hover,
+  .testimonialCards blockquote:hover,
+  .onboardingSteps article:hover,
+  .resultsTimeline li:hover,
+  .studioJourney li:hover,
+  .button:hover,
+  button:hover,
+  .brand:hover img,
+  .serviceFeature:hover .serviceFeatureImage,
+  .studioExperienceMain:hover,
+  .studioExperienceStrength:hover,
+  .studioExperienceRecovery:hover {
+    transform: none !important;
+  }
+}
