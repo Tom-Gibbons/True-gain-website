@@ -91,6 +91,7 @@ export default function Home() {
           <a href="#memberships" onClick={() => setMenuOpen(false)}>Memberships</a>
           <a href="#studio" onClick={() => setMenuOpen(false)}>Studio</a>
           <a href="#coach" onClick={() => setMenuOpen(false)}>Coach</a>
+          <a href="#case-studies" onClick={() => setMenuOpen(false)}>Results &amp; Progress</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
 
