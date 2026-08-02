@@ -5854,3 +5854,69 @@ img,video{max-width:100%;height:auto}
     margin-inline: .04em;
   }
 }
+
+
+
+/* GOLD CTA HOVER UPDATE */
+
+.buttonGold,
+a.buttonGold,
+button.buttonGold {
+  position: relative;
+  isolation: isolate;
+  transition:
+    transform 220ms cubic-bezier(.22,.8,.24,1),
+    box-shadow 260ms cubic-bezier(.22,.8,.24,1),
+    filter 220ms ease,
+    background 220ms ease,
+    border-color 220ms ease;
+}
+
+.buttonGold:hover,
+a.buttonGold:hover,
+button.buttonGold:hover {
+  transform: translateY(-3px) scale(1.02);
+  filter: brightness(1.08) saturate(1.05);
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.34),
+    0 0 18px rgba(199,151,72,.42),
+    0 0 34px rgba(199,151,72,.26),
+    0 14px 30px rgba(0,0,0,.34);
+}
+
+.buttonGold:focus-visible,
+a.buttonGold:focus-visible,
+button.buttonGold:focus-visible {
+  outline: 2px solid var(--tg-gold-light);
+  outline-offset: 4px;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.38),
+    0 0 20px rgba(199,151,72,.38);
+}
+
+.buttonGold:active,
+a.buttonGold:active,
+button.buttonGold:active {
+  transform: translateY(0) scale(.99);
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.28),
+    0 0 12px rgba(199,151,72,.28),
+    0 8px 18px rgba(0,0,0,.28);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .buttonGold,
+  a.buttonGold,
+  button.buttonGold {
+    transition: none;
+  }
+
+  .buttonGold:hover,
+  a.buttonGold:hover,
+  button.buttonGold:hover,
+  .buttonGold:active,
+  a.buttonGold:active,
+  button.buttonGold:active {
+    transform: none;
+  }
+}
