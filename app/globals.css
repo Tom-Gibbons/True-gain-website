@@ -4123,3 +4123,150 @@ main[data-site-version="onboarding-v2"] {
     min-height: 340px;
   }
 }
+
+
+
+/* STUDIO GALLERY REBUILD */
+
+/*
+  Rebuild the Phase 13 studio layout as two completely separate rows:
+  1. Intro + 1:1 benefits
+  2. Three self-contained image cards
+  This prevents the images from changing the width of the text section.
+*/
+
+.studioExperienceSection {
+  display: block !important;
+  overflow: hidden !important;
+}
+
+.studioExperienceHero {
+  width: 100% !important;
+  max-width: 1500px !important;
+  margin-inline: auto !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  gap: 46px !important;
+  align-items: start !important;
+}
+
+.studioExperienceCopy {
+  width: 100% !important;
+  max-width: 1120px !important;
+}
+
+.studioExperienceHeroAside {
+  width: 100% !important;
+  max-width: 1080px !important;
+  display: grid !important;
+  grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr) !important;
+  gap: 40px !important;
+  align-items: stretch !important;
+}
+
+.studioExperienceBadge,
+.studioExperienceBenefits {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+/* Gallery is always a new row and never shares width with the hero. */
+.studioExperienceGallery {
+  width: 100% !important;
+  max-width: 1500px !important;
+  min-height: 0 !important;
+  margin: 70px auto 0 !important;
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 22px !important;
+  align-items: stretch !important;
+  overflow: visible !important;
+}
+
+/* Flatten the old nested right-hand column into the main three-card grid. */
+.studioExperienceSide {
+  display: contents !important;
+}
+
+.studioExperienceMain,
+.studioExperienceStrength,
+.studioExperienceRecovery {
+  position: relative !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: 4 / 5 !important;
+  overflow: hidden !important;
+  border-radius: var(--tg-card-radius-xl) !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  box-sizing: border-box !important;
+}
+
+/* Show more of each approved image instead of visually zooming into it. */
+.studioExperienceMain {
+  background-position: center center !important;
+}
+
+.studioExperienceStrength {
+  background-position: center center !important;
+}
+
+.studioExperienceRecovery {
+  background-position: center center !important;
+}
+
+.studioExperienceGallery .imageLabel {
+  left: 24px !important;
+  right: 24px !important;
+  bottom: 22px !important;
+  max-width: calc(100% - 48px) !important;
+}
+
+/* Medium screens: one large image above two supporting images. */
+@media (max-width: 1120px) {
+  .studioExperienceHeroAside {
+    grid-template-columns: 1fr !important;
+    max-width: 760px !important;
+  }
+
+  .studioExperienceGallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .studioExperienceMain {
+    grid-column: 1 / -1 !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+
+  .studioExperienceStrength,
+  .studioExperienceRecovery {
+    aspect-ratio: 4 / 3 !important;
+  }
+}
+
+/* Phones: all content stacks naturally. */
+@media (max-width: 700px) {
+  .studioExperienceHero {
+    gap: 32px !important;
+  }
+
+  .studioExperienceHeroAside {
+    gap: 20px !important;
+  }
+
+  .studioExperienceGallery {
+    margin-top: 52px !important;
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  .studioExperienceMain,
+  .studioExperienceStrength,
+  .studioExperienceRecovery {
+    grid-column: auto !important;
+    aspect-ratio: 4 / 3 !important;
+  }
+}
