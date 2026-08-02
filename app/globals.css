@@ -4270,3 +4270,369 @@ main[data-site-version="onboarding-v2"] {
     aspect-ratio: 4 / 3 !important;
   }
 }
+
+
+
+/* CONTACT EXPERIENCE PHASE 14 */
+
+.contactExperienceSection {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 5%, rgba(199,151,72,.11), transparent 28%),
+    #070707;
+}
+
+.contactExperienceHero {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 72px;
+}
+
+.contactExperienceHero > div:first-child {
+  max-width: 940px;
+}
+
+.contactExperienceHero h2 {
+  margin-bottom: 28px;
+  font-family: var(--tg-font-display);
+  font-size: clamp(3.2rem, 5.7vw, 5.7rem);
+  line-height: .92;
+  letter-spacing: -.045em;
+  text-transform: uppercase;
+}
+
+.contactExperienceHero > div:first-child > p:last-child {
+  max-width: 740px;
+  margin: 0;
+  color: var(--tg-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.contactResponseCard {
+  padding: 30px;
+  border: 1px solid var(--tg-contact-border);
+  border-radius: var(--tg-radius-lg);
+  background: rgba(255,255,255,.02);
+}
+
+.contactResponseCard span,
+.contactResponseCard strong,
+.contactResponseCard p {
+  display: block;
+}
+
+.contactResponseCard span {
+  color: var(--tg-gold-light);
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.contactResponseCard strong {
+  margin: 12px 0 8px;
+  font-family: var(--tg-font-display);
+  font-size: 1.65rem;
+  text-transform: uppercase;
+}
+
+.contactResponseCard p {
+  margin: 0;
+  color: var(--tg-muted);
+  font-size: .82rem;
+}
+
+.contactExperienceGrid {
+  display: grid;
+  grid-template-columns: .82fr 1.18fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.contactJourneyPanel,
+.contactForm {
+  padding: 46px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--tg-card-radius-xl);
+  background: var(--tg-contact-panel);
+  box-shadow: 0 30px 80px rgba(0,0,0,.3);
+}
+
+.contactJourneyPanel h3,
+.contactForm h3 {
+  margin: 12px 0 22px;
+  font-family: var(--tg-font-display);
+  font-size: clamp(2.25rem, 3.5vw, 3.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.contactJourneyPanel ol {
+  margin: 42px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 14px;
+  list-style: none;
+}
+
+.contactJourneyPanel li {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 16px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.contactJourneyPanel li:last-child {
+  border-bottom: 0;
+}
+
+.contactJourneyPanel li > span {
+  color: var(--tg-gold-light);
+  font-family: var(--tg-font-display);
+}
+
+.contactJourneyPanel h4 {
+  margin: 0 0 7px;
+  font-family: var(--tg-font-display);
+  font-size: 1.08rem;
+  text-transform: uppercase;
+}
+
+.contactJourneyPanel li p {
+  margin: 0;
+  color: var(--tg-muted);
+  font-size: .88rem;
+  line-height: 1.68;
+}
+
+.contactFormHeading > p:last-child {
+  margin: 0;
+  color: var(--tg-muted);
+  line-height: 1.72;
+}
+
+.contactFields {
+  margin-top: 34px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.contactFields label {
+  display: grid;
+  gap: 9px;
+}
+
+.contactFields label > span {
+  color: #d7d1c7;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.contactFields input,
+.contactFields select,
+.contactFields textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: var(--tg-radius-sm);
+  background: var(--tg-contact-field);
+  color: var(--tg-ivory);
+  font: inherit;
+  outline: none;
+  transition:
+    border-color var(--tg-transition-standard),
+    background var(--tg-transition-standard);
+}
+
+.contactFields input,
+.contactFields select {
+  min-height: 52px;
+  padding: 0 16px;
+}
+
+.contactFields textarea {
+  padding: 16px;
+  resize: vertical;
+}
+
+.contactFields input:focus,
+.contactFields select:focus,
+.contactFields textarea:focus {
+  border-color: var(--tg-gold);
+  background: rgba(255,255,255,.05);
+}
+
+.contactFields input::placeholder,
+.contactFields textarea::placeholder {
+  color: rgba(235,230,220,.42);
+}
+
+.contactFields select option {
+  color: #111;
+}
+
+.contactFieldWide {
+  grid-column: 1 / -1;
+}
+
+.contactSubmit {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.contactPrivacy {
+  margin: 14px 0 0;
+  color: var(--tg-muted);
+  font-size: .72rem;
+  text-align: center;
+}
+
+.contactDetailsRow {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.contactDetailsRow article {
+  padding: 28px;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--tg-radius-lg);
+  background: rgba(255,255,255,.018);
+}
+
+.contactDetailsRow span,
+.contactDetailsRow strong,
+.contactDetailsRow p {
+  display: block;
+}
+
+.contactDetailsRow span {
+  margin-bottom: 10px;
+  color: var(--tg-gold-light);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.contactDetailsRow strong {
+  font-family: var(--tg-font-display);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+}
+
+.contactDetailsRow p {
+  margin: 10px 0 0;
+  color: var(--tg-muted);
+  font-size: .82rem;
+  line-height: 1.6;
+}
+
+.contactFaq {
+  margin-top: 88px;
+  display: grid;
+  grid-template-columns: .62fr 1.38fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.contactFaq h3 {
+  margin: 10px 0 0;
+  font-family: var(--tg-font-display);
+  font-size: clamp(2.3rem, 3.8vw, 3.8rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.contactFaqList {
+  border-top: 1px solid var(--tg-contact-border);
+}
+
+.contactFaq details {
+  border-bottom: 1px solid var(--tg-contact-border);
+}
+
+.contactFaq summary {
+  position: relative;
+  padding: 24px 46px 24px 0;
+  cursor: pointer;
+  color: var(--tg-ivory);
+  font-family: var(--tg-font-display);
+  font-size: 1.08rem;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.contactFaq summary::-webkit-details-marker {
+  display: none;
+}
+
+.contactFaq summary::after {
+  content: "+";
+  position: absolute;
+  right: 4px;
+  top: 20px;
+  color: var(--tg-gold-light);
+  font-size: 1.5rem;
+}
+
+.contactFaq details[open] summary::after {
+  content: "−";
+}
+
+.contactFaq details p {
+  max-width: 760px;
+  margin: 0;
+  padding: 0 46px 24px 0;
+  color: var(--tg-muted);
+  line-height: 1.72;
+}
+
+@media (max-width: 1050px) {
+  .contactExperienceHero {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .contactResponseCard {
+    max-width: 420px;
+  }
+
+  .contactExperienceGrid,
+  .contactFaq {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .contactDetailsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .contactJourneyPanel,
+  .contactForm {
+    padding: 34px 28px;
+  }
+
+  .contactFields {
+    grid-template-columns: 1fr;
+  }
+
+  .contactFieldWide {
+    grid-column: auto;
+  }
+
+  .contactFaq {
+    margin-top: 64px;
+  }
+}

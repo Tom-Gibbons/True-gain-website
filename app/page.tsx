@@ -913,100 +913,179 @@ export default function Home() {
           <a className="button buttonGold" href="#contact">Book free consultation</a>
         </div>
       </section>
-      <section className="section contactSection" id="contact">
-        <div className="contactIntro">
-          <p className="eyebrow">Your next step</p>
-          <h2>Start with a conversation.</h2>
-          <p>
-            Book a free 30-minute consultation to discuss your goals, training history and the most suitable way to work together. If you become a member, your complimentary initial assessment is booked separately and does not replace a weekly coaching session.
-          </p>
-
-          <div className="contactHighlights">
-            <div>
-              <strong>30 min</strong>
-              <span>Free consultation</span>
-            </div>
-            <div>
-              <strong>1:1</strong>
-              <span>Private coaching</span>
-            </div>
-            <div>
-              <strong>Luton</strong>
-              <span>Bushmead studio</span>
-            </div>
-          </div>
-
-          <div className="contactLocation">
-            <p className="planStrap">Studio location</p>
-            <h3>Bushmead, Luton</h3>
-            <p>Serving clients across Bedfordshire and Hertfordshire.</p>
-          </div>
-        </div>
-
-        <div className="contactPanel">
-          <div className="contactPanelHeader">
-            <p className="planStrap">Consultation request</p>
-            <h3>Tell me what you want to achieve.</h3>
+      <section className="section contactSection contactExperienceSection" id="contact">
+        <div className="contactExperienceHero">
+          <div>
+            <p className="eyebrow">Book a consultation</p>
+            <h2>Start with a conversation.</h2>
             <p>
-              Share a few details below and I’ll be in touch to arrange the next step.
+              Your first step is a free 30-minute consultation to discuss your goals,
+              training history, current challenges and the level of support that would
+              suit you best.
             </p>
           </div>
 
-          <form className="contactForm">
-            <div className="twoCol">
+          <div className="contactResponseCard">
+            <span>Typical response time</span>
+            <strong>Within 24 hours</strong>
+            <p>Monday to Saturday</p>
+          </div>
+        </div>
+
+        <div className="contactExperienceGrid">
+          <div className="contactJourneyPanel">
+            <p className="planStrap">What happens next</p>
+            <h3>A clear, pressure-free process.</h3>
+
+            <ol>
+              <li>
+                <span>01</span>
+                <div>
+                  <h4>Send your enquiry</h4>
+                  <p>Share your goals, preferred contact details and any useful background information.</p>
+                </div>
+              </li>
+
+              <li>
+                <span>02</span>
+                <div>
+                  <h4>Free consultation</h4>
+                  <p>Have a 30-minute conversation about your goals and whether True Gain is the right fit.</p>
+                </div>
+              </li>
+
+              <li>
+                <span>03</span>
+                <div>
+                  <h4>Choose your membership</h4>
+                  <p>Select the most suitable level of coaching support with no pressure to decide on the call.</p>
+                </div>
+              </li>
+
+              <li>
+                <span>04</span>
+                <div>
+                  <h4>Initial assessment</h4>
+                  <p>
+                    Once you join, your complimentary assessment is arranged separately
+                    and does not count towards your weekly coaching sessions.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+
+          <form className="contactForm" action="mailto:hello@truegainperformance.co.uk" method="post" encType="text/plain">
+            <div className="contactFormHeading">
+              <p className="planStrap">Consultation enquiry</p>
+              <h3>Tell me what you want to improve.</h3>
+              <p>
+                Complete the form below and I will respond personally to arrange your consultation.
+              </p>
+            </div>
+
+            <div className="contactFields">
               <label>
                 <span>Full name</span>
-                <input aria-label="Full name" placeholder="Your name" />
+                <input type="text" name="name" placeholder="Your name" required />
               </label>
+
               <label>
                 <span>Email address</span>
-                <input aria-label="Email address" type="email" placeholder="you@email.com" />
+                <input type="email" name="email" placeholder="you@example.com" required />
               </label>
-            </div>
 
-            <div className="twoCol">
               <label>
                 <span>Phone number</span>
-                <input aria-label="Phone number" placeholder="Your phone number" />
+                <input type="tel" name="phone" placeholder="Optional" />
               </label>
+
               <label>
-                <span>Service interest</span>
-                <select aria-label="Coaching interest" defaultValue="">
-                  <option value="" disabled>Select a service</option>
-                  <option>Train membership</option>
-                  <option>Recover membership</option>
-                  <option>Perform membership</option>
-                  <option>One-off personal training</option>
-                  <option>30-minute sports massage</option>
-                  <option>1-hour sports massage</option>
+                <span>Preferred service</span>
+                <select name="service" defaultValue="">
+                  <option value="" disabled>Select an option</option>
+                  <option value="Personal Training">Personal Training</option>
+                  <option value="Sports Massage">Sports Massage</option>
+                  <option value="Complete Coaching">Complete Coaching</option>
+                  <option value="Not Sure">Not sure yet</option>
                 </select>
               </label>
-            </div>
 
-            <label>
-              <span>Your main goal</span>
-              <textarea
-                aria-label="Goals"
-                rows={5}
-                placeholder="What would you most like to improve?"
-              />
-            </label>
-
-            <div className="contactConsent">
-              <input id="contact-consent" type="checkbox" />
-              <label htmlFor="contact-consent">
-                I agree to be contacted about my consultation request.
+              <label className="contactFieldWide">
+                <span>What would you like help with?</span>
+                <textarea
+                  name="message"
+                  rows={6}
+                  placeholder="Tell me about your goals, current challenges and training experience."
+                  required
+                />
               </label>
             </div>
 
-            <button className="button buttonGold" type="button">
-              Request consultation
+            <button className="button buttonGold contactSubmit" type="submit">
+              Request free consultation
             </button>
 
-            <small>
-              This form is currently a visual placeholder and will be connected before launch.
-            </small>
+            <p className="contactPrivacy">
+              Your details will only be used to respond to your enquiry.
+            </p>
           </form>
+        </div>
+
+        <div className="contactDetailsRow">
+          <article>
+            <span>Location</span>
+            <strong>Bushmead, Luton</strong>
+            <p>Private, appointment-only coaching studio.</p>
+          </article>
+
+          <article>
+            <span>Consultations</span>
+            <strong>Free · 30 minutes</strong>
+            <p>A conversation only. No exercise or assessment takes place.</p>
+          </article>
+
+          <article>
+            <span>Availability</span>
+            <strong>By appointment</strong>
+            <p>Session times are agreed around membership availability.</p>
+          </article>
+        </div>
+
+        <div className="contactFaq">
+          <div>
+            <p className="eyebrow">Before you enquire</p>
+            <h3>Common questions.</h3>
+          </div>
+
+          <div className="contactFaqList">
+            <details>
+              <summary>Do I need training experience?</summary>
+              <p>No. Coaching is adapted to your current ability, experience and confidence level.</p>
+            </details>
+
+            <details>
+              <summary>Does the consultation include an assessment?</summary>
+              <p>
+                No. The free consultation is a conversation. The complimentary assessment
+                is completed only after a membership has been purchased.
+              </p>
+            </details>
+
+            <details>
+              <summary>Does the assessment use one of my weekly sessions?</summary>
+              <p>
+                No. It is arranged separately, so your full weekly coaching allocation remains available.
+              </p>
+            </details>
+
+            <details>
+              <summary>Can I visit the studio before joining?</summary>
+              <p>
+                Studio visits can be arranged as part of the consultation process where appropriate.
+              </p>
+            </details>
+          </div>
         </div>
       </section>
 
