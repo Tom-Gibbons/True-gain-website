@@ -730,8 +730,7 @@ export default function Home() {
             <p className="planStrap">What progress can look like</p>
             <strong>Strength. Confidence. Consistency.</strong>
             <span>
-              Results will vary, but every programme is designed around measurable,
-              meaningful progress.
+              Every client's journey is different, but meaningful progress should always be expected. Every programme is tailored to your body, your goals and your lifestyle.
             </span>
           </div>
         </div>
