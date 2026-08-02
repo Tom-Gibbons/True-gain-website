@@ -4636,3 +4636,153 @@ main[data-site-version="onboarding-v2"] {
     margin-top: 64px;
   }
 }
+
+
+
+/* CONTACT FULLSCREEN LAYOUT FIX */
+
+/*
+  Keep the Phase 14 contact section inside a controlled content width.
+  The form and journey panels no longer stretch wider as the screen grows.
+*/
+
+.contactExperienceSection {
+  display: block !important;
+  overflow: hidden !important;
+}
+
+.contactExperienceHero,
+.contactExperienceGrid,
+.contactDetailsRow,
+.contactFaq {
+  width: min(100%, 1500px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  box-sizing: border-box !important;
+}
+
+/* Keep the heading row balanced on large screens. */
+.contactExperienceHero {
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px) !important;
+  gap: clamp(36px, 5vw, 74px) !important;
+  align-items: end !important;
+}
+
+.contactExperienceHero > div:first-child {
+  min-width: 0 !important;
+  max-width: 980px !important;
+}
+
+.contactResponseCard {
+  width: 100% !important;
+  max-width: 340px !important;
+  justify-self: end !important;
+}
+
+/* Prevent either panel from forcing the overall page wider. */
+.contactExperienceGrid {
+  grid-template-columns: minmax(360px, .82fr) minmax(0, 1.18fr) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+}
+
+.contactJourneyPanel,
+.contactForm {
+  min-width: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.contactFields {
+  min-width: 0 !important;
+}
+
+.contactFields label,
+.contactFields input,
+.contactFields select,
+.contactFields textarea {
+  min-width: 0 !important;
+  max-width: 100% !important;
+}
+
+.contactFields input,
+.contactFields select,
+.contactFields textarea {
+  display: block !important;
+}
+
+/* Keep all lower contact content aligned with the main section. */
+.contactDetailsRow {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+.contactDetailsRow article {
+  min-width: 0 !important;
+}
+
+.contactFaq {
+  grid-template-columns: minmax(280px, .62fr) minmax(0, 1.38fr) !important;
+  gap: clamp(36px, 5vw, 70px) !important;
+}
+
+.contactFaq > *,
+.contactFaqList,
+.contactFaq details {
+  min-width: 0 !important;
+}
+
+/* Wide desktop: add breathing room without increasing content width. */
+@media (min-width: 1500px) {
+  .contactExperienceSection {
+    padding-left: max(5vw, calc((100vw - 1500px) / 2)) !important;
+    padding-right: max(5vw, calc((100vw - 1500px) / 2)) !important;
+  }
+}
+
+/* Laptop and tablet */
+@media (max-width: 1120px) {
+  .contactExperienceHero,
+  .contactExperienceGrid,
+  .contactFaq {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contactResponseCard {
+    justify-self: start !important;
+    max-width: 420px !important;
+  }
+
+  .contactDetailsRow {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .contactExperienceSection {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .contactExperienceHero,
+  .contactExperienceGrid,
+  .contactDetailsRow,
+  .contactFaq {
+    width: 100% !important;
+  }
+
+  .contactJourneyPanel,
+  .contactForm {
+    padding: 32px 24px !important;
+  }
+
+  .contactFields {
+    grid-template-columns: 1fr !important;
+  }
+
+  .contactFieldWide {
+    grid-column: auto !important;
+  }
+}
