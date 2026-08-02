@@ -914,6 +914,151 @@ export default function Home() {
         </div>
       </section>
       
+      
+      <section className="section caseStudiesSection" id="case-studies">
+        <div className="caseStudiesHero">
+          <div className="caseStudiesHeroCopy">
+            <p className="eyebrow">Results and progress</p>
+            <h2>Real progress. Measured properly.</h2>
+            <p>
+              True Gain focuses on outcomes that matter beyond appearance: improved strength,
+              better movement, greater confidence, fewer limitations and long-term consistency.
+            </p>
+          </div>
+
+          <div className="caseStudiesHeroCard">
+            <span>Before launch</span>
+            <strong>Real client stories will be added here</strong>
+            <p>Only approved testimonials, photographs and measurable results will be published.</p>
+          </div>
+        </div>
+
+        <div className="caseStudyGrid">
+          <article className="caseStudyCard">
+            <div className="caseStudyImage caseStudyImageStrength">
+              <span>Client story coming soon</span>
+            </div>
+            <div className="caseStudyContent">
+              <p className="planStrap">Strength</p>
+              <h3>Build confidence under load.</h3>
+              <p>
+                A future case study will show how structured coaching can improve technique,
+                increase strength and help a client feel more capable in everyday life.
+              </p>
+              <div className="caseStudyMetrics">
+                <span>Technique</span>
+                <span>Strength</span>
+                <span>Confidence</span>
+              </div>
+            </div>
+          </article>
+
+          <article className="caseStudyCard">
+            <div className="caseStudyImage caseStudyImageMovement">
+              <span>Client story coming soon</span>
+            </div>
+            <div className="caseStudyContent">
+              <p className="planStrap">Movement</p>
+              <h3>Move with greater freedom.</h3>
+              <p>
+                This space will highlight meaningful improvements in mobility, movement quality
+                and confidence returning to activities that previously felt difficult.
+              </p>
+              <div className="caseStudyMetrics">
+                <span>Mobility</span>
+                <span>Control</span>
+                <span>Independence</span>
+              </div>
+            </div>
+          </article>
+
+          <article className="caseStudyCard">
+            <div className="caseStudyImage caseStudyImageConsistency">
+              <span>Client story coming soon</span>
+            </div>
+            <div className="caseStudyContent">
+              <p className="planStrap">Consistency</p>
+              <h3>Make progress sustainable.</h3>
+              <p>
+                A future client story will demonstrate how individual programming, accountability
+                and recovery support can turn short-term effort into long-term consistency.
+              </p>
+              <div className="caseStudyMetrics">
+                <span>Routine</span>
+                <span>Accountability</span>
+                <span>Longevity</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div className="milestonePanel">
+          <div className="milestoneIntro">
+            <p className="eyebrow">How results are tracked</p>
+            <h3>Progress is more than a before-and-after photo.</h3>
+            <p>
+              Results are reviewed using measures that reflect each client’s goals, starting point
+              and lifestyle. The aim is to show genuine improvement without unrealistic claims.
+            </p>
+          </div>
+
+          <div className="milestoneGrid">
+            <article>
+              <span>01</span>
+              <h4>Strength markers</h4>
+              <p>Improved load, control, repetitions and exercise confidence.</p>
+            </article>
+
+            <article>
+              <span>02</span>
+              <h4>Movement markers</h4>
+              <p>Better mobility, balance, range of motion and quality of movement.</p>
+            </article>
+
+            <article>
+              <span>03</span>
+              <h4>Lifestyle markers</h4>
+              <p>More energy, consistency, independence and confidence outside the studio.</p>
+            </article>
+
+            <article>
+              <span>04</span>
+              <h4>Recovery markers</h4>
+              <p>Improved readiness, reduced stiffness and better training continuity.</p>
+            </article>
+          </div>
+        </div>
+
+        <div className="caseStudyStandards">
+          <div>
+            <p className="eyebrow">Responsible results</p>
+            <h3>Honest, individual and permission-led.</h3>
+          </div>
+
+          <div className="caseStudyStandardsList">
+            <span>No exaggerated claims</span>
+            <span>No guaranteed outcomes</span>
+            <span>Client permission required</span>
+            <span>Context included with every result</span>
+          </div>
+        </div>
+
+        <div className="caseStudiesCta">
+          <div>
+            <p className="eyebrow">Create your own progress story</p>
+            <h3>Start with a plan built around you.</h3>
+            <p>
+              Book a free consultation to discuss the outcomes that matter most to you and
+              how they can be measured over time.
+            </p>
+          </div>
+
+          <a className="button buttonGold" href="#booking">
+            Book a Consultation
+          </a>
+        </div>
+      </section>
+
       <section className="section bookingSection" id="booking">
         <div className="bookingHero">
           <div className="bookingHeroCopy">
