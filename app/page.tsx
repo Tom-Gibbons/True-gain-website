@@ -550,9 +550,17 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="studioExperienceBadge">
-            <strong>1:1</strong>
-            <span>No crowds. No waiting. No distractions.</span>
+          <div className="studioExperienceHeroAside">
+            <div className="studioExperienceBadge">
+              <strong>1:1</strong>
+              <span>One coach. One client. Full focus.</span>
+            </div>
+
+            <div className="studioExperienceBenefits">
+              <div><span className="benefitIcon">◎</span><strong>No crowds.</strong></div>
+              <div><span className="benefitIcon">◴</span><strong>No waiting.</strong></div>
+              <div><span className="benefitIcon">◇</span><strong>No distractions.</strong></div>
+            </div>
           </div>
         </div>
 
