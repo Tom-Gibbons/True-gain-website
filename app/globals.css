@@ -5920,3 +5920,65 @@ button.buttonGold:active {
     transform: none;
   }
 }
+
+
+
+/* HEADER GOLD GLOW ONLY */
+
+/*
+  Keep the top-right consultation button visually unchanged at rest.
+  Add only a gold glow when hovered, focused or pressed.
+*/
+
+.siteHeader .buttonGold,
+header .buttonGold {
+  filter: none !important;
+  transform: none !important;
+  background: transparent !important;
+  color: var(--tg-ivory) !important;
+  border-color: var(--tg-gold) !important;
+  box-shadow: none !important;
+  transition:
+    box-shadow 240ms cubic-bezier(.22,.8,.24,1),
+    border-color 220ms ease !important;
+}
+
+.siteHeader .buttonGold:hover,
+header .buttonGold:hover {
+  filter: none !important;
+  transform: none !important;
+  background: transparent !important;
+  color: var(--tg-ivory) !important;
+  border-color: var(--tg-gold-light) !important;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.42),
+    0 0 16px rgba(199,151,72,.46),
+    0 0 32px rgba(199,151,72,.28) !important;
+}
+
+.siteHeader .buttonGold:focus-visible,
+header .buttonGold:focus-visible {
+  filter: none !important;
+  transform: none !important;
+  background: transparent !important;
+  color: var(--tg-ivory) !important;
+  border-color: var(--tg-gold-light) !important;
+  outline: 2px solid var(--tg-gold-light);
+  outline-offset: 4px;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.42),
+    0 0 18px rgba(199,151,72,.42) !important;
+}
+
+.siteHeader .buttonGold:active,
+header .buttonGold:active {
+  filter: none !important;
+  transform: none !important;
+  background: transparent !important;
+  color: var(--tg-ivory) !important;
+  border-color: var(--tg-gold-light) !important;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.48),
+    0 0 20px rgba(199,151,72,.52),
+    0 0 36px rgba(199,151,72,.3) !important;
+}
