@@ -94,7 +94,7 @@ export default function Home() {
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
 
-        <a className="button buttonOutline desktopCta" href="#contact">Book consultation</a>
+        <a className="button buttonOutline desktopCta" href="#contact">Arrange consultation</a>
 
         <button
           className="menuButton"
@@ -119,7 +119,7 @@ export default function Home() {
           </p>
 
           <div className="heroActions">
-            <a className="button buttonGold" href="#contact">Book a free consultation</a>
+            <a className="button buttonGold" href="#contact">Arrange your consultation</a>
             <a className="button buttonOutline" href="#memberships">Explore memberships</a>
           </div>
 
@@ -299,10 +299,10 @@ export default function Home() {
         <div className="servicesCta">
           <div>
             <p className="eyebrow">Not sure where to start?</p>
-            <h3>Book a free consultation.</h3>
+            <h3>Arrange your consultation.</h3>
             <p>We will discuss your goals, current challenges and the most suitable True Gain service for you.</p>
           </div>
-          <a className="button buttonGold" href="#contact">Book free consultation</a>
+          <a className="button buttonGold" href="#contact">Arrange your consultation</a>
         </div>
       </section>
       <section className="section membershipsSection" id="memberships">
@@ -518,7 +518,7 @@ export default function Home() {
               then recommend the most suitable membership.
             </p>
           </div>
-          <a className="button buttonGold" href="#contact">Book free consultation</a>
+          <a className="button buttonGold" href="#contact">Arrange your consultation</a>
         </div>
       </section>
 
@@ -766,7 +766,7 @@ export default function Home() {
           </div>
 
           <a className="button buttonGold coachCta" href="#contact">
-            Book a free consultation
+            Arrange your consultation
           </a>
         </div>
       </section>
@@ -906,13 +906,174 @@ export default function Home() {
             <p className="eyebrow">Your progress starts here</p>
             <h3>Build strength with a plan designed around you.</h3>
             <p>
-              Book a free consultation to discuss what you want to improve and how True
+              Arrange your consultation to discuss what you want to improve and how True
               Gain can support your next stage.
             </p>
           </div>
-          <a className="button buttonGold" href="#contact">Book free consultation</a>
+          <a className="button buttonGold" href="#contact">Arrange your consultation</a>
         </div>
       </section>
+      
+      <section className="section bookingSection" id="booking">
+        <div className="bookingHero">
+          <div className="bookingHeroCopy">
+            <p className="eyebrow">Free consultation</p>
+            <h2>Your journey starts with a conversation.</h2>
+            <p>
+              Arrange a free 30-minute consultation to discuss your goals, training
+              history, current challenges and the type of coaching support that would
+              suit you best. There is no exercise, assessment or pressure to join.
+            </p>
+          </div>
+
+          <div className="bookingHeroCard">
+            <span>Consultation length</span>
+            <strong>30 minutes</strong>
+            <p>Private conversation · No obligation</p>
+          </div>
+        </div>
+
+        <div className="bookingValueGrid">
+          <article>
+            <span>01</span>
+            <h3>Clear direction</h3>
+            <p>
+              Identify the most important priorities and the type of support that could
+              help you move forward.
+            </p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Personal recommendation</h3>
+            <p>
+              Receive an honest recommendation based on your goals, availability and
+              preferred level of coaching.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>No hard sell</h3>
+            <p>
+              Use the consultation to ask questions and decide whether True Gain feels
+              like the right fit for you.
+            </p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <h3>A clear next step</h3>
+            <p>
+              Leave knowing exactly what happens next if you decide to begin a membership.
+            </p>
+          </article>
+        </div>
+
+        <div className="bookingProcess">
+          <div className="bookingProcessIntro">
+            <p className="eyebrow">What the consultation covers</p>
+            <h3>A structured 30-minute conversation.</h3>
+            <p>
+              The consultation is designed to understand your situation before any
+              recommendation is made.
+            </p>
+          </div>
+
+          <ol className="bookingTimeline">
+            <li>
+              <span>01</span>
+              <div>
+                <h4>Welcome</h4>
+                <p>Brief introduction to True Gain and how private coaching works.</p>
+              </div>
+            </li>
+
+            <li>
+              <span>02</span>
+              <div>
+                <h4>Goals and lifestyle</h4>
+                <p>Discuss what you want to improve and what currently gets in the way.</p>
+              </div>
+            </li>
+
+            <li>
+              <span>03</span>
+              <div>
+                <h4>Training history</h4>
+                <p>Review your experience, confidence, injuries and previous approaches.</p>
+              </div>
+            </li>
+
+            <li>
+              <span>04</span>
+              <div>
+                <h4>Recommended pathway</h4>
+                <p>Identify the membership or service that best matches your needs.</p>
+              </div>
+            </li>
+
+            <li>
+              <span>05</span>
+              <div>
+                <h4>Questions and next steps</h4>
+                <p>Ask anything you need and decide whether you would like to continue.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div className="bookingPanel">
+          <div className="bookingPanelCopy">
+            <p className="planStrap">Live booking integration</p>
+            <h3>Choose a consultation time.</h3>
+            <p>
+              This panel is ready to connect to Calendly, Google Calendar or another
+              booking platform before launch. Until then, use the enquiry form below
+              to request a suitable time.
+            </p>
+
+            <div className="bookingTrust">
+              <span>Private studio</span>
+              <span>1:1 coaching</span>
+              <span>Bushmead, Luton</span>
+              <span>Response within 24 hours</span>
+            </div>
+          </div>
+
+          <div className="bookingPlaceholder">
+            <span className="bookingPlaceholderIcon">◷</span>
+            <strong>Booking calendar coming soon</strong>
+            <p>Request your preferred consultation time using the form below.</p>
+            <a className="button buttonGold" href="#contact">
+              Arrange your consultation
+            </a>
+          </div>
+        </div>
+
+        <div className="bookingAssessmentNote">
+          <div>
+            <p className="eyebrow">Important distinction</p>
+            <h3>Consultation first. Assessment after joining.</h3>
+            <p>
+              The free consultation is a conversation only. If you purchase a membership,
+              your complimentary initial assessment is arranged separately and does not
+              count towards your weekly coaching sessions.
+            </p>
+          </div>
+        </div>
+
+        <div className="bookingFinalCta">
+          <div>
+            <p className="eyebrow">Ready to take the first step?</p>
+            <h3>Your future progress starts with one conversation.</h3>
+          </div>
+          <a className="button buttonGold" href="#contact">
+            Arrange my consultation
+          </a>
+        </div>
+      </section>
+
       <section className="section contactSection contactExperienceSection" id="contact">
         <div className="contactExperienceHero">
           <div>
