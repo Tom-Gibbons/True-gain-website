@@ -108,7 +108,7 @@ export default function Home() {
 
       <section className="heroSplit" id="top">
         <div className="heroPanel">
-          <p className="eyebrow">Strength. Movement. Recovery. Longevity.</p>
+          <p className="eyebrow">Strength. Movement. Longevity.</p>
           <h1>
             Build strength.
             <span>Move with confidence.</span>
