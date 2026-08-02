@@ -151,7 +151,7 @@ export default function Home() {
             to help you become stronger, more confident and more capable in everyday life.
           </p>
           <p>
-            Every plan is built around your current ability, lifestyle and long-term goals—not a generic template.
+            Every plan is built around your current ability, lifestyle and long-term goals. Never a generic template.
           </p>
           <a className="inlineLink" href="#coach">Meet your coach →</a>
         </div>
@@ -372,62 +372,6 @@ export default function Home() {
               </a>
             </article>
           ))}
-        </div>
-
-        
-        <div className="onboardingNotice onboardingNoticeV2">
-          <div className="onboardingIntro">
-            <p className="eyebrow">How joining works</p>
-            <h3>Free consultation first. Assessment after membership purchase.</h3>
-            <p>
-              Your free consultation is a 30-minute conversation about your goals,
-              training history and whether True Gain is the right fit. It does not
-              include exercise or physical testing.
-            </p>
-
-            <div className="assessmentClarifier">
-              <strong>Complimentary initial assessment</strong>
-              <p>
-                Once you have purchased a membership, your initial assessment is arranged
-                separately before regular coaching starts. It is included at no extra cost
-                and does not use one of your weekly coaching sessions.
-              </p>
-            </div>
-          </div>
-
-          <div className="onboardingSteps">
-            <article>
-              <span>01</span>
-              <div>
-                <h4>Free consultation</h4>
-                <p>Discuss your goals, training background, availability and preferred level of support.</p>
-              </div>
-            </article>
-
-            <article>
-              <span>02</span>
-              <div>
-                <h4>Choose your membership</h4>
-                <p>Select Train, Recover or Perform based on the support that best suits you.</p>
-              </div>
-            </article>
-
-            <article>
-              <span>03</span>
-              <div>
-                <h4>Initial assessment</h4>
-                <p>Complete movement, mobility, strength and baseline checks after joining.</p>
-              </div>
-            </article>
-
-            <article>
-              <span>04</span>
-              <div>
-                <h4>Begin regular coaching</h4>
-                <p>Your weekly coaching allocation starts in full after the assessment is complete.</p>
-              </div>
-            </article>
-          </div>
         </div>
 
         <div className="membershipComparison">
@@ -720,7 +664,7 @@ export default function Home() {
               outside the studio.
             </p>
             <p>
-              Sessions are structured, personal and focused on long-term results—without the
+              Sessions are structured, personal and focused on long-term results, without the
               intimidation, noise or generic approach often found on a commercial gym floor.
             </p>
           </div>
@@ -738,7 +682,7 @@ export default function Home() {
               <span>02</span>
               <div>
                 <h3>Personal</h3>
-                <p>Your programme, progression and support are built around your needs—not a template.</p>
+                <p>Your programme, progression and support are built around your needs, not a template.</p>
               </div>
             </article>
 
@@ -996,7 +940,9 @@ export default function Home() {
         <div className="milestonePanel">
           <div className="milestoneIntro">
             <p className="eyebrow">How results are tracked</p>
-            <h3>Progress is more than a before-and-after photo.</h3>
+            <h3 className="milestoneHeadline">
+              Progress is more than a before <span>&amp;</span> after photo.
+            </h3>
             <p>
               Results are reviewed using measures that reflect each client’s goals, starting point
               and lifestyle. The aim is to show genuine improvement without unrealistic claims.
@@ -1027,20 +973,6 @@ export default function Home() {
               <h4>Recovery markers</h4>
               <p>Improved readiness, reduced stiffness and better training continuity.</p>
             </article>
-          </div>
-        </div>
-
-        <div className="caseStudyStandards">
-          <div>
-            <p className="eyebrow">Responsible results</p>
-            <h3>Honest, individual and permission-led.</h3>
-          </div>
-
-          <div className="caseStudyStandardsList">
-            <span>No exaggerated claims</span>
-            <span>No guaranteed outcomes</span>
-            <span>Client permission required</span>
-            <span>Context included with every result</span>
           </div>
         </div>
 
@@ -1194,18 +1126,6 @@ export default function Home() {
             <a className="button buttonGold" href="#contact">
               Arrange your consultation
             </a>
-          </div>
-        </div>
-
-        <div className="bookingAssessmentNote">
-          <div>
-            <p className="eyebrow">Important distinction</p>
-            <h3>Consultation first. Assessment after joining.</h3>
-            <p>
-              The free consultation is a conversation only. If you purchase a membership,
-              your complimentary initial assessment is arranged separately and does not
-              count towards your weekly coaching sessions.
-            </p>
           </div>
         </div>
 

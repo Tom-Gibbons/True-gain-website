@@ -5831,3 +5831,26 @@ img,video{max-width:100%;height:auto}
     width: 100%;
   }
 }
+
+
+/* CONTENT CLEANUP UPDATE */
+
+.milestoneHeadline span {
+  display: inline-block;
+  margin-inline: .08em;
+  color: var(--tg-gold-light);
+  font-size: 1.08em;
+  line-height: .85;
+}
+
+.membershipComparison,
+.caseStudiesCta,
+.bookingFinalCta {
+  margin-top: 72px;
+}
+
+@media (max-width: 700px) {
+  .milestoneHeadline span {
+    margin-inline: .04em;
+  }
+}
