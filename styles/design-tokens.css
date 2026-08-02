@@ -147,3 +147,11 @@
   --tg-studio-phase13-border: rgba(229, 189, 114, 0.24);
   --tg-studio-phase13-glow: rgba(199, 151, 72, 0.12);
 }
+
+
+/* Contact Experience Phase 14 */
+:root {
+  --tg-contact-panel: rgba(14, 14, 14, 0.97);
+  --tg-contact-border: rgba(229, 189, 114, 0.24);
+  --tg-contact-field: rgba(255, 255, 255, 0.035);
+}
