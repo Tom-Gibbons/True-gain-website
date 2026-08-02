@@ -3974,3 +3974,152 @@ main[data-site-version="onboarding-v2"] {
 .studioExperienceBenefits strong{color:var(--tg-ivory);font-family:var(--tg-font-display);font-size:clamp(1.55rem,2.4vw,2.65rem);line-height:1;letter-spacing:-.025em;text-transform:uppercase}
 @media(max-width:1220px){.studioExperienceHero{grid-template-columns:1fr}.studioExperienceHeroAside{grid-template-columns:minmax(250px,.75fr) minmax(320px,1fr);max-width:860px}}
 @media(max-width:760px){.studioExperienceHeroAside{grid-template-columns:1fr;max-width:none}.studioExperienceBadge{min-height:auto}.studioExperienceBenefits strong{font-size:clamp(1.45rem,8vw,2.2rem)}}
+
+
+
+/* STUDIO FULLSCREEN LAYOUT FIX */
+
+/* Keep the intro, 1:1 card and benefits within the content width. */
+.studioExperienceHero {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 46px;
+  align-items: start;
+}
+
+.studioExperienceHeroAside {
+  width: 100%;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr);
+  gap: 42px;
+  align-items: stretch;
+}
+
+.studioExperienceBenefits {
+  min-width: 0;
+}
+
+.studioExperienceBenefits > div {
+  width: 100%;
+}
+
+/* Force the image gallery to start on a new row and remain fully visible. */
+.studioExperienceGallery {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(340px, .65fr);
+  gap: 22px;
+  min-height: 720px;
+  margin-top: 18px;
+  overflow: visible;
+}
+
+.studioExperienceMain {
+  width: 100%;
+  min-width: 0;
+  min-height: 720px;
+}
+
+.studioExperienceSide {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.studioExperienceStrength,
+.studioExperienceRecovery {
+  width: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* Prevent any older absolute positioning or oversized widths from taking over. */
+.studioExperienceSection,
+.studioExperienceHero,
+.studioExperienceGallery,
+.studioExperienceSide {
+  position: relative;
+}
+
+.studioExperienceGallery > *,
+.studioExperienceSide > * {
+  max-width: 100%;
+}
+
+/* Large desktop */
+@media (min-width: 1400px) {
+  .studioExperienceSection {
+    padding-inline: max(5vw, calc((100vw - 1500px) / 2));
+  }
+
+  .studioExperienceHeroAside {
+    max-width: 1050px;
+  }
+
+  .studioExperienceGallery {
+    grid-template-columns: minmax(0, 1.4fr) minmax(380px, .6fr);
+    min-height: 760px;
+  }
+
+  .studioExperienceMain {
+    min-height: 760px;
+  }
+}
+
+/* Laptop and tablet */
+@media (max-width: 1180px) {
+  .studioExperienceHeroAside {
+    grid-template-columns: 1fr;
+    max-width: 760px;
+  }
+
+  .studioExperienceGallery {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .studioExperienceMain {
+    min-height: 600px;
+  }
+
+  .studioExperienceSide {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: none;
+  }
+
+  .studioExperienceStrength,
+  .studioExperienceRecovery {
+    min-height: 400px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .studioExperienceHero {
+    gap: 34px;
+  }
+
+  .studioExperienceHeroAside {
+    gap: 22px;
+  }
+
+  .studioExperienceGallery {
+    gap: 16px;
+  }
+
+  .studioExperienceMain {
+    min-height: 440px;
+  }
+
+  .studioExperienceSide {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .studioExperienceStrength,
+  .studioExperienceRecovery {
+    min-height: 340px;
+  }
+}
