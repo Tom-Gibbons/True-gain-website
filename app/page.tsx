@@ -94,7 +94,7 @@ export default function Home() {
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
 
-        <a className="button buttonOutline desktopCta" href="#contact">Book a Consultation/a>
+        <a className="button buttonOutline desktopCta" href="#contact">Book a Consultation</a>
 
         <button
           className="menuButton"
