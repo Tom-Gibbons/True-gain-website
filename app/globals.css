@@ -6317,3 +6317,298 @@ header .buttonGold:active {
     gap: 12px;
   }
 }
+
+
+
+/* PREMIUM CARD INTERACTIONS UPDATE */
+
+.membershipPlan,
+.oneOffCard,
+.bookingOptionCard {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition:
+    transform 280ms cubic-bezier(.22,.8,.24,1),
+    border-color 260ms ease,
+    background 260ms ease,
+    box-shadow 300ms cubic-bezier(.22,.8,.24,1);
+}
+
+.membershipPlan::before,
+.oneOffCard::before,
+.bookingOptionCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(229,189,114,.17), transparent 44%),
+    linear-gradient(180deg, rgba(229,189,114,.045), transparent 58%);
+  transition: opacity 280ms ease;
+}
+
+.membershipPlan:hover,
+.oneOffCard:hover,
+.bookingOptionCard:hover {
+  transform: translateY(-10px) scale(1.018);
+  border-color: rgba(229,189,114,.78) !important;
+  background-color: rgba(19,18,16,.99);
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.18),
+    0 0 24px rgba(199,151,72,.23),
+    0 30px 70px rgba(0,0,0,.48);
+}
+
+.membershipPlan:hover::before,
+.oneOffCard:hover::before,
+.bookingOptionCard:hover::before {
+  opacity: 1;
+}
+
+.membershipPlan.featured:hover {
+  transform: translateY(-18px) scale(1.022);
+  border-color: var(--tg-gold-light) !important;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.28),
+    0 0 30px rgba(199,151,72,.32),
+    0 34px 80px rgba(0,0,0,.5);
+}
+
+.membershipPlan h3,
+.oneOffCard h3,
+.bookingOptionCard h3,
+.membershipPlan .price,
+.oneOffCard .price,
+.bookingOptionCard .bookingOptionTag {
+  transition:
+    color 240ms ease,
+    text-shadow 240ms ease,
+    transform 240ms cubic-bezier(.22,.8,.24,1);
+}
+
+.membershipPlan:hover h3,
+.oneOffCard:hover h3,
+.bookingOptionCard:hover h3 {
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.membershipPlan:hover .price,
+.oneOffCard:hover .price {
+  color: var(--tg-gold-light);
+  text-shadow: 0 0 20px rgba(229,189,114,.28);
+}
+
+.bookingOptionCard:hover .bookingOptionTag {
+  color: #050505;
+  border-color: var(--tg-gold-light);
+  background: var(--tg-gold-light);
+}
+
+.membershipPlan .button,
+.oneOffCard .button,
+.bookingOptionCard .button {
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 240ms ease,
+    transform 240ms cubic-bezier(.22,.8,.24,1);
+}
+
+.membershipPlan:hover .button,
+.oneOffCard:hover .button,
+.bookingOptionCard:hover .button {
+  background: var(--tg-gold-light) !important;
+  color: #050505 !important;
+  border-color: var(--tg-gold-light) !important;
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 16px rgba(229,189,114,.34),
+    0 10px 24px rgba(0,0,0,.3);
+}
+
+.membershipPlan .button::after,
+.oneOffCard .button::after,
+.bookingOptionCard .button::after {
+  content: " →";
+  display: inline-block;
+  margin-left: 6px;
+  transition: transform 220ms cubic-bezier(.22,.8,.24,1);
+}
+
+.membershipPlan:hover .button::after,
+.oneOffCard:hover .button::after,
+.bookingOptionCard:hover .button::after {
+  transform: translateX(5px);
+}
+
+.membershipPlan:focus-within,
+.oneOffCard:focus-within,
+.bookingOptionCard:focus-within {
+  border-color: var(--tg-gold-light) !important;
+  box-shadow:
+    0 0 0 2px rgba(229,189,114,.3),
+    0 0 24px rgba(199,151,72,.25);
+}
+
+@media (hover: none) {
+  .membershipPlan:hover,
+  .oneOffCard:hover,
+  .bookingOptionCard:hover,
+  .membershipPlan.featured:hover {
+    transform: none;
+  }
+
+  .membershipPlan.featured {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .membershipPlan,
+  .oneOffCard,
+  .bookingOptionCard,
+  .membershipPlan *,
+  .oneOffCard *,
+  .bookingOptionCard * {
+    transition-duration: 1ms !important;
+  }
+
+  .membershipPlan:hover,
+  .oneOffCard:hover,
+  .bookingOptionCard:hover,
+  .membershipPlan.featured:hover {
+    transform: none !important;
+  }
+}
+
+
+
+/* ENHANCED GOLD CARD GLOW */
+
+/*
+  Stronger animated gold light for membership and one-off cards.
+  The glow shines behind the content and sweeps gently across the card.
+*/
+
+.membershipPlan,
+.oneOffCard,
+.bookingOptionCard {
+  position: relative;
+  isolation: isolate;
+}
+
+.membershipPlan::after,
+.oneOffCard::after,
+.bookingOptionCard::after {
+  content: "";
+  position: absolute;
+  inset: -35%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(
+      circle at 30% 20%,
+      rgba(229, 189, 114, .34) 0%,
+      rgba(199, 151, 72, .18) 22%,
+      transparent 54%
+    );
+  filter: blur(24px);
+  transform: translate3d(-12%, 8%, 0) scale(.92);
+  transition:
+    opacity 300ms ease,
+    transform 700ms cubic-bezier(.22,.8,.24,1);
+}
+
+.membershipPlan:hover::after,
+.oneOffCard:hover::after,
+.bookingOptionCard:hover::after {
+  opacity: 1;
+  transform: translate3d(12%, -6%, 0) scale(1.08);
+  animation: tg-card-gold-shine 2.4s ease-in-out infinite alternate;
+}
+
+.membershipPlan:hover,
+.oneOffCard:hover,
+.bookingOptionCard:hover {
+  border-color: rgba(229,189,114,.95) !important;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.26),
+    0 0 26px rgba(229,189,114,.32),
+    0 0 58px rgba(199,151,72,.22),
+    0 34px 76px rgba(0,0,0,.5) !important;
+}
+
+.membershipPlan:hover::before,
+.oneOffCard:hover::before,
+.bookingOptionCard:hover::before {
+  opacity: 1 !important;
+  background:
+    linear-gradient(
+      120deg,
+      rgba(229,189,114,.05) 0%,
+      rgba(229,189,114,.14) 44%,
+      rgba(229,189,114,.04) 72%,
+      transparent 100%
+    ) !important;
+}
+
+@keyframes tg-card-gold-shine {
+  0% {
+    transform: translate3d(-10%, 8%, 0) scale(.98);
+    filter: blur(24px) brightness(.94);
+  }
+  100% {
+    transform: translate3d(14%, -8%, 0) scale(1.1);
+    filter: blur(30px) brightness(1.12);
+  }
+}
+
+/* Featured Recover card receives the strongest glow. */
+.membershipPlan.featured:hover::after {
+  opacity: 1;
+  background:
+    radial-gradient(
+      circle at 50% 12%,
+      rgba(229,189,114,.42) 0%,
+      rgba(199,151,72,.24) 26%,
+      transparent 60%
+    );
+}
+
+.membershipPlan.featured:hover {
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.34),
+    0 0 34px rgba(229,189,114,.38),
+    0 0 72px rgba(199,151,72,.28),
+    0 38px 88px rgba(0,0,0,.54) !important;
+}
+
+/* Keep text and buttons crisp above the glow layer. */
+.membershipPlan > *,
+.oneOffCard > *,
+.bookingOptionCard > * {
+  position: relative;
+  z-index: 2;
+}
+
+@media (hover: none) {
+  .membershipPlan::after,
+  .oneOffCard::after,
+  .bookingOptionCard::after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .membershipPlan:hover::after,
+  .oneOffCard:hover::after,
+  .bookingOptionCard:hover::after {
+    animation: none !important;
+  }
+}
