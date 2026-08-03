@@ -8187,3 +8187,352 @@ header .desktopCta {
   .tgHeaderNav{gap:18px!important;}
   .tgHeaderNav a{font-size:14px!important;}
 }
+
+
+
+/* PREMIUM PORTAL ANALYTICS */
+
+.clientPortalAnalytics {
+  margin-top: 38px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(210px, .55fr);
+  gap: 16px;
+}
+
+.clientPortalChartCard,
+.clientPortalDonutCard {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.075);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(229,189,114,.075), transparent 38%),
+    rgba(7,7,7,.52);
+}
+
+.clientPortalChartCard {
+  padding: 22px 20px 14px;
+}
+
+.clientPortalChartHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 12px;
+}
+
+.clientPortalChartHeading span,
+.clientPortalChartHeading strong,
+.clientPortalDonutCard > div:first-child span,
+.clientPortalDonutCard > div:first-child strong {
+  display: block;
+}
+
+.clientPortalChartHeading span,
+.clientPortalDonutCard > div:first-child span {
+  color: var(--tg-muted);
+  font-size: .62rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.clientPortalChartHeading strong,
+.clientPortalDonutCard > div:first-child strong {
+  margin-top: 5px;
+  color: var(--tg-ivory);
+  font-family: var(--tg-font-display);
+  font-size: .98rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.clientPortalTrendBadge {
+  padding: 7px 10px;
+  border: 1px solid rgba(229,189,114,.3);
+  border-radius: 999px;
+  color: var(--tg-gold-light) !important;
+  background: rgba(229,189,114,.06);
+  font-size: .67rem !important;
+}
+
+.clientPortalCombinedChart {
+  position: relative;
+  height: 232px;
+  overflow: hidden;
+  border-radius: 13px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.018), transparent);
+}
+
+.clientPortalChartGrid {
+  position: absolute;
+  inset: 0 0 24px;
+  background:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 100% 42px, calc(100% / 7) 100%;
+}
+
+.clientPortalBars {
+  position: absolute;
+  inset: 18px 18px 25px;
+  display: flex;
+  align-items: flex-end;
+  gap: 13px;
+}
+
+.clientPortalBars span {
+  flex: 1;
+  min-width: 14px;
+  border-radius: 8px 8px 2px 2px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(246,207,132,.94) 0%,
+      rgba(199,151,72,.62) 52%,
+      rgba(199,151,72,.16) 100%
+    );
+  box-shadow:
+    0 0 18px rgba(229,189,114,.12),
+    inset 0 1px 0 rgba(255,255,255,.2);
+  transform: scaleY(.04);
+  transform-origin: bottom;
+  opacity: .2;
+  animation: tg-premium-bars 950ms cubic-bezier(.18,.8,.22,1) forwards;
+}
+
+.clientPortalBars span::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(105deg, transparent 28%, rgba(255,255,255,.18) 48%, transparent 68%);
+  transform: translateX(-130%);
+  animation: tg-bar-shimmer 3.4s ease-in-out infinite;
+}
+
+.clientPortalLineChart {
+  position: absolute;
+  inset: 18px 18px 24px;
+  width: calc(100% - 36px);
+  height: calc(100% - 42px);
+  overflow: visible;
+  pointer-events: none;
+}
+
+.clientPortalLineArea {
+  fill: url(#tgLineFill);
+  opacity: 0;
+  animation: tg-line-area 900ms ease 500ms forwards;
+}
+
+.clientPortalLinePath {
+  fill: none;
+  stroke: #f0ca82;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: url(#tgLineGlow);
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: tg-line-draw 1.35s cubic-bezier(.2,.75,.2,1) 300ms forwards;
+}
+
+.clientPortalLinePoint {
+  fill: #0a0a0a;
+  stroke: #f0ca82;
+  stroke-width: 4;
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: tg-line-point 420ms cubic-bezier(.18,.9,.22,1.4) forwards;
+}
+
+.clientPortalChartLabels {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 4px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  color: rgba(255,255,255,.34);
+  font-size: .56rem;
+  text-align: center;
+}
+
+.clientPortalDonutCard {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.clientPortalDonut {
+  position: relative;
+  width: 152px;
+  aspect-ratio: 1;
+  margin: 18px auto;
+  display: grid;
+  place-items: center;
+}
+
+.clientPortalDonut svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.clientPortalDonutTrack,
+.clientPortalDonutValue {
+  fill: none;
+  stroke-width: 10;
+}
+
+.clientPortalDonutTrack {
+  stroke: rgba(255,255,255,.08);
+}
+
+.clientPortalDonutValue {
+  stroke: url(#none);
+  stroke: #e5bd72;
+  stroke-linecap: round;
+  stroke-dasharray: 301.59;
+  stroke-dashoffset: 301.59;
+  filter: drop-shadow(0 0 7px rgba(229,189,114,.42));
+  animation: tg-donut-fill 1.4s cubic-bezier(.18,.8,.22,1) 350ms forwards;
+}
+
+.clientPortalDonut > div {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.clientPortalDonut strong,
+.clientPortalDonut span {
+  display: block;
+}
+
+.clientPortalDonut strong {
+  color: var(--tg-gold-light);
+  font-family: var(--tg-font-display);
+  font-size: 2rem;
+}
+
+.clientPortalDonut span {
+  margin-top: 4px;
+  color: var(--tg-muted);
+  font-size: .58rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.clientPortalDonutLegend {
+  display: grid;
+  gap: 9px;
+  color: var(--tg-muted);
+  font-size: .66rem;
+}
+
+.clientPortalDonutLegend span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.clientPortalDonutLegend i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tg-gold-light);
+  box-shadow: 0 0 8px rgba(229,189,114,.35);
+}
+
+.clientPortalDonutLegend span:last-child i {
+  background: rgba(255,255,255,.14);
+  box-shadow: none;
+}
+
+@keyframes tg-premium-bars {
+  0% {
+    transform: scaleY(.04);
+    opacity: .2;
+  }
+  75% {
+    transform: scaleY(1.04);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes tg-bar-shimmer {
+  0%, 45% { transform: translateX(-130%); }
+  70%, 100% { transform: translateX(150%); }
+}
+
+@keyframes tg-line-draw {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes tg-line-area {
+  to { opacity: 1; }
+}
+
+@keyframes tg-line-point {
+  0% {
+    opacity: 0;
+    transform: scale(.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes tg-donut-fill {
+  to {
+    stroke-dashoffset: 54.29;
+  }
+}
+
+@media (max-width: 900px) {
+  .clientPortalAnalytics {
+    grid-template-columns: 1fr;
+  }
+
+  .clientPortalDonutCard {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 560px) {
+  .clientPortalCombinedChart {
+    height: 205px;
+  }
+
+  .clientPortalBars {
+    gap: 7px;
+  }
+
+  .clientPortalChartCard {
+    padding-inline: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clientPortalBars span,
+  .clientPortalBars span::after,
+  .clientPortalLineArea,
+  .clientPortalLinePath,
+  .clientPortalLinePoint,
+  .clientPortalDonutValue {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+  }
+}
