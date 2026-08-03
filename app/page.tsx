@@ -1,3 +1,4 @@
+import BookingSystem from "../components/BookingSystem";
 "use client";
 
 import { useState } from "react";
@@ -1188,6 +1189,8 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      <BookingSystem />
 
       <section className="section contactSection contactExperienceSection" id="contact">
         <div className="contactExperienceHero">
