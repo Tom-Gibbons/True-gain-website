@@ -11,9 +11,6 @@ type BookingOption = {
 };
 
 const links = {
-  consultation:
-    process.env.NEXT_PUBLIC_BOOKING_CONSULTATION_URL ??
-    "https://calendly.com/replace-me/consultation",
   pt60:
     process.env.NEXT_PUBLIC_BOOKING_PT_60_URL ??
     "https://calendly.com/replace-me/pt-60",
@@ -52,14 +49,6 @@ export default function BookingSystem() {
 
   const bookingOptions = useMemo<BookingOption[]>(
     () => [
-      {
-        id: "consultation",
-        label: "Free consultation",
-        description:
-          "Book a 30-minute conversation to discuss your goals and the most suitable coaching option.",
-        href: links.consultation,
-        tag: "30 minutes",
-      },
       {
         id: "pt60",
         label: "One-off 1:1 personal training",
