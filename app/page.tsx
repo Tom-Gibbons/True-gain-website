@@ -110,10 +110,18 @@ export default function Home() {
           >
             Book a Consultation
           </a>
-        </div>  aria-expanded={menuOpen}
+        </div>
+
+        <button
+          type="button"
+          className="mobileMenuButton"
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span /><span /><span />
+          <span />
+          <span />
+          <span />
         </button>
       </header>
 
