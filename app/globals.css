@@ -8160,3 +8160,30 @@ header .desktopCta {
     font-size: 12px !important;
   }
 }
+
+
+/* MAXIMUM DESKTOP NAVIGATION SIZE */
+
+.tgHeaderNav{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:clamp(24px,2vw,38px)!important;
+}
+
+.tgHeaderNav a{
+  font-size:15.5px!important;
+  font-weight:700!important;
+  letter-spacing:.06em!important;
+  white-space:nowrap;
+}
+
+@media (max-width:1500px){
+  .tgHeaderNav{gap:22px!important;}
+  .tgHeaderNav a{font-size:15px!important;}
+}
+
+@media (max-width:1350px){
+  .tgHeaderNav{gap:18px!important;}
+  .tgHeaderNav a{font-size:14px!important;}
+}
