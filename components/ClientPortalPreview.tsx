@@ -90,16 +90,16 @@ export default function ClientPortalPreview() {
                     <span className="clientPortalTrendBadge">+18%</span>
                   </div>
 
-                  <div className="clientPortalCombinedChart" aria-label="Animated training progress chart">
+                  <div className="clientPortalCombinedChart" aria-label="Animated nine-week training progress chart">
                     <div className="clientPortalChartGrid" aria-hidden="true" />
 
                     <div className="clientPortalBars" aria-hidden="true">
-                      {[34,48,43,61,72,67,84].map((height, i) => (
+                      {[18,34,29,55,46,72,61,82,74].map((height, i) => (
                         <span
                           key={i}
                           style={{
                             height: `${height}%`,
-                            animationDelay: `${i * 90}ms`,
+                            animationDelay: `${i * 110}ms`,
                           }}
                         />
                       ))}
@@ -107,17 +107,17 @@ export default function ClientPortalPreview() {
 
                     <svg
                       className="clientPortalLineChart"
-                      viewBox="0 0 700 220"
+                      viewBox="0 0 900 220"
                       preserveAspectRatio="none"
                       aria-hidden="true"
                     >
                       <defs>
                         <linearGradient id="tgLineFill" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stopColor="rgba(229,189,114,.28)" />
+                          <stop offset="0%" stopColor="rgba(229,189,114,.2)" />
                           <stop offset="100%" stopColor="rgba(229,189,114,0)" />
                         </linearGradient>
                         <filter id="tgLineGlow">
-                          <feGaussianBlur stdDeviation="4" result="blur" />
+                          <feGaussianBlur stdDeviation="3" result="blur" />
                           <feMerge>
                             <feMergeNode in="blur" />
                             <feMergeNode in="SourceGraphic" />
@@ -125,35 +125,68 @@ export default function ClientPortalPreview() {
                         </filter>
                       </defs>
 
-                      <path
-                        className="clientPortalLineArea"
-                        d="M20 168 L128 145 L236 154 L344 112 L452 90 L560 100 L680 55 L680 220 L20 220 Z"
-                      />
-                      <path
-                        className="clientPortalLinePath"
-                        d="M20 168 L128 145 L236 154 L344 112 L452 90 L560 100 L680 55"
-                        pathLength="1"
-                      />
-                      {[["20","168"],["128","145"],["236","154"],["344","112"],["452","90"],["560","100"],["680","55"]].map(([cx, cy], i) => (
-                        <circle
-                          key={i}
-                          className="clientPortalLinePoint"
-                          cx={cx}
-                          cy={cy}
-                          r="6"
-                          style={{ animationDelay: `${650 + i * 85}ms` }}
+                      <path className="clientPortalLineArea">
+                        <animate
+                          attributeName="d"
+                          dur="6.8s"
+                          repeatCount="indefinite"
+                          values="
+                            M20 210 L125 210 L230 210 L335 210 L440 210 L545 210 L650 210 L755 210 L880 210 L880 220 L20 220 Z;
+                            M20 178 L125 148 L230 160 L335 105 L440 125 L545 72 L650 96 L755 48 L880 70 L880 220 L20 220 Z;
+                            M20 178 L125 148 L230 160 L335 105 L440 125 L545 72 L650 96 L755 48 L880 70 L880 220 L20 220 Z
+                          "
+                          keyTimes="0;0.32;1"
+                          calcMode="spline"
+                          keySplines=".2 .8 .2 1;0 0 1 1"
                         />
+                      </path>
+
+                      <path className="clientPortalLinePath" pathLength="1">
+                        <animate
+                          attributeName="d"
+                          dur="6.8s"
+                          repeatCount="indefinite"
+                          values="
+                            M20 210 L125 210 L230 210 L335 210 L440 210 L545 210 L650 210 L755 210 L880 210;
+                            M20 178 L125 148 L230 160 L335 105 L440 125 L545 72 L650 96 L755 48 L880 70;
+                            M20 178 L125 148 L230 160 L335 105 L440 125 L545 72 L650 96 L755 48 L880 70
+                          "
+                          keyTimes="0;0.32;1"
+                          calcMode="spline"
+                          keySplines=".2 .8 .2 1;0 0 1 1"
+                        />
+                      </path>
+
+                      {[
+                        ["20","178"],["125","148"],["230","160"],["335","105"],["440","125"],
+                        ["545","72"],["650","96"],["755","48"],["880","70"]
+                      ].map(([cx, cy], i) => (
+                        <circle key={i} className="clientPortalLinePoint" cx={cx} cy="210" r="5">
+                          <animate
+                            attributeName="cy"
+                            dur="6.8s"
+                            repeatCount="indefinite"
+                            values={`210;${cy};${cy}`}
+                            keyTimes="0;0.32;1"
+                            calcMode="spline"
+                            keySplines=".2 .8 .2 1;0 0 1 1"
+                            begin={`${i * 0.08}s`}
+                          />
+                          <animate
+                            attributeName="opacity"
+                            dur="6.8s"
+                            repeatCount="indefinite"
+                            values="0;1;1"
+                            keyTimes="0;0.32;1"
+                            begin={`${i * 0.08}s`}
+                          />
+                        </circle>
                       ))}
                     </svg>
 
                     <div className="clientPortalChartLabels" aria-hidden="true">
-                      <span>W1</span>
-                      <span>W2</span>
-                      <span>W3</span>
-                      <span>W4</span>
-                      <span>W5</span>
-                      <span>W6</span>
-                      <span>W7</span>
+                      <span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span>
+                      <span>W6</span><span>W7</span><span>W8</span><span>W9</span>
                     </div>
                   </div>
                 </div>
