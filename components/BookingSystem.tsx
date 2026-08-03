@@ -14,6 +14,9 @@ const links = {
   consultation:
     process.env.NEXT_PUBLIC_BOOKING_CONSULTATION_URL ??
     "https://calendly.com/replace-me/consultation",
+  pt60:
+    process.env.NEXT_PUBLIC_BOOKING_PT_60_URL ??
+    "https://calendly.com/replace-me/pt-60",
   massage30:
     process.env.NEXT_PUBLIC_BOOKING_MASSAGE_30_URL ??
     "https://calendly.com/replace-me/massage-30",
@@ -29,9 +32,15 @@ const links = {
   perform:
     process.env.NEXT_PUBLIC_STRIPE_PERFORM_URL ??
     "https://buy.stripe.com/replace-perform",
-  massageDeposit:
-    process.env.NEXT_PUBLIC_STRIPE_MASSAGE_DEPOSIT_URL ??
-    "https://buy.stripe.com/replace-massage-deposit",
+  ptDeposit:
+    process.env.NEXT_PUBLIC_STRIPE_PT_DEPOSIT_URL ??
+    "https://buy.stripe.com/replace-pt-deposit",
+  massage30Deposit:
+    process.env.NEXT_PUBLIC_STRIPE_MASSAGE_30_DEPOSIT_URL ??
+    "https://buy.stripe.com/replace-massage-30-deposit",
+  massage60Deposit:
+    process.env.NEXT_PUBLIC_STRIPE_MASSAGE_60_DEPOSIT_URL ??
+    "https://buy.stripe.com/replace-massage-60-deposit",
 };
 
 function isPlaceholder(url: string) {
@@ -52,20 +61,28 @@ export default function BookingSystem() {
         tag: "30 minutes",
       },
       {
+        id: "pt60",
+        label: "One-off 1:1 personal training",
+        description:
+          "Book a 60-minute one-to-one coaching session. A 50% deposit is required to secure the appointment.",
+        href: links.pt60,
+        tag: "60 minutes · £55",
+      },
+      {
         id: "massage30",
         label: "Sports massage",
         description:
-          "Book a focused 30-minute treatment for a specific area or short recovery appointment.",
+          "Book a focused 30-minute treatment. A 50% deposit is required to secure the appointment.",
         href: links.massage30,
-        tag: "30 minutes",
+        tag: "30 minutes · £35",
       },
       {
         id: "massage60",
         label: "Sports massage",
         description:
-          "Book a full 60-minute treatment for broader recovery, mobility and soft-tissue work.",
+          "Book a full 60-minute treatment for broader recovery, mobility and soft-tissue work. A 50% deposit is required to secure the appointment.",
         href: links.massage60,
-        tag: "60 minutes",
+        tag: "60 minutes · £60",
       },
     ],
     []
@@ -104,12 +121,28 @@ export default function BookingSystem() {
   const depositOptions = useMemo<BookingOption[]>(
     () => [
       {
-        id: "massageDeposit",
-        label: "Massage deposit",
+        id: "ptDeposit",
+        label: "1:1 PT deposit",
         description:
-          "Secure a sports-massage appointment with a deposit before the booking is confirmed.",
-        href: links.massageDeposit,
-        tag: "Secure payment",
+          "Secure a one-off 60-minute personal training appointment. The £27.50 deposit is 50% of the £55 session fee.",
+        href: links.ptDeposit,
+        tag: "£27.50 deposit",
+      },
+      {
+        id: "massage30Deposit",
+        label: "30-minute massage deposit",
+        description:
+          "Secure a 30-minute sports massage appointment. The £17.50 deposit is 50% of the £35 session fee.",
+        href: links.massage30Deposit,
+        tag: "£17.50 deposit",
+      },
+      {
+        id: "massage60Deposit",
+        label: "60-minute massage deposit",
+        description:
+          "Secure a 60-minute sports massage appointment. The £30 deposit is 50% of the £60 session fee.",
+        href: links.massage60Deposit,
+        tag: "£30 deposit",
       },
     ],
     []
@@ -209,11 +242,14 @@ export default function BookingSystem() {
       </div>
 
       <div className="bookingSystemNote">
-        <strong>Assessment policy</strong>
+        <strong>One-off appointment deposits</strong>
         <p>
-          The free consultation is a conversation only. Once a membership is purchased,
-          the complimentary initial assessment is arranged separately and does not count
-          towards weekly coaching sessions.
+          A 50% deposit is required for every one-off Personal Training or Sports Massage
+          appointment. As availability is limited, this protects valuable coaching and
+          treatment times that could otherwise be reserved for membership clients. The
+          deposit is deducted from the full session price, with the remaining balance
+          payable on the day. Consultations remain free, and memberships require the first
+          monthly payment rather than a deposit.
         </p>
       </div>
     </section>
