@@ -88,6 +88,9 @@ export default function Home() {
         <a className="brand" href="#top" aria-label="True Gain home">
           <img src="/true-gain-logo.png" alt="True Gain Performance" />
         </a>
+        <a className="memberLoginUtility" href="/member-login">
+          Member Login
+        </a>
 
         <nav className={menuOpen ? "nav open" : "nav"}>
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
@@ -98,8 +101,6 @@ export default function Home() {
           <a href="#case-studies" onClick={() => setMenuOpen(false)}>Results &amp; Progress</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
-
-        <a className="memberLoginLink" href="/member-login">Member Login</a>
         <a
           className="button desktopCta"
           href="#contact"
