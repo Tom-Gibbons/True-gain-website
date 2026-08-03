@@ -6612,3 +6612,57 @@ header .buttonGold:active {
     animation: none !important;
   }
 }
+
+
+
+/* RECOVER HOVER BADGE UPDATE */
+
+/*
+  Hide the Recover membership's "Most Popular" badge at rest.
+  Reveal it with a premium pop-in animation on hover or keyboard focus.
+*/
+
+.membershipPlan.featured .membershipBadge {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px) scale(.86);
+  filter: blur(3px);
+  pointer-events: none;
+  transition:
+    opacity 220ms ease,
+    visibility 220ms ease,
+    transform 300ms cubic-bezier(.22,.8,.24,1),
+    filter 220ms ease,
+    box-shadow 260ms ease;
+}
+
+.membershipPlan.featured:hover .membershipBadge,
+.membershipPlan.featured:focus-within .membershipBadge {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.34),
+    0 0 18px rgba(229,189,114,.38),
+    0 8px 20px rgba(0,0,0,.26);
+}
+
+/* On touch devices, reveal the badge while the card is actively pressed. */
+@media (hover: none) {
+  .membershipPlan.featured:active .membershipBadge,
+  .membershipPlan.featured:focus-within .membershipBadge {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .membershipPlan.featured .membershipBadge {
+    transition-duration: 1ms !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}
