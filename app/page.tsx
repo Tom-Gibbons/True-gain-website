@@ -1,5 +1,7 @@
-import BookingSystem from "../components/BookingSystem";
 "use client";
+
+import BookingSystem from "../components/BookingSystem";
+
 
 import { useState } from "react";
 
