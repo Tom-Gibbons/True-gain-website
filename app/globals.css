@@ -6870,3 +6870,109 @@ header .buttonGold:active {
     animation: none !important;
   }
 }
+
+
+
+/* ALL MEMBERSHIPS FEATURED STYLE */
+
+/*
+  Train, Recover and Perform now share the same premium base appearance.
+  None of the cards glow at rest. The gold glow appears only on hover/focus.
+*/
+
+.membershipPlan,
+.membershipPlan.featured {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(199,151,72,.14), transparent 34%),
+    linear-gradient(180deg, rgba(199,151,72,.055), rgba(14,14,14,.98) 46%) !important;
+  border-color: rgba(229,189,114,.34) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(229,189,114,.08),
+    0 24px 54px rgba(0,0,0,.28) !important;
+  transform: none !important;
+}
+
+/* Remove the permanent top shine from every membership card. */
+.membershipPlan::before,
+.membershipPlan::after,
+.membershipPlan.featured::before,
+.membershipPlan.featured::after {
+  opacity: 0 !important;
+  animation: none !important;
+}
+
+/* Reveal the animated light only while hovering or focusing the card. */
+.membershipPlan:hover::before,
+.membershipPlan:focus-within::before,
+.membershipPlan.featured:hover::before,
+.membershipPlan.featured:focus-within::before {
+  opacity: 1 !important;
+  transform: translateX(14%) scaleX(1.08) !important;
+  filter: blur(24px) brightness(1.12) !important;
+  animation: tg-membership-top-shine 2.5s ease-in-out infinite alternate !important;
+}
+
+.membershipPlan:hover::after,
+.membershipPlan:focus-within::after,
+.membershipPlan.featured:hover::after,
+.membershipPlan.featured:focus-within::after {
+  opacity: 1 !important;
+  transform: scaleX(1) !important;
+}
+
+/* All three receive the same hover treatment. */
+.membershipPlan:hover,
+.membershipPlan.featured:hover,
+.membershipPlan:focus-within,
+.membershipPlan.featured:focus-within {
+  transform: translateY(-10px) scale(1.018) !important;
+  border-color: rgba(229,189,114,.92) !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(229,189,114,.22), transparent 38%),
+    linear-gradient(180deg, rgba(199,151,72,.09), rgba(18,17,15,.99) 48%) !important;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.24),
+    0 0 28px rgba(229,189,114,.3),
+    0 0 58px rgba(199,151,72,.22),
+    0 34px 76px rgba(0,0,0,.5) !important;
+}
+
+/* Recover can keep the hidden hover badge without having a different card style. */
+.membershipPlan.featured .membershipBadge {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.membershipPlan.featured:hover .membershipBadge,
+.membershipPlan.featured:focus-within .membershipBadge {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (hover: none) {
+  .membershipPlan,
+  .membershipPlan.featured {
+    transform: none !important;
+  }
+
+  .membershipPlan::before,
+  .membershipPlan::after,
+  .membershipPlan.featured::before,
+  .membershipPlan.featured::after {
+    opacity: 0 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .membershipPlan:hover,
+  .membershipPlan.featured:hover,
+  .membershipPlan:focus-within,
+  .membershipPlan.featured:focus-within {
+    transform: none !important;
+  }
+
+  .membershipPlan::before,
+  .membershipPlan::after {
+    animation: none !important;
+  }
+}
