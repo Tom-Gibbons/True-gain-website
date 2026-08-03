@@ -8536,3 +8536,103 @@ header .desktopCta {
     animation-delay: 0ms !important;
   }
 }
+
+
+
+/* REFINED PROGRESS ANIMATION */
+
+/* Remove the previous shimmer layer completely. */
+.clientPortalBars span::after {
+  display: none !important;
+  content: none !important;
+  animation: none !important;
+}
+
+/* Nine bars and nine labels, matching the approved dashboard layout. */
+.clientPortalBars {
+  gap: 10px !important;
+}
+
+.clientPortalChartLabels {
+  grid-template-columns: repeat(9, 1fr) !important;
+}
+
+/*
+  Bars begin at zero, rise to their individual values, and hold.
+  The different heights deliberately show both progression and regression.
+*/
+.clientPortalBars span {
+  transform: scaleY(0);
+  transform-origin: bottom;
+  opacity: .25;
+  animation-name: tg-bars-rise-and-hold !important;
+  animation-duration: 6.8s !important;
+  animation-timing-function: cubic-bezier(.2,.8,.2,1) !important;
+  animation-iteration-count: infinite !important;
+  animation-fill-mode: both !important;
+}
+
+/* The line itself moves from the baseline to the final trend shape. */
+.clientPortalLinePath {
+  fill: none;
+  stroke: #f0c979;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  filter: url(#tgLineGlow);
+}
+
+.clientPortalLineArea {
+  fill: url(#tgLineFill);
+}
+
+.clientPortalLinePoint {
+  fill: #0b0b0b;
+  stroke: #f0c979;
+  stroke-width: 3.5;
+  filter: drop-shadow(0 0 5px rgba(229,189,114,.42));
+}
+
+/* Keep the 82% completion ring and gently animate it from zero. */
+.clientPortalDonutValue {
+  animation: tg-donut-fill-and-hold 6.8s cubic-bezier(.2,.8,.2,1) infinite !important;
+}
+
+@keyframes tg-bars-rise-and-hold {
+  0%,
+  7% {
+    transform: scaleY(0);
+    opacity: .18;
+  }
+
+  32% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes tg-donut-fill-and-hold {
+  0%,
+  7% {
+    stroke-dashoffset: 301.59;
+  }
+
+  32%,
+  100% {
+    stroke-dashoffset: 54.29;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clientPortalBars span,
+  .clientPortalDonutValue {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
