@@ -62,6 +62,9 @@ export default function ClientPortalPreview() {
         <div className="clientPortalDashboard">
           <div className="clientPortalDashboardTopbar">
             <div><span>Welcome back</span><strong>Member dashboard</strong></div>
+            <a className="clientPortalLoginButton" href="/member-login">
+              Member Login
+            </a>
             <div className="clientPortalAvatar">TG</div>
           </div>
 
