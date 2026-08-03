@@ -6811,3 +6811,62 @@ header .buttonGold:active {
     transition-duration: 1ms !important;
   }
 }
+
+
+
+/* ALL MEMBERSHIP TOP GLOW */
+
+/*
+  Give Train, Recover and Perform the same visible gold light at the top
+  even when not hovered. Hover still strengthens the effect.
+*/
+
+.membershipPlan::before {
+  opacity: .38 !important;
+  transform: translateX(0) scaleX(1) !important;
+  filter: blur(20px) brightness(1.02) !important;
+}
+
+.membershipPlan::after {
+  opacity: .72 !important;
+  transform: scaleX(.86) !important;
+}
+
+.membershipPlan:hover::before,
+.membershipPlan:focus-within::before {
+  opacity: 1 !important;
+  transform: translateX(14%) scaleX(1.08) !important;
+  filter: blur(24px) brightness(1.12) !important;
+}
+
+.membershipPlan:hover::after,
+.membershipPlan:focus-within::after {
+  opacity: 1 !important;
+  transform: scaleX(1) !important;
+}
+
+/* Keep Recover slightly stronger, but no longer the only card with the effect. */
+.membershipPlan.featured::before {
+  opacity: .5 !important;
+}
+
+.membershipPlan.featured::after {
+  opacity: .9 !important;
+}
+
+@media (hover: none) {
+  .membershipPlan::before {
+    opacity: .38 !important;
+  }
+
+  .membershipPlan::after {
+    opacity: .72 !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .membershipPlan::before,
+  .membershipPlan::after {
+    animation: none !important;
+  }
+}
