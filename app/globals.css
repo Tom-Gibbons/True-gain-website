@@ -7039,3 +7039,39 @@ header .buttonGold:active {
 .clientPortalPremiumFooter>span{max-width:420px;color:var(--tg-muted);line-height:1.65}
 @media(max-width:1120px){.clientPortalPremiumHero,.clientPortalAppShell{grid-template-columns:1fr}.clientPortalAppNav{border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}.clientPortalNavButtons{grid-template-columns:repeat(3,1fr)}.clientPortalMemberCard{margin-top:22px}.clientPortalFeatureGrid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:760px){.clientPortalDashboardBody{grid-template-columns:1fr;padding:20px}.clientPortalPrimaryPanel{min-height:auto;padding:30px 24px}.clientPortalStats{grid-template-columns:1fr}.clientPortalNavButtons{grid-template-columns:1fr 1fr}.clientPortalFeatureGrid{grid-template-columns:1fr}.clientPortalPremiumFooter{padding:32px 26px;flex-direction:column;align-items:flex-start}}
+
+
+/* CONSULTATION CLEANUP AND RECOVER CTA */
+
+/* All membership CTAs use the same outlined appearance when idle. */
+.membershipPlan .button,
+.membershipPlan.featured .button {
+  background: transparent !important;
+  color: var(--tg-ivory) !important;
+  border-color: var(--tg-gold) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Gold shine appears only when the card/button is hovered or focused. */
+.membershipPlan:hover .button,
+.membershipPlan:focus-within .button,
+.membershipPlan .button:hover,
+.membershipPlan .button:focus-visible,
+.membershipPlan.featured:hover .button,
+.membershipPlan.featured:focus-within .button {
+  background: var(--tg-gold-light) !important;
+  color: #050505 !important;
+  border-color: var(--tg-gold-light) !important;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.35),
+    0 0 18px rgba(229,189,114,.42),
+    0 10px 26px rgba(0,0,0,.32) !important;
+}
+
+/* Remove excess alignment space left by deleted consultation buttons. */
+.consultationChoiceCard,
+.bookingCalendarPanel,
+.consultationCtaPanel {
+  justify-content: flex-start;
+}

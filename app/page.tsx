@@ -174,7 +174,6 @@ export default function Home() {
           </p>
 
           <div className="heroActions">
-            <a className="button buttonGold" href="#contact">Arrange your consultation</a>
             <a className="button buttonOutline" href="#memberships">Explore memberships</a>
           </div>
 
@@ -357,7 +356,6 @@ export default function Home() {
             <h3>Arrange your consultation.</h3>
             <p>We will discuss your goals, current challenges and the most suitable True Gain service for you.</p>
           </div>
-          <a className="button buttonGold" href="#contact">Arrange your consultation</a>
         </div>
       </section>
       <section className="section membershipsSection" id="memberships">
@@ -517,7 +515,6 @@ export default function Home() {
               then recommend the most suitable membership.
             </p>
           </div>
-          <a className="button buttonGold" href="#contact">Arrange your consultation</a>
         </div>
       </section>
 
@@ -763,10 +760,6 @@ export default function Home() {
               <span>Adult-focused approach</span>
             </div>
           </div>
-
-          <a className="button buttonGold coachCta" href="#contact">
-            Arrange your consultation
-          </a>
         </div>
       </section>
       <section className="section resultsSection" id="results">
@@ -908,7 +901,6 @@ export default function Home() {
               Gain can support your next stage.
             </p>
           </div>
-          <a className="button buttonGold" href="#contact">Arrange your consultation</a>
         </div>
       </section>
       
@@ -1178,9 +1170,6 @@ export default function Home() {
             <span className="bookingPlaceholderIcon">◷</span>
             <strong>Booking calendar coming soon</strong>
             <p>Request your preferred consultation time using the form below.</p>
-            <a className="button buttonGold" href="#contact">
-              Arrange your consultation
-            </a>
           </div>
         </div>
 
