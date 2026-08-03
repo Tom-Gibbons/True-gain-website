@@ -7252,3 +7252,269 @@ header .buttonGold:active {
     display: none;
   }
 }
+
+
+
+/* HEADER CTA AND PORTAL LOGIN FIX */
+
+/* Keep the full desktop header in one row. */
+.siteHeaderInner,
+.headerInner,
+.headerContent,
+.siteHeader > div,
+header > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+/* Main navigation can tighten, but the CTA must stay at the far right. */
+.siteHeader nav,
+.headerNav,
+.desktopNav {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.desktopCta,
+.siteHeader .button,
+header .desktopCta {
+  flex: 0 0 auto;
+  margin-left: auto !important;
+  white-space: nowrap !important;
+  min-width: max-content;
+  padding-inline: 28px !important;
+}
+
+/* Prevent the CTA text from breaking onto two lines. */
+.desktopCta,
+.desktopCta span,
+.desktopCta strong,
+.siteHeader .button,
+header .desktopCta {
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+
+/* Keep Member Login beside the logo while preserving breathing room before About. */
+.memberLoginUtility {
+  flex: 0 0 auto;
+  margin-left: 24px;
+  margin-right: 52px;
+  white-space: nowrap;
+}
+
+/* Add a clear login route within the public client portal preview. */
+.clientPortalLoginButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid rgba(229,189,114,.45);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--tg-ivory);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 240ms ease,
+    transform 220ms ease;
+}
+
+.clientPortalLoginButton:hover,
+.clientPortalLoginButton:focus-visible {
+  background: var(--tg-gold-light);
+  color: #050505;
+  border-color: var(--tg-gold-light);
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.25),
+    0 0 18px rgba(229,189,114,.35);
+  transform: translateY(-2px);
+}
+
+.clientPortalHeroLogin {
+  margin-top: 14px;
+}
+
+@media (max-width: 1500px) {
+  .memberLoginUtility {
+    margin-right: 34px;
+    font-size: .66rem;
+  }
+
+  .siteHeader nav,
+  .headerNav,
+  .desktopNav {
+    gap: 22px;
+  }
+
+  .desktopCta,
+  .siteHeader .button,
+  header .desktopCta {
+    padding-inline: 22px !important;
+  }
+}
+
+@media (max-width: 1220px) {
+  .memberLoginUtility {
+    display: none;
+  }
+}
+
+
+/* DEFINITIVE HEADER AND PORTAL LOGIN FIX */
+
+/* Explicit desktop header grid:
+   logo | navigation | account actions */
+.siteHeaderInner,
+.headerInner,
+.headerContent {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  width: 100% !important;
+  flex-wrap: nowrap !important;
+}
+
+.siteHeader nav,
+.headerNav,
+.desktopNav {
+  min-width: 0 !important;
+  justify-self: center !important;
+}
+
+.headerActions {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 26px !important;
+  margin-left: 36px !important;
+  white-space: nowrap !important;
+}
+
+.headerActions .memberLoginUtility {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  white-space: nowrap !important;
+}
+
+.headerActions .desktopCta {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 !important;
+  min-width: 220px !important;
+  width: auto !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+}
+
+/* Force the consultation wording onto one line. */
+.headerActions .desktopCta,
+.headerActions .desktopCta * {
+  white-space: nowrap !important;
+}
+
+/* Public portal preview login button */
+.clientPortalPremiumSection {
+  position: relative;
+}
+
+.clientPortalLoginButton {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 1px solid rgba(229,189,114,.52);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--tg-ivory);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 240ms ease,
+    transform 220ms ease;
+}
+
+.clientPortalLoginButton:hover,
+.clientPortalLoginButton:focus-visible {
+  background: var(--tg-gold-light);
+  color: #050505;
+  border-color: var(--tg-gold-light);
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.28),
+    0 0 18px rgba(229,189,114,.4);
+  transform: translateY(-2px);
+}
+
+.clientPortalHeroLogin {
+  align-self: end;
+  justify-self: end;
+  margin-bottom: 4px;
+}
+
+.clientPortalFloatingLogin {
+  position: absolute;
+  top: 42px;
+  right: 70px;
+  z-index: 5;
+}
+
+@media (max-width: 1500px) {
+  .siteHeaderInner,
+  .headerInner,
+  .headerContent {
+    grid-template-columns: auto minmax(0,1fr) auto !important;
+  }
+
+  .headerActions {
+    gap: 18px !important;
+    margin-left: 24px !important;
+  }
+
+  .headerActions .desktopCta {
+    min-width: 190px !important;
+    padding-inline: 20px !important;
+  }
+
+  .headerActions .memberLoginUtility {
+    font-size: .66rem !important;
+  }
+}
+
+@media (max-width: 1220px) {
+  .headerActions .memberLoginUtility {
+    display: none !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .headerActions .desktopCta {
+    display: none !important;
+  }
+
+  .clientPortalHeroLogin {
+    justify-self: start;
+    margin-top: 18px;
+  }
+
+  .clientPortalFloatingLogin {
+    position: static;
+    margin-bottom: 24px;
+  }
+}
