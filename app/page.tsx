@@ -84,17 +84,20 @@ export default function Home() {
 
   return (
     <main data-site-version="onboarding-v2" data-service-label-version="2">
-      <header className="siteHeader">
-        <a className="brand" href="#top" aria-label="True Gain home">
+      <header className="tgHeaderExact">
+        <a className="tgHeaderLogo" href="#top" aria-label="True Gain home">
           <img src="/true-gain-logo.png" alt="True Gain Performance" />
         </a>
 
-        <a className="memberLoginUtility" href="/member-login">
-          <span className="memberLoginIcon" aria-hidden="true">○</span>
+        <a className="tgMemberLogin" href="/member-login">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="7.25" r="3.25" />
+            <path d="M5.5 19c.55-4.1 2.7-6.2 6.5-6.2s5.95 2.1 6.5 6.2" />
+          </svg>
           <span>Member Login</span>
         </a>
 
-        <nav className={menuOpen ? "nav open" : "nav"} aria-label="Main navigation">
+        <nav className={menuOpen ? "tgHeaderNav is-open" : "tgHeaderNav"} aria-label="Main navigation">
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
           <a href="#memberships" onClick={() => setMenuOpen(false)}>Memberships</a>
@@ -104,18 +107,13 @@ export default function Home() {
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
 
-        <a
-          className="button desktopCta"
-          href="#contact"
-          onMouseEnter={(event) => event.currentTarget.classList.add("is-hovered")}
-          onMouseLeave={(event) => event.currentTarget.classList.remove("is-hovered")}
-        >
+        <a className="tgHeaderConsultation" href="#contact">
           Book a Consultation
         </a>
 
         <button
           type="button"
-          className="menuButton"
+          className="tgHeaderMenu"
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}
