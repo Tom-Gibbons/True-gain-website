@@ -6976,3 +6976,66 @@ header .buttonGold:active {
     animation: none !important;
   }
 }
+
+/* CLIENT PORTAL PREMIUM */
+
+.clientPortalPremiumSection{position:relative;overflow:hidden;background:radial-gradient(circle at 88% 5%,rgba(199,151,72,.13),transparent 30%),#070707}
+.clientPortalPremiumHero,.clientPortalAppShell,.clientPortalFeatureGrid,.clientPortalPremiumFooter{width:min(100%,1500px);margin-inline:auto;box-sizing:border-box}
+.clientPortalPremiumHero{display:grid;grid-template-columns:1fr 350px;gap:70px;align-items:end;margin-bottom:60px}
+.clientPortalPremiumHero h2{margin-bottom:28px;font-family:var(--tg-font-display);font-size:clamp(3.2rem,5.7vw,5.8rem);line-height:.92;letter-spacing:-.045em;text-transform:uppercase}
+.clientPortalPremiumHero>div:first-child>p:last-child{max-width:790px;margin:0;color:var(--tg-muted);font-size:1.05rem;line-height:1.8}
+.clientPortalLaunchCard{padding:30px;border:1px solid rgba(229,189,114,.28);border-radius:var(--tg-radius-lg);background:rgba(255,255,255,.02)}
+.clientPortalLaunchCard span,.clientPortalLaunchCard strong,.clientPortalLaunchCard p{display:block}
+.clientPortalLaunchCard span{color:var(--tg-gold-light);font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.clientPortalLaunchCard strong{margin:12px 0 8px;font-family:var(--tg-font-display);font-size:1.55rem;text-transform:uppercase}
+.clientPortalLaunchCard p{margin:0;color:var(--tg-muted);font-size:.84rem;line-height:1.65}
+.clientPortalAppShell{display:grid;grid-template-columns:280px 1fr;min-height:700px;overflow:hidden;border:1px solid rgba(229,189,114,.3);border-radius:28px;background:#0d0d0d;box-shadow:0 34px 90px rgba(0,0,0,.48)}
+.clientPortalAppNav{padding:26px 20px;display:flex;flex-direction:column;border-right:1px solid rgba(255,255,255,.07);background:linear-gradient(180deg,rgba(229,189,114,.045),transparent 30%),#0a0a0a}
+.clientPortalBrandMark{padding:6px 8px 28px;display:flex;gap:13px;align-items:center;border-bottom:1px solid rgba(255,255,255,.07)}
+.clientPortalBrandMark>span,.clientPortalAvatar{width:44px;height:44px;display:grid;place-items:center;border:1px solid rgba(229,189,114,.4);border-radius:50%;color:var(--tg-gold-light);font-family:var(--tg-font-display)}
+.clientPortalBrandMark strong,.clientPortalBrandMark small{display:block}
+.clientPortalBrandMark strong{font-family:var(--tg-font-display);text-transform:uppercase}
+.clientPortalBrandMark small{margin-top:4px;color:var(--tg-muted);font-size:.67rem;letter-spacing:.08em;text-transform:uppercase}
+.clientPortalNavButtons{margin-top:24px;display:grid;gap:8px}
+.clientPortalNavButtons button{min-height:62px;padding:0 15px;display:flex;flex-direction:column;justify-content:center;gap:4px;border:1px solid transparent;border-radius:12px;background:transparent;color:var(--tg-muted);font:inherit;text-align:left;cursor:pointer;transition:.22s ease}
+.clientPortalNavButtons button span{font-size:.64rem;letter-spacing:.1em;text-transform:uppercase}
+.clientPortalNavButtons button strong{font-size:.82rem}
+.clientPortalNavButtons button:hover,.clientPortalNavButtons button.active{transform:translateX(5px);border-color:rgba(229,189,114,.3);background:rgba(229,189,114,.08);color:var(--tg-ivory)}
+.clientPortalNavButtons button.active{box-shadow:inset 3px 0 0 var(--tg-gold-light)}
+.clientPortalMemberCard{margin-top:auto;padding:18px;border:1px solid rgba(229,189,114,.24);border-radius:14px;background:rgba(229,189,114,.05)}
+.clientPortalMemberCard span,.clientPortalMemberCard strong,.clientPortalMemberCard small{display:block}
+.clientPortalMemberCard strong{margin:8px 0 5px;color:var(--tg-gold-light);font-family:var(--tg-font-display);font-size:1.25rem;text-transform:uppercase}
+.clientPortalMemberCard span,.clientPortalMemberCard small{color:var(--tg-muted);font-size:.68rem}
+.clientPortalDashboard{min-width:0;background:radial-gradient(circle at 100% 0%,rgba(199,151,72,.14),transparent 35%),#111}
+.clientPortalDashboardTopbar{min-height:92px;padding:0 34px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.07)}
+.clientPortalDashboardTopbar span,.clientPortalDashboardTopbar strong{display:block}
+.clientPortalDashboardTopbar span{color:var(--tg-muted);font-size:.68rem;letter-spacing:.09em;text-transform:uppercase}
+.clientPortalDashboardTopbar strong{margin-top:5px;font-family:var(--tg-font-display);font-size:1.25rem;text-transform:uppercase}
+.clientPortalDashboardBody{padding:34px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(280px,.6fr);gap:22px}
+.clientPortalPrimaryPanel,.clientPortalSidePanels article{border:1px solid rgba(255,255,255,.075);border-radius:20px;background:rgba(255,255,255,.018)}
+.clientPortalPrimaryPanel{min-height:520px;padding:42px}
+.clientPortalPrimaryPanel h3{margin:14px 0 18px;font-family:var(--tg-font-display);font-size:clamp(2.5rem,4vw,4.3rem);line-height:.98;text-transform:uppercase}
+.clientPortalPrimaryPanel>p:not(.planStrap){max-width:650px;margin:0;color:var(--tg-muted);line-height:1.75}
+.clientPortalStats{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.clientPortalStats article{padding:18px;border:1px solid rgba(229,189,114,.17);border-radius:13px;background:rgba(229,189,114,.035)}
+.clientPortalStats strong,.clientPortalStats span{display:block}
+.clientPortalStats strong{color:var(--tg-gold-light);font-family:var(--tg-font-display);font-size:1.6rem}
+.clientPortalStats span{margin-top:6px;color:var(--tg-muted);font-size:.7rem;text-transform:uppercase}
+.clientPortalProgressChart{height:180px;margin-top:38px;padding:20px 18px 0;display:flex;align-items:flex-end;gap:12px;border:1px solid rgba(255,255,255,.06);border-radius:16px;background:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px);background-size:100% 36px}
+.clientPortalProgressChart span{flex:1;border-radius:8px 8px 0 0;background:linear-gradient(180deg,var(--tg-gold-light),rgba(199,151,72,.22));box-shadow:0 0 14px rgba(229,189,114,.13)}
+.clientPortalSidePanels{display:grid;gap:18px}
+.clientPortalSidePanels article{padding:26px}
+.clientPortalSidePanels span{color:var(--tg-gold-light);font-size:.67rem;text-transform:uppercase}
+.clientPortalSidePanels strong{display:block;margin:15px 0 10px;font-family:var(--tg-font-display);font-size:1.25rem;text-transform:uppercase}
+.clientPortalSidePanels p{margin:0;color:var(--tg-muted);font-size:.84rem;line-height:1.65}
+.clientPortalFeatureGrid{margin-top:28px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.clientPortalFeatureGrid article{min-height:220px;padding:30px;border:1px solid rgba(255,255,255,.075);border-radius:18px;background:rgba(255,255,255,.017);transition:.24s ease}
+.clientPortalFeatureGrid article:hover{transform:translateY(-7px);border-color:rgba(229,189,114,.46);box-shadow:0 18px 45px rgba(0,0,0,.34)}
+.clientPortalFeatureGrid article>span{color:rgba(229,189,114,.5);font-family:var(--tg-font-display)}
+.clientPortalFeatureGrid h3{margin:32px 0 12px;font-family:var(--tg-font-display);font-size:1.4rem;text-transform:uppercase}
+.clientPortalFeatureGrid p{margin:0;color:var(--tg-muted);line-height:1.68}
+.clientPortalPremiumFooter{margin-top:28px;padding:38px 42px;display:flex;justify-content:space-between;gap:40px;align-items:center;border:1px solid rgba(229,189,114,.24);border-radius:20px;background:rgba(229,189,114,.035)}
+.clientPortalPremiumFooter h3{margin:8px 0 0;font-family:var(--tg-font-display);font-size:clamp(2rem,3vw,3rem);text-transform:uppercase}
+.clientPortalPremiumFooter>span{max-width:420px;color:var(--tg-muted);line-height:1.65}
+@media(max-width:1120px){.clientPortalPremiumHero,.clientPortalAppShell{grid-template-columns:1fr}.clientPortalAppNav{border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}.clientPortalNavButtons{grid-template-columns:repeat(3,1fr)}.clientPortalMemberCard{margin-top:22px}.clientPortalFeatureGrid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.clientPortalDashboardBody{grid-template-columns:1fr;padding:20px}.clientPortalPrimaryPanel{min-height:auto;padding:30px 24px}.clientPortalStats{grid-template-columns:1fr}.clientPortalNavButtons{grid-template-columns:1fr 1fr}.clientPortalFeatureGrid{grid-template-columns:1fr}.clientPortalPremiumFooter{padding:32px 26px;flex-direction:column;align-items:flex-start}}

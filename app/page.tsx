@@ -1,5 +1,6 @@
 "use client";
 
+import ClientPortalPreview from "../components/ClientPortalPreview";
 import BookingSystem from "../components/BookingSystem";
 
 
@@ -912,6 +913,8 @@ export default function Home() {
       </section>
       
       
+      <ClientPortalPreview />
+
       <section className="section caseStudiesSection" id="case-studies">
         <div className="caseStudiesHero">
           <div className="caseStudiesHeroCopy">
