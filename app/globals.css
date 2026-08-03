@@ -6666,3 +6666,148 @@ header .buttonGold:active {
     filter: none !important;
   }
 }
+
+
+
+/* PREMIUM MEMBERSHIP LIGHTING */
+
+/*
+  All membership cards receive the same animated gold light across the top edge.
+  Recover remains the featured option with a slightly stronger glow.
+*/
+
+.membershipPlan {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.membershipPlan::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: -26px;
+  height: 72px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  border-radius: 999px;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(229, 189, 114, .48) 0%,
+      rgba(199, 151, 72, .24) 34%,
+      rgba(199, 151, 72, .08) 58%,
+      transparent 76%
+    );
+  filter: blur(18px);
+  transform: translateX(-18%) scaleX(.84);
+  transition:
+    opacity 260ms ease,
+    transform 620ms cubic-bezier(.22,.8,.24,1),
+    filter 260ms ease;
+}
+
+.membershipPlan:hover::before,
+.membershipPlan:focus-within::before {
+  opacity: 1;
+  transform: translateX(18%) scaleX(1.08);
+  filter: blur(22px) brightness(1.08);
+  animation: tg-membership-top-shine 2.5s ease-in-out infinite alternate;
+}
+
+.membershipPlan::after {
+  content: "";
+  position: absolute;
+  left: 12%;
+  right: 12%;
+  top: 0;
+  height: 2px;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(229,189,114,.45),
+    rgba(255,226,166,.95),
+    rgba(229,189,114,.45),
+    transparent
+  );
+  box-shadow:
+    0 0 10px rgba(229,189,114,.44),
+    0 0 22px rgba(199,151,72,.28);
+  transform: scaleX(.45);
+  transform-origin: center;
+  transition:
+    opacity 240ms ease,
+    transform 440ms cubic-bezier(.22,.8,.24,1);
+}
+
+.membershipPlan:hover::after,
+.membershipPlan:focus-within::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.membershipPlan.featured::before {
+  opacity: .38;
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(229, 189, 114, .58) 0%,
+      rgba(199, 151, 72, .32) 36%,
+      rgba(199, 151, 72, .12) 60%,
+      transparent 78%
+    );
+}
+
+.membershipPlan.featured:hover::before,
+.membershipPlan.featured:focus-within::before {
+  opacity: 1;
+  filter: blur(24px) brightness(1.15);
+}
+
+.membershipPlan.featured:hover::after,
+.membershipPlan.featured:focus-within::after {
+  box-shadow:
+    0 0 12px rgba(229,189,114,.58),
+    0 0 28px rgba(199,151,72,.38);
+}
+
+.membershipPlan > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes tg-membership-top-shine {
+  0% {
+    transform: translateX(-16%) scaleX(.92);
+    opacity: .74;
+  }
+  100% {
+    transform: translateX(16%) scaleX(1.08);
+    opacity: 1;
+  }
+}
+
+@media (hover: none) {
+  .membershipPlan::before,
+  .membershipPlan::after {
+    animation: none;
+  }
+
+  .membershipPlan:active::before,
+  .membershipPlan:active::after {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .membershipPlan::before,
+  .membershipPlan::after {
+    animation: none !important;
+    transition-duration: 1ms !important;
+  }
+}
