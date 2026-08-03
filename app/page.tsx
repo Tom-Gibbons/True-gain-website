@@ -89,7 +89,12 @@ export default function Home() {
           <img src="/true-gain-logo.png" alt="True Gain Performance" />
         </a>
 
-        <nav className={menuOpen ? "nav open" : "nav"}>
+        <a className="memberLoginUtility" href="/member-login">
+          <span className="memberLoginIcon" aria-hidden="true">○</span>
+          <span>Member Login</span>
+        </a>
+
+        <nav className={menuOpen ? "nav open" : "nav"} aria-label="Main navigation">
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
           <a href="#memberships" onClick={() => setMenuOpen(false)}>Memberships</a>
@@ -98,23 +103,19 @@ export default function Home() {
           <a href="#case-studies" onClick={() => setMenuOpen(false)}>Results &amp; Progress</a>
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
-        <div className="headerActions">
-          <a className="memberLoginUtility" href="/member-login">
-            Member Login
-          </a>
-          <a
-            className="button desktopCta"
-            href="#contact"
-            onMouseEnter={(event) => event.currentTarget.classList.add("is-hovered")}
-            onMouseLeave={(event) => event.currentTarget.classList.remove("is-hovered")}
-          >
-            Book a Consultation
-          </a>
-        </div>
+
+        <a
+          className="button desktopCta"
+          href="#contact"
+          onMouseEnter={(event) => event.currentTarget.classList.add("is-hovered")}
+          onMouseLeave={(event) => event.currentTarget.classList.remove("is-hovered")}
+        >
+          Book a Consultation
+        </a>
 
         <button
           type="button"
-          className="mobileMenuButton"
+          className="menuButton"
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen(!menuOpen)}

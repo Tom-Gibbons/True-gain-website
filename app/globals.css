@@ -7518,3 +7518,231 @@ header .desktopCta {
     margin-bottom: 24px;
   }
 }
+
+
+
+/* CLEAN HOMEPAGE HEADER LAYOUT */
+
+/*
+  Desktop order:
+  Logo | Member Login | Public navigation | Book a Consultation
+
+  This also removes the empty white rounded rectangle by using the existing
+  .menuButton class and keeping it hidden on desktop.
+*/
+
+.siteHeader {
+  min-height: 104px !important;
+  padding: 0 clamp(28px, 4vw, 72px) !important;
+  display: grid !important;
+  grid-template-columns:
+    minmax(150px, 190px)
+    auto
+    minmax(0, 1fr)
+    auto !important;
+  align-items: center !important;
+  column-gap: clamp(22px, 2.2vw, 42px) !important;
+  background: rgba(5,5,5,.94) !important;
+}
+
+.siteHeader .brand {
+  min-width: 0;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+}
+
+.siteHeader .brand img {
+  width: clamp(145px, 12vw, 182px) !important;
+  height: 82px !important;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.siteHeader .memberLoginUtility {
+  position: relative;
+  margin: 0 clamp(28px, 3.4vw, 62px) 0 0 !important;
+  padding: 13px 0;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 9px;
+  color: var(--tg-ivory, #f4f0e8);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .105em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: .92;
+}
+
+.memberLoginIcon {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(229,189,114,.58);
+  border-radius: 50%;
+  color: var(--tg-gold-light, #e5bd72);
+  font-size: .74rem;
+  line-height: 1;
+}
+
+.siteHeader .memberLoginUtility::after {
+  content: "";
+  position: absolute;
+  left: 29px;
+  right: 0;
+  bottom: 5px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--tg-gold-light, #e5bd72), transparent);
+  opacity: 0;
+  transform: scaleX(.35);
+  transform-origin: left;
+  transition: opacity 220ms ease, transform 260ms ease;
+}
+
+.siteHeader .memberLoginUtility:hover,
+.siteHeader .memberLoginUtility:focus-visible {
+  color: var(--tg-gold-light, #e5bd72);
+  opacity: 1;
+}
+
+.siteHeader .memberLoginUtility:hover::after,
+.siteHeader .memberLoginUtility:focus-visible::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.siteHeader .nav {
+  min-width: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(13px, 1.55vw, 27px) !important;
+  white-space: nowrap;
+}
+
+.siteHeader .nav a {
+  font-size: clamp(.57rem, .56vw, .67rem) !important;
+  letter-spacing: .105em !important;
+}
+
+.siteHeader .desktopCta {
+  min-width: 212px !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 25px !important;
+  display: inline-flex !important;
+  white-space: nowrap !important;
+  line-height: 1 !important;
+  justify-self: end;
+}
+
+.siteHeader .menuButton {
+  display: none !important;
+}
+
+/* The old header action wrapper is no longer used. */
+.siteHeader .headerActions {
+  display: none !important;
+}
+
+.heroSplit {
+  padding-top: 104px !important;
+}
+
+@media (max-width: 1320px) {
+  .siteHeader {
+    grid-template-columns: 155px auto minmax(0,1fr) auto !important;
+    column-gap: 20px !important;
+    padding-inline: 26px !important;
+  }
+
+  .siteHeader .brand img {
+    width: 145px !important;
+  }
+
+  .siteHeader .memberLoginUtility {
+    margin-right: 26px !important;
+    font-size: .61rem;
+  }
+
+  .siteHeader .nav {
+    gap: 14px !important;
+  }
+
+  .siteHeader .nav a {
+    font-size: .57rem !important;
+    letter-spacing: .08em !important;
+  }
+
+  .siteHeader .desktopCta {
+    min-width: 190px !important;
+    padding-inline: 18px !important;
+    font-size: .65rem !important;
+  }
+}
+
+@media (max-width: 1080px) {
+  .siteHeader {
+    min-height: 82px !important;
+    grid-template-columns: 1fr auto !important;
+    padding-inline: 22px !important;
+  }
+
+  .siteHeader .brand img {
+    width: 150px !important;
+    height: 70px !important;
+  }
+
+  .siteHeader .memberLoginUtility,
+  .siteHeader .desktopCta {
+    display: none !important;
+  }
+
+  .siteHeader .menuButton {
+    display: flex !important;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 8px;
+    background: transparent !important;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+  }
+
+  .siteHeader .menuButton span {
+    width: 100%;
+    height: 1px;
+    background: #fff;
+  }
+
+  .siteHeader .nav {
+    display: none !important;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    right: 0;
+    padding: 28px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px !important;
+    background: rgba(8,8,8,.98);
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  .siteHeader .nav.open {
+    display: flex !important;
+  }
+
+  .siteHeader .nav a {
+    font-size: .72rem !important;
+  }
+
+  .heroSplit {
+    padding-top: 82px !important;
+  }
+}
