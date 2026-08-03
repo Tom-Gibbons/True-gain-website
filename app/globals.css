@@ -8124,3 +8124,39 @@ header .desktopCta {
     padding-top: 82px !important;
   }
 }
+
+
+
+/* LARGER CENTRE NAVIGATION */
+
+/*
+  Slightly increases the centre navigation size while preserving
+  a single-line desktop header.
+*/
+
+.tgHeaderNav {
+  gap: clamp(22px, 2.05vw, 36px) !important;
+}
+
+.tgHeaderNav a {
+  font-size: clamp(12px, .82vw, 13px) !important;
+  font-weight: 700 !important;
+  letter-spacing: .065em !important;
+}
+
+@media (max-width: 1380px) {
+  .tgHeaderNav {
+    gap: 15px !important;
+  }
+
+  .tgHeaderNav a {
+    font-size: 10.5px !important;
+    letter-spacing: .055em !important;
+  }
+}
+
+@media (max-width: 1120px) {
+  .tgHeaderNav a {
+    font-size: 12px !important;
+  }
+}
