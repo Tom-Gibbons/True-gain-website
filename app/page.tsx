@@ -95,7 +95,57 @@ export default function Home() {
           <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
         </nav>
 
-        <a className="button buttonOutline desktopCta" href="#contact">Book a Consultation</a>
+        <a
+          className="button desktopCta"
+          href="#contact"
+          onMouseEnter={(event) => {
+            event.currentTarget.style.setProperty("background", "#e5bd72", "important");
+            event.currentTarget.style.setProperty("color", "#050505", "important");
+            event.currentTarget.style.setProperty("border-color", "#e5bd72", "important");
+            event.currentTarget.style.setProperty(
+              "box-shadow",
+              "0 0 0 1px rgba(229,189,114,.55), 0 0 18px rgba(229,189,114,.62), 0 0 38px rgba(199,151,72,.4)",
+              "important"
+            );
+          }}
+          onMouseLeave={(event) => {
+            event.currentTarget.style.setProperty("background", "transparent", "important");
+            event.currentTarget.style.setProperty("color", "#f4efe6", "important");
+            event.currentTarget.style.setProperty("border-color", "#c79748", "important");
+            event.currentTarget.style.setProperty("box-shadow", "none", "important");
+          }}
+          onFocus={(event) => {
+            event.currentTarget.style.setProperty("background", "#e5bd72", "important");
+            event.currentTarget.style.setProperty("color", "#050505", "important");
+            event.currentTarget.style.setProperty("border-color", "#e5bd72", "important");
+            event.currentTarget.style.setProperty(
+              "box-shadow",
+              "0 0 0 1px rgba(229,189,114,.55), 0 0 18px rgba(229,189,114,.62), 0 0 38px rgba(199,151,72,.4)",
+              "important"
+            );
+          }}
+          onBlur={(event) => {
+            event.currentTarget.style.setProperty("background", "transparent", "important");
+            event.currentTarget.style.setProperty("color", "#f4efe6", "important");
+            event.currentTarget.style.setProperty("border-color", "#c79748", "important");
+            event.currentTarget.style.setProperty("box-shadow", "none", "important");
+          }}
+          onPointerDown={(event) => {
+            event.currentTarget.style.setProperty("background", "#c79748", "important");
+            event.currentTarget.style.setProperty("color", "#050505", "important");
+            event.currentTarget.style.setProperty(
+              "box-shadow",
+              "0 0 22px rgba(229,189,114,.72), 0 0 42px rgba(199,151,72,.46)",
+              "important"
+            );
+          }}
+          onPointerUp={(event) => {
+            event.currentTarget.style.setProperty("background", "#e5bd72", "important");
+            event.currentTarget.style.setProperty("color", "#050505", "important");
+          }}
+        >
+          Book a Consultation
+        </a>
 
         <button
           className="menuButton"

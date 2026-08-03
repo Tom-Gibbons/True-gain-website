@@ -5982,3 +5982,120 @@ header .buttonGold:active {
     0 0 20px rgba(199,151,72,.52),
     0 0 36px rgba(199,151,72,.3) !important;
 }
+
+
+
+/* HEADER GOLD ACTIVE STATE */
+
+/*
+  Header CTA stays black/transparent at rest.
+  On hover, focus or click it fills gold and glows.
+*/
+
+.siteHeader .buttonGold,
+header .buttonGold {
+  background: transparent !important;
+  color: var(--tg-ivory) !important;
+  border-color: var(--tg-gold) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 240ms cubic-bezier(.22,.8,.24,1) !important;
+}
+
+.siteHeader .buttonGold:hover,
+header .buttonGold:hover,
+.siteHeader .buttonGold:focus-visible,
+header .buttonGold:focus-visible,
+.siteHeader .buttonGold:active,
+header .buttonGold:active {
+  background: var(--tg-gold-light) !important;
+  color: #050505 !important;
+  border-color: var(--tg-gold-light) !important;
+  transform: none !important;
+  filter: none !important;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.52),
+    0 0 18px rgba(229,189,114,.58),
+    0 0 38px rgba(199,151,72,.38),
+    0 12px 28px rgba(0,0,0,.32) !important;
+}
+
+.siteHeader .buttonGold:focus-visible,
+header .buttonGold:focus-visible {
+  outline: 2px solid var(--tg-gold-light) !important;
+  outline-offset: 4px !important;
+}
+
+.siteHeader .buttonGold:active,
+header .buttonGold:active {
+  background: var(--tg-gold) !important;
+  border-color: var(--tg-gold) !important;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.6),
+    0 0 22px rgba(229,189,114,.66),
+    0 0 42px rgba(199,151,72,.42) !important;
+}
+
+
+
+/* DESKTOP CTA HOVER FIX — FULL */
+
+/*
+  Targets the actual top-right header button class.
+  Idle state remains black/transparent with white text and a gold border.
+  Hover, focus and active states become gold-filled with a gold glow.
+*/
+
+.desktopCta {
+  background: transparent !important;
+  color: var(--tg-ivory) !important;
+  border-color: var(--tg-gold) !important;
+  box-shadow: none !important;
+  transform: none !important;
+  filter: none !important;
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 240ms cubic-bezier(.22,.8,.24,1) !important;
+}
+
+.desktopCta:hover,
+.desktopCta:focus-visible,
+.desktopCta:active {
+  background: var(--tg-gold-light) !important;
+  color: #050505 !important;
+  border-color: var(--tg-gold-light) !important;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.5),
+    0 0 16px rgba(229,189,114,.58),
+    0 0 34px rgba(199,151,72,.38),
+    0 12px 28px rgba(0,0,0,.32) !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+.desktopCta:focus-visible {
+  outline: 2px solid var(--tg-gold-light) !important;
+  outline-offset: 4px !important;
+}
+
+.desktopCta:active {
+  background: var(--tg-gold) !important;
+  border-color: var(--tg-gold) !important;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.6),
+    0 0 20px rgba(229,189,114,.66),
+    0 0 40px rgba(199,151,72,.42) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .desktopCta {
+    transition: none !important;
+  }
+}
