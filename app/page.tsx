@@ -1335,7 +1335,7 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        <img src="/true-gain-logo.png" alt="True Gain Performance" />
+        <img src="/tom-gibbons-coach.webp" alt="True Gain Performance" />
         <p>Strength. Movement. Longevity.</p>
         <span>© 2026 True Gain Performance</span>
       </footer>

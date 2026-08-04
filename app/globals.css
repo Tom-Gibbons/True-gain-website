@@ -9105,3 +9105,16 @@ header .desktopCta {
 .closingCta h2 {
   max-width: 980px;
 }
+
+
+/* EXACT MEET THE COACH PHOTO */
+
+.coachPortrait img,
+.coachVisual img,
+.coachImage img,
+#coach img {
+  object-fit: cover;
+  object-position: 50% 24%;
+  image-rendering: auto;
+  filter: none;
+}
