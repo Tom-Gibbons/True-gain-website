@@ -663,7 +663,7 @@ export default function Home() {
               <p className="planStrap">Qualified coaching</p>
               <strong>BSc</strong>
               <span>Strength & Conditioning</span>
-              <small>University-level expertise</small>
+              <small>Level 7 Qualified</small>
             </div>
           </div>
         </div>
