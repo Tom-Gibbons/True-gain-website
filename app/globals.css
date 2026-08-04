@@ -8636,3 +8636,111 @@ header .desktopCta {
     animation-iteration-count: 1 !important;
   }
 }
+
+
+/* SERVICE AND BOOKING POLISH */
+
+/* Service CTAs match the header consultation button at rest and on hover. */
+.serviceFeatureCopy .serviceBookingButton {
+  min-height: 58px;
+  padding: 0 28px;
+  border: 1px solid rgba(229,189,114,.78) !important;
+  border-radius: 6px;
+  background: #0b0b0b !important;
+  color: var(--tg-ivory) !important;
+  box-shadow: none !important;
+  white-space: nowrap;
+  transition:
+    background 220ms ease,
+    color 220ms ease,
+    border-color 220ms ease,
+    box-shadow 240ms ease,
+    transform 220ms ease;
+}
+
+.serviceFeatureCopy .serviceBookingButton:hover,
+.serviceFeatureCopy .serviceBookingButton:focus-visible {
+  background: var(--tg-gold-light) !important;
+  color: #050505 !important;
+  border-color: var(--tg-gold-light) !important;
+  box-shadow:
+    0 0 0 1px rgba(229,189,114,.28),
+    0 0 22px rgba(229,189,114,.38),
+    0 12px 30px rgba(0,0,0,.34) !important;
+  transform: translateY(-2px);
+}
+
+/* All three Coach / Treat / Transform cards receive the same permanent top glow. */
+.servicesComparison article.serviceComparisonPremium {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(229,189,114,.34) !important;
+  background:
+    radial-gradient(
+      ellipse at 50% -8%,
+      rgba(229,189,114,.20) 0%,
+      rgba(199,151,72,.10) 25%,
+      transparent 58%
+    ),
+    linear-gradient(180deg, #15130f 0%, #101010 38%, #0d0d0d 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.035),
+    0 -12px 38px rgba(199,151,72,.055);
+}
+
+.servicesComparison article.serviceComparisonPremium::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 12%;
+  width: 76%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(229,189,114,.82),
+    transparent
+  );
+  opacity: .55;
+  filter: blur(.15px);
+}
+
+.servicesComparison article.serviceComparisonPremium:hover {
+  border-color: rgba(229,189,114,.68) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.05),
+    0 -12px 42px rgba(199,151,72,.12),
+    0 18px 45px rgba(0,0,0,.32) !important;
+}
+
+/* Consultation tab is intentionally distinct from one-off deposit booking. */
+.bookingTabs button:first-child {
+  position: relative;
+}
+
+.bookingTabs button:first-child::after {
+  content: "Studio";
+  margin-left: 10px;
+  padding: 3px 7px;
+  border: 1px solid rgba(229,189,114,.32);
+  border-radius: 999px;
+  color: currentColor;
+  font-size: .52rem;
+  letter-spacing: .08em;
+}
+
+/* A single consultation card should not stretch awkwardly across all three columns. */
+.bookingOptionGrid:has(.bookingOptionCard:only-child) {
+  grid-template-columns: minmax(0, 520px);
+  justify-content: start;
+}
+
+@media (max-width: 700px) {
+  .serviceFeatureCopy .serviceBookingButton {
+    width: 100%;
+  }
+
+  .bookingOptionGrid:has(.bookingOptionCard:only-child) {
+    grid-template-columns: 1fr;
+  }
+}

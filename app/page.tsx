@@ -242,7 +242,7 @@ export default function Home() {
               <li>Technique coaching</li>
               <li>Progress tracking</li>
             </ul>
-            <a className="button buttonOutline" href="#contact">Book personal training</a>
+            <a className="button buttonOutline serviceBookingButton" href="#contact">Book personal training</a>
           </div>
         </div>
 
@@ -262,7 +262,7 @@ export default function Home() {
               <li>Mobility guidance</li>
               <li>Recovery planning</li>
             </ul>
-            <a className="button buttonOutline" href="#contact">Book recovery</a>
+            <a className="button buttonOutline serviceBookingButton" href="#contact">Book recovery</a>
           </div>
         </div>
 
@@ -282,24 +282,24 @@ export default function Home() {
               <li>Recovery support</li>
               <li>Ongoing accountability</li>
             </ul>
-            <a className="button buttonGold" href="#memberships">Explore memberships</a>
+            <a className="button buttonOutline serviceBookingButton" href="#memberships">Explore memberships</a>
           </div>
         </div>
 
         <div className="servicesComparison">
-          <article>
+          <article className="serviceComparisonPremium">
             <p className="planStrap">Coach</p>
             <h3>Personal training</h3>
             <p>Expert one-to-one coaching for strength, movement and confidence.</p>
             <span>From £55/session</span>
           </article>
-          <article>
+          <article className="serviceComparisonPremium">
             <p className="planStrap">Treat</p>
             <h3>Sports massage</h3>
             <p>Focused treatment and recovery support to help you move and feel better.</p>
             <span>From £35/session</span>
           </article>
-          <article className="featured">
+          <article className="featured serviceComparisonPremium">
             <p className="planStrap">Transform</p>
             <h3>Complete coaching</h3>
             <p>Training, recovery and accountability combined into one premium service.</p>
@@ -1327,7 +1327,7 @@ export default function Home() {
 
       <footer className="footer">
         <img src="/true-gain-logo.png" alt="True Gain Performance" />
-        <p>Strength. Recovery. Longevity.</p>
+        <p>Strength. Movement. Longevity.</p>
         <span>© 2026 True Gain Performance</span>
       </footer>
     </main>
