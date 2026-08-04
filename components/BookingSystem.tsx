@@ -11,9 +11,12 @@ type BookingOption = {
 };
 
 const links = {
-  consultation:
-    process.env.NEXT_PUBLIC_BOOKING_CONSULTATION_URL ??
-    "https://calendly.com/replace-me/consultation",
+  consultationGeneral:
+    process.env.NEXT_PUBLIC_BOOKING_GENERAL_CONSULTATION_URL ??
+    "https://calendly.com/replace-me/general-consultation",
+  consultationStudio:
+    process.env.NEXT_PUBLIC_BOOKING_STUDIO_CONSULTATION_URL ??
+    "https://calendly.com/replace-me/studio-consultation",
   pt60:
     process.env.NEXT_PUBLIC_BOOKING_PT_60_URL ??
     "https://calendly.com/replace-me/pt-60",
@@ -53,11 +56,19 @@ export default function BookingSystem() {
   const bookingOptions = useMemo<BookingOption[]>(
     () => [
       {
-        id: "consultation",
-        label: "Free studio consultation",
+        id: "consultationGeneral",
+        label: "General consultation",
         description:
-          "Book a complimentary 30-minute conversation at the True Gain studio to discuss your goals, training history and the most suitable coaching option.",
-        href: links.consultation,
+          "A complimentary 30-minute conversation in a relaxed, neutral setting such as a local coffee shop, or remotely if preferred. Discuss your goals without the studio environment feeling overwhelming.",
+        href: links.consultationGeneral,
+        tag: "30 minutes · Free",
+      },
+      {
+        id: "consultationStudio",
+        label: "Studio consultation",
+        description:
+          "A complimentary 30-minute conversation at the private True Gain studio, with the opportunity to see the space and discuss the coaching option that best suits you.",
+        href: links.consultationStudio,
         tag: "30 minutes · Free",
       },
     ],
@@ -149,7 +160,7 @@ export default function BookingSystem() {
           <p className="eyebrow">Online booking & payments</p>
           <h2>Book, join or pay securely online.</h2>
           <p>
-            Start by booking a free studio consultation, purchase a membership, or secure a one-off session by paying the required deposit.
+            Choose a general consultation in a relaxed neutral setting or a studio consultation, purchase a membership, or secure a one-off session by paying the required deposit.
           </p>
         </div>
 
@@ -168,7 +179,7 @@ export default function BookingSystem() {
           role="tab"
           aria-selected={activeTab === "book"}
         >
-          Book appointments
+          Book a consultation
         </button>
 
         <button
@@ -207,7 +218,9 @@ export default function BookingSystem() {
               onClick={() => openExternal(option.href)}
             >
               {activeTab === "book"
-                ? "Book consultation"
+                ? option.id === "consultationStudio"
+                  ? "Book studio consultation"
+                  : "Book general consultation"
                 : activeTab === "memberships"
                 ? "Continue to checkout"
                 : "Pay deposit"}
