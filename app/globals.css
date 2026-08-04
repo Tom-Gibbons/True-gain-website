@@ -9118,3 +9118,16 @@ header .desktopCta {
   image-rendering: auto;
   filter: none;
 }
+
+
+/* LATEST APPROVED COACH PORTRAIT */
+
+.coachPortrait img,
+.coachVisual img,
+.coachImage img,
+#coach img {
+  object-fit: cover;
+  object-position: 50% 22%;
+  filter: none;
+  image-rendering: auto;
+}
