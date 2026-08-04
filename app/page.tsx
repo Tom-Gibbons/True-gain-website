@@ -1152,9 +1152,6 @@ export default function Home() {
             <p className="eyebrow">Ready to take the first step?</p>
             <h3>Your future progress starts with one conversation.</h3>
           </div>
-          <a className="button buttonGold" href="#contact">
-            Arrange my consultation
-          </a>
         </div>
       </section>
 

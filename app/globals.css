@@ -9084,3 +9084,24 @@ header .desktopCta {
     animation-iteration-count: 1 !important;
   }
 }
+
+
+/* CLEANER FINAL CONSULTATION CTA */
+
+.finalCta,
+.finalCTA,
+.consultationCta,
+.closingCta {
+  grid-template-columns: 1fr !important;
+}
+
+.finalCta > div,
+.finalCTA > div,
+.consultationCta > div,
+.closingCta > div,
+.finalCta h2,
+.finalCTA h2,
+.consultationCta h2,
+.closingCta h2 {
+  max-width: 980px;
+}
