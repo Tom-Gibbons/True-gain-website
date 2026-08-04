@@ -1157,7 +1157,8 @@ export default function Home() {
 
       <BookingSystem />
 
-      <section className="section contactSection contactExperienceSection" id="contact">
+      <div id="consultation-enquiry" className="scrollAnchor" aria-hidden="true" />
+<section className="section contactSection contactExperienceSection" id="contact">
         <div className="contactExperienceHero">
           <div>
             <p className="eyebrow">Book a consultation</p>
