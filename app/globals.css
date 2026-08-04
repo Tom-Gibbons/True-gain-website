@@ -8744,3 +8744,343 @@ header .desktopCta {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* MEMBERSHIP, CONSULTATION AND EXPERTISE UPDATE */
+
+/* ---------------------------------------------------------------
+   Membership comparison: row-by-row, then Train-to-Perform reveal
+   --------------------------------------------------------------- */
+
+.animatedComparisonTable {
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.animatedComparisonTable .comparisonRevealRow {
+  position: relative;
+}
+
+.animatedComparisonTable .comparisonRevealRow > span {
+  opacity: 0;
+  transform: translateY(16px) scale(.985);
+  filter: blur(4px);
+  animation:
+    tg-comparison-cell-reveal 9.5s cubic-bezier(.2,.78,.2,1) infinite;
+  animation-fill-mode: both;
+}
+
+/* Header appears first from left to right. */
+.animatedComparisonTable .rowIndex0 > span:nth-child(1) { animation-delay: .15s; }
+.animatedComparisonTable .rowIndex0 > span:nth-child(2) { animation-delay: .40s; }
+.animatedComparisonTable .rowIndex0 > span:nth-child(3) { animation-delay: .65s; }
+.animatedComparisonTable .rowIndex0 > span:nth-child(4) { animation-delay: .90s; }
+
+/* Each membership row appears top-to-bottom and Train-to-Perform. */
+.animatedComparisonTable .rowIndex1 > span:nth-child(1) { animation-delay: 1.15s; }
+.animatedComparisonTable .rowIndex1 > span:nth-child(2) { animation-delay: 1.35s; }
+.animatedComparisonTable .rowIndex1 > span:nth-child(3) { animation-delay: 1.55s; }
+.animatedComparisonTable .rowIndex1 > span:nth-child(4) { animation-delay: 1.75s; }
+
+.animatedComparisonTable .rowIndex2 > span:nth-child(1) { animation-delay: 2.05s; }
+.animatedComparisonTable .rowIndex2 > span:nth-child(2) { animation-delay: 2.25s; }
+.animatedComparisonTable .rowIndex2 > span:nth-child(3) { animation-delay: 2.45s; }
+.animatedComparisonTable .rowIndex2 > span:nth-child(4) { animation-delay: 2.65s; }
+
+.animatedComparisonTable .rowIndex3 > span:nth-child(1) { animation-delay: 2.95s; }
+.animatedComparisonTable .rowIndex3 > span:nth-child(2) { animation-delay: 3.15s; }
+.animatedComparisonTable .rowIndex3 > span:nth-child(3) { animation-delay: 3.35s; }
+.animatedComparisonTable .rowIndex3 > span:nth-child(4) { animation-delay: 3.55s; }
+
+.animatedComparisonTable .rowIndex4 > span:nth-child(1) { animation-delay: 3.85s; }
+.animatedComparisonTable .rowIndex4 > span:nth-child(2) { animation-delay: 4.05s; }
+.animatedComparisonTable .rowIndex4 > span:nth-child(3) { animation-delay: 4.25s; }
+.animatedComparisonTable .rowIndex4 > span:nth-child(4) { animation-delay: 4.45s; }
+
+.animatedComparisonTable .rowIndex5 > span:nth-child(1) { animation-delay: 4.75s; }
+.animatedComparisonTable .rowIndex5 > span:nth-child(2) { animation-delay: 4.95s; }
+.animatedComparisonTable .rowIndex5 > span:nth-child(3) { animation-delay: 5.15s; }
+.animatedComparisonTable .rowIndex5 > span:nth-child(4) { animation-delay: 5.35s; }
+
+.animatedComparisonTable .rowIndex6 > span:nth-child(1) { animation-delay: 5.65s; }
+.animatedComparisonTable .rowIndex6 > span:nth-child(2) { animation-delay: 5.85s; }
+.animatedComparisonTable .rowIndex6 > span:nth-child(3) { animation-delay: 6.05s; }
+.animatedComparisonTable .rowIndex6 > span:nth-child(4) { animation-delay: 6.25s; }
+
+.animatedComparisonTable .comparisonRevealRow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(229,189,114,.56),
+    transparent
+  );
+  animation: tg-comparison-line-sweep 9.5s ease infinite;
+}
+
+.animatedComparisonTable .rowIndex1::after { animation-delay: 1.05s; }
+.animatedComparisonTable .rowIndex2::after { animation-delay: 1.95s; }
+.animatedComparisonTable .rowIndex3::after { animation-delay: 2.85s; }
+.animatedComparisonTable .rowIndex4::after { animation-delay: 3.75s; }
+.animatedComparisonTable .rowIndex5::after { animation-delay: 4.65s; }
+.animatedComparisonTable .rowIndex6::after { animation-delay: 5.55s; }
+
+@keyframes tg-comparison-cell-reveal {
+  0%, 7% {
+    opacity: 0;
+    transform: translateY(16px) scale(.985);
+    filter: blur(4px);
+  }
+
+  16%, 83% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+
+  94%, 100% {
+    opacity: 0;
+    transform: translateY(-4px) scale(.995);
+    filter: blur(2px);
+  }
+}
+
+@keyframes tg-comparison-line-sweep {
+  0%, 10% {
+    right: 100%;
+    opacity: 0;
+  }
+
+  22% {
+    right: 0;
+    opacity: .7;
+  }
+
+  34%, 100% {
+    right: 0;
+    opacity: 0;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Proper calendar icon
+   --------------------------------------------------------------- */
+
+.bookingCalendarIcon {
+  display: grid !important;
+  place-items: center;
+}
+
+.bookingCalendarIcon svg {
+  width: 34px;
+  height: 34px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ---------------------------------------------------------------
+   Two consultation cards
+   --------------------------------------------------------------- */
+
+.bookingOptionGrid:has(.bookingOptionCard:nth-child(2):last-child) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1050px;
+}
+
+.bookingOptionGrid:has(.bookingOptionCard:nth-child(2):last-child)
+.bookingOptionCard {
+  min-height: 430px;
+}
+
+.bookingTabs button:first-child::after {
+  content: "Two options" !important;
+}
+
+/* ---------------------------------------------------------------
+   Highly animated BSc expertise card
+   --------------------------------------------------------------- */
+
+.animatedQualificationCard {
+  position: absolute;
+  overflow: hidden;
+  isolation: isolate;
+  animation:
+    tg-qualification-float 4.2s ease-in-out infinite,
+    tg-qualification-emphasis 6.5s ease-in-out infinite;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.42),
+    0 0 0 1px rgba(229,189,114,.12),
+    0 0 26px rgba(229,189,114,.10);
+}
+
+.animatedQualificationCard::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  z-index: -2;
+  border-radius: inherit;
+  background:
+    conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 245deg,
+      rgba(229,189,114,.12) 280deg,
+      rgba(246,209,139,.92) 315deg,
+      rgba(229,189,114,.15) 342deg,
+      transparent 360deg
+    );
+  animation: tg-qualification-border 4.8s linear infinite;
+}
+
+.animatedQualificationCard::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: calc(inherit - 1px);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(229,189,114,.16), transparent 45%),
+    #0b0b0b;
+}
+
+.qualificationOrbit {
+  position: absolute;
+  width: 96px;
+  height: 96px;
+  top: -54px;
+  right: -48px;
+  border: 1px solid rgba(229,189,114,.34);
+  border-radius: 50%;
+  box-shadow:
+    0 0 22px rgba(229,189,114,.16),
+    inset 0 0 18px rgba(229,189,114,.08);
+  animation: tg-qualification-orbit 5.5s linear infinite;
+}
+
+.qualificationPulse {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--tg-gold-light);
+  box-shadow:
+    0 0 0 0 rgba(229,189,114,.48),
+    0 0 12px rgba(229,189,114,.62);
+  animation: tg-qualification-pulse 2.2s ease-out infinite;
+}
+
+.qualificationContent {
+  position: relative;
+  z-index: 2;
+}
+
+.animatedQualificationCard strong {
+  display: inline-block;
+  background: linear-gradient(
+    90deg,
+    #d8a957 0%,
+    #f4d99e 44%,
+    #d8a957 76%,
+    #f4d99e 100%
+  );
+  background-size: 220% 100%;
+  color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: tg-qualification-text-shine 3.2s ease-in-out infinite;
+}
+
+.animatedQualificationCard small {
+  display: block;
+  margin-top: 10px;
+  color: rgba(229,189,114,.72);
+  font-size: .55rem;
+  font-weight: 700;
+  letter-spacing: .10em;
+  text-transform: uppercase;
+  opacity: .82;
+}
+
+@keyframes tg-qualification-float {
+  0%, 100% { transform: translateY(0) rotate(-.15deg); }
+  50% { transform: translateY(-9px) rotate(.2deg); }
+}
+
+@keyframes tg-qualification-emphasis {
+  0%, 100% {
+    box-shadow:
+      0 18px 40px rgba(0,0,0,.42),
+      0 0 0 1px rgba(229,189,114,.12),
+      0 0 20px rgba(229,189,114,.08);
+  }
+
+  50% {
+    box-shadow:
+      0 22px 48px rgba(0,0,0,.5),
+      0 0 0 1px rgba(229,189,114,.42),
+      0 0 34px rgba(229,189,114,.26);
+  }
+}
+
+@keyframes tg-qualification-border {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes tg-qualification-orbit {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes tg-qualification-pulse {
+  0% {
+    box-shadow:
+      0 0 0 0 rgba(229,189,114,.46),
+      0 0 12px rgba(229,189,114,.62);
+  }
+
+  72%, 100% {
+    box-shadow:
+      0 0 0 17px rgba(229,189,114,0),
+      0 0 18px rgba(229,189,114,.26);
+  }
+}
+
+@keyframes tg-qualification-text-shine {
+  0%, 28% { background-position: 100% 0; }
+  68%, 100% { background-position: -120% 0; }
+}
+
+@media (max-width: 760px) {
+  .bookingOptionGrid:has(.bookingOptionCard:nth-child(2):last-child) {
+    grid-template-columns: 1fr;
+  }
+
+  .animatedQualificationCard {
+    animation:
+      tg-qualification-emphasis 6.5s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animatedComparisonTable .comparisonRevealRow > span,
+  .animatedComparisonTable .comparisonRevealRow::after,
+  .animatedQualificationCard,
+  .animatedQualificationCard::before,
+  .qualificationOrbit,
+  .qualificationPulse,
+  .animatedQualificationCard strong {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

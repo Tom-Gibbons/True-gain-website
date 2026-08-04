@@ -399,50 +399,50 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="comparisonTable" role="table" aria-label="Membership comparison">
-            <div className="comparisonRow comparisonHead" role="row">
+          <div className="comparisonTable animatedComparisonTable" role="table" aria-label="Membership comparison">
+            <div className="comparisonRow comparisonHead comparisonRevealRow rowIndex0" role="row">
               <span role="columnheader">Included</span>
               <span role="columnheader">Train</span>
               <span role="columnheader">Recover</span>
               <span role="columnheader">Perform</span>
             </div>
 
-            <div className="comparisonRow" role="row">
+            <div className="comparisonRow comparisonRevealRow rowIndex1" role="row">
               <span role="cell">Private coaching</span>
               <span role="cell">Weekly</span>
               <span role="cell">Weekly</span>
               <span role="cell">Twice weekly</span>
             </div>
 
-            <div className="comparisonRow" role="row">
+            <div className="comparisonRow comparisonRevealRow rowIndex2" role="row">
               <span role="cell">Personal programme</span>
               <span role="cell">✓</span>
               <span role="cell">✓</span>
               <span role="cell">✓</span>
             </div>
 
-            <div className="comparisonRow" role="row">
+            <div className="comparisonRow comparisonRevealRow rowIndex3" role="row">
               <span role="cell">Progress reviews</span>
               <span role="cell">Monthly</span>
               <span role="cell">Monthly</span>
               <span role="cell">Priority</span>
             </div>
 
-            <div className="comparisonRow" role="row">
+            <div className="comparisonRow comparisonRevealRow rowIndex4" role="row">
               <span role="cell">Recovery support</span>
               <span role="cell">—</span>
               <span role="cell">Monthly</span>
               <span role="cell">Included</span>
             </div>
 
-            <div className="comparisonRow" role="row">
+            <div className="comparisonRow comparisonRevealRow rowIndex5" role="row">
               <span role="cell">Priority scheduling</span>
               <span role="cell">—</span>
               <span role="cell">✓</span>
               <span role="cell">✓</span>
             </div>
 
-            <div className="comparisonRow comparisonPrice" role="row">
+            <div className="comparisonRow comparisonPrice comparisonRevealRow rowIndex6" role="row">
               <span role="cell">Monthly price</span>
               <span role="cell">£279</span>
               <span role="cell">£349</span>
@@ -656,10 +656,15 @@ export default function Home() {
             <span className="coachImageLabel">Founder & Coach</span>
           </div>
 
-          <div className="coachQualificationCard">
-            <p className="planStrap">Qualified coaching</p>
-            <strong>BSc</strong>
-            <span>Strength & Conditioning</span>
+          <div className="coachQualificationCard animatedQualificationCard">
+            <span className="qualificationOrbit" aria-hidden="true" />
+            <span className="qualificationPulse" aria-hidden="true" />
+            <div className="qualificationContent">
+              <p className="planStrap">Qualified coaching</p>
+              <strong>BSc</strong>
+              <span>Strength & Conditioning</span>
+              <small>University-level expertise</small>
+            </div>
           </div>
         </div>
 
@@ -1130,7 +1135,13 @@ export default function Home() {
           </div>
 
           <div className="bookingPlaceholder">
-            <span className="bookingPlaceholderIcon">◷</span>
+            <span className="bookingPlaceholderIcon bookingCalendarIcon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3.5" y="5.5" width="17" height="15" rx="2.2" />
+                <path d="M7.5 3.5v4M16.5 3.5v4M3.5 9.5h17" />
+                <path d="M7.5 13h2M11 13h2M14.5 13h2M7.5 16.5h2M11 16.5h2M14.5 16.5h2" />
+              </svg>
+            </span>
             <strong>Booking calendar coming soon</strong>
             <p>Request your preferred consultation time using the form below.</p>
           </div>
