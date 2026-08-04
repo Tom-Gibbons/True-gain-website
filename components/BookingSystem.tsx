@@ -11,6 +11,9 @@ type BookingOption = {
 };
 
 const links = {
+  consultation:
+    process.env.NEXT_PUBLIC_BOOKING_CONSULTATION_URL ??
+    "https://calendly.com/replace-me/consultation",
   pt60:
     process.env.NEXT_PUBLIC_BOOKING_PT_60_URL ??
     "https://calendly.com/replace-me/pt-60",
@@ -50,28 +53,12 @@ export default function BookingSystem() {
   const bookingOptions = useMemo<BookingOption[]>(
     () => [
       {
-        id: "pt60",
-        label: "One-off 1:1 personal training",
+        id: "consultation",
+        label: "Free studio consultation",
         description:
-          "Book a 60-minute one-to-one coaching session. A 50% deposit is required to secure the appointment.",
-        href: links.pt60,
-        tag: "60 minutes · £55",
-      },
-      {
-        id: "massage30",
-        label: "Sports massage",
-        description:
-          "Book a focused 30-minute treatment. A 50% deposit is required to secure the appointment.",
-        href: links.massage30,
-        tag: "30 minutes · £35",
-      },
-      {
-        id: "massage60",
-        label: "Sports massage",
-        description:
-          "Book a full 60-minute treatment for broader recovery, mobility and soft-tissue work. A 50% deposit is required to secure the appointment.",
-        href: links.massage60,
-        tag: "60 minutes · £60",
+          "Book a complimentary 30-minute conversation at the True Gain studio to discuss your goals, training history and the most suitable coaching option.",
+        href: links.consultation,
+        tag: "30 minutes · Free",
       },
     ],
     []
@@ -162,8 +149,7 @@ export default function BookingSystem() {
           <p className="eyebrow">Online booking & payments</p>
           <h2>Book, join or pay securely online.</h2>
           <p>
-            Choose the action you need below. Appointments open through your live booking
-            calendar, while memberships and deposits use secure Stripe checkout.
+            Start by booking a free studio consultation, purchase a membership, or secure a one-off session by paying the required deposit.
           </p>
         </div>
 
@@ -221,7 +207,7 @@ export default function BookingSystem() {
               onClick={() => openExternal(option.href)}
             >
               {activeTab === "book"
-                ? "Choose a time"
+                ? "Book consultation"
                 : activeTab === "memberships"
                 ? "Continue to checkout"
                 : "Pay deposit"}
