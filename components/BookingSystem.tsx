@@ -60,7 +60,7 @@ export default function BookingSystem() {
         label: "General consultation",
         description:
           "A complimentary 30-minute conversation in a relaxed, neutral setting such as a local coffee shop, or remotely if preferred. Discuss your goals without the studio environment feeling overwhelming.",
-        href: links.consultationGeneral,
+        href: "#consultation-enquiry",
         tag: "30 minutes · Free",
       },
       {
@@ -68,7 +68,7 @@ export default function BookingSystem() {
         label: "Studio consultation",
         description:
           "A complimentary 30-minute conversation at the private True Gain studio, with the opportunity to see the space and discuss the coaching option that best suits you.",
-        href: links.consultationStudio,
+        href: "#consultation-enquiry",
         tag: "30 minutes · Free",
       },
     ],
@@ -160,7 +160,7 @@ export default function BookingSystem() {
           <p className="eyebrow">Online booking & payments</p>
           <h2>Book, join or pay securely online.</h2>
           <p>
-            Choose a general consultation in a relaxed neutral setting or a studio consultation, purchase a membership, or secure a one-off session by paying the required deposit.
+            Enquire about a general consultation in a relaxed neutral setting or a studio consultation, purchase a membership, or secure a one-off session by paying the required deposit.
           </p>
         </div>
 
@@ -219,8 +219,8 @@ export default function BookingSystem() {
             >
               {activeTab === "book"
                 ? option.id === "consultationStudio"
-                  ? "Book studio consultation"
-                  : "Book general consultation"
+                  ? "Enquire about studio consultation"
+                  : "Enquire about general consultation"
                 : activeTab === "memberships"
                 ? "Continue to checkout"
                 : "Pay deposit"}
