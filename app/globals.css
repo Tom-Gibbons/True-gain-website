@@ -9513,3 +9513,32 @@ header .desktopCta {
   object-fit: contain;
   background: #000;
 }
+
+
+
+
+/* FINAL EXACT PORTAL LOGO */
+
+/*
+  Uses the exact supplied True Gain emblem, enlarged inside the existing
+  black circular portal icon while preserving the premium gold border.
+*/
+
+.clientPortalBrandMark > .clientPortalLogoCircle,
+.clientPortalAvatar {
+  background: #000 !important;
+  padding: 3px !important;
+  overflow: hidden;
+}
+
+.clientPortalBrandMark > .clientPortalLogoCircle img,
+.clientPortalAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 50%;
+  background: #000;
+  transform: scale(1.08);
+  transform-origin: center;
+}
