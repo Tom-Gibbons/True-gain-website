@@ -9144,3 +9144,82 @@ header .desktopCta {
   filter: none;
   image-rendering: auto;
 }
+
+
+
+
+/* BRIGHTER FRONT-AND-CENTRE COACH PHOTO */
+
+/*
+  The source photograph is unchanged. These rules only reduce the dark
+  website overlays so the coach feels visible, confident and approachable.
+*/
+
+.coachImage {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5, 5, 5, 0) 0%,
+      rgba(5, 5, 5, .04) 58%,
+      rgba(5, 5, 5, .18) 100%
+    ),
+    url("/tom-gibbons-coach.webp") center 12% / cover no-repeat !important;
+}
+
+/* Reduce the heavy side and bottom vignette from the original treatment. */
+.coachImage::after {
+  background:
+    linear-gradient(
+      90deg,
+      transparent 72%,
+      rgba(7, 7, 7, .22) 100%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 76%,
+      rgba(5, 5, 5, .28) 100%
+    ) !important;
+}
+
+/* Add a restrained warm lift behind the upper body without covering the image. */
+.coachVisual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 48% 35%,
+      rgba(229, 189, 114, .055) 0%,
+      rgba(229, 189, 114, .018) 34%,
+      transparent 62%
+    );
+}
+
+/* Keep labels and the qualification card above the subtle lighting layer. */
+.coachImageLabel,
+.coachQualificationCard {
+  z-index: 3;
+}
+
+/* Bring the qualification card in slightly so it supports rather than obscures the portrait. */
+.coachQualificationCard {
+  right: -18px;
+  bottom: 44px;
+}
+
+@media (max-width: 900px) {
+  .coachImage {
+    background-position: center 10% !important;
+  }
+
+  .coachImage::after {
+    background:
+      linear-gradient(
+        180deg,
+        transparent 78%,
+        rgba(5, 5, 5, .24) 100%
+      ) !important;
+  }
+}
