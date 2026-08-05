@@ -9131,3 +9131,16 @@ header .desktopCta {
   filter: none;
   image-rendering: auto;
 }
+
+
+/* FINAL APPROVED MEET THE COACH PHOTO */
+
+.coachPortrait img,
+.coachVisual img,
+.coachImage img,
+#coach img {
+  object-fit: cover;
+  object-position: 50% 20%;
+  filter: none;
+  image-rendering: auto;
+}
