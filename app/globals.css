@@ -9223,3 +9223,86 @@ header .desktopCta {
       ) !important;
   }
 }
+
+
+
+
+/* WIDER MEET THE COACH FRAMING */
+
+/*
+  Shows more of the approved portrait so the full sleeve slogan and
+  more of the upper body remain visible without altering the source image.
+*/
+
+.coachImage {
+  background-color: #050505 !important;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(5, 5, 5, 0) 0%,
+      rgba(5, 5, 5, .025) 64%,
+      rgba(5, 5, 5, .12) 100%
+    ),
+    url("/tom-gibbons-coach.webp") !important;
+  background-repeat: no-repeat !important;
+  background-position: center 16%, center 16% !important;
+  background-size: 100% 100%, auto 94% !important;
+}
+
+/* Reduce edge masking further so the sleeve wording stays readable. */
+.coachImage::after {
+  background:
+    linear-gradient(
+      90deg,
+      transparent 84%,
+      rgba(7, 7, 7, .10) 100%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 86%,
+      rgba(5, 5, 5, .16) 100%
+    ) !important;
+}
+
+/* Give the portrait panel slightly more vertical room on larger screens. */
+.coachVisual,
+.coachImage {
+  min-height: clamp(720px, 72vw, 940px);
+}
+
+/* Keep the qualification card from covering the sleeve and lower torso. */
+.coachQualificationCard {
+  right: 18px;
+  bottom: 26px;
+  max-width: 245px;
+}
+
+@media (max-width: 1100px) {
+  .coachImage {
+    background-position: center 14%, center 14% !important;
+    background-size: 100% 100%, auto 92% !important;
+  }
+
+  .coachVisual,
+  .coachImage {
+    min-height: 700px;
+  }
+}
+
+@media (max-width: 760px) {
+  .coachImage {
+    background-position: center 12%, center 12% !important;
+    background-size: 100% 100%, auto 88% !important;
+  }
+
+  .coachVisual,
+  .coachImage {
+    min-height: 640px;
+  }
+
+  .coachQualificationCard {
+    right: 12px;
+    bottom: 18px;
+    max-width: 220px;
+  }
+}
