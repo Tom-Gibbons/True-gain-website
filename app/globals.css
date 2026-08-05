@@ -9420,3 +9420,70 @@ header .desktopCta {
     width: min(280px, 78vw);
   }
 }
+
+
+
+
+/* TRUE GAIN PORTAL LOGO ICONS */
+
+/*
+  Replaces both TG initials with the exact supplied True Gain emblem,
+  while preserving the original circular gold portal styling.
+*/
+
+.clientPortalBrandMark > .clientPortalLogoCircle,
+.clientPortalAvatar {
+  width: 52px;
+  height: 52px;
+  padding: 6px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 52px;
+  overflow: hidden;
+  border: 1px solid rgba(229, 189, 114, .58);
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 50% 42%,
+      rgba(229, 189, 114, .08),
+      rgba(5, 5, 5, .96) 72%
+    );
+  box-shadow:
+    inset 0 0 14px rgba(229, 189, 114, .055),
+    0 0 0 1px rgba(0, 0, 0, .4);
+}
+
+.clientPortalBrandMark > .clientPortalLogoCircle img,
+.clientPortalAvatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+}
+
+.clientPortalAvatar {
+  transition:
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
+}
+
+.clientPortalAvatar:hover {
+  transform: translateY(-2px);
+  border-color: rgba(229, 189, 114, .88);
+  box-shadow:
+    inset 0 0 16px rgba(229, 189, 114, .08),
+    0 0 18px rgba(229, 189, 114, .15);
+}
+
+@media (max-width: 760px) {
+  .clientPortalBrandMark > .clientPortalLogoCircle,
+  .clientPortalAvatar {
+    width: 46px;
+    height: 46px;
+    flex-basis: 46px;
+    padding: 5px;
+  }
+}
