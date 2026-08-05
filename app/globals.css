@@ -9487,3 +9487,29 @@ header .desktopCta {
     padding: 5px;
   }
 }
+
+
+
+
+/* CLEAN BLACK PORTAL ICON BACKGROUND */
+
+/*
+  The logo asset now contains a true circular black field with transparency
+  outside it, eliminating the visible square image edge.
+*/
+
+.clientPortalBrandMark > .clientPortalLogoCircle,
+.clientPortalAvatar {
+  background: #000 !important;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.clientPortalBrandMark > .clientPortalLogoCircle img,
+.clientPortalAvatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: contain;
+  background: #000;
+}
