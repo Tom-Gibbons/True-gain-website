@@ -36,7 +36,13 @@ export default function ClientPortalPreview() {
       <div className="clientPortalAppShell">
         <aside className="clientPortalAppNav">
           <div className="clientPortalBrandMark">
-            <span>TG</span>
+            <span className="clientPortalLogoCircle">
+              <img
+                src="/true-gain-portal-icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </span>
             <div><strong>True Gain</strong><small>Member portal</small></div>
           </div>
           <div className="clientPortalNavButtons">
@@ -65,7 +71,13 @@ export default function ClientPortalPreview() {
             <a className="clientPortalLoginButton" href="/member-login">
               Member Login
             </a>
-            <div className="clientPortalAvatar">TG</div>
+            <div className="clientPortalAvatar" aria-label="True Gain">
+              <img
+                src="/true-gain-portal-icon.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
           </div>
 
           <div className="clientPortalDashboardBody">
