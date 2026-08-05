@@ -9306,3 +9306,58 @@ header .desktopCta {
     max-width: 220px;
   }
 }
+
+
+
+
+/* SLEEVE SLOGAN VISIBLE FRAMING */
+
+/*
+  Zooms the coach portrait out slightly and shifts it left so the full
+  sleeve slogan, including “TRAIN”, is visible while keeping the face prominent.
+*/
+
+.coachImage {
+  background-position: 47% 15%, 47% 15% !important;
+  background-size: 100% 100%, auto 86% !important;
+}
+
+/* Preserve the brighter, cleaner presentation from the previous update. */
+.coachImage::after {
+  background:
+    linear-gradient(
+      90deg,
+      transparent 88%,
+      rgba(7, 7, 7, .08) 100%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 88%,
+      rgba(5, 5, 5, .13) 100%
+    ) !important;
+}
+
+/* Keep the qualification card clear of the sleeve area. */
+.coachQualificationCard {
+  right: 20px;
+  bottom: 22px;
+}
+
+@media (max-width: 1100px) {
+  .coachImage {
+    background-position: 46% 14%, 46% 14% !important;
+    background-size: 100% 100%, auto 84% !important;
+  }
+}
+
+@media (max-width: 760px) {
+  .coachImage {
+    background-position: 45% 12%, 45% 12% !important;
+    background-size: 100% 100%, auto 80% !important;
+  }
+
+  .coachQualificationCard {
+    right: 12px;
+    bottom: 16px;
+  }
+}
