@@ -6,6 +6,7 @@ import BookingSystem from "../components/BookingSystem";
 
 import { useState } from "react";
 
+import RotatingTestimonials from "../components/RotatingTestimonials";
 const services = [
   {
     number: "01",
@@ -784,91 +785,11 @@ export default function Home() {
             <p className="eyebrow">Client experience</p>
             <h3>What clients can expect from True Gain.</h3>
             <p>
-              These statements are placeholders until approved client testimonials are
-              added before launch.
+              These illustrative examples show the type of feedback the True Gain experience is designed to earn. Genuine client testimonials will replace them before launch.
             </p>
           </div>
 
-          <div className="testimonialCards">
-            <blockquote>
-              <p>
-                “I feel stronger, move better and finally have a clear structure to follow.”
-              </p>
-              <footer>
-                <strong>Client testimonial placeholder</strong>
-                <span>Strength and confidence</span>
-              </footer>
-            </blockquote>
-
-            <blockquote>
-              <p>
-                “Professional, encouraging and completely focused on long-term progress.”
-              </p>
-              <footer>
-                <strong>Client testimonial placeholder</strong>
-                <span>Coaching experience</span>
-              </footer>
-            </blockquote>
-
-            <blockquote>
-              <p>
-                “The coaching gave me confidence to train properly again.”
-              </p>
-              <footer>
-                <strong>Client testimonial placeholder</strong>
-                <span>Return to training</span>
-              </footer>
-            </blockquote>
-          </div>
-        </div>
-
-        <div className="resultsTimeline">
-          <div>
-            <p className="eyebrow">How progress is measured</p>
-            <h3>A clear process from consultation to long-term results.</h3>
-          </div>
-
-          <ol>
-            <li>
-              <span>01</span>
-              <div>
-                <h4>Consultation</h4>
-                <p>Discuss goals, training history, current challenges and priorities.</p>
-              </div>
-            </li>
-            <li>
-              <span>02</span>
-              <div>
-                <h4>Assessment after joining</h4>
-                <p>Complete a complimentary initial assessment once your membership has begun. This is separate from your weekly coaching sessions.</p>
-              </div>
-            </li>
-            <li>
-              <span>03</span>
-              <div>
-                <h4>Progression</h4>
-                <p>Follow a structured plan that develops as your ability improves.</p>
-              </div>
-            </li>
-            <li>
-              <span>04</span>
-              <div>
-                <h4>Review</h4>
-                <p>Measure progress, adjust the plan and keep momentum moving forward.</p>
-              </div>
-            </li>
-          </ol>
-        </div>
-
-        <div className="resultsCta">
-          <div>
-            <p className="eyebrow">Your progress starts here</p>
-            <h3>Build strength with a plan designed around you.</h3>
-            <p>
-              Arrange your consultation to discuss what you want to improve and how True
-              Gain can support your next stage.
-            </p>
-          </div>
+          <RotatingTestimonials />
         </div>
       </section>
       
