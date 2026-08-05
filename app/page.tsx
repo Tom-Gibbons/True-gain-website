@@ -1256,7 +1256,11 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        <img src="/tom-gibbons-coach.webp" alt="True Gain Performance" />
+        <img
+          className="footerBrandLogo"
+          src="/true-gain-footer-logo.png"
+          alt="True Gain Performance logo"
+        />
         <p>Strength. Movement. Longevity.</p>
         <span>© 2026 True Gain Performance</span>
       </footer>

@@ -9396,3 +9396,27 @@ header .desktopCta {
     animation-delay: 0ms !important;
   }
 }
+
+
+
+
+/* RESTORED FOOTER BRAND LOGO */
+
+.footer .footerBrandLogo {
+  display: block;
+  width: min(330px, 72vw);
+  height: auto;
+  margin: 0 auto 24px;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  filter: none;
+}
+
+@media (max-width: 760px) {
+  .footer .footerBrandLogo {
+    width: min(280px, 78vw);
+  }
+}
