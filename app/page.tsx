@@ -517,9 +517,40 @@ export default function Home() {
             </div>
 
             <div className="studioExperienceBenefits">
-              <div><span className="benefitIcon">◎</span><strong>No crowds.</strong></div>
-              <div><span className="benefitIcon">◴</span><strong>No waiting.</strong></div>
-              <div><span className="benefitIcon">◇</span><strong>No distractions.</strong></div>
+              <div>
+                <span className="benefitIcon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="img">
+                    <circle cx="12" cy="8" r="2.3" />
+                    <circle cx="6.2" cy="9.4" r="1.8" />
+                    <circle cx="17.8" cy="9.4" r="1.8" />
+                    <path d="M8.2 18.5v-2.1c0-2.3 1.7-4.1 3.8-4.1s3.8 1.8 3.8 4.1v2.1" />
+                    <path d="M2.8 18.5v-1.4c0-1.9 1.4-3.5 3.2-3.5 1 0 1.9.5 2.5 1.2" />
+                    <path d="M21.2 18.5v-1.4c0-1.9-1.4-3.5-3.2-3.5-1 0-1.9.5-2.5 1.2" />
+                    <path d="M4.2 4.2l15.6 15.6" />
+                  </svg>
+                </span>
+                <strong>No crowds.</strong>
+              </div>
+              <div>
+                <span className="benefitIcon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="img">
+                    <circle cx="11" cy="11" r="7.2" />
+                    <path d="M11 7v4.3l2.8 1.7" />
+                    <path d="M15.7 18.2l1.8 1.8 3.4-4" />
+                  </svg>
+                </span>
+                <strong>No waiting.</strong>
+              </div>
+              <div>
+                <span className="benefitIcon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" role="img">
+                    <circle cx="12" cy="12" r="7.2" />
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M12 2.7v3M12 18.3v3M2.7 12h3M18.3 12h3" />
+                  </svg>
+                </span>
+                <strong>No distractions.</strong>
+              </div>
             </div>
           </div>
         </div>
