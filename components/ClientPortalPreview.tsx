@@ -1,258 +1,138 @@
-"use client";
+const portalFeatures = [
+  {
+    title: "Personalised programme",
+    subtitle: "A training plan built specifically for your goals.",
+    text: "Follow your personalised workouts with sets, reps, coaching notes and progression built into every session.",
+    image: "/portal-programme.webp",
+    icon: "programme",
+  },
+  {
+    title: "Progress tracking",
+    subtitle: "See your improvements over time.",
+    text: "Monitor strength, recovery, mobility and overall progress so you always know how far you have come.",
+    image: "/portal-progress.webp",
+    icon: "progress",
+  },
+  {
+    title: "Coach support",
+    subtitle: "Stay connected between sessions.",
+    text: "Complete weekly check-ins, message your coach, upload videos for feedback and manage appointments from one place.",
+    image: "/portal-support.webp",
+    icon: "support",
+  },
+];
 
-import { useState } from "react";
+function PortalIcon({ type }: { type: string }) {
+  if (type === "progress") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 18V6M4 18h16M7 15l4-4 3 2 5-6" />
+      </svg>
+    );
+  }
+  if (type === "support") {
+    return (
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M5 6h14a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-8l-4 3v-3H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+        <path d="M8 11h.01M12 11h.01M16 11h.01" />
+      </svg>
+    );
+  }
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8 4h8M9 2h6v4H9zM6 5h12a2 2 0 0 1 2 2v14H4V7a2 2 0 0 1 2-2Z" />
+      <path d="M8 10h8M8 14h8M8 18h5" />
+    </svg>
+  );
+}
 
-const features = [
-  ["Exercise programmes", "Weekly sessions, instructions, sets, reps and coaching notes."],
-  ["Progress tracking", "Strength, movement, habits and milestone tracking."],
-  ["Nutrition guidance", "Practical targets and habits built around the individual."],
-  ["Check-ins", "Recovery, energy, sleep and readiness feedback."],
-  ["File uploads", "Private files, photographs and coaching resources."],
-  ["Video analysis", "Exercise uploads with detailed coaching feedback."],
+const benefits = [
+  "Access anywhere, anytime",
+  "Built for results and accountability",
+  "Direct communication with your coach",
+  "Secure, private and personalised",
 ];
 
 export default function ClientPortalPreview() {
-  const [active, setActive] = useState(0);
-
   return (
-    <section className="section clientPortalPremiumSection" id="client-portal">
-      <div className="clientPortalPremiumHero">
-        <div>
-          <p className="eyebrow">Client portal</p>
-          <h2>Everything you need. One secure place.</h2>
-          <p>
-            A private digital coaching space for active True Gain members. Programmes,
-            progress, nutrition guidance, check-ins, uploads and technique feedback will
-            sit alongside the in-person coaching experience.
-          </p>
-        </div>
-        <div className="clientPortalLaunchCard">
-          <span>Future development</span>
-          <strong>Launching later</strong>
-          <p>Planned as part of the long-term premium membership experience.</p>
-        </div>
-      </div>
-
-      <div className="clientPortalAppShell">
-        <aside className="clientPortalAppNav">
-          <div className="clientPortalBrandMark">
-            <span className="clientPortalLogoCircle">
-              <img
-                src="/true-gain-portal-icon.png"
-                alt=""
-                aria-hidden="true"
-              />
-            </span>
-            <div><strong>True Gain</strong><small>Member portal</small></div>
+    <section className="section portalShowcase" id="client-portal">
+      <div className="portalShowcaseInner">
+        <div className="portalShowcaseHero">
+          <div className="portalShowcaseCopy">
+            <p className="eyebrow">Member portal</p>
+            <h2>Your coaching.<br />One portal.</h2>
+            <span className="portalGoldLine" aria-hidden="true" />
+            <p className="portalLead">
+              Everything you need to train, track progress and stay accountable—all in one place.
+            </p>
+            <p className="portalIntro">
+              Designed to keep you focused, informed and supported every step of the way.
+            </p>
+            <ul className="portalBenefitList">
+              {benefits.map((benefit) => (
+                <li key={benefit}><span>✓</span>{benefit}</li>
+              ))}
+            </ul>
           </div>
-          <div className="clientPortalNavButtons">
-            {features.map(([label], index) => (
-              <button
-                key={label}
-                type="button"
-                className={active === index ? "active" : ""}
-                onClick={() => setActive(index)}
-              >
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <strong>{label}</strong>
-              </button>
+
+          <div className="portalDeviceStage" aria-label="Preview of the True Gain member portal">
+            <div className="portalLaptop">
+              <div className="portalLaptopScreen">
+                <img src="/portal-dashboard-preview.webp" alt="True Gain member portal dashboard preview" />
+              </div>
+              <div className="portalLaptopBase" />
+            </div>
+            <div className="portalPhone">
+              <img src="/portal-dashboard-preview.webp" alt="" aria-hidden="true" />
+            </div>
+          </div>
+        </div>
+
+        <div className="portalFeaturesPanel">
+          <div className="portalFeaturesHeading">
+            <p className="eyebrow">Built for your results</p>
+            <h3>Everything you need. All in one place.</h3>
+            <p>Powerful features to help you train smarter and stay on track.</p>
+          </div>
+
+          <div className="portalFeatureCards">
+            {portalFeatures.map((feature) => (
+              <article className="portalFeatureCard" key={feature.title}>
+                <div className={`portalFeatureImage portalFeatureImage--${feature.icon}`}>
+                  <img src={feature.image} alt={`${feature.title} preview`} />
+                </div>
+                <span className="portalFeatureIcon"><PortalIcon type={feature.icon} /></span>
+                <h4>{feature.title}</h4>
+                <p className="portalFeatureSubtitle">{feature.subtitle}</p>
+                <span className="portalFeatureDivider" aria-hidden="true" />
+                <p>{feature.text}</p>
+              </article>
             ))}
           </div>
-          <div className="clientPortalMemberCard">
-            <span>Active membership</span>
-            <strong>Recover</strong>
-            <small>Private coaching access</small>
-          </div>
-        </aside>
 
-        <div className="clientPortalDashboard">
-          <div className="clientPortalDashboardTopbar">
-            <div><span>Welcome back</span><strong>Member dashboard</strong></div>
-            <a className="clientPortalLoginButton" href="/member-login">
-              Member Login
-            </a>
-            <div className="clientPortalAvatar" aria-label="True Gain">
-              <img
-                src="/true-gain-portal-icon.png"
-                alt=""
-                aria-hidden="true"
-              />
-            </div>
-          </div>
-
-          <div className="clientPortalDashboardBody">
-            <div className="clientPortalPrimaryPanel">
-              <p className="planStrap">Member feature</p>
-              <h3>{features[active][0]}</h3>
-              <p>{features[active][1]}</p>
-
-              <div className="clientPortalStats">
-                <article><strong>4</strong><span>Sessions</span></article>
-                <article><strong>82%</strong><span>Complete</span></article>
-                <article><strong>2</strong><span>Coach updates</span></article>
+          <div className="portalAccessPanel">
+            <div className="portalAccessVisual">
+              <div className="portalAccessLaptop">
+                <img src="/portal-dashboard-preview.webp" alt="Member portal shown on a laptop" />
               </div>
-
-              <div className="clientPortalAnalytics">
-                <div className="clientPortalChartCard">
-                  <div className="clientPortalChartHeading">
-                    <div>
-                      <span>Training progress</span>
-                      <strong>9-week trend</strong>
-                    </div>
-                    <span className="clientPortalTrendBadge">+18%</span>
-                  </div>
-
-                  <div className="clientPortalCombinedChart" aria-label="Animated nine-week training progress chart">
-                    <div className="clientPortalChartGrid" aria-hidden="true" />
-
-                    <div className="clientPortalBars" aria-hidden="true">
-                      {[18,34,29,55,46,72,61,82,74].map((height, i) => (
-                        <span
-                          key={i}
-                          style={{
-                            height: `${height}%`,
-                            animationDelay: `${i * 110}ms`,
-                          }}
-                        />
-                      ))}
-                    </div>
-
-                    <svg
-                      className="clientPortalLineChart"
-                      viewBox="0 0 900 220"
-                      preserveAspectRatio="none"
-                      aria-hidden="true"
-                    >
-                      <defs>
-                        <linearGradient id="tgLineFill" x1="0" y1="0" x2="0" y2="1">
-                          <stop offset="0%" stopColor="rgba(229,189,114,.2)" />
-                          <stop offset="100%" stopColor="rgba(229,189,114,0)" />
-                        </linearGradient>
-                        <filter id="tgLineGlow">
-                          <feGaussianBlur stdDeviation="3" result="blur" />
-                          <feMerge>
-                            <feMergeNode in="blur" />
-                            <feMergeNode in="SourceGraphic" />
-                          </feMerge>
-                        </filter>
-                      </defs>
-
-                      <path className="clientPortalLineArea">
-                        <animate
-                          attributeName="d"
-                          dur="6.8s"
-                          repeatCount="indefinite"
-                          values="
-                            M20 210 L125 210 L230 210 L335 210 L440 210 L545 210 L650 210 L755 210 L880 210 L880 220 L20 220 Z;
-                            M20 178 L125 148 L230 160 L335 105 L440 125 L545 72 L650 96 L755 48 L880 70 L880 220 L20 220 Z;
-                            M20 178 L125 148 L230 160 L335 105 L440 125 L545 72 L650 96 L755 48 L880 70 L880 220 L20 220 Z
-                          "
-                          keyTimes="0;0.32;1"
-                          calcMode="spline"
-                          keySplines=".2 .8 .2 1;0 0 1 1"
-                        />
-                      </path>
-
-                      <path className="clientPortalLinePath" pathLength="1">
-                        <animate
-                          attributeName="d"
-                          dur="6.8s"
-                          repeatCount="indefinite"
-                          values="
-                            M20 210 L125 210 L230 210 L335 210 L440 210 L545 210 L650 210 L755 210 L880 210;
-                            M20 178 L125 148 L230 160 L335 105 L440 125 L545 72 L650 96 L755 48 L880 70;
-                            M20 178 L125 148 L230 160 L335 105 L440 125 L545 72 L650 96 L755 48 L880 70
-                          "
-                          keyTimes="0;0.32;1"
-                          calcMode="spline"
-                          keySplines=".2 .8 .2 1;0 0 1 1"
-                        />
-                      </path>
-
-                      {[
-                        ["20","178"],["125","148"],["230","160"],["335","105"],["440","125"],
-                        ["545","72"],["650","96"],["755","48"],["880","70"]
-                      ].map(([cx, cy], i) => (
-                        <circle key={i} className="clientPortalLinePoint" cx={cx} cy="210" r="5">
-                          <animate
-                            attributeName="cy"
-                            dur="6.8s"
-                            repeatCount="indefinite"
-                            values={`210;${cy};${cy}`}
-                            keyTimes="0;0.32;1"
-                            calcMode="spline"
-                            keySplines=".2 .8 .2 1;0 0 1 1"
-                            begin={`${i * 0.08}s`}
-                          />
-                          <animate
-                            attributeName="opacity"
-                            dur="6.8s"
-                            repeatCount="indefinite"
-                            values="0;1;1"
-                            keyTimes="0;0.32;1"
-                            begin={`${i * 0.08}s`}
-                          />
-                        </circle>
-                      ))}
-                    </svg>
-
-                    <div className="clientPortalChartLabels" aria-hidden="true">
-                      <span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span>
-                      <span>W6</span><span>W7</span><span>W8</span><span>W9</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="clientPortalDonutCard">
-                  <div>
-                    <span>Weekly completion</span>
-                    <strong>Consistency</strong>
-                  </div>
-
-                  <div className="clientPortalDonut" aria-label="82 percent weekly completion">
-                    <svg viewBox="0 0 120 120" aria-hidden="true">
-                      <circle className="clientPortalDonutTrack" cx="60" cy="60" r="48" />
-                      <circle className="clientPortalDonutValue" cx="60" cy="60" r="48" />
-                    </svg>
-                    <div>
-                      <strong>82%</strong>
-                      <span>Complete</span>
-                    </div>
-                  </div>
-
-                  <div className="clientPortalDonutLegend">
-                    <span><i /> Completed sessions</span>
-                    <span><i /> Remaining work</span>
-                  </div>
-                </div>
+              <div className="portalAccessPhone">
+                <img src="/portal-dashboard-preview.webp" alt="" aria-hidden="true" />
               </div>
             </div>
-
-            <div className="clientPortalSidePanels">
-              <article><span>Next action</span><strong>Complete weekly check-in</strong><p>Recovery, sleep, energy and readiness.</p></article>
-              <article><span>Coach feedback</span><strong>2 new updates</strong><p>Programme notes and video feedback.</p></article>
-              <article><span>Secure uploads</span><strong>Files and exercise videos</strong><p>Protected behind member login.</p></article>
+            <div className="portalAccessCopy">
+              <p className="eyebrow">All in one place</p>
+              <h3>Access your portal<br />anytime, anywhere.</h3>
+              <div className="portalAccessBenefits">
+                <div><span>▣</span><p>Mobile<br />friendly</p></div>
+                <div><span>⌑</span><p>Secure<br />& private</p></div>
+                <div><span>⇧</span><p>Upload & track<br />your progress</p></div>
+                <div><span>□</span><p>Manage sessions<br />& appointments</p></div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div className="clientPortalFeatureGrid">
-        {features.map(([title, text], index) => (
-          <article key={title}>
-            <span>{String(index + 1).padStart(2, "0")}</span>
-            <h3>{title}</h3>
-            <p>{text}</p>
-          </article>
-        ))}
-      </div>
-
-      <div className="clientPortalPremiumFooter">
-        <div>
-          <p className="eyebrow">Included with memberships</p>
-          <h3>Coaching that continues between sessions.</h3>
+          <p className="portalIncludedLine">Included with every Complete Coaching membership.</p>
         </div>
-        <span>Secure member login planned for a later development phase.</span>
       </div>
     </section>
   );
