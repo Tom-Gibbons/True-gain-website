@@ -9606,7 +9606,9 @@ header .desktopCta {
 .portalAccessCopy h3{margin:8px 0 28px;font-family:var(--tg-font-display);font-size:clamp(2.2rem,4vw,4.5rem);line-height:.98;letter-spacing:-.04em;text-transform:uppercase}
 .portalAccessBenefits{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .portalAccessBenefits div{text-align:center;color:#d7d1c9}
-.portalAccessBenefits span{height:42px;display:grid;place-items:center;color:var(--tg-gold-light);font-size:1.9rem}
+.portalAccessBenefits span{height:46px;display:grid;place-items:center;color:var(--tg-gold-light)}
+.portalAccessBenefits span svg{width:32px;height:32px;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px rgba(214,166,81,.12));transition:transform .25s ease,filter .25s ease}
+.portalAccessBenefits div:hover span svg{transform:translateY(-2px);filter:drop-shadow(0 0 10px rgba(214,166,81,.28))}
 .portalAccessBenefits p{margin:8px 0 0;font-size:.83rem;line-height:1.45}
 .portalIncludedLine{margin:28px 0 0;text-align:center;color:var(--tg-gold-light);font-size:1rem}
 @media(max-width:1180px){
