@@ -91,6 +91,12 @@ function AccessIcon({ type }: { type: "phone" | "lock" | "graph" | "calendar" })
   );
 }
 
+const benefits = [
+  "Access anywhere, anytime",
+  "Built for results and accountability",
+  "Direct communication with your coach",
+  "Secure, private and personalised",
+];
 
 export default function ClientPortalPreview() {
   return (
@@ -104,6 +110,14 @@ export default function ClientPortalPreview() {
             <p className="portalLead">
               Everything you need to train, track progress and stay accountable—all in one place.
             </p>
+            <p className="portalIntro">
+              Designed to keep you focused, informed and supported every step of the way.
+            </p>
+            <ul className="portalBenefitList">
+              {benefits.map((benefit) => (
+                <li key={benefit}><span>✓</span>{benefit}</li>
+              ))}
+            </ul>
           </div>
 
           <div className="portalDeviceStage" aria-label="Preview of the True Gain member portal">
