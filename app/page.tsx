@@ -217,7 +217,8 @@ export default function Home() {
             <p className="eyebrow">Services</p>
             <h2>Three services. One personal standard.</h2>
             <p>
-              Personal training, sports massage and complete coaching built around your goals.
+              Evidence-led coaching, recovery and accountability built around your
+              goals, lifestyle and long-term physical capability.
             </p>
           </div>
           <div className="servicesHeroStat">
@@ -232,7 +233,9 @@ export default function Home() {
             <p className="serviceNumber">01 / Train</p>
             <h3>Build strength with purpose.</h3>
             <p>
-              Structured one-to-one training built around your ability, goals and training history.
+              Personal training designed around your current ability, training history
+              and long-term goals. Every session is structured, progressive and focused
+              on helping you become stronger and more confident.
             </p>
             <ul>
               <li>Individual assessment</li>
@@ -250,7 +253,9 @@ export default function Home() {
             <p className="serviceNumber">02 / Recover</p>
             <h3>Move better. Recover properly.</h3>
             <p>
-              Targeted sports massage and recovery support to help you move well and train consistently.
+              Focused sports massage and recovery support to reduce tension, improve
+              movement and help you train consistently. Treatment is practical,
+              professional and tailored to your needs.
             </p>
             <ul>
               <li>30- or 60-minute treatment</li>
@@ -268,7 +273,9 @@ export default function Home() {
             <p className="serviceNumber">03 / Perform</p>
             <h3>Complete coaching for long-term results.</h3>
             <p>
-              Training, recovery and ongoing coaching combined into one complete service.
+              Training, recovery, programming and accountability working together.
+              This is the most complete True Gain experience for clients who want
+              consistent support and meaningful long-term progress.
             </p>
             <ul>
               <li>Private coached sessions</li>
@@ -471,7 +478,8 @@ export default function Home() {
             <p className="eyebrow">The studio experience</p>
             <h2>Private by design. Built for progress.</h2>
             <p>
-              A private, appointment-only coaching studio in Bushmead, Luton.
+              A purpose-built, appointment-only coaching studio in Bushmead, Luton,
+              designed for focused one-to-one training, recovery and complete personal attention.
             </p>
           </div>
 
@@ -602,12 +610,15 @@ export default function Home() {
           <p className="eyebrow">Meet your coach</p>
           <h2>Expert coaching. Individual attention.</h2>
           <p className="coachLead">
-            Qualified, evidence-led coaching with the attention and structure of a genuinely personal service.
+            True Gain is built around one clear standard: every client receives thoughtful,
+            evidence-led coaching designed around their body, goals and lifestyle.
           </p>
 
           <div className="coachStory">
             <p>
-              My role is to help you train well, understand your progress and build strength that supports life outside the studio.
+              My role is not simply to count repetitions. It is to help you understand how
+              to train well, progress with confidence and build strength that supports your life
+              outside the studio.
             </p>
           </div>
 
