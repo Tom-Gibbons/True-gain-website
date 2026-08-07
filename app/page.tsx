@@ -287,6 +287,33 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="servicesComparison">
+          <article className="serviceComparisonPremium">
+            <p className="planStrap">Coach</p>
+            <h3>Personal training</h3>
+            <p>Expert one-to-one coaching for strength, movement and confidence.</p>
+            <span>From £55/session</span>
+          </article>
+          <article className="serviceComparisonPremium">
+            <p className="planStrap">Treat</p>
+            <h3>Sports massage</h3>
+            <p>Focused treatment and recovery support to help you move and feel better.</p>
+            <span>From £35/session</span>
+          </article>
+          <article className="featured serviceComparisonPremium">
+            <p className="planStrap">Transform</p>
+            <h3>Complete coaching</h3>
+            <p>Training, recovery and accountability combined into one premium service.</p>
+            <span>From £279/month</span>
+          </article>
+        </div>
+
+        <div className="servicesWhy">
+          <div><strong>Evidence-led</strong><span>Sound coaching principles and individual progression.</span></div>
+          <div><strong>Private studio</strong><span>No crowds, waiting or distractions.</span></div>
+          <div><strong>Long-term focus</strong><span>Strength and confidence that lasts beyond a short programme.</span></div>
+        </div>
+
         <div className="servicesCta">
           <div>
             <p className="eyebrow">Not sure where to start?</p>
@@ -543,6 +570,35 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="studioFeatureGrid">
+          <article>
+            <span>01</span>
+            <h3>Private coaching space</h3>
+            <p>
+              Every appointment is focused entirely on you, without the interruption,
+              noise or pressure of a busy commercial gym.
+            </p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Purposeful equipment</h3>
+            <p>
+              Carefully selected strength, conditioning and mobility equipment supports
+              effective training without unnecessary clutter.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Integrated recovery</h3>
+            <p>
+              Training and recovery can work together in one setting, with dedicated space
+              for sports massage, mobility and movement support.
+            </p>
+          </article>
+        </div>
+
         <div className="studioEquipmentPanel">
           <div className="studioEquipmentIntro">
             <p className="eyebrow">Equipment and training zones</p>
@@ -571,6 +627,44 @@ export default function Home() {
               <span>Assessments, coaching reviews and individual programme planning.</span>
             </div>
           </div>
+        </div>
+
+        <div className="studioJourney">
+          <div>
+            <p className="eyebrow">Your studio experience</p>
+            <h3>Calm, structured and entirely personal.</h3>
+          </div>
+
+          <ol>
+            <li>
+              <span>01</span>
+              <div>
+                <h4>Arrive</h4>
+                <p>Enter a private environment prepared specifically for your session.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h4>Train</h4>
+                <p>Follow a clear session plan with continuous coaching and technique support.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h4>Review</h4>
+                <p>Track progress, discuss feedback and adjust the next stage of your programme.</p>
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <h4>Recover</h4>
+                <p>Use mobility or recovery support where appropriate to stay consistent.</p>
+              </div>
+            </li>
+          </ol>
         </div>
 
         <div className="studioLocationFeature">
@@ -620,6 +714,36 @@ export default function Home() {
               to train well, progress with confidence and build strength that supports your life
               outside the studio.
             </p>
+            <p>
+              Sessions are structured, personal and focused on long-term results, without the
+              intimidation, noise or generic approach often found on a commercial gym floor.
+            </p>
+          </div>
+
+          <div className="coachPrinciples">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Evidence-led</h3>
+                <p>Coaching decisions are guided by sound training principles and your individual response.</p>
+              </div>
+            </article>
+
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Personal</h3>
+                <p>Your programme, progression and support are built around your needs, not a template.</p>
+              </div>
+            </article>
+
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Long-term</h3>
+                <p>The aim is lasting strength, confidence and physical capability—not short-term punishment.</p>
+              </div>
+            </article>
           </div>
 
           <div className="coachCredentials">
