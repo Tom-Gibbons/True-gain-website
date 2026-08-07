@@ -10381,3 +10381,139 @@ body {
     padding: 30px 22px !important;
   }
 }
+
+
+
+/* =========================================================
+   MEET THE COACH — SEAMLESS PHOTO / BACKGROUND BLEND
+   Keeps the approved Coach layout and portrait framing intact.
+   Only softens the visible right/lower image boundaries so the
+   portrait phases naturally into the surrounding black section.
+   ========================================================= */
+
+#coach .coachVisual {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #050505;
+}
+
+/* Keep the approved portrait size / crop exactly as before. */
+#coach .coachImage {
+  background-color: #050505 !important;
+  background-position: 47% 15%, 47% 15% !important;
+  background-size: 100% 100%, auto 86% !important;
+}
+
+/*
+  Wider feathered fade on the right-hand side removes the hard line
+  beside the arm without darkening the central portrait.
+*/
+#coach .coachImage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,5,5,0) 0%,
+      rgba(5,5,5,0) 66%,
+      rgba(5,5,5,.08) 74%,
+      rgba(5,5,5,.28) 83%,
+      rgba(5,5,5,.62) 92%,
+      #050505 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(5,5,5,0) 0%,
+      rgba(5,5,5,0) 79%,
+      rgba(5,5,5,.10) 87%,
+      rgba(5,5,5,.42) 95%,
+      #050505 100%
+    ) !important;
+}
+
+/* Very soft extra feather around the join between visual and copy. */
+#coach .coachVisual::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: 0;
+  width: clamp(90px, 11vw, 185px);
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(5,5,5,0) 0%,
+    rgba(5,5,5,.12) 35%,
+    rgba(5,5,5,.48) 70%,
+    #050505 100%
+  );
+}
+
+/* Preserve the warm lift and keep the subject front-and-centre. */
+#coach .coachVisual::after {
+  z-index: 1;
+  background:
+    radial-gradient(
+      circle at 43% 34%,
+      rgba(229,189,114,.045) 0%,
+      rgba(229,189,114,.012) 34%,
+      transparent 62%
+    ) !important;
+}
+
+/* Keep Coach labels/cards above the fade. */
+#coach .coachImageLabel,
+#coach .coachQualificationCard {
+  position: relative;
+  z-index: 5;
+}
+
+@media (max-width: 1100px) {
+  #coach .coachImage {
+    background-position: 46% 14%, 46% 14% !important;
+    background-size: 100% 100%, auto 84% !important;
+  }
+
+  #coach .coachVisual::before {
+    width: clamp(70px, 9vw, 125px);
+  }
+}
+
+@media (max-width: 760px) {
+  /* On mobile the columns stack, so fade predominantly into the bottom. */
+  #coach .coachImage {
+    background-position: 45% 12%, 45% 12% !important;
+    background-size: 100% 100%, auto 80% !important;
+  }
+
+  #coach .coachVisual::before {
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    width: auto;
+    height: 110px;
+    background: linear-gradient(
+      180deg,
+      rgba(5,5,5,0) 0%,
+      rgba(5,5,5,.20) 42%,
+      #050505 100%
+    );
+  }
+
+  #coach .coachImage::after {
+    background:
+      linear-gradient(
+        180deg,
+        transparent 76%,
+        rgba(5,5,5,.18) 86%,
+        rgba(5,5,5,.64) 95%,
+        #050505 100%
+      ) !important;
+  }
+}
