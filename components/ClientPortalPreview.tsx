@@ -1,22 +1,22 @@
 const portalFeatures = [
   {
     title: "Personalised programme",
-    subtitle: "A training plan built specifically for your goals.",
-    text: "Follow your personalised workouts with sets, reps, coaching notes and progression built into every session.",
+    subtitle: "",
+    text: "Your training, progression and coaching notes in one place.",
     image: "/portal-programme.webp",
     icon: "programme",
   },
   {
     title: "Progress tracking",
-    subtitle: "See your improvements over time.",
-    text: "Monitor strength, recovery, mobility and overall progress so you always know how far you have come.",
+    subtitle: "",
+    text: "Track strength, recovery, mobility and long-term progress.",
     image: "/portal-progress.webp",
     icon: "progress",
   },
   {
     title: "Coach support",
-    subtitle: "Stay connected between sessions.",
-    text: "Complete weekly check-ins, message your coach, upload videos for feedback and manage appointments from one place.",
+    subtitle: "",
+    text: "Check-ins, feedback and direct support between sessions.",
     image: "/portal-support.webp",
     icon: "support",
   },
@@ -91,12 +91,6 @@ function AccessIcon({ type }: { type: "phone" | "lock" | "graph" | "calendar" })
   );
 }
 
-const benefits = [
-  "Access anywhere, anytime",
-  "Built for results and accountability",
-  "Direct communication with your coach",
-  "Secure, private and personalised",
-];
 
 export default function ClientPortalPreview() {
   return (
@@ -110,14 +104,6 @@ export default function ClientPortalPreview() {
             <p className="portalLead">
               Everything you need to train, track progress and stay accountable—all in one place.
             </p>
-            <p className="portalIntro">
-              Designed to keep you focused, informed and supported every step of the way.
-            </p>
-            <ul className="portalBenefitList">
-              {benefits.map((benefit) => (
-                <li key={benefit}><span>✓</span>{benefit}</li>
-              ))}
-            </ul>
           </div>
 
           <div className="portalDeviceStage" aria-label="Preview of the True Gain member portal">
@@ -148,7 +134,7 @@ export default function ClientPortalPreview() {
                 </div>
                 <span className="portalFeatureIcon"><PortalIcon type={feature.icon} /></span>
                 <h4>{feature.title}</h4>
-                <p className="portalFeatureSubtitle">{feature.subtitle}</p>
+                {feature.subtitle && <p className="portalFeatureSubtitle">{feature.subtitle}</p>}
                 <span className="portalFeatureDivider" aria-hidden="true" />
                 <p>{feature.text}</p>
               </article>
