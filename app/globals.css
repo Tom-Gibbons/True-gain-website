@@ -10523,3 +10523,104 @@ body {
     flex-wrap: wrap !important;
   }
 }
+
+
+
+/* =========================================================
+   MEET THE COACH — LARGE APPROVED PHOTO FRAMING
+   Restores the larger/closer portrait presentation while
+   keeping the BSc qualification card bottom-right.
+   ========================================================= */
+
+#coach .coachSection,
+#coach.coachSection {
+  min-height: 900px !important;
+}
+
+#coach .coachVisual {
+  position: relative !important;
+  min-height: 900px !important;
+  overflow: hidden !important;
+  background: #050505 !important;
+}
+
+/* Restore the closer, full-panel portrait look from the preferred version. */
+#coach .coachImage {
+  position: absolute !important;
+  inset: 0 !important;
+  min-height: 900px !important;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5,5,5,.00) 0%,
+      rgba(5,5,5,.02) 62%,
+      rgba(5,5,5,.15) 100%
+    ),
+    url("/tom-gibbons-coach.webp") center 12% / cover no-repeat !important;
+}
+
+/* Keep the photograph clean while gently blending into the dark site. */
+#coach .coachImage::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 76%,
+      rgba(7,7,7,.18) 91%,
+      rgba(7,7,7,.44) 100%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 82%,
+      rgba(5,5,5,.14) 92%,
+      rgba(5,5,5,.30) 100%
+    ) !important;
+}
+
+/* BSc qualification card stays in the bottom-right corner of the photo. */
+#coach .coachQualificationCard {
+  position: absolute !important;
+  top: auto !important;
+  left: auto !important;
+  right: 24px !important;
+  bottom: 24px !important;
+  margin: 0 !important;
+  z-index: 6 !important;
+  width: min(260px, calc(100% - 48px)) !important;
+}
+
+/* Keep the Founder & Coach label readable above the image treatment. */
+#coach .coachImageLabel {
+  z-index: 5 !important;
+}
+
+@media (max-width: 1100px) {
+  #coach .coachVisual,
+  #coach .coachImage {
+    min-height: 780px !important;
+  }
+
+  #coach .coachImage {
+    background-position: center 10% !important;
+  }
+}
+
+@media (max-width: 760px) {
+  #coach .coachVisual,
+  #coach .coachImage {
+    min-height: 650px !important;
+  }
+
+  #coach .coachImage {
+    background-position: center 10% !important;
+  }
+
+  #coach .coachQualificationCard {
+    right: 18px !important;
+    bottom: 18px !important;
+    width: min(235px, calc(100% - 36px)) !important;
+  }
+}
