@@ -9860,3 +9860,21 @@ header .desktopCta {
     transform: translateX(-50%) !important;
   }
 }
+
+
+/* BSc card position refinement — move right to reveal FOUNDER & COACH */
+@media (min-width: 1051px) {
+  #coach .coachQualificationCard,
+  #coach .coachQualificationCard.animatedQualificationCard {
+    left: 64% !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+@media (max-width: 1050px) and (min-width: 701px) {
+  #coach .coachQualificationCard,
+  #coach .coachQualificationCard.animatedQualificationCard {
+    left: 62% !important;
+    transform: translateX(-50%) !important;
+  }
+}
