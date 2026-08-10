@@ -526,6 +526,7 @@ export default function Home() {
                     <path d="M10.5 25v-3.2c0-3.6 2.4-6.2 5.5-6.2s5.5 2.6 5.5 6.2V25" />
                     <path d="M2.8 24v-2.4c0-2.8 1.9-4.8 4.7-4.8 1.4 0 2.7.5 3.6 1.5" />
                     <path d="M29.2 24v-2.4c0-2.8-1.9-4.8-4.7-4.8-1.4 0-2.7.5-3.6 1.5" />
+                    <path d="M5 27 27 5" strokeWidth="2.2" />
                   </svg>
                 </span>
                 <strong>No crowds.</strong>
@@ -537,6 +538,7 @@ export default function Home() {
                     <circle cx="16" cy="16" r="10" />
                     <path d="M16 10v6h5" />
                     <path d="M16 6V4" />
+                    <path d="M6.5 25.5 25.5 6.5" strokeWidth="2.2" />
                   </svg>
                 </span>
                 <strong>No waiting.</strong>
