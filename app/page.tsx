@@ -517,9 +517,40 @@ export default function Home() {
             </div>
 
             <div className="studioExperienceBenefits">
-              <div><span className="benefitIcon">◎</span><strong>No crowds.</strong></div>
-              <div><span className="benefitIcon">◴</span><strong>No waiting.</strong></div>
-              <div><span className="benefitIcon">◇</span><strong>No distractions.</strong></div>
+              <div>
+                <span className="benefitIcon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" width="25" height="25" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="16" cy="9" r="3.2" />
+                    <circle cx="7.5" cy="12" r="2.6" />
+                    <circle cx="24.5" cy="12" r="2.6" />
+                    <path d="M10.5 25v-3.2c0-3.6 2.4-6.2 5.5-6.2s5.5 2.6 5.5 6.2V25" />
+                    <path d="M2.8 24v-2.4c0-2.8 1.9-4.8 4.7-4.8 1.4 0 2.7.5 3.6 1.5" />
+                    <path d="M29.2 24v-2.4c0-2.8-1.9-4.8-4.7-4.8-1.4 0-2.7.5-3.6 1.5" />
+                  </svg>
+                </span>
+                <strong>No crowds.</strong>
+              </div>
+
+              <div>
+                <span className="benefitIcon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" width="25" height="25" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="16" cy="16" r="10" />
+                    <path d="M16 10v6h5" />
+                    <path d="M16 6V4" />
+                  </svg>
+                </span>
+                <strong>No waiting.</strong>
+              </div>
+
+              <div>
+                <span className="benefitIcon" aria-hidden="true">
+                  <svg viewBox="0 0 32 32" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M16 5 27 16 16 27 5 16 16 5Z" />
+                    <path d="M12 16h8" />
+                  </svg>
+                </span>
+                <strong>No distractions.</strong>
+              </div>
             </div>
           </div>
         </div>
