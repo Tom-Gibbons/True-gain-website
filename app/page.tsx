@@ -589,19 +589,23 @@ export default function Home() {
         </div>
       </section>
       <section className="section coachSection" id="coach">
-        <div className="coachVisual">
-          <div className="coachImage">
-            <span className="coachImageLabel">Founder & Coach</span>
+        <div className="coachMediaColumn">
+          <div className="coachVisual">
+            <div className="coachImage">
+              <span className="coachImageLabel">Founder & Coach</span>
+            </div>
           </div>
 
-          <div className="coachQualificationCard animatedQualificationCard">
-            <span className="qualificationOrbit" aria-hidden="true" />
-            <span className="qualificationPulse" aria-hidden="true" />
-            <div className="qualificationContent">
-              <p className="planStrap">Qualified coaching</p>
-              <strong>BSc</strong>
-              <span>Strength & Conditioning</span>
-              <small>Level 7 Qualified</small>
+          <div className="coachQualificationSlot">
+            <div className="coachQualificationCard animatedQualificationCard">
+              <span className="qualificationOrbit" aria-hidden="true" />
+              <span className="qualificationPulse" aria-hidden="true" />
+              <div className="qualificationContent">
+                <p className="planStrap">Qualified coaching</p>
+                <strong>BSc</strong>
+                <span>Strength & Conditioning</span>
+                <small>Level 7 Qualified</small>
+              </div>
             </div>
           </div>
         </div>

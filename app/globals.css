@@ -10517,134 +10517,427 @@ body {
 
 
 /* =========================================================
-   FINAL MEET THE COACH FRAMING
-   Matches the supplied reference:
-   - image panel ends before the copy column
-   - right arm is deliberately cut by the centre split
-   - portrait stays large
-   - BSc card sits at the bottom-right of the image panel
+   FINAL COACH STRUCTURE — BSc CARD OUTSIDE THE PHOTO
+   The portrait itself is not repositioned or resized here.
+   The qualification card is now a sibling beneath the photo,
+   so it physically cannot cover the coach.
    ========================================================= */
 
 #coach.coachSection {
-  grid-template-columns: 46% 54% !important;
+  align-items: stretch !important;
+  overflow: visible !important;
+}
+
+#coach .coachMediaColumn {
+  position: relative !important;
+  min-width: 0 !important;
+  display: grid !important;
+  grid-template-rows: 820px auto !important;
+  align-content: start !important;
+  overflow: visible !important;
+}
+
+/* Photo retains the existing approved crop/background rules. */
+#coach .coachMediaColumn > .coachVisual {
+  position: relative !important;
   min-height: 820px !important;
+  height: 820px !important;
   overflow: hidden !important;
 }
 
-#coach .coachVisual {
+/* Dedicated row below the photo for the qualification animation. */
+#coach .coachQualificationSlot {
   position: relative !important;
+  min-height: 210px !important;
+  padding: 22px 24px 0 34px !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
+  background: #050505 !important;
+  overflow: visible !important;
+}
+
+/* Reset all historic absolute positioning rules. */
+#coach .coachQualificationSlot .coachQualificationCard,
+#coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
+  position: relative !important;
+  inset: auto !important;
+  top: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  width: 260px !important;
+  max-width: 260px !important;
+  margin: 0 !important;
+  z-index: 10 !important;
+  transform-origin: center !important;
+}
+
+/* Keep the existing BSc animation, but do not let it alter placement. */
+#coach .coachQualificationSlot .animatedQualificationCard {
+  animation:
+    tg-qualification-float 4.2s ease-in-out infinite,
+    tg-qualification-emphasis 6.5s ease-in-out infinite !important;
+}
+
+/* Founder label remains attached to the photograph. */
+#coach .coachImageLabel {
+  left: 34px !important;
+  bottom: 30px !important;
+}
+
+/* Right-hand content keeps its existing position. */
+#coach .coachCopy {
+  align-self: stretch !important;
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  #coach .coachMediaColumn {
+    grid-template-rows: 700px auto !important;
+  }
+
+  #coach .coachMediaColumn > .coachVisual {
+    min-height: 700px !important;
+    height: 700px !important;
+  }
+
+  #coach .coachQualificationSlot {
+    min-height: 195px !important;
+    padding: 20px 20px 0 24px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  #coach .coachMediaColumn {
+    grid-template-rows: 640px auto !important;
+  }
+
+  #coach .coachMediaColumn > .coachVisual {
+    min-height: 640px !important;
+    height: 640px !important;
+  }
+
+  #coach .coachQualificationSlot {
+    min-height: 185px !important;
+    padding: 18px !important;
+    justify-content: center !important;
+  }
+
+  #coach .coachQualificationSlot .coachQualificationCard,
+  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
+    width: min(235px, 100%) !important;
+    max-width: 235px !important;
+  }
+}
+
+
+
+/* =========================================================
+   MEET THE COACH — MATCH SUPPLIED REFERENCE
+   Keep the approved portrait crop. Place the BSc card low at
+   the bottom-right of the left panel, beneath the visible arms/body.
+   ========================================================= */
+
+@media (min-width: 761px) {
+  #coach.coachSection {
+    grid-template-columns: 46% 54% !important;
+    align-items: start !important;
+    overflow: visible !important;
+  }
+
+  #coach .coachMediaColumn {
+    position: relative !important;
+    display: grid !important;
+    grid-template-rows: 820px 180px !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+    background: #050505 !important;
+  }
+
+  /* Keep the exact existing photo crop/framing. */
+  #coach .coachMediaColumn > .coachVisual {
+    position: relative !important;
+    height: 820px !important;
+    min-height: 820px !important;
+    overflow: hidden !important;
+  }
+
+  #coach .coachMediaColumn > .coachVisual .coachImage {
+    position: absolute !important;
+    inset: 0 !important;
+    height: 100% !important;
+    min-height: 100% !important;
+  }
+
+  /* Dedicated bottom strip under the photo. */
+  #coach .coachQualificationSlot {
+    position: relative !important;
+    height: 180px !important;
+    min-height: 180px !important;
+    padding: 0 24px 0 34px !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+    background: #050505 !important;
+    overflow: visible !important;
+  }
+
+  /* Card sits in the bottom-right, like the reference, without covering the body. */
+  #coach .coachQualificationSlot .coachQualificationCard,
+  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
+    position: relative !important;
+    inset: auto !important;
+    width: 260px !important;
+    max-width: 260px !important;
+    margin: -70px 0 0 0 !important;
+    z-index: 20 !important;
+  }
+
+  /* Keep Founder & Coach low-left on the panel. */
+  #coach .coachImageLabel {
+    position: absolute !important;
+    left: 34px !important;
+    bottom: 28px !important;
+    z-index: 10 !important;
+  }
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  #coach .coachMediaColumn {
+    grid-template-rows: 720px 170px !important;
+  }
+
+  #coach .coachMediaColumn > .coachVisual {
+    height: 720px !important;
+    min-height: 720px !important;
+  }
+
+  #coach .coachQualificationSlot {
+    height: 170px !important;
+    min-height: 170px !important;
+    padding-right: 20px !important;
+  }
+
+  #coach .coachQualificationSlot .coachQualificationCard,
+  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
+    margin-top: -64px !important;
+  }
+}
+
+@media (max-width: 760px) {
+  #coach .coachMediaColumn {
+    grid-template-rows: 640px auto !important;
+  }
+
+  #coach .coachMediaColumn > .coachVisual {
+    height: 640px !important;
+    min-height: 640px !important;
+  }
+
+  #coach .coachQualificationSlot {
+    min-height: 190px !important;
+    padding: 18px !important;
+    justify-content: center !important;
+  }
+
+  #coach .coachQualificationSlot .coachQualificationCard,
+  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
+    margin: 0 !important;
+    width: min(235px, 100%) !important;
+    max-width: 235px !important;
+  }
+}
+
+
+
+/* =========================================================
+   MEET THE COACH — EDITORIAL / CENTRED COMPOSITION
+   Matches the latest reference:
+   - whole Coach section is narrower and centred
+   - generous black space around the composition
+   - tall portrait on the left
+   - BSc animation sits below/right of the portrait, not over the body
+   - right-hand content remains aligned alongside at a reduced scale
+   ========================================================= */
+
+#coach.coachSection {
+  width: min(1180px, calc(100% - 96px)) !important;
+  margin: 0 auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr) !important;
+  column-gap: 64px !important;
+  align-items: start !important;
+  overflow: visible !important;
+}
+
+/* Left composition */
+#coach .coachMediaColumn {
+  position: relative !important;
+  display: grid !important;
+  grid-template-rows: 760px 150px !important;
   min-width: 0 !important;
-  min-height: 820px !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+/* Tall portrait card */
+#coach .coachMediaColumn > .coachVisual {
+  position: relative !important;
+  height: 760px !important;
+  min-height: 760px !important;
   overflow: hidden !important;
   background: #050505 !important;
 }
 
-/*
-  Make the portrait slightly wider than the image column.
-  The overflow:hidden on .coachVisual creates the hard vertical
-  crop through the right arm, matching the reference screenshot.
-*/
-#coach .coachImage {
-  position: absolute !important;
-  top: 0 !important;
-  bottom: 0 !important;
-  left: 0 !important;
-  right: -13% !important;
-  overflow: hidden !important;
-
-  background-image:
-    linear-gradient(
-      180deg,
-      rgba(5,5,5,.03) 0%,
-      rgba(5,5,5,.10) 62%,
-      rgba(5,5,5,.44) 100%
-    ),
-    url("/tom-gibbons-coach.webp") !important;
-
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  background-position: center 16% !important;
-}
-
-/* No right-side feather: the arm should stop sharply at the split. */
-#coach .coachImage::after {
-  content: "" !important;
+/* Keep current image asset and preserve full-body visibility. */
+#coach .coachMediaColumn > .coachVisual .coachImage {
   position: absolute !important;
   inset: 0 !important;
-  pointer-events: none !important;
-  background:
-    linear-gradient(
-      180deg,
-      transparent 66%,
-      rgba(5,5,5,.12) 82%,
-      rgba(5,5,5,.62) 100%
-    ) !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  background-size: cover !important;
+  background-position: center 15% !important;
 }
 
-#coach .coachVisual::before,
-#coach .coachVisual::after {
-  display: none !important;
-}
-
-/* Keep the qualification card tight to the bottom-right of the image area. */
-#coach .coachQualificationCard {
-  position: absolute !important;
-  top: auto !important;
-  left: auto !important;
-  right: -8px !important;
-  bottom: 24px !important;
-  width: 260px !important;
-  margin: 0 !important;
-  z-index: 10 !important;
-}
-
-/* Founder label remains bottom-left. */
+/* Founder label remains attached to image bottom-left. */
 #coach .coachImageLabel {
-  left: 34px !important;
-  bottom: 30px !important;
-  z-index: 9 !important;
+  position: absolute !important;
+  left: 20px !important;
+  bottom: 18px !important;
+  z-index: 10 !important;
+  font-size: .72rem !important;
+  letter-spacing: .14em !important;
 }
 
-/* Preserve the current right-hand Coach content layout. */
-#coach .coachCopy {
+/* Dedicated qualification strip below the image. */
+#coach .coachQualificationSlot {
   position: relative !important;
-  z-index: 2 !important;
+  min-height: 150px !important;
+  padding: 0 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+/* BSc card sits low/right and does not overlap the portrait. */
+#coach .coachQualificationSlot .coachQualificationCard,
+#coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
+  position: relative !important;
+  inset: auto !important;
+  width: 220px !important;
+  max-width: 220px !important;
+  margin: -34px 12px 0 0 !important;
+  z-index: 20 !important;
+}
+
+/* Preserve existing card animation. */
+#coach .coachQualificationSlot .animatedQualificationCard {
+  animation:
+    tg-qualification-float 4.2s ease-in-out infinite,
+    tg-qualification-emphasis 6.5s ease-in-out infinite !important;
+}
+
+/* Right-hand content becomes more compact and editorial. */
+#coach .coachCopy {
+  max-width: 560px !important;
+  padding-top: 20px !important;
+  align-self: start !important;
+}
+
+#coach .coachCopy .eyebrow,
+#coach .coachCopy .sectionEyebrow {
+  margin-bottom: 18px !important;
+}
+
+#coach .coachCopy h2 {
+  font-size: clamp(3rem, 4.2vw, 5rem) !important;
+  line-height: .94 !important;
+  max-width: 520px !important;
+  margin-bottom: 28px !important;
+}
+
+#coach .coachCopy > p {
+  max-width: 540px !important;
+  line-height: 1.65 !important;
+}
+
+#coach .coachPillars {
+  margin-top: 32px !important;
+  gap: 14px !important;
+}
+
+#coach .coachPillar {
+  padding: 18px 22px !important;
+}
+
+#coach .coachStats {
+  margin-top: 26px !important;
 }
 
 /* Tablet */
 @media (max-width: 1100px) and (min-width: 761px) {
   #coach.coachSection {
-    grid-template-columns: 47% 53% !important;
+    width: min(1040px, calc(100% - 56px)) !important;
+    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr) !important;
+    column-gap: 40px !important;
   }
 
-  #coach .coachImage {
-    right: -15% !important;
-    background-position: center 14% !important;
+  #coach .coachMediaColumn {
+    grid-template-rows: 690px 140px !important;
   }
 
-  #coach .coachQualificationCard {
-    right: -6px !important;
+  #coach .coachMediaColumn > .coachVisual {
+    height: 690px !important;
+    min-height: 690px !important;
+  }
+
+  #coach .coachQualificationSlot .coachQualificationCard,
+  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
+    width: 205px !important;
+    max-width: 205px !important;
+    margin-top: -30px !important;
+    margin-right: 6px !important;
+  }
+
+  #coach .coachCopy h2 {
+    font-size: clamp(2.7rem, 4.6vw, 4.2rem) !important;
   }
 }
 
-/* Mobile returns to a stacked layout. */
+/* Mobile: stack cleanly */
 @media (max-width: 760px) {
   #coach.coachSection {
+    width: min(100% - 28px, 680px) !important;
     grid-template-columns: 1fr !important;
+    row-gap: 30px !important;
   }
 
-  #coach .coachVisual {
-    min-height: 680px !important;
+  #coach .coachMediaColumn {
+    grid-template-rows: 620px auto !important;
   }
 
-  #coach .coachImage {
-    right: 0 !important;
-    background-position: center 12% !important;
+  #coach .coachMediaColumn > .coachVisual {
+    height: 620px !important;
+    min-height: 620px !important;
   }
 
-  #coach .coachQualificationCard {
-    right: 18px !important;
-    bottom: 18px !important;
-    width: min(235px, calc(100% - 36px)) !important;
+  #coach .coachQualificationSlot {
+    justify-content: center !important;
+    min-height: 150px !important;
+  }
+
+  #coach .coachQualificationSlot .coachQualificationCard,
+  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
+    width: min(220px, 100%) !important;
+    max-width: 220px !important;
+    margin: -22px 0 0 !important;
+  }
+
+  #coach .coachCopy {
+    max-width: none !important;
+    padding-top: 0 !important;
   }
 }
