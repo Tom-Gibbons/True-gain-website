@@ -10463,3 +10463,53 @@ body {
     flex-wrap: wrap !important;
   }
 }
+
+
+
+/* =========================================================
+   MEET THE COACH — HARD IMAGE EDGE / ARM CLIP
+   Matches the supplied reference: the portrait is clipped
+   cleanly at the right edge of the left image panel.
+   ========================================================= */
+
+#coach .coachVisual,
+#coach.coachSection .coachVisual {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+/* Remove any soft right-side fade that lets the arm visually bleed
+   into the copy column. Keep the photo contained within its panel. */
+#coach .coachImage,
+#coach.coachSection .coachImage {
+  overflow: hidden !important;
+  clip-path: inset(0 0 0 0) !important;
+}
+
+/* No feathering on the right edge — clean vertical cut like reference. */
+#coach .coachImage::after,
+#coach.coachSection .coachImage::after {
+  background:
+    linear-gradient(
+      180deg,
+      transparent 88%,
+      rgba(5,5,5,.13) 100%
+    ) !important;
+}
+
+/* Ensure the image cannot extend beyond the left column boundary. */
+#coach .coachVisual::before,
+#coach.coachSection .coachVisual::before {
+  display: none !important;
+}
+
+/* Keep BSc qualification card bottom-right of the photo. */
+#coach .coachQualificationCard,
+#coach.coachSection .coachQualificationCard {
+  position: absolute !important;
+  top: auto !important;
+  left: auto !important;
+  right: 24px !important;
+  bottom: 24px !important;
+  z-index: 10 !important;
+}
