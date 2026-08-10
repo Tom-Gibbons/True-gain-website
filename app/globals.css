@@ -10941,3 +10941,72 @@ body {
     padding-top: 0 !important;
   }
 }
+
+
+
+/* =========================================================
+   FINAL — EXACT USER-SUPPLIED COACH PHOTO
+   ========================================================= */
+
+#coach .coachMediaColumn > .coachVisual {
+  position: relative !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+#coach .coachImage {
+  display: none !important;
+}
+
+#coach .coachExactPhoto {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#coach .coachImageLabel {
+  position: absolute !important;
+  left: 20px !important;
+  bottom: 18px !important;
+  z-index: 10 !important;
+}
+
+#coach .coachQualificationSlot {
+  position: relative !important;
+  min-height: 170px !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: flex-start !important;
+  padding: 18px 12px 0 0 !important;
+  background: transparent !important;
+  overflow: visible !important;
+}
+
+#coach .coachQualificationSlot .coachQualificationCard,
+#coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
+  position: relative !important;
+  inset: auto !important;
+  margin: 0 !important;
+  width: 220px !important;
+  max-width: 220px !important;
+  z-index: 20 !important;
+}
+
+@media (max-width: 760px) {
+  #coach .coachExactPhoto {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  #coach .coachQualificationSlot {
+    justify-content: center !important;
+    padding-right: 0 !important;
+  }
+}

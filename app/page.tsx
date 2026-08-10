@@ -591,9 +591,12 @@ export default function Home() {
       <section className="section coachSection" id="coach">
         <div className="coachMediaColumn">
           <div className="coachVisual">
-            <div className="coachImage">
-              <span className="coachImageLabel">Founder & Coach</span>
-            </div>
+            <img
+              className="coachExactPhoto"
+              src="/tom-gibbons-coach-exact.jpeg"
+              alt="Tom Gibbons, Founder and Coach at True Gain Performance"
+            />
+            <span className="coachImageLabel">Founder & Coach</span>
           </div>
 
           <div className="coachQualificationSlot">
