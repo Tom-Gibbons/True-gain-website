@@ -287,6 +287,33 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="servicesComparison">
+          <article className="serviceComparisonPremium">
+            <p className="planStrap">Coach</p>
+            <h3>Personal training</h3>
+            <p>Expert one-to-one coaching for strength, movement and confidence.</p>
+            <span>From £55/session</span>
+          </article>
+          <article className="serviceComparisonPremium">
+            <p className="planStrap">Treat</p>
+            <h3>Sports massage</h3>
+            <p>Focused treatment and recovery support to help you move and feel better.</p>
+            <span>From £35/session</span>
+          </article>
+          <article className="featured serviceComparisonPremium">
+            <p className="planStrap">Transform</p>
+            <h3>Complete coaching</h3>
+            <p>Training, recovery and accountability combined into one premium service.</p>
+            <span>From £279/month</span>
+          </article>
+        </div>
+
+        <div className="servicesWhy">
+          <div><strong>Evidence-led</strong><span>Sound coaching principles and individual progression.</span></div>
+          <div><strong>Private studio</strong><span>No crowds, waiting or distractions.</span></div>
+          <div><strong>Long-term focus</strong><span>Strength and confidence that lasts beyond a short programme.</span></div>
+        </div>
+
         <div className="servicesCta">
           <div>
             <p className="eyebrow">Not sure where to start?</p>
@@ -490,40 +517,9 @@ export default function Home() {
             </div>
 
             <div className="studioExperienceBenefits">
-              <div>
-                <span className="benefitIcon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" role="img">
-                    <circle cx="12" cy="8" r="2.3" />
-                    <circle cx="6.2" cy="9.4" r="1.8" />
-                    <circle cx="17.8" cy="9.4" r="1.8" />
-                    <path d="M8.2 18.5v-2.1c0-2.3 1.7-4.1 3.8-4.1s3.8 1.8 3.8 4.1v2.1" />
-                    <path d="M2.8 18.5v-1.4c0-1.9 1.4-3.5 3.2-3.5 1 0 1.9.5 2.5 1.2" />
-                    <path d="M21.2 18.5v-1.4c0-1.9-1.4-3.5-3.2-3.5-1 0-1.9.5-2.5 1.2" />
-                    <path d="M4.2 4.2l15.6 15.6" />
-                  </svg>
-                </span>
-                <strong>No crowds.</strong>
-              </div>
-              <div>
-                <span className="benefitIcon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" role="img">
-                    <circle cx="11" cy="11" r="7.2" />
-                    <path d="M11 7v4.3l2.8 1.7" />
-                    <path d="M15.7 18.2l1.8 1.8 3.4-4" />
-                  </svg>
-                </span>
-                <strong>No waiting.</strong>
-              </div>
-              <div>
-                <span className="benefitIcon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" role="img">
-                    <circle cx="12" cy="12" r="7.2" />
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M12 2.7v3M12 18.3v3M2.7 12h3M18.3 12h3" />
-                  </svg>
-                </span>
-                <strong>No distractions.</strong>
-              </div>
+              <div><span className="benefitIcon">◎</span><strong>No crowds.</strong></div>
+              <div><span className="benefitIcon">◴</span><strong>No waiting.</strong></div>
+              <div><span className="benefitIcon">◇</span><strong>No distractions.</strong></div>
             </div>
           </div>
         </div>
@@ -541,6 +537,35 @@ export default function Home() {
               <span className="imageLabel">Recovery area</span>
             </div>
           </div>
+        </div>
+
+        <div className="studioFeatureGrid">
+          <article>
+            <span>01</span>
+            <h3>Private coaching space</h3>
+            <p>
+              Every appointment is focused entirely on you, without the interruption,
+              noise or pressure of a busy commercial gym.
+            </p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Purposeful equipment</h3>
+            <p>
+              Carefully selected strength, conditioning and mobility equipment supports
+              effective training without unnecessary clutter.
+            </p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Integrated recovery</h3>
+            <p>
+              Training and recovery can work together in one setting, with dedicated space
+              for sports massage, mobility and movement support.
+            </p>
+          </article>
         </div>
 
         <div className="studioEquipmentPanel">
@@ -573,6 +598,44 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="studioJourney">
+          <div>
+            <p className="eyebrow">Your studio experience</p>
+            <h3>Calm, structured and entirely personal.</h3>
+          </div>
+
+          <ol>
+            <li>
+              <span>01</span>
+              <div>
+                <h4>Arrive</h4>
+                <p>Enter a private environment prepared specifically for your session.</p>
+              </div>
+            </li>
+            <li>
+              <span>02</span>
+              <div>
+                <h4>Train</h4>
+                <p>Follow a clear session plan with continuous coaching and technique support.</p>
+              </div>
+            </li>
+            <li>
+              <span>03</span>
+              <div>
+                <h4>Review</h4>
+                <p>Track progress, discuss feedback and adjust the next stage of your programme.</p>
+              </div>
+            </li>
+            <li>
+              <span>04</span>
+              <div>
+                <h4>Recover</h4>
+                <p>Use mobility or recovery support where appropriate to stay consistent.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
         <div className="studioLocationFeature">
           <div>
             <p className="planStrap">Private studio location</p>
@@ -589,26 +652,19 @@ export default function Home() {
         </div>
       </section>
       <section className="section coachSection" id="coach">
-        <div className="coachMediaColumn">
-          <div className="coachVisual">
-            <img
-              className="coachExactPhoto"
-              src="/tom-gibbons-coach-exact.jpeg"
-              alt="Tom Gibbons, Founder and Coach at True Gain Performance"
-            />
+        <div className="coachVisual">
+          <div className="coachImage">
             <span className="coachImageLabel">Founder & Coach</span>
           </div>
 
-          <div className="coachQualificationSlot">
-            <div className="coachQualificationCard animatedQualificationCard">
-              <span className="qualificationOrbit" aria-hidden="true" />
-              <span className="qualificationPulse" aria-hidden="true" />
-              <div className="qualificationContent">
-                <p className="planStrap">Qualified coaching</p>
-                <strong>BSc</strong>
-                <span>Strength & Conditioning</span>
-                <small>Level 7 Qualified</small>
-              </div>
+          <div className="coachQualificationCard animatedQualificationCard">
+            <span className="qualificationOrbit" aria-hidden="true" />
+            <span className="qualificationPulse" aria-hidden="true" />
+            <div className="qualificationContent">
+              <p className="planStrap">Qualified coaching</p>
+              <strong>BSc</strong>
+              <span>Strength & Conditioning</span>
+              <small>Level 7 Qualified</small>
             </div>
           </div>
         </div>
@@ -627,6 +683,36 @@ export default function Home() {
               to train well, progress with confidence and build strength that supports your life
               outside the studio.
             </p>
+            <p>
+              Sessions are structured, personal and focused on long-term results, without the
+              intimidation, noise or generic approach often found on a commercial gym floor.
+            </p>
+          </div>
+
+          <div className="coachPrinciples">
+            <article>
+              <span>01</span>
+              <div>
+                <h3>Evidence-led</h3>
+                <p>Coaching decisions are guided by sound training principles and your individual response.</p>
+              </div>
+            </article>
+
+            <article>
+              <span>02</span>
+              <div>
+                <h3>Personal</h3>
+                <p>Your programme, progression and support are built around your needs, not a template.</p>
+              </div>
+            </article>
+
+            <article>
+              <span>03</span>
+              <div>
+                <h3>Long-term</h3>
+                <p>The aim is lasting strength, confidence and physical capability—not short-term punishment.</p>
+              </div>
+            </article>
           </div>
 
           <div className="coachCredentials">

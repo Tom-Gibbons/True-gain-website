@@ -3971,7 +3971,6 @@ main[data-site-version="onboarding-v2"] {
 .studioExperienceBenefits>div{min-height:74px;display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(229,189,114,.62)}
 .studioExperienceBenefits>div:last-child{border-bottom:0}
 .studioExperienceBenefits .benefitIcon{width:46px;height:46px;display:grid;place-items:center;border:2px solid var(--tg-gold-light);border-radius:50%;color:var(--tg-gold-light);font-family:var(--tg-font-display);font-size:1.35rem;line-height:1}
-.studioExperienceBenefits .benefitIcon svg{width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
 .studioExperienceBenefits strong{color:var(--tg-ivory);font-family:var(--tg-font-display);font-size:clamp(1.55rem,2.4vw,2.65rem);line-height:1;letter-spacing:-.025em;text-transform:uppercase}
 @media(max-width:1220px){.studioExperienceHero{grid-template-columns:1fr}.studioExperienceHeroAside{grid-template-columns:minmax(250px,.75fr) minmax(320px,1fr);max-width:860px}}
 @media(max-width:760px){.studioExperienceHeroAside{grid-template-columns:1fr;max-width:none}.studioExperienceBadge{min-height:auto}.studioExperienceBenefits strong{font-size:clamp(1.45rem,8vw,2.2rem)}}
@@ -9544,1469 +9543,255 @@ header .desktopCta {
   transform-origin: center;
 }
 
-/* =========================================================
-   CLEAN CLIENT PORTAL SHOWCASE — AUGUST 2026
-   ========================================================= */
-.portalShowcase{
-  position:relative;
-  overflow:hidden;
-  padding-top:clamp(72px,8vw,118px);
-  padding-bottom:clamp(72px,8vw,118px);
-  background:
-    radial-gradient(circle at 78% 16%,rgba(199,151,72,.10),transparent 30%),
-    #050505;
-}
-.portalShowcase::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:linear-gradient(120deg,transparent 0 68%,rgba(229,189,114,.025) 100%);
-}
-.portalShowcaseInner{position:relative;width:min(100% - 48px,1480px);margin-inline:auto}
-.portalShowcaseHero{display:grid;grid-template-columns:minmax(320px,.78fr) minmax(620px,1.45fr);gap:clamp(48px,7vw,108px);align-items:center}
-.portalShowcaseCopy h2{margin:16px 0 18px;font-family:var(--tg-font-display);font-size:clamp(3.3rem,6vw,6.3rem);line-height:.92;letter-spacing:-.055em;text-transform:uppercase}
-.portalGoldLine{display:block;width:52px;height:2px;margin:0 0 28px;background:linear-gradient(90deg,var(--tg-gold-light),rgba(229,189,114,.15))}
-.portalLead,.portalIntro{max-width:570px;color:var(--tg-muted);font-size:1.08rem;line-height:1.72}
-.portalIntro{margin-top:4px}
-.portalBenefitList{margin:28px 0 0;padding:0;display:grid;gap:16px;list-style:none}
-.portalBenefitList li{display:flex;align-items:center;gap:13px;color:#d5d0c8;font-size:.95rem}
-.portalBenefitList li span{width:22px;height:22px;display:grid;place-items:center;border:1px solid rgba(229,189,114,.8);border-radius:50%;color:var(--tg-gold-light);font-size:.72rem}
-.portalDeviceStage{position:relative;min-height:560px;display:flex;align-items:center;justify-content:center}
-.portalLaptop{position:relative;width:min(100%,860px);filter:drop-shadow(0 36px 48px rgba(0,0,0,.58))}
-.portalLaptopScreen{padding:12px;border:1px solid rgba(229,189,114,.28);border-radius:21px 21px 7px 7px;background:#111;box-shadow:inset 0 0 0 1px rgba(255,255,255,.04)}
-.portalLaptopScreen img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center;border-radius:11px}
-.portalLaptopBase{width:108%;height:18px;margin-left:-4%;border-radius:2px 2px 80% 80%;background:linear-gradient(180deg,#6c6c6c,#161616 70%);box-shadow:0 12px 18px rgba(0,0,0,.75)}
-.portalPhone{position:absolute;right:0;bottom:42px;width:158px;height:322px;padding:7px;border:1px solid rgba(229,189,114,.38);border-radius:28px;background:#090909;box-shadow:0 28px 42px rgba(0,0,0,.75)}
-.portalPhone img{width:100%;height:100%;object-fit:cover;object-position:74% center;border-radius:21px}
-.portalFeaturesPanel{margin-top:clamp(56px,7vw,92px);padding:clamp(34px,5vw,72px);border:1px solid rgba(229,189,114,.22);border-radius:28px;background:linear-gradient(145deg,rgba(255,255,255,.025),rgba(229,189,114,.018));box-shadow:0 36px 90px rgba(0,0,0,.28)}
-.portalFeaturesHeading{text-align:center}
-.portalFeaturesHeading h3{margin:9px 0 9px;font-family:var(--tg-font-display);font-size:clamp(2rem,3.5vw,3.8rem);letter-spacing:-.035em}
-.portalFeaturesHeading>p:last-child{margin:0;color:var(--tg-muted)}
-.portalFeatureCards{margin-top:42px;display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-.portalFeatureCard{position:relative;padding:14px 14px 30px;border:1px solid rgba(229,189,114,.48);border-radius:20px;background:#090909;text-align:center;transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
-.portalFeatureCard:hover{transform:translateY(-7px);border-color:rgba(229,189,114,.78);box-shadow:0 24px 48px rgba(0,0,0,.4),0 0 28px rgba(229,189,114,.08)}
-.portalFeatureImage{height:390px;overflow:hidden;border-radius:12px;background:#0d0d0d}
-.portalFeatureImage img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
-.portalFeatureImage--programme img{object-position:center}
-.portalFeatureImage--progress img{object-position:center}
-.portalFeatureImage--support img{object-position:top center}
-.portalFeatureCard:hover .portalFeatureImage img{transform:scale(1.025)}
-.portalFeatureIcon{position:relative;z-index:2;width:58px;height:58px;margin:-29px auto 16px;display:grid;place-items:center;border:1px solid rgba(229,189,114,.85);border-radius:50%;background:#090909;color:var(--tg-gold-light);box-shadow:0 0 0 8px #090909}
-.portalFeatureIcon svg{width:27px;height:27px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.portalFeatureCard h4{margin:0;font-family:var(--tg-font-display);font-size:1.22rem;text-transform:uppercase}
-.portalFeatureSubtitle{min-height:48px;margin:13px auto 0;max-width:280px;color:#d7d2ca;line-height:1.55}
-.portalFeatureDivider{display:block;width:25px;height:2px;margin:16px auto;background:var(--tg-gold-light)}
-.portalFeatureCard>p:last-child{max-width:310px;margin:0 auto;color:var(--tg-muted);font-size:.9rem;line-height:1.72}
-.portalAccessPanel{margin-top:42px;padding:38px 48px;display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:center;border:1px solid rgba(229,189,114,.3);border-radius:22px;background:radial-gradient(circle at 56% 20%,rgba(199,151,72,.1),transparent 38%),#090909}
-.portalAccessVisual{position:relative;min-height:280px;display:flex;align-items:center;justify-content:center}
-.portalAccessLaptop{width:min(100%,500px);padding:7px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:#111;box-shadow:0 26px 36px rgba(0,0,0,.5)}
-.portalAccessLaptop img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:5px}
-.portalAccessPhone{position:absolute;right:6%;bottom:0;width:100px;height:205px;padding:5px;border:1px solid rgba(229,189,114,.4);border-radius:18px;background:#090909;box-shadow:0 20px 28px rgba(0,0,0,.65)}
-.portalAccessPhone img{width:100%;height:100%;object-fit:cover;object-position:75% center;border-radius:13px}
-.portalAccessCopy h3{margin:8px 0 28px;font-family:var(--tg-font-display);font-size:clamp(2.2rem,4vw,4.5rem);line-height:.98;letter-spacing:-.04em;text-transform:uppercase}
-.portalAccessBenefits{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.portalAccessBenefits div{text-align:center;color:#d7d1c9}
-.portalAccessBenefits span{height:46px;display:grid;place-items:center;color:var(--tg-gold-light)}
-.portalAccessBenefits span svg{width:32px;height:32px;fill:none;stroke:currentColor;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 8px rgba(214,166,81,.12));transition:transform .25s ease,filter .25s ease}
-.portalAccessBenefits div:hover span svg{transform:translateY(-2px);filter:drop-shadow(0 0 10px rgba(214,166,81,.28))}
-.portalAccessBenefits p{margin:8px 0 0;font-size:.83rem;line-height:1.45}
-.portalIncludedLine{margin:28px 0 0;text-align:center;color:var(--tg-gold-light);font-size:1rem}
-@media(max-width:1180px){
-  .portalShowcaseHero{grid-template-columns:1fr;gap:46px}
-  .portalShowcaseCopy{max-width:760px}
-  .portalDeviceStage{min-height:auto}
-  .portalFeatureImage{height:330px}
-  .portalAccessPanel{grid-template-columns:1fr}
-  .portalAccessVisual{order:2}
-}
-@media(max-width:900px){
-  .portalFeatureCards{grid-template-columns:1fr}
-  .portalFeatureCard{display:grid;grid-template-columns:minmax(250px,.9fr) 1fr;column-gap:30px;align-items:center;text-align:left;padding:14px 30px 14px 14px}
-  .portalFeatureImage{grid-row:1/6;height:310px}
-  .portalFeatureIcon{margin:0 0 10px;box-shadow:none}
-  .portalFeatureSubtitle,.portalFeatureCard>p:last-child{max-width:none;margin-left:0}
-  .portalFeatureDivider{margin:13px 0}
-  .portalAccessBenefits{grid-template-columns:1fr 1fr}
-}
-@media(max-width:650px){
-  .portalShowcaseInner{width:min(100% - 28px,1480px)}
-  .portalShowcaseCopy h2{font-size:clamp(3rem,15vw,4.4rem)}
-  .portalPhone{width:100px;height:205px;right:-4px;bottom:18px}
-  .portalFeaturesPanel{padding:24px 14px}
-  .portalFeatureCard{display:block;padding:12px 12px 28px;text-align:center}
-  .portalFeatureImage{height:310px}
-  .portalFeatureIcon{margin:-29px auto 16px;box-shadow:0 0 0 8px #090909}
-  .portalFeatureSubtitle,.portalFeatureCard>p:last-child{margin-left:auto;margin-right:auto}
-  .portalFeatureDivider{margin:16px auto}
-  .portalAccessPanel{padding:28px 18px}
-  .portalAccessBenefits{grid-template-columns:1fr 1fr}
-  .portalAccessPhone{right:0}
-}
-
-
-
-
-/* PREMIUM SITE-WIDE LAYOUT REFINEMENT */
-/*
-  Layout-only polish pass.
-  Meet the Coach section is intentionally excluded from these overrides.
-*/
-
-/* ---------- Shared spacing / page rhythm ---------- */
-
-:root {
-  --tg-content-max: 1480px;
-  --tg-reading-max: 760px;
-  --tg-section-gap: clamp(92px, 9vw, 150px);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background:
-    radial-gradient(circle at 50% -15%, rgba(199,151,72,.045), transparent 28%),
-    #050505;
-}
-
-.section:not(.coachSection) {
-  padding-top: var(--tg-section-gap);
-  padding-bottom: var(--tg-section-gap);
-}
-
-.sectionIntro:not(.coachSection .sectionIntro),
-.servicesHero,
-.membershipHero,
-.resultsHero,
-.caseStudiesHero,
-.bookingHero,
-.contactExperienceHero {
-  max-width: var(--tg-content-max);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Small gold eyebrow labels read as deliberate section markers. */
-.section:not(.coachSection) .eyebrow {
-  letter-spacing: .18em;
-  margin-bottom: 18px;
-}
-
-/* ---------- Header ---------- */
-
-.tgHeaderExact {
-  background:
-    linear-gradient(180deg, rgba(8,8,8,.985), rgba(5,5,5,.955)) !important;
-  border-bottom-color: rgba(229,189,114,.12) !important;
-  box-shadow: 0 12px 45px rgba(0,0,0,.34);
-}
-
-.tgHeaderNav a {
-  opacity: .88;
-  transition: color .2s ease, opacity .2s ease, transform .2s ease;
-}
-
-.tgHeaderNav a:hover,
-.tgHeaderNav a:focus-visible {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-/* ---------- Hero ---------- */
-
-.heroSplit {
-  min-height: min(900px, 92vh);
-  grid-template-columns: minmax(500px, 46%) 1fr;
-  background:
-    radial-gradient(circle at 30% 35%, rgba(199,151,72,.055), transparent 32%),
-    #050505;
-}
-
-.heroPanel {
-  padding-left: max(5vw, calc((100vw - var(--tg-content-max)) / 2));
-  padding-right: clamp(42px, 5vw, 84px);
-}
-
-.heroPanel h1 {
-  max-width: 780px;
-  font-size: clamp(4rem, 6vw, 6.7rem);
-  line-height: .91;
-}
-
-.heroPanel .heroText {
-  max-width: 620px;
-  font-size: 1.04rem;
-  line-height: 1.85;
-}
-
-.heroActions .button {
-  min-width: 230px;
-}
-
-.heroLocation {
-  margin-top: 44px;
-  padding-top: 22px;
-  border-top: 1px solid rgba(255,255,255,.075);
-}
-
-/* ---------- Proof strip ---------- */
-
-.proofStrip {
-  max-width: var(--tg-content-max);
-  margin: 0 auto;
-  padding: 32px clamp(18px, 2vw, 34px) !important;
-  border: 1px solid rgba(255,255,255,.07);
-  border-top-color: rgba(229,189,114,.18);
-  border-radius: 0 0 18px 18px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.018), transparent),
-    #080808;
-}
-
-.proofStrip div {
-  text-align: center;
-}
-
-.proofStrip strong {
-  font-size: clamp(1.2rem, 1.5vw, 1.55rem);
-}
-
-/* ---------- About ---------- */
-
-.manifesto {
-  max-width: var(--tg-content-max);
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr);
-  gap: clamp(64px, 8vw, 140px);
-  align-items: start;
-}
-
-.manifesto .sectionIntro h2 {
-  max-width: 720px;
-  font-size: clamp(2.8rem, 4.7vw, 5.2rem);
-  line-height: .96;
-}
-
-.manifestoCopy {
-  max-width: 690px;
-  padding: 30px 0 30px clamp(28px, 4vw, 60px);
-  border-left: 1px solid rgba(229,189,114,.28);
-}
-
-.manifestoCopy p {
-  font-size: 1rem;
-  line-height: 1.85;
-}
-
-/* ---------- Train / Recover / Perform editorial cards ---------- */
-
-.pillars {
-  max-width: var(--tg-content-max);
-  margin: 0 auto var(--tg-section-gap);
-  padding: 0 max(5vw, calc((100vw - var(--tg-content-max)) / 2));
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0,1fr));
-  gap: 22px;
-}
-
-.pillarCard {
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.075);
-  border-radius: 18px;
-  background: #0c0c0c;
-  box-shadow: 0 24px 60px rgba(0,0,0,.18);
-  transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease;
-}
-
-.pillarCard:hover {
-  transform: translateY(-6px);
-  border-color: rgba(229,189,114,.28);
-  box-shadow: 0 28px 70px rgba(0,0,0,.34);
-}
-
-.pillarImage {
-  min-height: 390px;
-}
-
-.pillarContent {
-  padding: clamp(30px, 3vw, 46px);
-}
-
-.pillarContent h3 {
-  font-size: clamp(1.65rem, 2.1vw, 2.25rem);
-}
-
-/* ---------- Services ---------- */
-
-.servicesSection {
-  position: relative;
-  background:
-    linear-gradient(180deg, #080808 0%, #0b0a09 48%, #080808 100%) !important;
-}
-
-.servicesHero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(260px, .45fr);
-  gap: 50px;
-  align-items: end;
-  padding-bottom: 52px;
-  border-bottom: 1px solid rgba(255,255,255,.075);
-}
-
-.servicesHeroCopy {
-  max-width: 820px;
-}
-
-.servicesHeroCopy h2 {
-  font-size: clamp(3rem, 4.8vw, 5.3rem);
-  line-height: .95;
-}
-
-.servicesHeroCopy > p:last-child {
-  max-width: 670px;
-  line-height: 1.8;
-}
-
-.servicesHeroStat {
-  justify-self: end;
-  min-width: 260px;
-  padding: 26px 30px;
-  border: 1px solid rgba(229,189,114,.26);
-  border-radius: 14px;
-  background:
-    radial-gradient(circle at 100% 0, rgba(229,189,114,.10), transparent 48%),
-    rgba(255,255,255,.018);
-}
-
-.serviceFeature {
-  max-width: var(--tg-content-max);
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 22px;
-  overflow: hidden;
-  border-color: rgba(255,255,255,.085) !important;
-  box-shadow: 0 34px 85px rgba(0,0,0,.24);
-}
-
-.serviceFeature + .serviceFeature {
-  margin-top: 28px;
-}
-
-.serviceFeatureCopy {
-  padding: clamp(42px, 5vw, 78px) !important;
-}
-
-.serviceFeatureCopy h3 {
-  font-size: clamp(2.2rem, 3.6vw, 4rem);
-  line-height: .98;
-}
-
-/* ---------- Memberships ---------- */
-
-.membershipsSection {
-  background:
-    radial-gradient(circle at 50% 0, rgba(199,151,72,.085), transparent 27%),
-    #060606 !important;
-}
-
-.membershipHero {
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, .45fr);
-  gap: clamp(40px, 6vw, 90px);
-  align-items: end;
-  padding-bottom: 58px;
-}
-
-.membershipHeroCopy h2 {
-  max-width: 850px;
-  font-size: clamp(3rem, 4.9vw, 5.5rem);
-  line-height: .95;
-}
-
-.membershipHeroNote {
-  border-radius: 16px;
-  padding: 28px;
-}
-
-.membershipShowcase {
-  max-width: var(--tg-content-max);
-  margin-left: auto;
-  margin-right: auto;
-  gap: 24px;
-}
-
-.membershipPlan {
-  border-radius: 20px;
-  padding: clamp(34px, 3.2vw, 48px);
-  box-shadow: 0 26px 70px rgba(0,0,0,.20);
-}
-
-.membershipPlan.featured {
-  transform: translateY(-8px);
-}
-
-.membershipPlan:hover {
-  transform: translateY(-8px);
-}
-
-.membershipPlan.featured:hover {
-  transform: translateY(-12px);
-}
-
-.membershipComparison,
-.membershipPromise,
-.membershipCta {
-  max-width: var(--tg-content-max);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.membershipComparison {
-  margin-top: 72px;
-}
-
-.membershipPromise,
-.membershipCta {
-  border-radius: 18px;
-}
-
-/* ---------- One-off sessions ---------- */
-
-.oneOffSection {
-  background:
-    linear-gradient(180deg, #090909 0%, #070707 100%);
-}
-
-.oneOffSection .sectionIntro {
-  max-width: 860px;
-}
-
-.oneOffGrid {
-  max-width: var(--tg-content-max);
-  margin-left: auto;
-  margin-right: auto;
-  gap: 22px;
-}
-
-.oneOffCard {
-  border-radius: 18px;
-  padding: 38px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.025), transparent),
-    #101010;
-}
-
-/* ---------- Studio ---------- */
-
-.studioSection {
-  max-width: none !important;
-  grid-template-columns: minmax(390px, .78fr) minmax(0, 1.22fr) !important;
-  gap: clamp(54px, 7vw, 115px) !important;
-  padding-left: max(5vw, calc((100vw - var(--tg-content-max)) / 2)) !important;
-  padding-right: max(5vw, calc((100vw - var(--tg-content-max)) / 2)) !important;
-  background:
-    radial-gradient(circle at 86% 18%, rgba(199,151,72,.085), transparent 30%),
-    #070707 !important;
-}
-
-.studioCopy {
-  position: sticky;
-  top: 150px;
-  align-self: start;
-}
-
-.studioCopy h2 {
-  font-size: clamp(3rem, 4.8vw, 5.25rem) !important;
-  line-height: .95 !important;
-}
-
-.studioVisual {
-  min-width: 0;
-}
-
-.studioGallery {
-  min-height: 690px !important;
-  gap: 14px !important;
-}
-
-.studioGallery > div,
-.studioLocationCard {
-  border-radius: 18px !important;
-  overflow: hidden;
-}
-
-.studioLocationCard {
-  margin-top: 18px;
-}
-
-/* ---------- Results / progress ---------- */
-
-.resultsSection {
-  background:
-    linear-gradient(180deg, #080808, #0a0908 56%, #080808);
-}
-
-.resultsHero {
-  grid-template-columns: minmax(0, 1.2fr) minmax(280px, .45fr);
-  gap: 60px;
-  padding-bottom: 50px;
-  border-bottom: 1px solid rgba(255,255,255,.07);
-}
-
-.resultsHero h2 {
-  font-size: clamp(3rem, 4.8vw, 5.3rem);
-  line-height: .95;
-}
-
-.resultsGrid,
-.milestonePanel {
-  max-width: var(--tg-content-max);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.resultsGrid {
-  gap: 22px;
-}
-
-.resultCard {
-  border-radius: 18px;
-  padding: clamp(30px, 3vw, 44px);
-  background:
-    radial-gradient(circle at 100% 0, rgba(229,189,114,.055), transparent 45%),
-    #0f0f0f;
-  box-shadow: 0 24px 60px rgba(0,0,0,.18);
-}
-
-/* ---------- Client portal ---------- */
-
-.portalShowcase {
-  background:
-    radial-gradient(circle at 82% 14%, rgba(199,151,72,.08), transparent 28%),
-    #060606 !important;
-}
-
-.portalShowcaseInner {
-  max-width: var(--tg-content-max) !important;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.portalShowcaseHero {
-  gap: clamp(46px, 6vw, 90px) !important;
-  align-items: center !important;
-}
-
-.portalShowcaseCopy h2 {
-  font-size: clamp(3rem, 4.8vw, 5.35rem) !important;
-  line-height: .95 !important;
-}
-
-.portalLaptop,
-.portalFeatureCard,
-.portalAccessPanel {
-  border-radius: 20px !important;
-}
-
-.portalFeatureCards {
-  gap: 22px !important;
-}
-
-.portalFeatureCard {
-  box-shadow: 0 24px 65px rgba(0,0,0,.20);
-}
-
-.portalAccessPanel {
-  margin-top: 72px !important;
-  padding: clamp(38px, 5vw, 72px) !important;
-}
-
-/* ---------- Case studies ---------- */
-
-.caseStudiesSection {
-  background: #080808;
-}
-
-.caseStudiesHero {
-  padding-bottom: 50px;
-  border-bottom: 1px solid rgba(255,255,255,.07);
-}
-
-.caseStudiesHeroCopy h2 {
-  font-size: clamp(3rem, 4.8vw, 5.3rem);
-  line-height: .95;
-}
-
-.caseStudyGrid {
-  max-width: var(--tg-content-max);
-  margin-left: auto;
-  margin-right: auto;
-  gap: 24px;
-}
-
-.caseStudyCard {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 28px 70px rgba(0,0,0,.22);
-}
-
-.caseStudyContent {
-  padding: clamp(32px, 3vw, 46px);
-}
-
-/* ---------- Booking ---------- */
-
-.bookingSection {
-  background:
-    radial-gradient(circle at 16% 8%, rgba(199,151,72,.065), transparent 26%),
-    #070707;
-}
-
-.bookingHero {
-  padding-bottom: 50px;
-}
-
-.bookingHeroCopy h2 {
-  font-size: clamp(3rem, 4.8vw, 5.3rem);
-  line-height: .95;
-}
-
-.bookingHeroCard,
-.bookingPanel,
-.bookingFinalCta {
-  border-radius: 20px;
-}
-
-.bookingProcess,
-.bookingPanel,
-.bookingFinalCta,
-.bookingTrust {
-  max-width: var(--tg-content-max);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bookingTimeline,
-.bookingValueGrid {
-  gap: 20px;
-}
-
-/* ---------- Contact ---------- */
-
-.contactExperienceSection {
-  max-width: none !important;
-  padding-left: max(5vw, calc((100vw - var(--tg-content-max)) / 2)) !important;
-  padding-right: max(5vw, calc((100vw - var(--tg-content-max)) / 2)) !important;
-  background:
-    linear-gradient(100deg, rgba(4,4,4,.985) 0%, rgba(6,6,6,.93) 46%, rgba(6,6,6,.80) 100%),
-    url("/studio-full.webp") center / cover no-repeat !important;
-}
-
-.contactExperienceGrid {
-  max-width: var(--tg-content-max);
-  margin: 0 auto;
-  gap: clamp(48px, 7vw, 110px);
-}
-
-.contactJourneyPanel,
-.contactResponseCard,
-.contactForm {
-  border-radius: 18px;
-}
-
-/* ---------- Footer ---------- */
-
-.footer {
-  padding-top: 78px;
-  padding-bottom: 42px;
-  background:
-    radial-gradient(circle at 50% 0, rgba(229,189,114,.055), transparent 36%),
-    #050505;
-}
-
-.footer .footerBrandLogo {
-  width: min(300px, 70vw) !important;
-  margin-bottom: 28px !important;
-}
-
-/* ---------- Responsive ---------- */
-
-@media (max-width: 1180px) {
-  .heroSplit {
-    grid-template-columns: 50% 50%;
-  }
-
-  .pillars {
-    gap: 16px;
-  }
-
-  .servicesHero,
-  .membershipHero,
-  .resultsHero {
-    grid-template-columns: 1fr;
-  }
-
-  .servicesHeroStat,
-  .membershipHeroNote,
-  .resultsHeroNote {
-    justify-self: start;
-  }
-
-  .studioSection {
-    grid-template-columns: 1fr !important;
-  }
-
-  .studioCopy {
-    position: static;
-    max-width: 820px;
-  }
-}
-
-@media (max-width: 900px) {
-  .section:not(.coachSection) {
-    padding-top: 88px;
-    padding-bottom: 88px;
-  }
-
-  .heroSplit {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-
-  .heroPanel {
-    min-height: 680px;
-    padding: 145px 7vw 76px;
-  }
-
-  .heroImage {
-    min-height: 540px;
-  }
-
-  .manifesto {
-    grid-template-columns: 1fr;
-    gap: 42px;
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
-
-  .manifestoCopy {
-    padding-left: 26px;
-  }
-
-  .pillars {
-    grid-template-columns: 1fr;
-    padding-left: 7vw;
-    padding-right: 7vw;
-  }
-
-  .pillarCard {
-    display: grid;
-    grid-template-columns: .9fr 1.1fr;
-  }
-
-  .pillarImage {
-    min-height: 360px;
-  }
-
-  .membershipPlan.featured,
-  .membershipPlan:hover,
-  .membershipPlan.featured:hover {
-    transform: none;
-  }
-
-  .studioGallery {
-    min-height: 580px !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .heroPanel {
-    min-height: 610px;
-    padding: 130px 24px 64px;
-  }
-
-  .heroPanel h1 {
-    font-size: clamp(3.1rem, 15vw, 4.5rem);
-  }
-
-  .heroImage {
-    min-height: 430px;
-  }
-
-  .proofStrip {
-    margin-left: 18px;
-    margin-right: 18px;
-    border-radius: 14px;
-  }
-
-  .manifesto {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .pillars {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-
-  .pillarCard {
-    display: block;
-  }
-
-  .pillarImage {
-    min-height: 340px;
-  }
-
-  .servicesHero,
-  .membershipHero,
-  .resultsHero,
-  .caseStudiesHero,
-  .bookingHero {
-    padding-bottom: 38px;
-  }
-
-  .studioSection,
-  .contactExperienceSection {
-    padding-left: 24px !important;
-    padding-right: 24px !important;
-  }
-
-  .studioGallery {
-    min-height: 510px !important;
-  }
-
-  .portalAccessPanel {
-    padding: 30px 22px !important;
-  }
-}
-
 
 
 /* =========================================================
-   MEET THE COACH — BSc CARD POSITION
-   Pins the qualification card to the bottom-right of the
-   coach photograph without changing the portrait or copy.
+   MEET THE COACH — FINAL TARGET LAYOUT
+   Uses the existing /tom-gibbons-coach.webp asset.
+   Matches the supplied reference composition:
+   - centred, narrower two-column section
+   - tall portrait card
+   - hard crop on the RIGHT edge through the outside arm
+   - full BSc qualification animation below/right of portrait
+   - Coach copy and three principle cards retained
    ========================================================= */
 
-#coach .coachVisual {
-  position: relative !important;
-}
-
-#coach .coachQualificationCard {
-  position: absolute !important;
-  top: auto !important;
-  left: auto !important;
-  right: 24px !important;
-  bottom: 24px !important;
-  margin: 0 !important;
-  z-index: 6 !important;
-  width: min(260px, calc(100% - 48px)) !important;
-}
-
-@media (max-width: 760px) {
-  #coach .coachQualificationCard {
-    right: 18px !important;
-    bottom: 18px !important;
-    width: min(235px, calc(100% - 36px)) !important;
-  }
-}
-
-/* =========================================================
-   CASE STUDY METRICS — CORRECT ONE-LINE FIX
-   The actual class used in page.tsx is .caseStudyMetrics.
-   ========================================================= */
-
-.caseStudyMetrics {
-  display: flex !important;
-  flex-wrap: nowrap !important;
-  align-items: center !important;
-  gap: 8px !important;
-  width: 100% !important;
-}
-
-.caseStudyMetrics span {
-  flex: 0 1 auto !important;
-  min-width: 0 !important;
-  white-space: nowrap !important;
-  padding: 9px 12px !important;
-  font-size: clamp(.68rem, .72vw, .8rem) !important;
-  letter-spacing: .035em !important;
-}
-
-/* Slightly tighter spacing on the third card so the longer
-   ACCOUNTABILITY label stays on the same row as the other two. */
-.caseStudyCard:nth-child(3) .caseStudyMetrics {
-  gap: 7px !important;
-}
-
-.caseStudyCard:nth-child(3) .caseStudyMetrics span {
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-  font-size: clamp(.66rem, .69vw, .77rem) !important;
-}
-
-@media (max-width: 1180px) and (min-width: 701px) {
-  .caseStudyMetrics {
-    gap: 6px !important;
-  }
-
-  .caseStudyMetrics span {
-    padding: 8px 9px !important;
-    font-size: .68rem !important;
-  }
-}
-
-@media (max-width: 700px) {
-  .caseStudyMetrics {
-    flex-wrap: wrap !important;
-  }
-}
-
-
-
-/* =========================================================
-   MEET THE COACH — HARD IMAGE EDGE / ARM CLIP
-   Matches the supplied reference: the portrait is clipped
-   cleanly at the right edge of the left image panel.
-   ========================================================= */
-
-#coach .coachVisual,
-#coach.coachSection .coachVisual {
-  position: relative !important;
-  overflow: hidden !important;
-}
-
-/* Remove any soft right-side fade that lets the arm visually bleed
-   into the copy column. Keep the photo contained within its panel. */
-#coach .coachImage,
-#coach.coachSection .coachImage {
-  overflow: hidden !important;
-  clip-path: inset(0 0 0 0) !important;
-}
-
-/* No feathering on the right edge — clean vertical cut like reference. */
-#coach .coachImage::after,
-#coach.coachSection .coachImage::after {
-  background:
-    linear-gradient(
-      180deg,
-      transparent 88%,
-      rgba(5,5,5,.13) 100%
-    ) !important;
-}
-
-/* Ensure the image cannot extend beyond the left column boundary. */
-#coach .coachVisual::before,
-#coach.coachSection .coachVisual::before {
-  display: none !important;
-}
-
-/* Keep BSc qualification card bottom-right of the photo. */
-#coach .coachQualificationCard,
-#coach.coachSection .coachQualificationCard {
-  position: absolute !important;
-  top: auto !important;
-  left: auto !important;
-  right: 24px !important;
-  bottom: 24px !important;
-  z-index: 10 !important;
-}
-
-
-
-/* =========================================================
-   FINAL COACH STRUCTURE — BSc CARD OUTSIDE THE PHOTO
-   The portrait itself is not repositioned or resized here.
-   The qualification card is now a sibling beneath the photo,
-   so it physically cannot cover the coach.
-   ========================================================= */
-
-#coach.coachSection {
-  align-items: stretch !important;
-  overflow: visible !important;
-}
-
-#coach .coachMediaColumn {
-  position: relative !important;
-  min-width: 0 !important;
-  display: grid !important;
-  grid-template-rows: 820px auto !important;
-  align-content: start !important;
-  overflow: visible !important;
-}
-
-/* Photo retains the existing approved crop/background rules. */
-#coach .coachMediaColumn > .coachVisual {
-  position: relative !important;
-  min-height: 820px !important;
-  height: 820px !important;
-  overflow: hidden !important;
-}
-
-/* Dedicated row below the photo for the qualification animation. */
-#coach .coachQualificationSlot {
-  position: relative !important;
-  min-height: 210px !important;
-  padding: 22px 24px 0 34px !important;
-  display: flex !important;
-  justify-content: flex-end !important;
-  align-items: flex-start !important;
-  background: #050505 !important;
-  overflow: visible !important;
-}
-
-/* Reset all historic absolute positioning rules. */
-#coach .coachQualificationSlot .coachQualificationCard,
-#coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
-  position: relative !important;
-  inset: auto !important;
-  top: auto !important;
-  right: auto !important;
-  bottom: auto !important;
-  left: auto !important;
-  width: 260px !important;
-  max-width: 260px !important;
-  margin: 0 !important;
-  z-index: 10 !important;
-  transform-origin: center !important;
-}
-
-/* Keep the existing BSc animation, but do not let it alter placement. */
-#coach .coachQualificationSlot .animatedQualificationCard {
-  animation:
-    tg-qualification-float 4.2s ease-in-out infinite,
-    tg-qualification-emphasis 6.5s ease-in-out infinite !important;
-}
-
-/* Founder label remains attached to the photograph. */
-#coach .coachImageLabel {
-  left: 34px !important;
-  bottom: 30px !important;
-}
-
-/* Right-hand content keeps its existing position. */
-#coach .coachCopy {
-  align-self: stretch !important;
-}
-
-@media (max-width: 1100px) and (min-width: 761px) {
-  #coach .coachMediaColumn {
-    grid-template-rows: 700px auto !important;
-  }
-
-  #coach .coachMediaColumn > .coachVisual {
-    min-height: 700px !important;
-    height: 700px !important;
-  }
-
-  #coach .coachQualificationSlot {
-    min-height: 195px !important;
-    padding: 20px 20px 0 24px !important;
-  }
-}
-
-@media (max-width: 760px) {
-  #coach .coachMediaColumn {
-    grid-template-rows: 640px auto !important;
-  }
-
-  #coach .coachMediaColumn > .coachVisual {
-    min-height: 640px !important;
-    height: 640px !important;
-  }
-
-  #coach .coachQualificationSlot {
-    min-height: 185px !important;
-    padding: 18px !important;
-    justify-content: center !important;
-  }
-
-  #coach .coachQualificationSlot .coachQualificationCard,
-  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
-    width: min(235px, 100%) !important;
-    max-width: 235px !important;
-  }
-}
-
-
-
-/* =========================================================
-   MEET THE COACH — MATCH SUPPLIED REFERENCE
-   Keep the approved portrait crop. Place the BSc card low at
-   the bottom-right of the left panel, beneath the visible arms/body.
-   ========================================================= */
-
-@media (min-width: 761px) {
+@media (min-width: 1051px) {
   #coach.coachSection {
-    grid-template-columns: 46% 54% !important;
+    width: min(1120px, calc(100% - 96px)) !important;
+    margin: 0 auto !important;
+    padding: 54px 0 120px !important;
+    display: grid !important;
+    grid-template-columns: 430px minmax(0, 1fr) !important;
+    gap: 64px !important;
+    min-height: 0 !important;
     align-items: start !important;
     overflow: visible !important;
+    background: transparent !important;
   }
 
-  #coach .coachMediaColumn {
+  /* Left image composition */
+  #coach .coachVisual {
     position: relative !important;
-    display: grid !important;
-    grid-template-rows: 820px 180px !important;
-    min-width: 0 !important;
+    width: 430px !important;
+    height: 760px !important;
+    min-height: 760px !important;
     overflow: visible !important;
-    background: #050505 !important;
+    background: transparent !important;
   }
 
-  /* Keep the exact existing photo crop/framing. */
-  #coach .coachMediaColumn > .coachVisual {
-    position: relative !important;
-    height: 820px !important;
-    min-height: 820px !important;
-    overflow: hidden !important;
-  }
-
-  #coach .coachMediaColumn > .coachVisual .coachImage {
+  /*
+    The photograph itself is a separate clipped rectangle.
+    It ends at x=430px, giving the same hard right-side cut shown
+    in the supplied reference rather than fading the outside arm.
+  */
+  #coach .coachImage {
     position: absolute !important;
     inset: 0 !important;
-    height: 100% !important;
-    min-height: 100% !important;
+    width: 430px !important;
+    height: 710px !important;
+    overflow: hidden !important;
+    background:
+      linear-gradient(180deg, rgba(5,5,5,.03) 0%, rgba(5,5,5,.06) 64%, rgba(5,5,5,.25) 100%),
+      url("/tom-gibbons-coach.webp") center 13% / cover no-repeat !important;
   }
 
-  /* Dedicated bottom strip under the photo. */
-  #coach .coachQualificationSlot {
-    position: relative !important;
-    height: 180px !important;
-    min-height: 180px !important;
-    padding: 0 24px 0 34px !important;
-    display: flex !important;
-    justify-content: flex-end !important;
-    align-items: flex-start !important;
-    background: #050505 !important;
-    overflow: visible !important;
-  }
-
-  /* Card sits in the bottom-right, like the reference, without covering the body. */
-  #coach .coachQualificationSlot .coachQualificationCard,
-  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
-    position: relative !important;
-    inset: auto !important;
-    width: 260px !important;
-    max-width: 260px !important;
-    margin: -70px 0 0 0 !important;
-    z-index: 20 !important;
-  }
-
-  /* Keep Founder & Coach low-left on the panel. */
-  #coach .coachImageLabel {
+  /* Remove the old right-side feather so the arm is cut cleanly. */
+  #coach .coachImage::after {
+    content: "" !important;
     position: absolute !important;
-    left: 34px !important;
-    bottom: 28px !important;
-    z-index: 10 !important;
-  }
-}
-
-@media (max-width: 1100px) and (min-width: 761px) {
-  #coach .coachMediaColumn {
-    grid-template-rows: 720px 170px !important;
-  }
-
-  #coach .coachMediaColumn > .coachVisual {
-    height: 720px !important;
-    min-height: 720px !important;
+    inset: 0 !important;
+    pointer-events: none !important;
+    background:
+      linear-gradient(
+        180deg,
+        transparent 72%,
+        rgba(5,5,5,.10) 86%,
+        rgba(5,5,5,.48) 100%
+      ) !important;
   }
 
-  #coach .coachQualificationSlot {
-    height: 170px !important;
-    min-height: 170px !important;
-    padding-right: 20px !important;
+  #coach .coachImageLabel {
+    left: 22px !important;
+    bottom: 18px !important;
+    font-size: .68rem !important;
+    letter-spacing: .14em !important;
   }
 
-  #coach .coachQualificationSlot .coachQualificationCard,
-  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
-    margin-top: -64px !important;
-  }
-}
-
-@media (max-width: 760px) {
-  #coach .coachMediaColumn {
-    grid-template-rows: 640px auto !important;
-  }
-
-  #coach .coachMediaColumn > .coachVisual {
-    height: 640px !important;
-    min-height: 640px !important;
-  }
-
-  #coach .coachQualificationSlot {
-    min-height: 190px !important;
-    padding: 18px !important;
-    justify-content: center !important;
-  }
-
-  #coach .coachQualificationSlot .coachQualificationCard,
-  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
+  /*
+    The qualification animation stays fully functional.
+    It sits low and to the right, overlapping only the black space
+    below the photograph — not the coach's visible body.
+  */
+  #coach .coachQualificationCard,
+  #coach .coachQualificationCard.animatedQualificationCard {
+    position: absolute !important;
+    top: auto !important;
+    left: auto !important;
+    right: 12px !important;
+    bottom: -104px !important;
+    width: 220px !important;
+    padding: 24px !important;
     margin: 0 !important;
-    width: min(235px, 100%) !important;
-    max-width: 235px !important;
-  }
-}
-
-
-
-/* =========================================================
-   MEET THE COACH — EDITORIAL / CENTRED COMPOSITION
-   Matches the latest reference:
-   - whole Coach section is narrower and centred
-   - generous black space around the composition
-   - tall portrait on the left
-   - BSc animation sits below/right of the portrait, not over the body
-   - right-hand content remains aligned alongside at a reduced scale
-   ========================================================= */
-
-#coach.coachSection {
-  width: min(1180px, calc(100% - 96px)) !important;
-  margin: 0 auto !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr) !important;
-  column-gap: 64px !important;
-  align-items: start !important;
-  overflow: visible !important;
-}
-
-/* Left composition */
-#coach .coachMediaColumn {
-  position: relative !important;
-  display: grid !important;
-  grid-template-rows: 760px 150px !important;
-  min-width: 0 !important;
-  overflow: visible !important;
-  background: transparent !important;
-}
-
-/* Tall portrait card */
-#coach .coachMediaColumn > .coachVisual {
-  position: relative !important;
-  height: 760px !important;
-  min-height: 760px !important;
-  overflow: hidden !important;
-  background: #050505 !important;
-}
-
-/* Keep current image asset and preserve full-body visibility. */
-#coach .coachMediaColumn > .coachVisual .coachImage {
-  position: absolute !important;
-  inset: 0 !important;
-  height: 100% !important;
-  min-height: 100% !important;
-  background-size: cover !important;
-  background-position: center 15% !important;
-}
-
-/* Founder label remains attached to image bottom-left. */
-#coach .coachImageLabel {
-  position: absolute !important;
-  left: 20px !important;
-  bottom: 18px !important;
-  z-index: 10 !important;
-  font-size: .72rem !important;
-  letter-spacing: .14em !important;
-}
-
-/* Dedicated qualification strip below the image. */
-#coach .coachQualificationSlot {
-  position: relative !important;
-  min-height: 150px !important;
-  padding: 0 !important;
-  display: flex !important;
-  justify-content: flex-end !important;
-  align-items: flex-start !important;
-  overflow: visible !important;
-  background: transparent !important;
-}
-
-/* BSc card sits low/right and does not overlap the portrait. */
-#coach .coachQualificationSlot .coachQualificationCard,
-#coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
-  position: relative !important;
-  inset: auto !important;
-  width: 220px !important;
-  max-width: 220px !important;
-  margin: -34px 12px 0 0 !important;
-  z-index: 20 !important;
-}
-
-/* Preserve existing card animation. */
-#coach .coachQualificationSlot .animatedQualificationCard {
-  animation:
-    tg-qualification-float 4.2s ease-in-out infinite,
-    tg-qualification-emphasis 6.5s ease-in-out infinite !important;
-}
-
-/* Right-hand content becomes more compact and editorial. */
-#coach .coachCopy {
-  max-width: 560px !important;
-  padding-top: 20px !important;
-  align-self: start !important;
-}
-
-#coach .coachCopy .eyebrow,
-#coach .coachCopy .sectionEyebrow {
-  margin-bottom: 18px !important;
-}
-
-#coach .coachCopy h2 {
-  font-size: clamp(3rem, 4.2vw, 5rem) !important;
-  line-height: .94 !important;
-  max-width: 520px !important;
-  margin-bottom: 28px !important;
-}
-
-#coach .coachCopy > p {
-  max-width: 540px !important;
-  line-height: 1.65 !important;
-}
-
-#coach .coachPillars {
-  margin-top: 32px !important;
-  gap: 14px !important;
-}
-
-#coach .coachPillar {
-  padding: 18px 22px !important;
-}
-
-#coach .coachStats {
-  margin-top: 26px !important;
-}
-
-/* Tablet */
-@media (max-width: 1100px) and (min-width: 761px) {
-  #coach.coachSection {
-    width: min(1040px, calc(100% - 56px)) !important;
-    grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr) !important;
-    column-gap: 40px !important;
+    z-index: 8 !important;
   }
 
-  #coach .coachMediaColumn {
-    grid-template-rows: 690px 140px !important;
+  #coach .coachQualificationCard strong {
+    font-size: 2.15rem !important;
   }
 
-  #coach .coachMediaColumn > .coachVisual {
-    height: 690px !important;
-    min-height: 690px !important;
+  /* Right-hand editorial column */
+  #coach .coachCopy {
+    width: 100% !important;
+    max-width: 520px !important;
+    padding: 24px 0 0 !important;
+    justify-content: flex-start !important;
   }
 
-  #coach .coachQualificationSlot .coachQualificationCard,
-  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
-    width: 205px !important;
-    max-width: 205px !important;
-    margin-top: -30px !important;
-    margin-right: 6px !important;
+  #coach .coachCopy .eyebrow {
+    margin-bottom: 16px !important;
   }
 
   #coach .coachCopy h2 {
-    font-size: clamp(2.7rem, 4.6vw, 4.2rem) !important;
+    max-width: 470px !important;
+    margin-bottom: 24px !important;
+    font-size: clamp(3rem, 4vw, 4.6rem) !important;
+    line-height: .94 !important;
+  }
+
+  #coach .coachLead {
+    max-width: 500px !important;
+    margin-bottom: 20px !important;
+    font-size: .96rem !important;
+    line-height: 1.72 !important;
+  }
+
+  #coach .coachStory {
+    max-width: 500px !important;
+  }
+
+  #coach .coachStory p {
+    margin-bottom: 14px !important;
+    font-size: .92rem !important;
+    line-height: 1.7 !important;
+  }
+
+  #coach .coachPrinciples {
+    gap: 10px !important;
+    margin: 24px 0 22px !important;
+  }
+
+  #coach .coachPrinciples article {
+    grid-template-columns: 34px 1fr !important;
+    gap: 14px !important;
+    padding: 15px 17px !important;
+    border-radius: 10px !important;
+  }
+
+  #coach .coachPrinciples h3 {
+    margin-bottom: 4px !important;
+    font-size: 1rem !important;
+  }
+
+  #coach .coachPrinciples p {
+    font-size: .76rem !important;
+    line-height: 1.55 !important;
+  }
+
+  #coach .coachCredentials {
+    gap: 8px !important;
+    margin-bottom: 0 !important;
+  }
+
+  #coach .coachCredentials div {
+    padding: 16px 10px 0 !important;
+  }
+
+  #coach .coachCredentials strong {
+    font-size: 1.25rem !important;
+  }
+
+  #coach .coachCredentials span {
+    font-size: .62rem !important;
   }
 }
 
-/* Mobile: stack cleanly */
-@media (max-width: 760px) {
+/* iPad / medium layout */
+@media (max-width: 1050px) and (min-width: 701px) {
   #coach.coachSection {
-    width: min(100% - 28px, 680px) !important;
-    grid-template-columns: 1fr !important;
-    row-gap: 30px !important;
+    width: min(920px, calc(100% - 56px)) !important;
+    margin: 0 auto !important;
+    padding: 48px 0 112px !important;
+    grid-template-columns: 390px minmax(0, 1fr) !important;
+    gap: 42px !important;
+    overflow: visible !important;
   }
 
-  #coach .coachMediaColumn {
-    grid-template-rows: 620px auto !important;
+  #coach .coachVisual {
+    width: 390px !important;
+    height: 710px !important;
+    min-height: 710px !important;
+    overflow: visible !important;
   }
 
-  #coach .coachMediaColumn > .coachVisual {
-    height: 620px !important;
-    min-height: 620px !important;
+  #coach .coachImage {
+    width: 390px !important;
+    height: 660px !important;
+    background-position: center 13% !important;
+    background-size: cover !important;
   }
 
-  #coach .coachQualificationSlot {
-    justify-content: center !important;
-    min-height: 150px !important;
+  #coach .coachImage::after {
+    background:
+      linear-gradient(180deg, transparent 72%, rgba(5,5,5,.12) 88%, rgba(5,5,5,.48) 100%) !important;
   }
 
-  #coach .coachQualificationSlot .coachQualificationCard,
-  #coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
-    width: min(220px, 100%) !important;
-    max-width: 220px !important;
-    margin: -22px 0 0 !important;
+  #coach .coachQualificationCard,
+  #coach .coachQualificationCard.animatedQualificationCard {
+    right: 10px !important;
+    bottom: -96px !important;
+    width: 210px !important;
   }
 
   #coach .coachCopy {
-    max-width: none !important;
-    padding-top: 0 !important;
+    padding: 16px 0 0 !important;
   }
 }
 
-
-
-/* =========================================================
-   FINAL — EXACT USER-SUPPLIED COACH PHOTO
-   ========================================================= */
-
-#coach .coachMediaColumn > .coachVisual {
-  position: relative !important;
-  height: auto !important;
-  min-height: 0 !important;
-  overflow: visible !important;
-  background: transparent !important;
-}
-
-#coach .coachImage {
-  display: none !important;
-}
-
-#coach .coachExactPhoto {
-  display: block !important;
-  width: 100% !important;
-  height: auto !important;
-  max-width: 100% !important;
-  object-fit: contain !important;
-  object-position: center !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-#coach .coachImageLabel {
-  position: absolute !important;
-  left: 20px !important;
-  bottom: 18px !important;
-  z-index: 10 !important;
-}
-
-#coach .coachQualificationSlot {
-  position: relative !important;
-  min-height: 170px !important;
-  display: flex !important;
-  justify-content: flex-end !important;
-  align-items: flex-start !important;
-  padding: 18px 12px 0 0 !important;
-  background: transparent !important;
-  overflow: visible !important;
-}
-
-#coach .coachQualificationSlot .coachQualificationCard,
-#coach .coachQualificationSlot .coachQualificationCard.animatedQualificationCard {
-  position: relative !important;
-  inset: auto !important;
-  margin: 0 !important;
-  width: 220px !important;
-  max-width: 220px !important;
-  z-index: 20 !important;
-}
-
-@media (max-width: 760px) {
-  #coach .coachExactPhoto {
+/* Mobile stays stacked and readable. */
+@media (max-width: 700px) {
+  #coach.coachSection {
     width: 100% !important;
-    height: auto !important;
+    padding: 0 0 80px !important;
   }
 
-  #coach .coachQualificationSlot {
-    justify-content: center !important;
-    padding-right: 0 !important;
+  #coach .coachVisual {
+    min-height: 620px !important;
+    overflow: visible !important;
+  }
+
+  #coach .coachImage {
+    height: 560px !important;
+    background-position: center 12% !important;
+    background-size: cover !important;
+  }
+
+  #coach .coachImage::after {
+    background:
+      linear-gradient(180deg, transparent 68%, rgba(5,5,5,.10) 84%, rgba(5,5,5,.50) 100%) !important;
+  }
+
+  #coach .coachQualificationCard,
+  #coach .coachQualificationCard.animatedQualificationCard {
+    position: absolute !important;
+    right: 20px !important;
+    left: auto !important;
+    bottom: -54px !important;
+    width: 210px !important;
+    margin: 0 !important;
+  }
+
+  #coach .coachCopy {
+    padding-top: 88px !important;
   }
 }
