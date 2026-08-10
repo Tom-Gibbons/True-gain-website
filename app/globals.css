@@ -10513,3 +10513,138 @@ body {
   bottom: 24px !important;
   z-index: 10 !important;
 }
+
+
+
+/* =========================================================
+   FINAL MEET THE COACH FRAMING
+   Matches the supplied reference:
+   - image panel ends before the copy column
+   - right arm is deliberately cut by the centre split
+   - portrait stays large
+   - BSc card sits at the bottom-right of the image panel
+   ========================================================= */
+
+#coach.coachSection {
+  grid-template-columns: 46% 54% !important;
+  min-height: 820px !important;
+  overflow: hidden !important;
+}
+
+#coach .coachVisual {
+  position: relative !important;
+  min-width: 0 !important;
+  min-height: 820px !important;
+  overflow: hidden !important;
+  background: #050505 !important;
+}
+
+/*
+  Make the portrait slightly wider than the image column.
+  The overflow:hidden on .coachVisual creates the hard vertical
+  crop through the right arm, matching the reference screenshot.
+*/
+#coach .coachImage {
+  position: absolute !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: -13% !important;
+  overflow: hidden !important;
+
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(5,5,5,.03) 0%,
+      rgba(5,5,5,.10) 62%,
+      rgba(5,5,5,.44) 100%
+    ),
+    url("/tom-gibbons-coach.webp") !important;
+
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center 16% !important;
+}
+
+/* No right-side feather: the arm should stop sharply at the split. */
+#coach .coachImage::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  background:
+    linear-gradient(
+      180deg,
+      transparent 66%,
+      rgba(5,5,5,.12) 82%,
+      rgba(5,5,5,.62) 100%
+    ) !important;
+}
+
+#coach .coachVisual::before,
+#coach .coachVisual::after {
+  display: none !important;
+}
+
+/* Keep the qualification card tight to the bottom-right of the image area. */
+#coach .coachQualificationCard {
+  position: absolute !important;
+  top: auto !important;
+  left: auto !important;
+  right: -8px !important;
+  bottom: 24px !important;
+  width: 260px !important;
+  margin: 0 !important;
+  z-index: 10 !important;
+}
+
+/* Founder label remains bottom-left. */
+#coach .coachImageLabel {
+  left: 34px !important;
+  bottom: 30px !important;
+  z-index: 9 !important;
+}
+
+/* Preserve the current right-hand Coach content layout. */
+#coach .coachCopy {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Tablet */
+@media (max-width: 1100px) and (min-width: 761px) {
+  #coach.coachSection {
+    grid-template-columns: 47% 53% !important;
+  }
+
+  #coach .coachImage {
+    right: -15% !important;
+    background-position: center 14% !important;
+  }
+
+  #coach .coachQualificationCard {
+    right: -6px !important;
+  }
+}
+
+/* Mobile returns to a stacked layout. */
+@media (max-width: 760px) {
+  #coach.coachSection {
+    grid-template-columns: 1fr !important;
+  }
+
+  #coach .coachVisual {
+    min-height: 680px !important;
+  }
+
+  #coach .coachImage {
+    right: 0 !important;
+    background-position: center 12% !important;
+  }
+
+  #coach .coachQualificationCard {
+    right: 18px !important;
+    bottom: 18px !important;
+    width: min(235px, calc(100% - 36px)) !important;
+  }
+}
