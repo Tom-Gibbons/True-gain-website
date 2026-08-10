@@ -9795,3 +9795,68 @@ header .desktopCta {
     padding-top: 88px !important;
   }
 }
+
+
+
+/* =========================================================
+   BSc CARD — MOVE TO LOWER BLACK SPACE
+   Matches the user's marked position:
+   - no overlap with the coach image
+   - centred under the left image area
+   - remains animated
+   ========================================================= */
+
+@media (min-width: 1051px) {
+  #coach .coachVisual {
+    padding-bottom: 210px !important;
+    height: 930px !important;
+  }
+
+  #coach .coachQualificationCard,
+  #coach .coachQualificationCard.animatedQualificationCard {
+    position: absolute !important;
+    top: auto !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: -145px !important;
+    width: 220px !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+    z-index: 12 !important;
+  }
+}
+
+@media (max-width: 1050px) and (min-width: 701px) {
+  #coach .coachVisual {
+    padding-bottom: 195px !important;
+    height: 885px !important;
+  }
+
+  #coach .coachQualificationCard,
+  #coach .coachQualificationCard.animatedQualificationCard {
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: -138px !important;
+    width: 210px !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  #coach .coachVisual {
+    padding-bottom: 165px !important;
+  }
+
+  #coach .coachQualificationCard,
+  #coach .coachQualificationCard.animatedQualificationCard {
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    bottom: -105px !important;
+    width: 205px !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+  }
+}
