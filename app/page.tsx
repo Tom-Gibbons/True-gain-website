@@ -15,13 +15,13 @@ const services = [
   },
   {
     number: "02",
-    title: "Hybrid coaching",
-    text: "In-person coaching combined with structured independent training and ongoing accountability.",
+    title: "Complete coaching",
+    text: "Private one-to-one coaching supported by personalised programming, progress reviews and structured independent training where appropriate.",
   },
   {
     number: "03",
     title: "Sports massage",
-    text: "Targeted recovery treatment to reduce tension, improve movement and support consistency.",
+    text: "Focused sports massage delivered within professional scope to support recovery, comfort and training consistency.",
   },
 ];
 
@@ -31,14 +31,14 @@ const memberships = [
     price: "£279",
     strapline: "Build strong foundations",
     outcome:
-      "Ideal for clients who want expert one-to-one coaching, a clear plan and structured weekly accountability. Train gives you the guidance to improve technique, build confidence and make measurable progress while still allowing you to train independently between sessions.",
+      "For adults who want expert weekly coaching, a personalised plan and clear progression while still training independently between sessions.",
     features: [
-      "Weekly one-to-one personal training",
-      "Personalised strength programme",
-      "Technique coaching and exercise progressions",
-      "Monthly progress and goal review",
-      "Training app access",
-      "Ongoing guidance between sessions",
+      "1 × 60-minute 1:1 S&C session every week",
+      "Personalised S&C programme",
+      "Independent training prescribed where appropriate",
+      "Structured progress review every 6 weeks",
+      "Member portal access",
+      "Sports massage available pay-as-you-go",
     ],
   },
   {
@@ -46,15 +46,14 @@ const memberships = [
     price: "£349",
     strapline: "Train consistently. Recover smarter.",
     outcome:
-      "Everything in Train, enhanced with dedicated recovery support. Recover is designed for busy professionals and active adults who want to reduce stiffness, improve movement quality and stay consistent without allowing aches, fatigue or poor recovery to interrupt progress.",
-    featured: true,
+      "Everything in Train, with one 60-minute sports massage included each month to support a consistent approach to training and recovery.",
     features: [
       "Everything included in Train",
-      "Monthly sports massage or recovery session",
-      "Personalised mobility and recovery plan",
-      "Support for muscular tension and movement quality",
-      "Priority scheduling",
-      "Closer coaching contact and accountability",
+      "1 × 60-minute sports massage each month",
+      "Structured progress review every 6 weeks",
+      "Ongoing programme monitoring and adjustments",
+      "Member portal access",
+      "Standard recurring weekly coaching slot",
     ],
   },
   {
@@ -62,22 +61,22 @@ const memberships = [
     price: "£499",
     strapline: "The complete True Gain experience",
     outcome:
-      "The flagship option for clients who want the highest level of coaching, accountability and support. Perform removes the guesswork by combining increased private coaching, personalised programming, recovery support and regular progress reviews into one complete long-term coaching service.",
+      "The highest level of True Gain coaching, combining twice-weekly private S&C, personalised programming, monthly sports massage and additional between-session support.",
     features: [
-      "Everything included in Recover",
-      "Two coached sessions each week",
-      "Priority programme updates",
-      "Regular performance and lifestyle reviews",
-      "Direct coaching access",
-      "Highest level of accountability and support",
+      "2 × 60-minute 1:1 S&C sessions every week",
+      "Personalised S&C programme",
+      "1 × 60-minute sports massage each month",
+      "Dedicated mobility & movement programming",
+      "Between-session video technique feedback",
+      "Priority booking",
     ],
   },
 ];
 
 const oneOff = [
-  ["1-hour PT session", "£55", "A focused one-to-one coaching session with no monthly commitment."],
-  ["30-minute sports massage", "£35", "Targeted treatment for a specific area of tension, stiffness or fatigue."],
-  ["1-hour sports massage", "£60", "A more comprehensive recovery session with assessment and aftercare guidance."],
+  ["60-minute 1:1 S&C / PT session", "£55", "A focused one-to-one coaching session with no monthly commitment."],
+  ["30-minute sports massage", "£35", "A focused sports massage appointment delivered within professional scope."],
+  ["60-minute sports massage", "£60", "A full sports massage appointment delivered within professional scope."],
 ];
 
 export default function Home() {
@@ -134,7 +133,7 @@ export default function Home() {
             Stay capable for life.
           </h1>
           <p className="heroText">
-            Premium, evidence-led 1:1 coaching in a private studio in Bushmead, Luton. Helping adults build strength, move better and stay capable for life.
+            Premium, evidence-led 1:1 coaching in a private studio in Bushmead, Luton. Specialising in helping adults 30+ build strength, move better and stay capable for life.
           </p>
 
           <div className="heroActions">
@@ -336,7 +335,7 @@ export default function Home() {
           <div className="membershipHeroNote">
             <p className="planStrap">Every membership includes</p>
             <strong>Assessment. Programme. Progression.</strong>
-            <span>Begin with a free 30-minute consultation. Your complimentary initial assessment is arranged only after membership purchase and is separate from your weekly coaching allocation.</span>
+            <span>Begin with a free 30-minute consultation. Your complimentary 45-minute individual assessment is arranged after membership purchase and is separate from your weekly coaching allocation.</span>
           </div>
         </div>
 
@@ -351,7 +350,7 @@ export default function Home() {
                   <p className="planIndex">0{index + 1}</p>
                   <p className="planStrap">{plan.strapline}</p>
                 </div>
-                {plan.featured ? <span className="membershipBadge">Most popular</span> : null}
+                
               </div>
 
               <h3>{plan.name}</h3>
@@ -359,6 +358,7 @@ export default function Home() {
               <div className="membershipPriceRow">
                 <p className="price">{plan.price}<span>/month</span></p>
               </div>
+              <p className="membershipCommitment">Initial 3-month minimum commitment</p>
 
               <p className="membershipOutcome">{plan.outcome}</p>
 
@@ -402,52 +402,34 @@ export default function Home() {
 
           <div className="comparisonTable animatedComparisonTable" role="table" aria-label="Membership comparison">
             <div className="comparisonRow comparisonHead comparisonRevealRow rowIndex0" role="row">
-              <span role="columnheader">Included</span>
-              <span role="columnheader">Train</span>
-              <span role="columnheader">Recover</span>
-              <span role="columnheader">Perform</span>
+              <span role="columnheader">Included</span><span role="columnheader">Train</span><span role="columnheader">Recover</span><span role="columnheader">Perform</span>
             </div>
-
             <div className="comparisonRow comparisonRevealRow rowIndex1" role="row">
-              <span role="cell">Private coaching</span>
-              <span role="cell">Weekly</span>
-              <span role="cell">Weekly</span>
-              <span role="cell">Twice weekly</span>
+              <span role="cell">60-min 1:1 S&C</span><span role="cell">1× weekly</span><span role="cell">1× weekly</span><span role="cell">2× weekly</span>
             </div>
-
             <div className="comparisonRow comparisonRevealRow rowIndex2" role="row">
-              <span role="cell">Personal programme</span>
-              <span role="cell">✓</span>
-              <span role="cell">✓</span>
-              <span role="cell">✓</span>
+              <span role="cell">Personalised S&C programme</span><span role="cell">✓</span><span role="cell">✓</span><span role="cell">✓</span>
             </div>
-
             <div className="comparisonRow comparisonRevealRow rowIndex3" role="row">
-              <span role="cell">Progress reviews</span>
-              <span role="cell">Monthly</span>
-              <span role="cell">Monthly</span>
-              <span role="cell">Priority</span>
+              <span role="cell">6-week progress review</span><span role="cell">✓</span><span role="cell">✓</span><span role="cell">✓</span>
             </div>
-
             <div className="comparisonRow comparisonRevealRow rowIndex4" role="row">
-              <span role="cell">Recovery support</span>
-              <span role="cell">—</span>
-              <span role="cell">Monthly</span>
-              <span role="cell">Included</span>
+              <span role="cell">Member portal</span><span role="cell">✓</span><span role="cell">✓</span><span role="cell">✓</span>
             </div>
-
             <div className="comparisonRow comparisonRevealRow rowIndex5" role="row">
-              <span role="cell">Priority scheduling</span>
-              <span role="cell">—</span>
-              <span role="cell">✓</span>
-              <span role="cell">✓</span>
+              <span role="cell">60-min sports massage</span><span role="cell">Pay-as-you-go</span><span role="cell">1/month</span><span role="cell">1/month</span>
             </div>
-
-            <div className="comparisonRow comparisonPrice comparisonRevealRow rowIndex6" role="row">
-              <span role="cell">Monthly price</span>
-              <span role="cell">£279</span>
-              <span role="cell">£349</span>
-              <span role="cell">£499</span>
+            <div className="comparisonRow comparisonRevealRow rowIndex6" role="row">
+              <span role="cell">Mobility & movement programming</span><span role="cell">—</span><span role="cell">—</span><span role="cell">✓</span>
+            </div>
+            <div className="comparisonRow comparisonRevealRow rowIndex7" role="row">
+              <span role="cell">Between-session technique feedback</span><span role="cell">—</span><span role="cell">—</span><span role="cell">✓</span>
+            </div>
+            <div className="comparisonRow comparisonRevealRow rowIndex8" role="row">
+              <span role="cell">Priority booking</span><span role="cell">—</span><span role="cell">—</span><span role="cell">✓</span>
+            </div>
+            <div className="comparisonRow comparisonPrice comparisonRevealRow rowIndex9" role="row">
+              <span role="cell">Monthly price</span><span role="cell">£279</span><span role="cell">£349</span><span role="cell">£499</span>
             </div>
           </div>
         </div>
@@ -601,6 +583,19 @@ export default function Home() {
           </article>
         </div>
 
+        <div className="studioHoursPanel" aria-label="True Gain opening hours">
+          <div>
+            <p className="eyebrow">Opening hours</p>
+            <h3>Private studio. Appointment only.</h3>
+            <p>Coaching and treatment appointments are scheduled around a focused private-studio timetable.</p>
+          </div>
+          <div className="studioHoursGrid">
+            <div><span>Monday–Friday</span><strong>6:00am–3:00pm</strong><strong>6:00pm–9:00pm</strong></div>
+            <div><span>Saturday</span><strong>8:00am–2:00pm</strong></div>
+            <div><span>Sunday</span><strong>Closed</strong></div>
+          </div>
+        </div>
+
         <div className="studioEquipmentPanel">
           <div className="studioEquipmentIntro">
             <p className="eyebrow">Equipment and training zones</p>
@@ -697,7 +692,7 @@ export default function Home() {
               <p className="planStrap">Qualified coaching</p>
               <strong>BSc</strong>
               <span>Strength & Conditioning</span>
-              <small>Level 7 Qualified</small>
+              <small>Qualified S&C Coach</small>
             </div>
           </div>
         </div>
@@ -779,7 +774,7 @@ export default function Home() {
             <p className="planStrap">What progress can look like</p>
             <strong>Strength. Confidence. Consistency.</strong>
             <span>
-              Every client's journey is different, but meaningful progress should always be expected. Every programme is tailored to your body, your goals and your lifestyle.
+              Every client's journey is different, but meaningful progress should always be expected. Progress measures are selected around your goals and ability, with optional progress photographs where appropriate and agreed.
             </span>
           </div>
         </div>
@@ -840,70 +835,6 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="caseStudiesHeroCard">
-            <span>Before launch</span>
-            <strong>Real client stories will be added here</strong>
-            <p>Only approved testimonials, photographs and measurable results will be published.</p>
-          </div>
-        </div>
-
-        <div className="caseStudyGrid">
-          <article className="caseStudyCard">
-            <div className="caseStudyImage caseStudyImageStrength">
-              <span>Client story coming soon</span>
-            </div>
-            <div className="caseStudyContent">
-              <p className="planStrap">Strength</p>
-              <h3>Build confidence under load.</h3>
-              <p>
-                A future case study will show how structured coaching can improve technique,
-                increase strength and help a client feel more capable in everyday life.
-              </p>
-              <div className="caseStudyMetrics">
-                <span>Technique</span>
-                <span>Strength</span>
-                <span>Confidence</span>
-              </div>
-            </div>
-          </article>
-
-          <article className="caseStudyCard">
-            <div className="caseStudyImage caseStudyImageMovement">
-              <span>Client story coming soon</span>
-            </div>
-            <div className="caseStudyContent">
-              <p className="planStrap">Movement</p>
-              <h3>Move with greater freedom.</h3>
-              <p>
-                This space will highlight meaningful improvements in mobility, movement quality
-                and confidence returning to activities that previously felt difficult.
-              </p>
-              <div className="caseStudyMetrics">
-                <span>Mobility</span>
-                <span>Control</span>
-                <span>Independence</span>
-              </div>
-            </div>
-          </article>
-
-          <article className="caseStudyCard">
-            <div className="caseStudyImage caseStudyImageConsistency">
-              <span>Client story coming soon</span>
-            </div>
-            <div className="caseStudyContent">
-              <p className="planStrap">Consistency</p>
-              <h3>Make progress sustainable.</h3>
-              <p>
-                A future client story will demonstrate how individual programming, accountability
-                and recovery support can turn short-term effort into long-term consistency.
-              </p>
-              <div className="caseStudyMetrics">
-                <span>Routine</span>
-                <span>Accountability</span>
-                <span>Longevity</span>
-              </div>
-            </div>
-          </article>
         </div>
 
         <div className="milestonePanel">
@@ -933,8 +864,8 @@ export default function Home() {
 
             <article>
               <span>03</span>
-              <h4>Lifestyle markers</h4>
-              <p>More energy, consistency, independence and confidence outside the studio.</p>
+              <h4>Everyday capability</h4>
+              <p>Greater consistency, independence and confidence in training and everyday activity.</p>
             </article>
 
             <article>
@@ -969,7 +900,8 @@ export default function Home() {
             <p>
               Arrange a free 30-minute consultation to discuss your goals, training
               history, current challenges and the type of coaching support that would
-              suit you best. There is no exercise, assessment or pressure to join.
+              suit you best. Choose phone/video, an agreed neutral environment, or an in-studio
+              consultation where appropriate. There is no exercise, physical assessment or pressure to join.
             </p>
           </div>
 
@@ -1072,19 +1004,19 @@ export default function Home() {
 
         <div className="bookingPanel">
           <div className="bookingPanelCopy">
-            <p className="planStrap">Live booking integration</p>
+            <p className="planStrap">Consultation scheduling</p>
             <h3>Choose a consultation time.</h3>
             <p>
-              This panel is ready to connect to Calendly, Google Calendar or another
-              booking platform before launch. Until then, use the enquiry form below
-              to request a suitable time.
+              Request a suitable consultation time using the enquiry form below. Consultations
+              can take place by phone/video, in an agreed neutral environment, or in the studio
+              where appropriate.
             </p>
 
             <div className="bookingTrust">
               <span>Private studio</span>
               <span>1:1 coaching</span>
               <span>Bushmead, Luton</span>
-              <span>Response within 24 hours</span>
+              <span>Response within 1–2 operating days</span>
             </div>
           </div>
 
@@ -1096,8 +1028,8 @@ export default function Home() {
                 <path d="M7.5 13h2M11 13h2M14.5 13h2M7.5 16.5h2M11 16.5h2M14.5 16.5h2" />
               </svg>
             </span>
-            <strong>Booking calendar coming soon</strong>
-            <p>Request your preferred consultation time using the form below.</p>
+            <strong>Request a consultation time</strong>
+            <p>Use the enquiry form below and I will arrange the most suitable consultation option with you.</p>
           </div>
         </div>
 
@@ -1120,13 +1052,14 @@ export default function Home() {
             <p>
               Your first step is a free 30-minute consultation to discuss your goals,
               training history, current challenges and the level of support that would
-              suit you best.
+              suit you best. Choose phone/video, an agreed neutral environment, or an
+              in-studio consultation where appropriate.
             </p>
           </div>
 
           <div className="contactResponseCard">
             <span>Typical response time</span>
-            <strong>Within 24 hours</strong>
+            <strong>1–2 operating days</strong>
             <p>Monday to Saturday</p>
           </div>
         </div>
@@ -1137,40 +1070,13 @@ export default function Home() {
             <h3>A clear, pressure-free process.</h3>
 
             <ol>
-              <li>
-                <span>01</span>
-                <div>
-                  <h4>Send your enquiry</h4>
-                  <p>Share your goals, preferred contact details and any useful background information.</p>
-                </div>
-              </li>
-
-              <li>
-                <span>02</span>
-                <div>
-                  <h4>Free consultation</h4>
-                  <p>Have a 30-minute conversation about your goals and whether True Gain is the right fit.</p>
-                </div>
-              </li>
-
-              <li>
-                <span>03</span>
-                <div>
-                  <h4>Choose your membership</h4>
-                  <p>Select the most suitable level of coaching support with no pressure to decide on the call.</p>
-                </div>
-              </li>
-
-              <li>
-                <span>04</span>
-                <div>
-                  <h4>Initial assessment</h4>
-                  <p>
-                    Once you join, your complimentary assessment is arranged separately
-                    and does not count towards your weekly coaching sessions.
-                  </p>
-                </div>
-              </li>
+              <li><span>01</span><div><h4>Consult</h4><p>Start with one complimentary 30-minute consultation to discuss your goals, background and whether True Gain is the right fit.</p></div></li>
+              <li><span>02</span><div><h4>Join</h4><p>Choose Train, Recover or Perform and set up your recurring membership on the next available 1st or 15th billing date.</p></div></li>
+              <li><span>03</span><div><h4>Onboard</h4><p>Complete your digital health screening, consent, membership and privacy documentation before physical coaching begins.</p></div></li>
+              <li><span>04</span><div><h4>Assess</h4><p>Your complimentary 45-minute individual assessment establishes the starting information needed to coach you properly.</p></div></li>
+              <li><span>05</span><div><h4>Build</h4><p>Your personalised S&C programme and recurring weekly coaching schedule are created around your goals and availability.</p></div></li>
+              <li><span>06</span><div><h4>Progress</h4><p>Train consistently while your programme, portal data and feedback are monitored and adjusted whenever needed.</p></div></li>
+              <li><span>07</span><div><h4>Review</h4><p>Every 6 weeks, progress is reviewed within a coached session and used to make evidence-based programme adjustments.</p></div></li>
             </ol>
           </div>
 
