@@ -342,7 +342,7 @@ export default function Home() {
         <div className="membershipShowcase">
           {memberships.map((plan, index) => (
             <article
-              className={plan.featured ? "membershipPlan featured" : "membershipPlan"}
+              className="membershipPlan"
               key={plan.name}
             >
               <div className="membershipPlanTop">
@@ -381,7 +381,7 @@ export default function Home() {
               </div>
 
               <a
-                className={plan.featured ? "button buttonGold" : "button buttonOutline"}
+                className="button buttonOutline"
                 href="#contact"
               >
                 Start with a consultation
