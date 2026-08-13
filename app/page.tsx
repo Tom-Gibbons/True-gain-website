@@ -46,12 +46,12 @@ const memberships = [
     price: "£349",
     strapline: "Train consistently. Recover smarter.",
     outcome:
-      "Everything in Train, with one 60-minute sports massage included each month to support a consistent approach to training and recovery.",
+      "Everything in Train, with one 60-minute sports massage each month and recovery-informed programme adjustments so your training and recovery work together.",
     features: [
       "Everything included in Train",
       "1 × 60-minute sports massage each month",
       "Structured progress review every 6 weeks",
-      "Ongoing programme monitoring and adjustments",
+      "Recovery-informed programme adjustments",
       "Member portal access",
       "Standard recurring weekly coaching slot",
     ],
@@ -420,6 +420,9 @@ export default function Home() {
               <span role="cell">60-min sports massage</span><span role="cell">Pay-as-you-go</span><span role="cell">1/month</span><span role="cell">1/month</span>
             </div>
             <div className="comparisonRow comparisonRevealRow rowIndex6" role="row">
+              <span role="cell">Recovery-informed programme adjustments</span><span role="cell">—</span><span role="cell">✓</span><span role="cell">✓</span>
+            </div>
+            <div className="comparisonRow comparisonRevealRow rowIndex6b" role="row">
               <span role="cell">Mobility & movement programming</span><span role="cell">—</span><span role="cell">—</span><span role="cell">✓</span>
             </div>
             <div className="comparisonRow comparisonRevealRow rowIndex7" role="row">
