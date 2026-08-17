@@ -10521,3 +10521,208 @@ header .desktopCta {
     right: 10px !important;
   }
 }
+
+
+/* =========================================================
+   TRUE GAIN — MOBILE MEMBERSHIP COMPARISON FIX
+   Keep all four comparison columns visible on phone.
+   ========================================================= */
+@media (max-width: 700px) {
+  .comparisonTable,
+  .animatedComparisonTable {
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .comparisonRow {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-template-columns: minmax(0, 1.55fr) repeat(3, minmax(0, .82fr)) !important;
+    min-height: 0 !important;
+  }
+
+  .comparisonRow span {
+    min-width: 0 !important;
+    padding: 12px 4px !important;
+    font-size: .66rem !important;
+    line-height: 1.28 !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+  }
+
+  .comparisonRow span:first-child {
+    padding-left: 8px !important;
+    padding-right: 6px !important;
+  }
+
+  .comparisonHead span {
+    font-size: .58rem !important;
+    letter-spacing: .035em !important;
+  }
+
+  .comparisonPrice span:not(:first-child) {
+    font-size: .82rem !important;
+  }
+
+  /* On a small screen the delayed cell-by-cell reveal can make later
+     membership columns appear missing. Keep the table fully visible. */
+  .animatedComparisonTable .comparisonRevealRow > span {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    animation: none !important;
+  }
+
+  .animatedComparisonTable .comparisonRevealRow::after {
+    display: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .comparisonRow {
+    grid-template-columns: minmax(0, 1.48fr) repeat(3, minmax(0, .84fr)) !important;
+  }
+
+  .comparisonRow span {
+    padding: 11px 3px !important;
+    font-size: .61rem !important;
+  }
+
+  .comparisonRow span:first-child {
+    padding-left: 6px !important;
+  }
+
+  .comparisonHead span {
+    font-size: .54rem !important;
+  }
+
+  .comparisonPrice span:not(:first-child) {
+    font-size: .76rem !important;
+  }
+}
+
+
+/* =========================================================
+   TRUE GAIN — MOBILE MEMBERSHIP SWITCHER
+   Desktop keeps the full comparison table.
+   Phone uses Train / Recover / Perform tabs.
+   ========================================================= */
+
+.mobileMembershipComparison {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .membershipComparison .comparisonTable {
+    display: none !important;
+  }
+
+  .mobileMembershipComparison {
+    display: block !important;
+    width: 100%;
+  }
+
+  .mobileMembershipTabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+
+  .mobileMembershipTabs button {
+    min-width: 0;
+    min-height: 46px;
+    padding: 10px 6px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 10px;
+    background: #0d0d0d;
+    color: #aaa49a;
+    font: inherit;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  .mobileMembershipTabs button.is-active {
+    border-color: rgba(229,189,114,.72);
+    background:
+      radial-gradient(circle at 50% 0%, rgba(199,151,72,.18), transparent 65%),
+      #15120e;
+    color: var(--tg-gold-light);
+    box-shadow: 0 0 0 1px rgba(229,189,114,.08) inset;
+  }
+
+  .mobileMembershipCard {
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.09);
+    border-radius: 18px;
+    background: #0d0d0d;
+  }
+
+  .mobileMembershipCardHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 18px 16px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    background: rgba(199,151,72,.09);
+  }
+
+  .mobileMembershipCardHead > span {
+    color: var(--tg-gold-light);
+    font-family: var(--tg-font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .mobileMembershipCardHead strong {
+    color: var(--tg-gold-light);
+    font-family: var(--tg-font-display);
+    font-size: 1.35rem;
+    white-space: nowrap;
+  }
+
+  .mobileMembershipCardHead small {
+    margin-left: 3px;
+    color: var(--tg-muted);
+    font-family: var(--tg-font-body);
+    font-size: .62rem;
+    font-weight: 600;
+    text-transform: none;
+  }
+
+  .mobileMembershipFeature {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 16px;
+    align-items: center;
+    min-height: 54px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+
+  .mobileMembershipFeature:last-child {
+    border-bottom: 0;
+  }
+
+  .mobileMembershipFeature span {
+    color: var(--tg-muted);
+    font-size: .76rem;
+    line-height: 1.4;
+  }
+
+  .mobileMembershipFeature strong {
+    max-width: 105px;
+    color: #e8e1d6;
+    font-size: .78rem;
+    line-height: 1.3;
+    text-align: right;
+  }
+}

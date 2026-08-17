@@ -80,7 +80,7 @@ const oneOff = [
 ];
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);\n  const [mobileMembership, setMobileMembership] = useState<"Train" | "Recover" | "Perform">("Train");
 
   return (
     <main data-site-version="onboarding-v2" data-service-label-version="2">
@@ -433,6 +433,50 @@ export default function Home() {
             </div>
             <div className="comparisonRow comparisonPrice comparisonRevealRow rowIndex9" role="row">
               <span role="cell">Monthly price</span><span role="cell">£279</span><span role="cell">£349</span><span role="cell">£499</span>
+            </div>
+          </div>
+
+          <div className="mobileMembershipComparison" aria-label="Mobile membership comparison">
+            <div className="mobileMembershipTabs" role="tablist" aria-label="Choose membership">
+              {(["Train", "Recover", "Perform"] as const).map((plan) => (
+                <button
+                  key={plan}
+                  type="button"
+                  role="tab"
+                  aria-selected={mobileMembership === plan}
+                  className={mobileMembership === plan ? "is-active" : ""}
+                  onClick={() => setMobileMembership(plan)}
+                >
+                  {plan}
+                </button>
+              ))}
+            </div>
+
+            <div className="mobileMembershipCard">
+              <div className="mobileMembershipCardHead">
+                <span>{mobileMembership}</span>
+                <strong>
+                  {mobileMembership === "Train" ? "£279" : mobileMembership === "Recover" ? "£349" : "£499"}
+                  <small>/month</small>
+                </strong>
+              </div>
+
+              {[
+                ["60-min 1:1 S&C", mobileMembership === "Perform" ? "2× weekly" : "1× weekly"],
+                ["Personalised S&C programme", "✓"],
+                ["6-week progress review", "✓"],
+                ["Member portal", "✓"],
+                ["60-min sports massage", mobileMembership === "Train" ? "Pay-as-you-go" : "1/month"],
+                ["Recovery-informed programme adjustments", mobileMembership === "Train" ? "—" : "✓"],
+                ["Mobility & movement programming", mobileMembership === "Perform" ? "✓" : "—"],
+                ["Between-session technique feedback", mobileMembership === "Perform" ? "✓" : "—"],
+                ["Priority booking", mobileMembership === "Perform" ? "✓" : "—"],
+              ].map(([label, value]) => (
+                <div className="mobileMembershipFeature" key={label}>
+                  <span>{label}</span>
+                  <strong>{value}</strong>
+                </div>
+              ))}
             </div>
           </div>
         </div>
