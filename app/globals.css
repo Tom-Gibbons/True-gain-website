@@ -10034,30 +10034,23 @@ header .desktopCta {
 }
 
 /* =========================================================
-   TRUE GAIN MOBILE RESPONSIVENESS FIX V2 — AUGUST 2026
-   IMPORTANT: keep this block at the VERY END of globals.css.
-   It targets the live tgHeaderExact / tgHeaderNav classes and
-   overrides older desktop rules that were re-enabling the nav.
+   TRUE GAIN MOBILE FIX V3 — FINAL CASCADE OVERRIDE
+   Must remain at the end of globals.css.
    ========================================================= */
 
 @media (max-width: 1120px) {
   .tgHeaderExact {
     height: 76px !important;
     min-height: 76px !important;
-    padding: 0 18px !important;
+    padding: 0 16px !important;
     grid-template-columns: 1fr 46px !important;
-    column-gap: 14px !important;
+    column-gap: 12px !important;
   }
 
-  .tgHeaderLogo {
-    width: 118px !important;
-    height: 62px !important;
-  }
-
+  .tgHeaderLogo,
   .tgHeaderLogo img {
-    width: 118px !important;
-    height: 62px !important;
-    object-fit: contain !important;
+    width: 112px !important;
+    height: 64px !important;
   }
 
   .tgMemberLogin,
@@ -10070,69 +10063,66 @@ header .desktopCta {
     width: 46px !important;
     height: 46px !important;
     padding: 11px !important;
-    justify-self: end !important;
     flex-direction: column !important;
     justify-content: center !important;
     gap: 5px !important;
+    justify-self: end !important;
     border: 1px solid rgba(255,255,255,.22) !important;
     border-radius: 9px !important;
-    background: rgba(255,255,255,.015) !important;
+    background: transparent !important;
   }
 
   .tgHeaderMenu span {
     display: block !important;
     width: 100% !important;
     height: 2px !important;
-    background: #f4f0e8 !important;
-    border-radius: 2px !important;
+    background: #f5f1e8 !important;
+    border-radius: 999px !important;
   }
 
-  .tgHeaderExact .tgHeaderNav {
+  /* This specifically defeats the later MAXIMUM DESKTOP NAVIGATION SIZE rule. */
+  .tgHeaderExact > .tgHeaderNav {
     display: none !important;
     position: fixed !important;
     top: 76px !important;
     left: 0 !important;
     right: 0 !important;
-    width: 100vw !important;
-    max-width: none !important;
+    width: 100% !important;
     height: auto !important;
     max-height: calc(100dvh - 76px) !important;
-    padding: 24px 24px 30px !important;
     margin: 0 !important;
+    padding: 14px 20px 24px !important;
     overflow-y: auto !important;
-    overscroll-behavior: contain !important;
     flex-direction: column !important;
     align-items: stretch !important;
     justify-content: flex-start !important;
     gap: 0 !important;
     white-space: normal !important;
-    background: rgba(7,7,7,.995) !important;
+    background: rgba(6,6,6,.995) !important;
     border-top: 1px solid rgba(255,255,255,.06) !important;
-    border-bottom: 1px solid rgba(229,189,114,.20) !important;
-    z-index: 9999 !important;
+    border-bottom: 1px solid rgba(229,189,114,.22) !important;
+    z-index: 10000 !important;
   }
 
-  .tgHeaderExact .tgHeaderNav.is-open {
+  .tgHeaderExact > .tgHeaderNav.is-open {
     display: flex !important;
   }
 
-  .tgHeaderExact .tgHeaderNav a {
+  .tgHeaderExact > .tgHeaderNav a {
+    width: 100% !important;
+    min-height: 50px !important;
     display: flex !important;
     align-items: center !important;
-    min-height: 54px !important;
-    width: 100% !important;
+    justify-content: flex-start !important;
     padding: 0 4px !important;
     border-bottom: 1px solid rgba(255,255,255,.08) !important;
-    color: #f4f0e8 !important;
-    font-size: 14px !important;
-    font-weight: 700 !important;
-    letter-spacing: .075em !important;
+    font-size: 13px !important;
     line-height: 1.2 !important;
-    text-transform: uppercase !important;
+    letter-spacing: .07em !important;
     white-space: normal !important;
   }
 
-  .tgHeaderExact .tgHeaderNav a:last-child {
+  .tgHeaderExact > .tgHeaderNav a:last-child {
     border-bottom: 0 !important;
   }
 
@@ -10142,26 +10132,15 @@ header .desktopCta {
 }
 
 @media (max-width: 768px) {
-  :root {
-    --tg-phone-gutter: 18px;
-  }
-
-  html,
-  body {
+  html, body {
     overflow-x: hidden !important;
   }
 
   .section {
-    padding-left: var(--tg-phone-gutter) !important;
-    padding-right: var(--tg-phone-gutter) !important;
-    padding-top: 68px !important;
-    padding-bottom: 68px !important;
-  }
-
-  .eyebrow {
-    font-size: .70rem !important;
-    line-height: 1.4 !important;
-    letter-spacing: .22em !important;
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
   }
 
   .testimonialIntro h3,
@@ -10169,16 +10148,16 @@ header .desktopCta {
   .caseStudiesHeroCopy h2,
   .bookingHeroCopy h2,
   .contactExperienceHero h2 {
-    font-size: clamp(2.65rem, 11.5vw, 3.55rem) !important;
-    line-height: .94 !important;
-    letter-spacing: -.04em !important;
-    overflow-wrap: normal !important;
+    font-size: clamp(2.35rem, 10.5vw, 3.1rem) !important;
+    line-height: .96 !important;
+    letter-spacing: -.035em !important;
     word-break: normal !important;
+    overflow-wrap: normal !important;
     hyphens: none !important;
   }
 
   .milestoneHeadline {
-    font-size: clamp(2.35rem, 10.5vw, 3.2rem) !important;
+    font-size: clamp(2.15rem, 9.7vw, 2.85rem) !important;
     line-height: .98 !important;
   }
 
@@ -10189,69 +10168,40 @@ header .desktopCta {
   .bookingHeroCopy > p:last-child,
   .contactExperienceHero > div:first-child > p:last-child {
     font-size: 1rem !important;
-    line-height: 1.62 !important;
+    line-height: 1.58 !important;
   }
 
   .caseStudiesHero,
   .bookingHero,
   .contactExperienceHero {
     grid-template-columns: 1fr !important;
-    gap: 30px !important;
-    margin-bottom: 46px !important;
+    gap: 28px !important;
+    margin-bottom: 42px !important;
   }
 
   .bookingHeroCard,
   .contactResponseCard,
-  .caseStudiesHeroCard {
-    padding: 24px 22px !important;
-  }
-
+  .caseStudiesHeroCard,
   .milestonePanel,
   .bookingPanel,
   .contactJourneyPanel,
   .contactForm {
-    padding-left: 22px !important;
-    padding-right: 22px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 
-  .testimonialShowcase {
-    gap: 36px !important;
-  }
-
-  .portalShowcase {
-    padding-top: 68px !important;
-    padding-bottom: 68px !important;
-  }
-
-  .portalShowcaseInner {
-    width: calc(100% - 36px) !important;
-  }
-
-  .portalShowcaseHero {
-    gap: 34px !important;
-  }
-
-  .portalBenefitList {
-    gap: 14px !important;
-  }
-
-  .bookingValueGrid {
-    grid-template-columns: 1fr !important;
-  }
-
+  .bookingValueGrid,
   .contactExperienceGrid {
     grid-template-columns: 1fr !important;
   }
 
   .contactFaq summary {
     font-size: .98rem !important;
-    line-height: 1.45 !important;
+    line-height: 1.4 !important;
     padding-right: 38px !important;
   }
 
-  input,
-  select,
-  textarea {
+  input, select, textarea {
     font-size: 16px !important;
   }
 }
@@ -10263,7 +10213,7 @@ header .desktopCta {
 
   .tgHeaderLogo,
   .tgHeaderLogo img {
-    width: 110px !important;
+    width: 106px !important;
   }
 
   .section {
@@ -10276,30 +10226,6 @@ header .desktopCta {
   .caseStudiesHeroCopy h2,
   .bookingHeroCopy h2,
   .contactExperienceHero h2 {
-    font-size: clamp(2.45rem, 11vw, 3.15rem) !important;
-  }
-
-  .milestoneHeadline {
-    font-size: clamp(2.15rem, 10vw, 2.8rem) !important;
-  }
-
-  .bookingHeroCard,
-  .contactResponseCard,
-  .caseStudiesHeroCard,
-  .milestonePanel,
-  .bookingPanel,
-  .contactJourneyPanel,
-  .contactForm {
-    padding-left: 18px !important;
-    padding-right: 18px !important;
-  }
-
-  .tgHeaderExact .tgHeaderNav {
-    padding-inline: 18px !important;
-  }
-
-  .tgHeaderExact .tgHeaderNav a {
-    min-height: 52px !important;
-    font-size: 13px !important;
+    font-size: clamp(2.2rem, 10vw, 2.75rem) !important;
   }
 }
