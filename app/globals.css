@@ -10229,3 +10229,97 @@ header .desktopCta {
     font-size: clamp(2.2rem, 10vw, 2.75rem) !important;
   }
 }
+
+/* =========================================================
+   TRUE GAIN MOBILE HERO FIX — AUGUST 2026
+   Keep this block at the very end of app/globals.css.
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .heroSplit {
+    min-height: auto !important;
+    display: block !important;
+    padding-top: 76px !important;
+  }
+
+  .heroPanel {
+    padding: 44px 22px 54px !important;
+  }
+
+  .heroPanel .eyebrow {
+    margin-bottom: 18px !important;
+    font-size: .74rem !important;
+    line-height: 1.4 !important;
+    letter-spacing: .24em !important;
+  }
+
+  .heroPanel h1 {
+    margin: 0 0 26px !important;
+    font-size: clamp(2.7rem, 11.2vw, 3.55rem) !important;
+    line-height: .92 !important;
+    letter-spacing: -.045em !important;
+    max-width: 100% !important;
+  }
+
+  .heroPanel h1 span {
+    display: block !important;
+  }
+
+  .heroPanel .heroText {
+    max-width: 34rem !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 26px !important;
+  }
+
+  .heroActions {
+    margin-top: 0 !important;
+  }
+
+  .heroActions .button {
+    width: 100% !important;
+    min-height: 54px !important;
+    justify-content: center !important;
+    padding-inline: 18px !important;
+  }
+
+  .heroLocation {
+    margin-top: 34px !important;
+    gap: 14px !important;
+  }
+
+  .heroLocation span {
+    font-size: .78rem !important;
+    line-height: 1.35 !important;
+    letter-spacing: .13em !important;
+  }
+
+  .heroImage {
+    min-height: 420px !important;
+    height: 52vh !important;
+    max-height: 560px !important;
+    background-position: 62% center !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .heroPanel {
+    padding: 38px 18px 48px !important;
+  }
+
+  .heroPanel h1 {
+    font-size: clamp(2.45rem, 10.6vw, 3.05rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.04em !important;
+  }
+
+  .heroPanel .heroText {
+    font-size: .98rem !important;
+    line-height: 1.58 !important;
+  }
+
+  .heroImage {
+    min-height: 380px !important;
+    height: 48vh !important;
+  }
+}
