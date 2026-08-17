@@ -10032,3 +10032,194 @@ header .desktopCta {
   .studioHoursGrid{grid-template-columns:1fr}
   .studioHoursGrid>div{min-height:0}
 }
+
+/* =========================================================
+   MOBILE RESPONSIVENESS STABILISATION — AUGUST 2026
+   Final cascade-safe overrides for phone/tablet navigation and
+   the oversized mobile typography visible in portrait testing.
+   Desktop layout above 1120px is intentionally unchanged.
+   ========================================================= */
+
+/* Restore the intended collapsible navigation after later desktop
+   navigation rules in this file override the earlier breakpoint. */
+@media (max-width: 1120px) {
+  .tgHeaderExact {
+    height: 82px !important;
+    min-height: 82px !important;
+    grid-template-columns: 1fr auto !important;
+    padding-inline: 20px !important;
+  }
+
+  .tgMemberLogin,
+  .tgHeaderConsultation {
+    display: none !important;
+  }
+
+  .tgHeaderMenu {
+    display: flex !important;
+  }
+
+  .tgHeaderNav {
+    display: none !important;
+    position: fixed !important;
+    top: 82px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-height: calc(100dvh - 82px) !important;
+    overflow-y: auto !important;
+    padding: 24px 24px 30px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    white-space: normal !important;
+    background: rgba(8,8,8,.995) !important;
+    border-bottom: 1px solid rgba(255,255,255,.09) !important;
+    box-shadow: 0 24px 48px rgba(0,0,0,.42) !important;
+  }
+
+  .tgHeaderNav.is-open {
+    display: flex !important;
+  }
+
+  .tgHeaderNav a {
+    width: 100% !important;
+    padding: 15px 2px !important;
+    border-bottom: 1px solid rgba(255,255,255,.07) !important;
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    letter-spacing: .07em !important;
+  }
+
+  .tgHeaderNav a:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .heroSplit {
+    padding-top: 82px !important;
+  }
+}
+
+/* Phone-only refinements. Keep iPad/tablet presentation intact. */
+@media (max-width: 700px) {
+  .tgHeaderExact {
+    height: 76px !important;
+    min-height: 76px !important;
+    padding-inline: 18px !important;
+  }
+
+  .tgHeaderLogo {
+    width: 118px !important;
+    height: 64px !important;
+  }
+
+  .tgHeaderExact .tgHeaderLogo img {
+    width: 118px !important;
+    height: 64px !important;
+    max-width: none !important;
+  }
+
+  .tgHeaderMenu {
+    width: 42px !important;
+    height: 42px !important;
+    padding: 10px !important;
+  }
+
+  .tgHeaderNav {
+    top: 76px !important;
+    max-height: calc(100dvh - 76px) !important;
+    padding: 16px 20px 24px !important;
+  }
+
+  .tgHeaderNav a {
+    padding: 14px 0 !important;
+    font-size: 12px !important;
+  }
+
+  .heroSplit {
+    padding-top: 76px !important;
+  }
+
+  /* Reduce the large desktop-scale display headings on phones. */
+  .portalShowcaseCopy h2,
+  .caseStudiesHeroCopy h2,
+  .bookingHeroCopy h2,
+  .liveBookingIntro h2,
+  .contactExperienceHero h2 {
+    font-size: clamp(2.55rem, 11.5vw, 3.35rem) !important;
+    line-height: .94 !important;
+    letter-spacing: -.035em !important;
+  }
+
+  .bookingProcessIntro h3,
+  .bookingPanelCopy h3,
+  .bookingAssessmentNote h3,
+  .bookingFinalCta h3,
+  .caseStudiesCta h3,
+  .contactFaq h3,
+  .contactFormHeading h3,
+  .contactJourneyPanel h3,
+  .portalAccessCopy h3 {
+    font-size: clamp(1.95rem, 8.5vw, 2.65rem) !important;
+    line-height: 1 !important;
+  }
+
+  .portalLead,
+  .portalIntro,
+  .caseStudiesHeroCopy > p:last-child,
+  .bookingHeroCopy > p:last-child,
+  .liveBookingIntro > div:first-child > p:last-child,
+  .contactExperienceHero > div:first-child > p:last-child {
+    font-size: .98rem !important;
+    line-height: 1.68 !important;
+  }
+
+  /* Tighten mobile rhythm without changing desktop spacing. */
+  .portalShowcase,
+  .caseStudiesSection,
+  .bookingSection,
+  .liveBookingSection,
+  .contactExperienceSection {
+    padding-top: 68px !important;
+    padding-bottom: 68px !important;
+  }
+
+  .portalShowcaseHero,
+  .caseStudiesHero,
+  .bookingHero,
+  .liveBookingIntro {
+    margin-bottom: 42px !important;
+    gap: 30px !important;
+  }
+
+  .bookingValueGrid article,
+  .bookingHeroCard,
+  .caseStudiesHeroCard,
+  .liveBookingSecurity,
+  .contactResponseCard {
+    padding: 24px !important;
+  }
+
+  .bookingOptionCard,
+  .bookingPanel,
+  .contactJourneyPanel,
+  .contactForm {
+    padding: 26px 22px !important;
+  }
+
+  .contactFaq summary {
+    font-size: .94rem !important;
+    line-height: 1.45 !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .portalShowcaseCopy h2,
+  .caseStudiesHeroCopy h2,
+  .bookingHeroCopy h2,
+  .liveBookingIntro h2,
+  .contactExperienceHero h2 {
+    font-size: clamp(2.35rem, 11vw, 3rem) !important;
+  }
+}
