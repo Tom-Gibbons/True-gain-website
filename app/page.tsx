@@ -80,7 +80,8 @@ const oneOff = [
 ];
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);\n  const [mobileMembership, setMobileMembership] = useState<"Train" | "Recover" | "Perform">("Train");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [mobileMembership, setMobileMembership] = useState<"Train" | "Recover" | "Perform">("Train");
 
   return (
     <main data-site-version="onboarding-v2" data-service-label-version="2">
