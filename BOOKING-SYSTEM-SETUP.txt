@@ -10,9 +10,13 @@ CONFIRMED PRICES
 30-minute massage: £35 single / £157.50 for 5 / £297.50 for 10
 60-minute massage: £60 single / £270 for 5 / £510 for 10
 
-Five-session blocks save 10%. Ten-session blocks save 15%.
-Strength blocks require two appointments per week.
-Massage blocks require one appointment per fortnight.
+5-session blocks save 10%. 10-session blocks save 15%.
+Strength blocks require 2 appointments per week.
+Massage blocks require 1 appointment per fortnight.
+
+COMBINED BUNDLES
+Strength + Reset: 5 x 60-minute strength sessions and 2 x 30-minute massages for £355 (save £40).
+Strength + Recover: 10 x 60-minute strength sessions and 2 x 60-minute massages for £655 (save £115).
 
 The contact form currently opens the visitor's email application and sends to:
 hello@truegainperformance.co.uk

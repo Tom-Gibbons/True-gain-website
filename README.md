@@ -56,5 +56,10 @@ Vercel will redeploy automatically after the GitHub commit.
 - 30-minute massage: £35 single / £157.50 for 5 / £297.50 for 10
 - 60-minute massage: £60 single / £270 for 5 / £510 for 10
 
-Five-session blocks save 10%; ten-session blocks save 15%. Strength blocks
+5-session blocks save 10%; 10-session blocks save 15%. Strength blocks
 require twice-weekly attendance and massage blocks require fortnightly attendance.
+
+Combined bundles:
+
+- Strength + Reset: 5 × 60-minute strength sessions and 2 × 30-minute massages for £355.
+- Strength + Recover: 10 × 60-minute strength sessions and 2 × 60-minute massages for £655.
