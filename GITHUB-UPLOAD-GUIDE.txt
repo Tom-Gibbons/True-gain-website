@@ -1,0 +1,26 @@
+TRUE GAIN — GITHUB UPLOAD GUIDE
+
+Upload the contents of the True-Gain-Responsive-Clean-Build folder to the root
+of the existing GitHub repository. Keep this structure:
+
+app/
+components/
+docs/
+public/
+styles/
+.env.example
+.gitignore
+next-env.d.ts
+package.json
+package-lock.json
+tsconfig.json
+
+Do not create an extra app/app folder. The homepage must remain at app/page.tsx.
+
+This version intentionally contains no member-login, member-portal,
+coach-portal or Supabase application routes. It uses direct enquiries rather
+than memberships or a client coaching app.
+
+After uploading, Vercel should build the project automatically. Check the
+homepage on desktop, iPad and mobile, and confirm the enquiry form opens a new
+email addressed to hello@truegainperformance.co.uk.

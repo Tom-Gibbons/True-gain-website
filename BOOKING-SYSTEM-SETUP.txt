@@ -1,0 +1,22 @@
+TRUE GAIN — ENQUIRY AND BOOKING SETUP
+
+This website version does not require a client app, member portal or monthly
+membership system. Visitors review the session prices and submit an enquiry.
+
+CONFIRMED PRICES
+
+45-minute strength: £47.50 single / £213.75 for 5 / £403.75 for 10
+60-minute strength: £65 single / £292.50 for 5 / £552.50 for 10
+30-minute massage: £35 single / £157.50 for 5 / £297.50 for 10
+60-minute massage: £60 single / £270 for 5 / £510 for 10
+
+Five-session blocks save 10%. Ten-session blocks save 15%.
+Strength blocks require two appointments per week.
+Massage blocks require one appointment per fortnight.
+
+The contact form currently opens the visitor's email application and sends to:
+hello@truegainperformance.co.uk
+
+Before launch, confirm that this email address is active and test the form on
+the live domain. Payments and appointment times are arranged personally after
+the enquiry.

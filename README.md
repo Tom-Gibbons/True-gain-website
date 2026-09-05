@@ -1,6 +1,10 @@
 # True Gain Website Master
 
-This is the complete current website plus the coded True Gain brand guide and design system.
+This is the complete True Gain private-studio website using flexible single
+appointments and prepaid strength and sports-massage blocks.
+
+This version intentionally has no monthly memberships, client app, member
+portal, independent programming or between-session coaching support.
 
 ## Main website files
 
@@ -19,7 +23,6 @@ This is the complete current website plus the coded True Gain brand guide and de
 - `components/Button.tsx`
 - `components/SectionHeading.tsx`
 - `components/ServiceCard.tsx`
-- `components/MembershipCard.tsx`
 
 ## Documentation
 
@@ -45,3 +48,13 @@ It should also show:
 - `next-env.d.ts`
 
 Vercel will redeploy automatically after the GitHub commit.
+
+## Confirmed pricing
+
+- 45-minute strength: £47.50 single / £213.75 for 5 / £403.75 for 10
+- 60-minute strength: £65 single / £292.50 for 5 / £552.50 for 10
+- 30-minute massage: £35 single / £157.50 for 5 / £297.50 for 10
+- 60-minute massage: £60 single / £270 for 5 / £510 for 10
+
+Five-session blocks save 10%; ten-session blocks save 15%. Strength blocks
+require twice-weekly attendance and massage blocks require fortnightly attendance.
