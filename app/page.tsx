@@ -233,11 +233,11 @@ export default function Home() {
             <h3>Commit consistently. Save on every session.</h3>
             <p>
               Prepaid blocks reward clients who are ready to attend consistently.
-              Choose five sessions for a 10% saving or ten sessions for a 15% saving,
+              Choose 5 sessions for a 10% saving or 10 sessions for a 15% saving,
               with the agreed attendance schedule reserved in advance.
             </p>
             <ul>
-              <li>Five- and ten-session options</li>
+              <li>5- and 10-session options</li>
               <li>Payment made upfront</li>
               <li>Twice-weekly strength attendance</li>
               <li>Fortnightly massage attendance</li>
@@ -262,7 +262,7 @@ export default function Home() {
           <article className="featured serviceComparisonPremium">
             <p className="planStrap">Commit</p>
             <h3>Prepaid session blocks</h3>
-            <p>Attend consistently and save 10% on five sessions or 15% on ten.</p>
+            <p>Attend consistently and save 10% on 5 sessions or 15% on 10.</p>
             <span>No monthly membership</span>
           </article>
         </div>
@@ -295,7 +295,7 @@ export default function Home() {
           <div className="membershipHeroNote">
             <p className="planStrap">Simple and transparent</p>
             <strong>No monthly membership.</strong>
-            <span>Single appointments offer flexibility. Five-session blocks save 10% and ten-session blocks save 15%, with attendance agreed in advance.</span>
+            <span>Single appointments offer flexibility. 5-session blocks save 10% and 10-session blocks save 15%, with attendance agreed in advance.</span>
           </div>
         </div>
 
@@ -417,6 +417,44 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="combinedBundles" aria-labelledby="combined-bundles-title">
+          <div className="combinedBundlesIntro">
+            <p className="eyebrow">Combined strength &amp; recovery</p>
+            <h3 id="combined-bundles-title">Train consistently. Recover properly.</h3>
+            <p>Pair full 60-minute strength coaching with planned sports massage in one prepaid package.</p>
+          </div>
+
+          <div className="combinedBundleGrid">
+            <article className="combinedBundleCard">
+              <div className="combinedBundleTop"><span>01</span><p className="planStrap">Strength + Reset</p></div>
+              <h4>5 strength sessions + 2 massages</h4>
+              <p className="combinedBundlePrice">£355 <span>paid upfront</span></p>
+              <p className="combinedBundleSaving">Save £40 against the £395 single-session value</p>
+              <ul>
+                <li>5 × 60-minute strength sessions</li>
+                <li>2 × 30-minute sports massages</li>
+                <li>Strength sessions attended twice weekly</li>
+                <li>Massages booked approximately fortnightly</li>
+              </ul>
+              <a className="button buttonGold" href="#contact">Enquire about Strength + Reset</a>
+            </article>
+
+            <article className="combinedBundleCard combinedBundleFeatured">
+              <div className="combinedBundleTop"><span>02</span><p className="planStrap">Strength + Recover</p></div>
+              <h4>10 strength sessions + 2 massages</h4>
+              <p className="combinedBundlePrice">£655 <span>paid upfront</span></p>
+              <p className="combinedBundleSaving">Save £115 against the £770 single-session value</p>
+              <ul>
+                <li>10 × 60-minute strength sessions</li>
+                <li>2 × 60-minute sports massages</li>
+                <li>Strength sessions attended twice weekly</li>
+                <li>Massages booked approximately fortnightly</li>
+              </ul>
+              <a className="button buttonGold" href="#contact">Enquire about Strength + Recover</a>
+            </article>
+          </div>
+        </div>
+
         <div className="membershipPromise">
           <div>
             <p className="eyebrow">The True Gain promise</p>
@@ -453,8 +491,8 @@ export default function Home() {
           <h2>Consistency rewarded. Terms kept clear.</h2>
         </div>
         <div className="oneOffGrid">
-          <article className="oneOffCard"><p className="planStrap">Strength blocks</p><h3>Twice-weekly training</h3><p className="oneOffText">Five- and ten-session strength blocks are paid upfront and require two appointments each week.</p></article>
-          <article className="oneOffCard"><p className="planStrap">Massage blocks</p><h3>Fortnightly treatment</h3><p className="oneOffText">Five- and ten-treatment massage blocks are paid upfront and require one appointment every fortnight.</p></article>
+          <article className="oneOffCard"><p className="planStrap">Strength blocks</p><h3>Twice-weekly training</h3><p className="oneOffText">5- and 10-session strength blocks are paid upfront and require 2 appointments each week.</p></article>
+          <article className="oneOffCard"><p className="planStrap">Massage blocks</p><h3>Fortnightly treatment</h3><p className="oneOffText">5- and 10-treatment massage blocks are paid upfront and require 1 appointment every fortnight.</p></article>
           <article className="oneOffCard"><p className="planStrap">Flexible option</p><h3>Single appointments</h3><p className="oneOffText">Clients attending strength once weekly, or massage monthly, use the standard single-appointment price.</p></article>
         </div>
       </section>
@@ -1088,6 +1126,8 @@ export default function Home() {
                   <option value="Sports Massage">Sports Massage</option>
                   <option value="Strength Session Block">Strength Session Block</option>
                   <option value="Massage Block">Massage Block</option>
+                  <option value="Strength + Reset Bundle">Strength + Reset Bundle</option>
+                  <option value="Strength + Recover Bundle">Strength + Recover Bundle</option>
                   <option value="Not Sure">Not sure yet</option>
                 </select>
               </label>
