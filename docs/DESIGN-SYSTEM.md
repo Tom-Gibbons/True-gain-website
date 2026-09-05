@@ -122,6 +122,5 @@ Use motion sparingly:
 - `components/Button.tsx`
 - `components/SectionHeading.tsx`
 - `components/ServiceCard.tsx`
-- `components/MembershipCard.tsx`
 
 These components should be used when new pages are added so the visual system stays consistent.

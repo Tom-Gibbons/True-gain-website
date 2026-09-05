@@ -6,7 +6,7 @@ True Gain is a premium private coaching brand helping adults aged 30–60 build 
 
 ## Mission
 
-Deliver evidence-led 1:1 coaching, recovery support and long-term guidance in a private studio environment.
+Deliver evidence-led 1:1 strength coaching and sports massage through focused private-studio appointments.
 
 ## Brand promise
 
