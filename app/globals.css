@@ -1761,11 +1761,16 @@ blockquote footer{
 }
 
 .combinedBundlePrice span {
+  display: inline-block;
+  margin-left: 12px;
   color: var(--tg-muted);
   font-family: var(--tg-font-body);
-  font-size: .72rem;
-  font-weight: 600;
+  font-size: .84rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.2;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 
 .combinedBundleSaving {
