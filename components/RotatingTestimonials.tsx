@@ -47,7 +47,7 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "The coaching is personal, encouraging and completely tailored to me. It doesn't feel like a generic gym programme.",
+      "The coaching is personal, encouraging and completely tailored to me. It never feels like a generic gym session.",
     name: "Claire P.",
     age: "Age 43",
     focus: "Personalised coaching",
@@ -64,7 +64,7 @@ const testimonials: Testimonial[] = [
       "The biggest difference has been consistency. Having someone genuinely invested in my progress keeps me accountable.",
     name: "Lisa B.",
     age: "Age 52",
-    focus: "Long-term support",
+    focus: "Long-term progress",
   },
   {
     quote:
