@@ -1,107 +1,66 @@
 "use client";
 
-import ClientPortalPreview from "../components/ClientPortalPreview";
 import BookingSystem from "../components/BookingSystem";
 
 
 import { useState } from "react";
 
 import RotatingTestimonials from "../components/RotatingTestimonials";
-const services = [
-  {
-    number: "01",
-    title: "Personal training",
-    text: "Private one-to-one coaching focused on strength, movement quality and long-term progress.",
-  },
-  {
-    number: "02",
-    title: "Complete coaching",
-    text: "Private one-to-one coaching supported by personalised programming, progress reviews and structured independent training where appropriate.",
-  },
-  {
-    number: "03",
-    title: "Sports massage",
-    text: "Focused sports massage delivered within professional scope to support recovery, comfort and training consistency.",
-  },
-];
 
-const memberships = [
+const sessionPrices = [
   {
-    name: "Train",
-    price: "£279",
-    strapline: "Build strong foundations",
-    outcome:
-      "For adults who want expert weekly coaching, a personalised plan and clear progression while still training independently between sessions.",
-    features: [
-      "1 × 60-minute 1:1 S&C session every week",
-      "Personalised S&C programme",
-      "Independent training prescribed where appropriate",
-      "Structured progress review every 6 weeks",
-      "Member portal access",
-      "Sports massage available pay-as-you-go",
-    ],
+    category: "Strength coaching",
+    name: "45 minutes",
+    tabLabel: "45 Strength",
+    single: "£47.50",
+    five: "£213.75",
+    ten: "£403.75",
+    cadence: "Strength blocks require two appointments per week.",
   },
   {
-    name: "Recover",
-    price: "£349",
-    strapline: "Train consistently. Recover smarter.",
-    outcome:
-      "Everything in Train, with one 60-minute sports massage each month and recovery-informed programme adjustments so your training and recovery work together.",
-    features: [
-      "Everything included in Train",
-      "1 × 60-minute sports massage each month",
-      "Structured progress review every 6 weeks",
-      "Recovery-informed programme adjustments",
-      "Member portal access",
-      "Standard recurring weekly coaching slot",
-    ],
+    category: "Strength coaching",
+    name: "60 minutes",
+    tabLabel: "60 Strength",
+    single: "£65",
+    five: "£292.50",
+    ten: "£552.50",
+    cadence: "Strength blocks require two appointments per week.",
   },
   {
-    name: "Perform",
-    price: "£499",
-    strapline: "The complete True Gain experience",
-    outcome:
-      "The highest level of True Gain coaching, combining twice-weekly private S&C, personalised programming, monthly sports massage and additional between-session support.",
-    features: [
-      "2 × 60-minute 1:1 S&C sessions every week",
-      "Personalised S&C programme",
-      "1 × 60-minute sports massage each month",
-      "Dedicated mobility & movement programming",
-      "Between-session video technique feedback",
-      "Priority booking",
-    ],
+    category: "Sports massage",
+    name: "30 minutes",
+    tabLabel: "30 Massage",
+    single: "£35",
+    five: "£157.50",
+    ten: "£297.50",
+    cadence: "Massage blocks require one appointment per fortnight.",
   },
-];
-
-const oneOff = [
-  ["60-minute 1:1 S&C / PT session", "£55", "A focused one-to-one coaching session with no monthly commitment."],
-  ["30-minute sports massage", "£35", "A focused sports massage appointment delivered within professional scope."],
-  ["60-minute sports massage", "£60", "A full sports massage appointment delivered within professional scope."],
+  {
+    category: "Sports massage",
+    name: "60 minutes",
+    tabLabel: "60 Massage",
+    single: "£60",
+    five: "£270",
+    ten: "£510",
+    cadence: "Massage blocks require one appointment per fortnight.",
+  },
 ];
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [mobileMembership, setMobileMembership] = useState<"Train" | "Recover" | "Perform">("Train");
+  const [mobilePrice, setMobilePrice] = useState(0);
 
   return (
-    <main data-site-version="onboarding-v2" data-service-label-version="2">
+    <main data-site-version="session-blocks-v1" data-service-label-version="3">
       <header className="tgHeaderExact">
         <a className="tgHeaderLogo" href="#top" aria-label="True Gain home">
           <img src="/true-gain-logo.png" alt="True Gain Performance" />
         </a>
 
-        <a className="tgMemberLogin" href="/member-login">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="7.25" r="3.25" />
-            <path d="M5.5 19c.55-4.1 2.7-6.2 6.5-6.2s5.95 2.1 6.5 6.2" />
-          </svg>
-          <span>Member Login</span>
-        </a>
-
         <nav className={menuOpen ? "tgHeaderNav is-open" : "tgHeaderNav"} aria-label="Main navigation">
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="#services" onClick={() => setMenuOpen(false)}>Services</a>
-          <a href="#memberships" onClick={() => setMenuOpen(false)}>Memberships</a>
+          <a href="#pricing" onClick={() => setMenuOpen(false)}>Pricing</a>
           <a href="#studio" onClick={() => setMenuOpen(false)}>Studio</a>
           <a href="#coach" onClick={() => setMenuOpen(false)}>Coach</a>
           <a href="#case-studies" onClick={() => setMenuOpen(false)}>Results &amp; Progress</a>
@@ -138,7 +97,7 @@ export default function Home() {
           </p>
 
           <div className="heroActions">
-            <a className="button buttonOutline" href="#memberships">Explore memberships</a>
+            <a className="button buttonOutline" href="#pricing">View sessions &amp; pricing</a>
           </div>
 
           <div className="heroLocation">
@@ -168,7 +127,7 @@ export default function Home() {
             to help you become stronger, more confident and more capable in everyday life.
           </p>
           <p>
-            Every plan is built around your current ability, lifestyle and long-term goals. Never a generic template.
+            Every appointment is shaped around your current ability, lifestyle and goals. Never a generic session.
           </p>
           <a className="inlineLink" href="#coach">Meet your coach →</a>
         </div>
@@ -178,7 +137,7 @@ export default function Home() {
         <article className="pillarCard">
           <div className="pillarImage pillarTrainImage" aria-label="One-to-one barbell back squat coaching" />
           <div className="pillarContent">
-            <p className="eyebrow">01 / Train</p>
+            <p className="eyebrow">01 / Strength</p>
             <h3>Build useful strength</h3>
             <p>
               Develop strength that carries into everyday life through structured,
@@ -190,7 +149,7 @@ export default function Home() {
         <article className="pillarCard">
           <div className="pillarImage pillarRecoverImage" aria-label="Professional sports massage treatment" />
           <div className="pillarContent">
-            <p className="eyebrow">02 / Recover</p>
+            <p className="eyebrow">02 / Massage</p>
             <h3>Move and feel better</h3>
             <p>
               Support your training with focused sports massage, mobility work and recovery
@@ -202,7 +161,7 @@ export default function Home() {
         <article className="pillarCard">
           <div className="pillarImage pillarPerformImage" aria-label="Client performing a powerful dumbbell swing" />
           <div className="pillarContent">
-            <p className="eyebrow">03 / Perform</p>
+            <p className="eyebrow">03 / Progress</p>
             <h3>Stay capable for life</h3>
             <p>
               Build the physical confidence, resilience and work capacity needed to perform well,
@@ -215,10 +174,10 @@ export default function Home() {
         <div className="servicesHero">
           <div className="servicesHeroCopy">
             <p className="eyebrow">Services</p>
-            <h2>Three services. One personal standard.</h2>
+            <h2>Focused sessions. One personal standard.</h2>
             <p>
-              Evidence-led coaching, recovery and accountability built around your
-              goals, lifestyle and long-term physical capability.
+              Evidence-led strength coaching and sports massage delivered around your
+              goals, current needs and long-term physical capability.
             </p>
           </div>
           <div className="servicesHeroStat">
@@ -230,27 +189,27 @@ export default function Home() {
         <div className="serviceFeature serviceFeatureTrain">
           <div className="serviceFeatureImage" aria-label="One-to-one strength coaching" />
           <div className="serviceFeatureCopy">
-            <p className="serviceNumber">01 / Train</p>
+            <p className="serviceNumber">01 / Strength coaching</p>
             <h3>Build strength with purpose.</h3>
             <p>
-              Personal training designed around your current ability, training history
-              and long-term goals. Every session is structured, progressive and focused
+              One-to-one strength coaching designed around your current ability, training history
+              and goals. Every appointment is structured, progressive and focused
               on helping you become stronger and more confident.
             </p>
             <ul>
-              <li>Individual assessment</li>
-              <li>Personalised programme</li>
+              <li>45- or 60-minute appointments</li>
+              <li>Individual session planning</li>
               <li>Technique coaching</li>
               <li>Progress tracking</li>
             </ul>
-            <a className="button buttonOutline serviceBookingButton" href="#contact">Book personal training</a>
+            <a className="button buttonOutline serviceBookingButton" href="#contact">Book strength coaching</a>
           </div>
         </div>
 
         <div className="serviceFeature serviceFeatureRecover reverse">
           <div className="serviceFeatureImage" aria-label="Professional sports massage and recovery" />
           <div className="serviceFeatureCopy">
-            <p className="serviceNumber">02 / Recover</p>
+            <p className="serviceNumber">02 / Sports massage</p>
             <h3>Move better. Recover properly.</h3>
             <p>
               Focused sports massage and recovery support to reduce tension, improve
@@ -268,22 +227,22 @@ export default function Home() {
         </div>
 
         <div className="serviceFeature serviceFeaturePerform">
-          <div className="serviceFeatureImage" aria-label="Complete coaching and accountability" />
+          <div className="serviceFeatureImage" aria-label="Consistent private strength coaching" />
           <div className="serviceFeatureCopy">
-            <p className="serviceNumber">03 / Perform</p>
-            <h3>Complete coaching for long-term results.</h3>
+            <p className="serviceNumber">03 / Session blocks</p>
+            <h3>Commit consistently. Save on every session.</h3>
             <p>
-              Training, recovery, programming and accountability working together.
-              This is the most complete True Gain experience for clients who want
-              consistent support and meaningful long-term progress.
+              Prepaid blocks reward clients who are ready to attend consistently.
+              Choose five sessions for a 10% saving or ten sessions for a 15% saving,
+              with the agreed attendance schedule reserved in advance.
             </p>
             <ul>
-              <li>Private coached sessions</li>
-              <li>Individual programming</li>
-              <li>Recovery support</li>
-              <li>Ongoing accountability</li>
+              <li>Five- and ten-session options</li>
+              <li>Payment made upfront</li>
+              <li>Twice-weekly strength attendance</li>
+              <li>Fortnightly massage attendance</li>
             </ul>
-            <a className="button buttonOutline serviceBookingButton" href="#memberships">Explore memberships</a>
+            <a className="button buttonOutline serviceBookingButton" href="#pricing">View block pricing</a>
           </div>
         </div>
 
@@ -292,7 +251,7 @@ export default function Home() {
             <p className="planStrap">Coach</p>
             <h3>Personal training</h3>
             <p>Expert one-to-one coaching for strength, movement and confidence.</p>
-            <span>From £55/session</span>
+            <span>From £47.50/session</span>
           </article>
           <article className="serviceComparisonPremium">
             <p className="planStrap">Treat</p>
@@ -301,17 +260,17 @@ export default function Home() {
             <span>From £35/session</span>
           </article>
           <article className="featured serviceComparisonPremium">
-            <p className="planStrap">Transform</p>
-            <h3>Complete coaching</h3>
-            <p>Training, recovery and accountability combined into one premium service.</p>
-            <span>From £279/month</span>
+            <p className="planStrap">Commit</p>
+            <h3>Prepaid session blocks</h3>
+            <p>Attend consistently and save 10% on five sessions or 15% on ten.</p>
+            <span>No monthly membership</span>
           </article>
         </div>
 
         <div className="servicesWhy">
           <div><strong>Evidence-led</strong><span>Sound coaching principles and individual progression.</span></div>
           <div><strong>Private studio</strong><span>No crowds, waiting or distractions.</span></div>
-          <div><strong>Long-term focus</strong><span>Strength and confidence that lasts beyond a short programme.</span></div>
+          <div><strong>Long-term focus</strong><span>Strength and confidence built through purposeful, consistent appointments.</span></div>
         </div>
 
         <div className="servicesCta">
@@ -322,26 +281,26 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section membershipsSection" id="memberships">
+      <section className="section membershipsSection sessionPricingSection" id="pricing">
         <div className="membershipHero">
           <div className="membershipHeroCopy">
-            <p className="eyebrow">Memberships</p>
-            <h2>Choose the support your goals require.</h2>
+            <p className="eyebrow">Sessions &amp; pricing</p>
+            <h2>Choose the appointment that suits you.</h2>
             <p>
-              Three levels of coaching built around one standard: individual attention,
-              clear progression and long-term results.
+              Pay for individual appointments when you need flexibility, or commit to a
+              prepaid block and save while building a consistent routine.
             </p>
           </div>
 
           <div className="membershipHeroNote">
-            <p className="planStrap">Every membership includes</p>
-            <strong>Assessment. Programme. Progression.</strong>
-            <span>Begin with a free 30-minute consultation. Your complimentary 45-minute individual assessment is arranged after membership purchase and is separate from your weekly coaching allocation.</span>
+            <p className="planStrap">Simple and transparent</p>
+            <strong>No monthly membership.</strong>
+            <span>Single appointments offer flexibility. Five-session blocks save 10% and ten-session blocks save 15%, with attendance agreed in advance.</span>
           </div>
         </div>
 
         <div className="membershipShowcase">
-          {memberships.map((plan, index) => (
+          {sessionPrices.map((plan, index) => (
             <article
               className="membershipPlan"
               key={plan.name}
@@ -349,7 +308,7 @@ export default function Home() {
               <div className="membershipPlanTop">
                 <div>
                   <p className="planIndex">0{index + 1}</p>
-                  <p className="planStrap">{plan.strapline}</p>
+                  <p className="planStrap">{plan.category}</p>
                 </div>
                 
               </div>
@@ -357,27 +316,26 @@ export default function Home() {
               <h3>{plan.name}</h3>
 
               <div className="membershipPriceRow">
-                <p className="price">{plan.price}<span>/month</span></p>
+                <p className="price">{plan.single}<span>/single appointment</span></p>
               </div>
-              <p className="membershipCommitment">Initial 3-month minimum commitment</p>
+              <p className="membershipCommitment">No recurring monthly payment</p>
 
-              <p className="membershipOutcome">{plan.outcome}</p>
+              <p className="membershipOutcome">{plan.cadence}</p>
 
               <div className="membershipDivider" />
 
-              <p className="membershipIncludes">What is included</p>
-              <ul>
-                {plan.features.map((feature) => (
-                  <li key={feature}>{feature}</li>
-                ))}
+              <p className="membershipIncludes">Prepaid options</p>
+              <ul className="blockPriceList">
+                <li><span>5 appointments · save 10%</span><strong>{plan.five}</strong></li>
+                <li><span>10 appointments · save 15%</span><strong>{plan.ten}</strong></li>
               </ul>
 
               <div className="membershipIdealFor">
-                <span>Ideal for</span>
+                <span>How it works</span>
                 <p>
-                  {plan.name === "Train" && "Clients who are motivated to train independently but want expert structure, technique coaching and consistent weekly accountability."}
-                  {plan.name === "Recover" && "Busy professionals and active adults who value strength, longevity and recovering properly between training sessions."}
-                  {plan.name === "Perform" && "Clients committed to achieving the strongest possible long-term result with maximum guidance, convenience and accountability."}
+                  {plan.category === "Strength coaching"
+                    ? "Blocks are for clients attending two strength appointments per week. Once-weekly or occasional appointments are charged at the single rate."
+                    : "Blocks are for clients attending one massage every fortnight. Monthly or occasional treatments are charged at the single rate."}
                 </p>
               </div>
 
@@ -385,7 +343,7 @@ export default function Home() {
                 className="button buttonOutline"
                 href="#contact"
               >
-                Start with a consultation
+                Enquire about this service
               </a>
             </article>
           ))}
@@ -393,85 +351,62 @@ export default function Home() {
 
         <div className="membershipComparison">
           <div className="comparisonIntro">
-            <p className="eyebrow">Compare memberships</p>
-            <h3>Find the right level of support.</h3>
+            <p className="eyebrow">Compare prices</p>
+            <h3>More commitment. Better value.</h3>
             <p>
-              The best option depends on how frequently you want to train, how much
-              accountability you need and whether recovery support is a priority.
+              Block savings are applied to the standard single-appointment price.
+              Choose a block only when the required attendance schedule suits you.
             </p>
           </div>
 
-          <div className="comparisonTable animatedComparisonTable" role="table" aria-label="Membership comparison">
+          <div className="comparisonTable animatedComparisonTable pricingComparisonTable" role="table" aria-label="Session price comparison">
             <div className="comparisonRow comparisonHead comparisonRevealRow rowIndex0" role="row">
-              <span role="columnheader">Included</span><span role="columnheader">Train</span><span role="columnheader">Recover</span><span role="columnheader">Perform</span>
+              <span role="columnheader">Appointment</span><span role="columnheader">Single</span><span role="columnheader">5 sessions</span><span role="columnheader">10 sessions</span>
             </div>
             <div className="comparisonRow comparisonRevealRow rowIndex1" role="row">
-              <span role="cell">60-min 1:1 S&C</span><span role="cell">1× weekly</span><span role="cell">1× weekly</span><span role="cell">2× weekly</span>
+              <span role="cell">45-min strength</span><span role="cell">£47.50</span><span role="cell">£213.75</span><span role="cell">£403.75</span>
             </div>
             <div className="comparisonRow comparisonRevealRow rowIndex2" role="row">
-              <span role="cell">Personalised S&C programme</span><span role="cell">✓</span><span role="cell">✓</span><span role="cell">✓</span>
+              <span role="cell">60-min strength</span><span role="cell">£65</span><span role="cell">£292.50</span><span role="cell">£552.50</span>
             </div>
             <div className="comparisonRow comparisonRevealRow rowIndex3" role="row">
-              <span role="cell">6-week progress review</span><span role="cell">✓</span><span role="cell">✓</span><span role="cell">✓</span>
+              <span role="cell">30-min massage</span><span role="cell">£35</span><span role="cell">£157.50</span><span role="cell">£297.50</span>
             </div>
             <div className="comparisonRow comparisonRevealRow rowIndex4" role="row">
-              <span role="cell">Member portal</span><span role="cell">✓</span><span role="cell">✓</span><span role="cell">✓</span>
-            </div>
-            <div className="comparisonRow comparisonRevealRow rowIndex5" role="row">
-              <span role="cell">60-min sports massage</span><span role="cell">Pay-as-you-go</span><span role="cell">1/month</span><span role="cell">1/month</span>
-            </div>
-            <div className="comparisonRow comparisonRevealRow rowIndex6" role="row">
-              <span role="cell">Recovery-informed programme adjustments</span><span role="cell">—</span><span role="cell">✓</span><span role="cell">✓</span>
-            </div>
-            <div className="comparisonRow comparisonRevealRow rowIndex6b" role="row">
-              <span role="cell">Mobility & movement programming</span><span role="cell">—</span><span role="cell">—</span><span role="cell">✓</span>
-            </div>
-            <div className="comparisonRow comparisonRevealRow rowIndex7" role="row">
-              <span role="cell">Between-session technique feedback</span><span role="cell">—</span><span role="cell">—</span><span role="cell">✓</span>
-            </div>
-            <div className="comparisonRow comparisonRevealRow rowIndex8" role="row">
-              <span role="cell">Priority booking</span><span role="cell">—</span><span role="cell">—</span><span role="cell">✓</span>
-            </div>
-            <div className="comparisonRow comparisonPrice comparisonRevealRow rowIndex9" role="row">
-              <span role="cell">Monthly price</span><span role="cell">£279</span><span role="cell">£349</span><span role="cell">£499</span>
+              <span role="cell">60-min massage</span><span role="cell">£60</span><span role="cell">£270</span><span role="cell">£510</span>
             </div>
           </div>
 
-          <div className="mobileMembershipComparison" aria-label="Mobile membership comparison">
-            <div className="mobileMembershipTabs" role="tablist" aria-label="Choose membership">
-              {(["Train", "Recover", "Perform"] as const).map((plan) => (
+          <div className="mobileMembershipComparison" aria-label="Mobile session price comparison">
+            <div className="mobileMembershipTabs" role="tablist" aria-label="Choose appointment">
+              {sessionPrices.map((plan, index) => (
                 <button
-                  key={plan}
+                  key={`${plan.category}-${plan.name}`}
                   type="button"
                   role="tab"
-                  aria-selected={mobileMembership === plan}
-                  className={mobileMembership === plan ? "is-active" : ""}
-                  onClick={() => setMobileMembership(plan)}
+                  aria-selected={mobilePrice === index}
+                  className={mobilePrice === index ? "is-active" : ""}
+                  onClick={() => setMobilePrice(index)}
                 >
-                  {plan}
+                  {plan.tabLabel}
                 </button>
               ))}
             </div>
 
             <div className="mobileMembershipCard">
               <div className="mobileMembershipCardHead">
-                <span>{mobileMembership}</span>
+                <span>{sessionPrices[mobilePrice].category}<small>{sessionPrices[mobilePrice].name}</small></span>
                 <strong>
-                  {mobileMembership === "Train" ? "£279" : mobileMembership === "Recover" ? "£349" : "£499"}
-                  <small>/month</small>
+                  {sessionPrices[mobilePrice].single}
+                  <small>/single</small>
                 </strong>
               </div>
 
               {[
-                ["60-min 1:1 S&C", mobileMembership === "Perform" ? "2× weekly" : "1× weekly"],
-                ["Personalised S&C programme", "✓"],
-                ["6-week progress review", "✓"],
-                ["Member portal", "✓"],
-                ["60-min sports massage", mobileMembership === "Train" ? "Pay-as-you-go" : "1/month"],
-                ["Recovery-informed programme adjustments", mobileMembership === "Train" ? "—" : "✓"],
-                ["Mobility & movement programming", mobileMembership === "Perform" ? "✓" : "—"],
-                ["Between-session technique feedback", mobileMembership === "Perform" ? "✓" : "—"],
-                ["Priority booking", mobileMembership === "Perform" ? "✓" : "—"],
+                ["Single appointment", sessionPrices[mobilePrice].single],
+                ["5 appointments · save 10%", sessionPrices[mobilePrice].five],
+                ["10 appointments · save 15%", sessionPrices[mobilePrice].ten],
+                ["Required attendance", sessionPrices[mobilePrice].category === "Strength coaching" ? "2× weekly" : "Fortnightly"],
               ].map(([label, value]) => (
                 <div className="mobileMembershipFeature" key={label}>
                   <span>{label}</span>
@@ -485,48 +420,42 @@ export default function Home() {
         <div className="membershipPromise">
           <div>
             <p className="eyebrow">The True Gain promise</p>
-            <h3>No generic plans. No crowded gym floor.</h3>
+            <h3>No generic sessions. No crowded gym floor.</h3>
             <p>
-              Every membership is delivered privately, adapted to your progress and
-              designed to support your life outside the studio.
+              Every appointment is delivered privately and adapted to your goals,
+              current ability and response on the day.
             </p>
           </div>
 
           <div className="membershipPromisePoints">
             <span>Private 1:1 coaching</span>
-            <span>Individual programming</span>
+            <span>Purposeful sessions</span>
             <span>Evidence-led progression</span>
-            <span>Long-term support</span>
+            <span>Consistent attendance</span>
           </div>
         </div>
 
         <div className="membershipCta">
           <div>
-            <p className="eyebrow">Not sure which membership fits?</p>
+            <p className="eyebrow">Not sure where to start?</p>
             <h3>Start with a free consultation.</h3>
             <p>
-              We will discuss your goals, availability and preferred level of support,
-              then recommend the most suitable membership.
+              We will discuss your goals and availability, then recommend the most
+              suitable appointment length and purchase option.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="section oneOffSection">
+      <section className="section oneOffSection blockTermsSection">
         <div className="sectionIntro centered">
-          <p className="eyebrow">Pay as you go</p>
-          <h2>Flexible one-off sessions.</h2>
+          <p className="eyebrow">How blocks work</p>
+          <h2>Consistency rewarded. Terms kept clear.</h2>
         </div>
         <div className="oneOffGrid">
-          {oneOff.map(([title, price, text]) => (
-            <article className="oneOffCard" key={title}>
-              <p className="planStrap">No monthly commitment</p>
-              <h3>{title}</h3>
-              <p className="price">{price}<span>/session</span></p>
-              <p className="oneOffText">{text}</p>
-              <a className="button buttonOutline" href="#contact">Enquire now</a>
-            </article>
-          ))}
+          <article className="oneOffCard"><p className="planStrap">Strength blocks</p><h3>Twice-weekly training</h3><p className="oneOffText">Five- and ten-session strength blocks are paid upfront and require two appointments each week.</p></article>
+          <article className="oneOffCard"><p className="planStrap">Massage blocks</p><h3>Fortnightly treatment</h3><p className="oneOffText">Five- and ten-treatment massage blocks are paid upfront and require one appointment every fortnight.</p></article>
+          <article className="oneOffCard"><p className="planStrap">Flexible option</p><h3>Single appointments</h3><p className="oneOffText">Clients attending strength once weekly, or massage monthly, use the standard single-appointment price.</p></article>
         </div>
       </section>
       <section className="section studioSection studioExperienceSection" id="studio">
@@ -668,8 +597,8 @@ export default function Home() {
               <span>Sports massage, mobility work and guided recovery sessions.</span>
             </div>
             <div>
-              <strong>Progress zone</strong>
-              <span>Assessments, coaching reviews and individual programme planning.</span>
+              <strong>Coaching zone</strong>
+              <span>Movement checks, technique coaching and purposeful session planning.</span>
             </div>
           </div>
         </div>
@@ -699,7 +628,7 @@ export default function Home() {
               <span>03</span>
               <div>
                 <h4>Review</h4>
-                <p>Track progress, discuss feedback and adjust the next stage of your programme.</p>
+                <p>Track progress, discuss feedback and shape the focus of your next appointments.</p>
               </div>
             </li>
             <li>
@@ -778,7 +707,7 @@ export default function Home() {
               <span>02</span>
               <div>
                 <h3>Personal</h3>
-                <p>Your programme, progression and support are built around your needs, not a template.</p>
+                <p>Your sessions and progression are shaped around your needs, not a template.</p>
               </div>
             </article>
 
@@ -870,8 +799,6 @@ export default function Home() {
       </section>
       
       
-      <ClientPortalPreview />
-
       <section className="section caseStudiesSection" id="case-studies">
         <div className="caseStudiesHero">
           <div className="caseStudiesHeroCopy">
@@ -992,7 +919,7 @@ export default function Home() {
             <span>04</span>
             <h3>A clear next step</h3>
             <p>
-              Leave knowing exactly what happens next if you decide to begin a membership.
+              Leave knowing exactly what happens next if you decide to book an appointment or block.
             </p>
           </article>
         </div>
@@ -1036,7 +963,7 @@ export default function Home() {
               <span>04</span>
               <div>
                 <h4>Recommended pathway</h4>
-                <p>Identify the membership or service that best matches your needs.</p>
+                <p>Identify the appointment length and purchase option that best match your needs.</p>
               </div>
             </li>
 
@@ -1119,12 +1046,12 @@ export default function Home() {
 
             <ol>
               <li><span>01</span><div><h4>Consult</h4><p>Start with one complimentary 30-minute consultation to discuss your goals, background and whether True Gain is the right fit.</p></div></li>
-              <li><span>02</span><div><h4>Join</h4><p>Choose Train, Recover or Perform and set up your recurring membership on the next available 1st or 15th billing date.</p></div></li>
-              <li><span>03</span><div><h4>Onboard</h4><p>Complete your digital health screening, consent, membership and privacy documentation before physical coaching begins.</p></div></li>
-              <li><span>04</span><div><h4>Assess</h4><p>Your complimentary 45-minute individual assessment establishes the starting information needed to coach you properly.</p></div></li>
-              <li><span>05</span><div><h4>Build</h4><p>Your personalised S&C programme and recurring weekly coaching schedule are created around your goals and availability.</p></div></li>
-              <li><span>06</span><div><h4>Progress</h4><p>Train consistently while your programme, portal data and feedback are monitored and adjusted whenever needed.</p></div></li>
-              <li><span>07</span><div><h4>Review</h4><p>Every 6 weeks, progress is reviewed within a coached session and used to make evidence-based programme adjustments.</p></div></li>
+              <li><span>02</span><div><h4>Choose</h4><p>Select a 45- or 60-minute strength session, a 30- or 60-minute massage, or the appropriate prepaid block.</p></div></li>
+              <li><span>03</span><div><h4>Screen</h4><p>Complete the relevant digital health screening, consent and privacy documentation before your first physical appointment.</p></div></li>
+              <li><span>04</span><div><h4>Book</h4><p>Agree your appointment time and pay for the single session or block before coaching or treatment begins.</p></div></li>
+              <li><span>05</span><div><h4>Attend</h4><p>Receive focused, private coaching or treatment adapted to your needs on the day.</p></div></li>
+              <li><span>06</span><div><h4>Continue</h4><p>Block clients follow the agreed twice-weekly strength or fortnightly massage schedule.</p></div></li>
+              <li><span>07</span><div><h4>Renew</h4><p>When your block is complete, decide whether another block or flexible single appointments suit you best.</p></div></li>
             </ol>
           </div>
 
@@ -1157,9 +1084,10 @@ export default function Home() {
                 <span>Preferred service</span>
                 <select name="service" defaultValue="">
                   <option value="" disabled>Select an option</option>
-                  <option value="Personal Training">Personal Training</option>
+                  <option value="Strength Coaching">Strength Coaching</option>
                   <option value="Sports Massage">Sports Massage</option>
-                  <option value="Complete Coaching">Complete Coaching</option>
+                  <option value="Strength Session Block">Strength Session Block</option>
+                  <option value="Massage Block">Massage Block</option>
                   <option value="Not Sure">Not sure yet</option>
                 </select>
               </label>
@@ -1201,7 +1129,7 @@ export default function Home() {
           <article>
             <span>Availability</span>
             <strong>By appointment</strong>
-            <p>Session times are agreed around membership availability.</p>
+            <p>Session times are agreed around current studio availability.</p>
           </article>
         </div>
 
@@ -1218,18 +1146,24 @@ export default function Home() {
             </details>
 
             <details>
-              <summary>Does the consultation include an assessment?</summary>
+              <summary>Does the consultation include physical coaching or treatment?</summary>
               <p>
-                No. The free consultation is a conversation. The complimentary assessment
-                is completed only after a membership has been purchased.
+                No. The free consultation is a conversation only. Coaching or massage begins
+                after the relevant screening is complete and a paid appointment is booked.
               </p>
             </details>
 
             <details>
-              <summary>Does the assessment use one of my weekly sessions?</summary>
+              <summary>Do I need to purchase a block?</summary>
               <p>
-                No. It is arranged separately, so your full weekly coaching allocation remains available.
+                No. Single appointments remain available. Blocks are designed for clients ready
+                to follow the required twice-weekly strength or fortnightly massage schedule.
               </p>
+            </details>
+
+            <details>
+              <summary>Do blocks include an app or coaching between appointments?</summary>
+              <p>No. Blocks cover private in-studio appointments only. Coaching and relevant guidance are provided during your booked session.</p>
             </details>
 
             <details>

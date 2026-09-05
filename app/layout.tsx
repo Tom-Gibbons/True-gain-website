@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "True Gain Performance | Strength, Recovery & Longevity",
   description:
-    "Premium personal training, recovery and longevity coaching for adults aged 30+ in Luton and surrounding areas.",
+    "Private 1:1 strength coaching and sports massage for adults aged 30+ in Bushmead, Luton, with flexible single appointments and prepaid session blocks.",
 };
 
 export default function RootLayout({
