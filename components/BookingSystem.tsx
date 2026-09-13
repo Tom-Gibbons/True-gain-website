@@ -27,8 +27,8 @@ export default function BookingSystem() {
         { id: "massage-60", label: "60-minute sports massage", description: "£60 single · £270 for 5 · £510 for 10. Blocks require 1 appointment per fortnight.", tag: "From £51 per treatment" },
       ],
       bundles: [
-        { id: "strength-reset", label: "Strength + Reset", description: "5 × 60-minute strength sessions and 2 × 30-minute massages. Strength is attended twice weekly, with massages booked approximately fortnightly.", tag: "£355 · Save £40" },
-        { id: "strength-recover", label: "Strength + Recover", description: "10 × 60-minute strength sessions and 2 × 60-minute massages. Strength is attended twice weekly, with massages booked approximately fortnightly.", tag: "£655 · Save £115" },
+        { id: "strength-reset", label: "Strength + Reset", description: "5 × 60-minute strength sessions and 2 × 30-minute massages. All 5 strength sessions must be completed within 4 weeks, with the 2 massages used fortnightly within the same 4-week period.", tag: "£355 · Save £40" },
+        { id: "strength-recover", label: "Strength + Recover", description: "10 × 60-minute strength sessions and 2 × 60-minute massages. All 10 strength sessions and both massages must be used within the same 6-week period.", tag: "£655 · Save £115" },
       ],
     }),
     []
