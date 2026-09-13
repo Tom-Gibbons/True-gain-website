@@ -433,8 +433,8 @@ export default function Home() {
               <ul>
                 <li>5 × 60-minute strength sessions</li>
                 <li>2 × 30-minute sports massages</li>
-                <li>Strength sessions attended twice weekly</li>
-                <li>Massages booked approximately fortnightly</li>
+                <li>All 5 strength sessions must be completed within 4 weeks</li>
+                <li>2 massages used fortnightly within the same 4-week period</li>
               </ul>
               <a className="button buttonGold" href="#contact">Enquire about Strength + Reset</a>
             </article>
@@ -447,8 +447,8 @@ export default function Home() {
               <ul>
                 <li>10 × 60-minute strength sessions</li>
                 <li>2 × 60-minute sports massages</li>
-                <li>Strength sessions attended twice weekly</li>
-                <li>Massages booked approximately fortnightly</li>
+                <li>All 10 strength sessions must be completed within 6 weeks</li>
+                <li>Both massages must be used within the same 6-week period</li>
               </ul>
               <a className="button buttonGold" href="#contact">Enquire about Strength + Recover</a>
             </article>
