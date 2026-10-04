@@ -19,16 +19,16 @@ export default function BookingSystem() {
         { id: "studio-consultation", label: "Studio consultation", description: "A complimentary conversation at the private True Gain studio, with the opportunity to see the space and discuss your options.", tag: "30 minutes · Free" },
       ],
       strength: [
-        { id: "strength-45", label: "45-minute strength coaching", description: "£47.50 single · £213.75 for 5 · £403.75 for 10. Blocks require 2 appointments per week.", tag: "From £40.38 per session" },
-        { id: "strength-60", label: "60-minute strength coaching", description: "£65 single · £292.50 for 5 · £552.50 for 10. Blocks require 2 appointments per week.", tag: "From £55.25 per session" },
+        { id: "strength-45", label: "45-minute strength coaching", description: "£45 single · £213.75 for 5 · £405 for 10. Blocks require 2 appointments per week.", tag: "From £40.50 per session" },
+        { id: "strength-60", label: "60-minute strength coaching", description: "£60 single · £285 for 5 · £540 for 10. Blocks require 2 appointments per week.", tag: "From £54 per session" },
       ],
       massage: [
         { id: "massage-30", label: "30-minute sports massage", description: "£35 single · £157.50 for 5 · £297.50 for 10. Blocks require 1 appointment per fortnight.", tag: "From £29.75 per treatment" },
         { id: "massage-60", label: "60-minute sports massage", description: "£60 single · £270 for 5 · £510 for 10. Blocks require 1 appointment per fortnight.", tag: "From £51 per treatment" },
       ],
       bundles: [
-        { id: "strength-reset", label: "Strength + Reset", description: "5 × 60-minute strength sessions and 2 × 30-minute massages. All 5 strength sessions must be completed within 4 weeks, with the 2 massages used fortnightly within the same 4-week period.", tag: "£355 · Save £40" },
-        { id: "strength-recover", label: "Strength + Recover", description: "10 × 60-minute strength sessions and 2 × 60-minute massages. All 10 strength sessions and both massages must be used within the same 6-week period.", tag: "£655 · Save £115" },
+        { id: "strength-reset", label: "Strength + Reset", description: "5 × 60-minute strength sessions and 2 × 30-minute massages. All 5 strength sessions must be completed within 4 weeks, with the 2 massages used fortnightly within the same 4-week period.", tag: "£325 · Save £45" },
+        { id: "strength-recover", label: "Strength + Recover", description: "10 × 60-minute strength sessions and 2 × 60-minute massages. All 10 strength sessions and both massages must be used within the same 6-week period.", tag: "£625 · Save £95" },
       ],
     }),
     []
@@ -67,7 +67,7 @@ export default function BookingSystem() {
 
       <div className="bookingSystemNote">
         <strong>Block attendance</strong>
-        <p>5-session blocks save 10% and 10-session blocks save 15%. Strength blocks require 2 appointments per week; massage blocks require 1 appointment every fortnight. Single appointments remain available for clients wanting more flexibility.</p>
+        <p>Strength blocks save 5% on 5 sessions and 10% on 10 sessions, and require 2 appointments per week. Massage blocks retain their existing savings and require 1 appointment every fortnight. Single appointments remain available for clients wanting more flexibility.</p>
       </div>
     </section>
   );
