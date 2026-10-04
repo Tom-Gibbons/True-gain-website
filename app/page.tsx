@@ -31,8 +31,8 @@ const sessionPrices = [
     name: "30 minutes",
     tabLabel: "30 Massage",
     single: "£35",
-    five: "£157.50",
-    ten: "£297.50",
+    five: "£166.25",
+    ten: "£315",
     cadence: "Massage blocks require one appointment per fortnight.",
   },
   {
@@ -40,8 +40,8 @@ const sessionPrices = [
     name: "60 minutes",
     tabLabel: "60 Massage",
     single: "£60",
-    five: "£270",
-    ten: "£510",
+    five: "£285",
+    ten: "£540",
     cadence: "Massage blocks require one appointment per fortnight.",
   },
 ];
@@ -295,7 +295,7 @@ export default function Home() {
           <div className="membershipHeroNote">
             <p className="planStrap">Simple and transparent</p>
             <strong>No monthly membership.</strong>
-            <span>Single appointments offer flexibility. Strength coaching blocks save 5% on 5 sessions and 10% on 10 sessions; massage block savings remain shown below.</span>
+            <span>Single appointments offer flexibility. Strength coaching blocks save 5% on 5 sessions and 10% on 10 sessions; massage blocks also save 5% on 5 sessions and 10% on 10 sessions.</span>
           </div>
         </div>
 
@@ -326,8 +326,8 @@ export default function Home() {
 
               <p className="membershipIncludes">Prepaid options</p>
               <ul className="blockPriceList">
-                <li><span>5 appointments · save {plan.category === "Strength coaching" ? "5%" : "10%"}</span><strong>{plan.five}</strong></li>
-                <li><span>10 appointments · save {plan.category === "Strength coaching" ? "10%" : "15%"}</span><strong>{plan.ten}</strong></li>
+                <li><span>5 appointments · save 5%</span><strong>{plan.five}</strong></li>
+                <li><span>10 appointments · save 10%</span><strong>{plan.ten}</strong></li>
               </ul>
 
               <div className="membershipIdealFor">
@@ -370,10 +370,10 @@ export default function Home() {
               <span role="cell">60-min strength</span><span role="cell">£60</span><span role="cell">£285</span><span role="cell">£540</span>
             </div>
             <div className="comparisonRow comparisonRevealRow rowIndex3" role="row">
-              <span role="cell">30-min massage</span><span role="cell">£35</span><span role="cell">£157.50</span><span role="cell">£297.50</span>
+              <span role="cell">30-min massage</span><span role="cell">£35</span><span role="cell">£166.25</span><span role="cell">£315</span>
             </div>
             <div className="comparisonRow comparisonRevealRow rowIndex4" role="row">
-              <span role="cell">60-min massage</span><span role="cell">£60</span><span role="cell">£270</span><span role="cell">£510</span>
+              <span role="cell">60-min massage</span><span role="cell">£60</span><span role="cell">£285</span><span role="cell">£540</span>
             </div>
           </div>
 
@@ -404,8 +404,8 @@ export default function Home() {
 
               {[
                 ["Single appointment", sessionPrices[mobilePrice].single],
-                [`5 appointments · save ${sessionPrices[mobilePrice].category === "Strength coaching" ? "5%" : "10%"}`, sessionPrices[mobilePrice].five],
-                [`10 appointments · save ${sessionPrices[mobilePrice].category === "Strength coaching" ? "10%" : "15%"}`, sessionPrices[mobilePrice].ten],
+                [`5 appointments · save 5%`, sessionPrices[mobilePrice].five],
+                [`10 appointments · save 10%`, sessionPrices[mobilePrice].ten],
                 ["Required attendance", sessionPrices[mobilePrice].category === "Strength coaching" ? "2× weekly" : "Fortnightly"],
               ].map(([label, value]) => (
                 <div className="mobileMembershipFeature" key={label}>
