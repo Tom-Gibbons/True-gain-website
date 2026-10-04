@@ -12,18 +12,18 @@ const sessionPrices = [
     category: "Strength coaching",
     name: "45 minutes",
     tabLabel: "45 Strength",
-    single: "£47.50",
+    single: "£45",
     five: "£213.75",
-    ten: "£403.75",
+    ten: "£405",
     cadence: "Strength blocks require two appointments per week.",
   },
   {
     category: "Strength coaching",
     name: "60 minutes",
     tabLabel: "60 Strength",
-    single: "£65",
-    five: "£292.50",
-    ten: "£552.50",
+    single: "£60",
+    five: "£285",
+    ten: "£540",
     cadence: "Strength blocks require two appointments per week.",
   },
   {
@@ -233,7 +233,7 @@ export default function Home() {
             <h3>Commit consistently. Save on every session.</h3>
             <p>
               Prepaid blocks reward clients who are ready to attend consistently.
-              Choose 5 sessions for a 10% saving or 10 sessions for a 15% saving,
+              Strength coaching blocks save 5% on 5 sessions or 10% on 10 sessions,
               with the agreed attendance schedule reserved in advance.
             </p>
             <ul>
@@ -251,7 +251,7 @@ export default function Home() {
             <p className="planStrap">Coach</p>
             <h3>Personal training</h3>
             <p>Expert one-to-one coaching for strength, movement and confidence.</p>
-            <span>From £47.50/session</span>
+            <span>From £45/session</span>
           </article>
           <article className="serviceComparisonPremium">
             <p className="planStrap">Treat</p>
@@ -262,7 +262,7 @@ export default function Home() {
           <article className="featured serviceComparisonPremium">
             <p className="planStrap">Commit</p>
             <h3>Prepaid session blocks</h3>
-            <p>Attend consistently and save 10% on 5 sessions or 15% on 10.</p>
+            <p>Strength coaching blocks save 5% on 5 sessions or 10% on 10.</p>
             <span>No monthly membership</span>
           </article>
         </div>
@@ -295,7 +295,7 @@ export default function Home() {
           <div className="membershipHeroNote">
             <p className="planStrap">Simple and transparent</p>
             <strong>No monthly membership.</strong>
-            <span>Single appointments offer flexibility. 5-session blocks save 10% and 10-session blocks save 15%, with attendance agreed in advance.</span>
+            <span>Single appointments offer flexibility. Strength coaching blocks save 5% on 5 sessions and 10% on 10 sessions; massage block savings remain shown below.</span>
           </div>
         </div>
 
@@ -326,8 +326,8 @@ export default function Home() {
 
               <p className="membershipIncludes">Prepaid options</p>
               <ul className="blockPriceList">
-                <li><span>5 appointments · save 10%</span><strong>{plan.five}</strong></li>
-                <li><span>10 appointments · save 15%</span><strong>{plan.ten}</strong></li>
+                <li><span>5 appointments · save {plan.category === "Strength coaching" ? "5%" : "10%"}</span><strong>{plan.five}</strong></li>
+                <li><span>10 appointments · save {plan.category === "Strength coaching" ? "10%" : "15%"}</span><strong>{plan.ten}</strong></li>
               </ul>
 
               <div className="membershipIdealFor">
@@ -364,10 +364,10 @@ export default function Home() {
               <span role="columnheader">Appointment</span><span role="columnheader">Single</span><span role="columnheader">5 sessions</span><span role="columnheader">10 sessions</span>
             </div>
             <div className="comparisonRow comparisonRevealRow rowIndex1" role="row">
-              <span role="cell">45-min strength</span><span role="cell">£47.50</span><span role="cell">£213.75</span><span role="cell">£403.75</span>
+              <span role="cell">45-min strength</span><span role="cell">£45</span><span role="cell">£213.75</span><span role="cell">£405</span>
             </div>
             <div className="comparisonRow comparisonRevealRow rowIndex2" role="row">
-              <span role="cell">60-min strength</span><span role="cell">£65</span><span role="cell">£292.50</span><span role="cell">£552.50</span>
+              <span role="cell">60-min strength</span><span role="cell">£60</span><span role="cell">£285</span><span role="cell">£540</span>
             </div>
             <div className="comparisonRow comparisonRevealRow rowIndex3" role="row">
               <span role="cell">30-min massage</span><span role="cell">£35</span><span role="cell">£157.50</span><span role="cell">£297.50</span>
@@ -404,8 +404,8 @@ export default function Home() {
 
               {[
                 ["Single appointment", sessionPrices[mobilePrice].single],
-                ["5 appointments · save 10%", sessionPrices[mobilePrice].five],
-                ["10 appointments · save 15%", sessionPrices[mobilePrice].ten],
+                [`5 appointments · save ${sessionPrices[mobilePrice].category === "Strength coaching" ? "5%" : "10%"}`, sessionPrices[mobilePrice].five],
+                [`10 appointments · save ${sessionPrices[mobilePrice].category === "Strength coaching" ? "10%" : "15%"}`, sessionPrices[mobilePrice].ten],
                 ["Required attendance", sessionPrices[mobilePrice].category === "Strength coaching" ? "2× weekly" : "Fortnightly"],
               ].map(([label, value]) => (
                 <div className="mobileMembershipFeature" key={label}>
@@ -428,8 +428,8 @@ export default function Home() {
             <article className="combinedBundleCard">
               <div className="combinedBundleTop"><span>01</span><p className="planStrap">Strength + Reset</p></div>
               <h4>5 strength sessions + 2 massages</h4>
-              <p className="combinedBundlePrice">£355 <span>paid upfront</span></p>
-              <p className="combinedBundleSaving">Save £40 against the £395 single-session value</p>
+              <p className="combinedBundlePrice">£325 <span>paid upfront</span></p>
+              <p className="combinedBundleSaving">Save £45 against the £370 single-session value</p>
               <ul>
                 <li>5 × 60-minute strength sessions</li>
                 <li>2 × 30-minute sports massages</li>
@@ -442,8 +442,8 @@ export default function Home() {
             <article className="combinedBundleCard combinedBundleFeatured">
               <div className="combinedBundleTop"><span>02</span><p className="planStrap">Strength + Recover</p></div>
               <h4>10 strength sessions + 2 massages</h4>
-              <p className="combinedBundlePrice">£655 <span>paid upfront</span></p>
-              <p className="combinedBundleSaving">Save £115 against the £770 single-session value</p>
+              <p className="combinedBundlePrice">£625 <span>paid upfront</span></p>
+              <p className="combinedBundleSaving">Save £95 against the £720 single-session value</p>
               <ul>
                 <li>10 × 60-minute strength sessions</li>
                 <li>2 × 60-minute sports massages</li>
