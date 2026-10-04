@@ -23,8 +23,8 @@ export default function BookingSystem() {
         { id: "strength-60", label: "60-minute strength coaching", description: "£60 single · £285 for 5 · £540 for 10. Blocks require 2 appointments per week.", tag: "From £54 per session" },
       ],
       massage: [
-        { id: "massage-30", label: "30-minute sports massage", description: "£35 single · £157.50 for 5 · £297.50 for 10. Blocks require 1 appointment per fortnight.", tag: "From £29.75 per treatment" },
-        { id: "massage-60", label: "60-minute sports massage", description: "£60 single · £270 for 5 · £510 for 10. Blocks require 1 appointment per fortnight.", tag: "From £51 per treatment" },
+        { id: "massage-30", label: "30-minute sports massage", description: "£35 single · £166.25 for 5 · £315 for 10. Blocks require 1 appointment per fortnight.", tag: "From £31.50 per treatment" },
+        { id: "massage-60", label: "60-minute sports massage", description: "£60 single · £285 for 5 · £540 for 10. Blocks require 1 appointment per fortnight.", tag: "From £54 per treatment" },
       ],
       bundles: [
         { id: "strength-reset", label: "Strength + Reset", description: "5 × 60-minute strength sessions and 2 × 30-minute massages. All 5 strength sessions must be completed within 4 weeks, with the 2 massages used fortnightly within the same 4-week period.", tag: "£325 · Save £45" },
@@ -67,7 +67,7 @@ export default function BookingSystem() {
 
       <div className="bookingSystemNote">
         <strong>Block attendance</strong>
-        <p>Strength blocks save 5% on 5 sessions and 10% on 10 sessions, and require 2 appointments per week. Massage blocks retain their existing savings and require 1 appointment every fortnight. Single appointments remain available for clients wanting more flexibility.</p>
+        <p>Strength blocks save 5% on 5 sessions and 10% on 10 sessions, and require 2 appointments per week. Massage blocks save 5% on 5 sessions and 10% on 10 sessions, and require 1 appointment every fortnight. Single appointments remain available for clients wanting more flexibility.</p>
       </div>
     </section>
   );
