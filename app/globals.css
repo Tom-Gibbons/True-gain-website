@@ -10992,3 +10992,57 @@ header .desktopCta {
 :focus-visible {outline:2px solid var(--gold-light);outline-offset:5px;}
 @media(max-width:1000px){.onlineGrid{grid-template-columns:repeat(2,minmax(0,1fr));}.onlinePricing{grid-template-columns:1fr;gap:30px;}}
 @media(max-width:640px){.onlineGrid{grid-template-columns:1fr;}.onlineCard,.onlinePriceCard{padding:24px;}.onlinePrice{font-size:3rem;}.onlineSection h2,.onlinePricing h2{font-size:2.5rem;}.proofStrip div span{font-size:.68rem;}.onlineEnquiry{padding:24px;}}
+
+/* Requested visual refinements: October 2026 */
+.heroActions .onlineExploreButton {
+  background: var(--tg-gold-light, #e5bd72) !important;
+  color: #050505 !important;
+  border-color: var(--tg-gold-light, #e5bd72) !important;
+}
+.heroActions .onlineExploreButton:hover,
+.heroActions .onlineExploreButton:focus-visible {
+  box-shadow: 0 0 22px rgba(229,189,114,.36);
+}
+#coach .coachCopy > .eyebrow {
+  color: var(--tg-gold-light, #e5bd72) !important;
+}
+.onlineOriginalPricing .membershipShowcase {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 720px;
+}
+.onlineOriginalPricing .membershipPlan {
+  min-height: auto;
+}
+.onlineOriginalPricing .membershipIdealFor a {
+  color: var(--tg-gold-light, #e5bd72);
+  text-decoration: underline;
+}
+
+/* Confirmed gold/pricing release v3 */
+main[data-site-version="online-coaching-gold-pricing-v3"] .heroActions a.onlineExploreButton {
+  background: #e5bd72 !important;
+  color: #050505 !important;
+  border: 1px solid #e5bd72 !important;
+}
+main[data-site-version="online-coaching-gold-pricing-v3"] #coach .coachCopy p.eyebrow {
+  color: #e5bd72 !important;
+}
+main[data-site-version="online-coaching-gold-pricing-v3"] #pricing .membershipHero {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 78px;
+}
+main[data-site-version="online-coaching-gold-pricing-v3"] #pricing .membershipShowcase {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 720px;
+  margin-inline: auto;
+}
+@media(max-width:900px) {
+  main[data-site-version="online-coaching-gold-pricing-v3"] #pricing .membershipHero {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-bottom: 40px;
+  }
+}

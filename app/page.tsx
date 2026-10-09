@@ -11,7 +11,7 @@ export default function Home() {
     setEnquiryNotice("Your email app has been requested. This website has not submitted your enquiry; please send the draft email, or use the address above.");
   }
   return (
-    <main data-site-version="online-coaching-v1">
+    <main data-site-version="online-coaching-gold-pricing-v3">
       <header className="tgHeaderExact">
         <a className="tgHeaderLogo" href="#top" aria-label="True Gain home">
           <img src="/true-gain-logo.png" alt="True Gain Performance" />
@@ -57,7 +57,7 @@ export default function Home() {
           </p>
 
           <div className="heroActions">
-            <a className="button buttonOutline" href="#pricing">Explore online coaching</a>
+            <a className="button buttonGold onlineExploreButton" style={{ background: "#e5bd72", color: "#050505", borderColor: "#e5bd72" }} href="#pricing">Explore online coaching</a>
           </div>
 
           <div className="heroLocation">
@@ -92,9 +92,25 @@ export default function Home() {
           <article className="onlineCard"><span className="planStrap">06 / Delivery</span><h3>Simple to access</h3><p>Your programme and training log are shared through Google Sheets, weekly check-ins use Google Forms, and communication takes place through WhatsApp. No paid coaching app subscription is required.</p></article>
         </div>
       </section>
-      <section className="section onlinePricing" id="pricing">
-        <div><p className="eyebrow">One complete coaching offer</p><h2>Invest in consistent progress.</h2><p className="onlineLead">Personalised programming and ongoing feedback, with clear expectations from the start.</p></div>
-        <article className="onlinePriceCard"><p className="planStrap">True Gain online coaching</p><h3>Strength. Movement. Longevity.</h3><p className="onlinePrice">£150 <span>/ calendar month</span></p><p><strong>Initial 3-calendar-month commitment.</strong><br />£450 across three monthly payments, then monthly rolling.</p><ul><li>Personalised programme and adjustments</li><li>Weekly check-ins and individual feedback</li><li>Up to 3 technique videos per week</li><li>Movement quality and injury-risk reduction exercises where appropriate</li><li>WhatsApp support within 1–2 working days, Monday–Saturday</li></ul><a className="button buttonGold" href="#contact">Arrange a free consultation</a><p className="onlineSmall">Payments are made monthly in advance, starting when you join. See <a href="#terms">payment and cancellation details</a>.</p></article>
+      <section className="section membershipsSection sessionPricingSection onlineOriginalPricing" id="pricing">
+        <div className="membershipHero">
+          <div className="membershipHeroCopy"><p className="eyebrow">Online coaching &amp; pricing</p><h2>Invest in consistent progress.</h2><p>Personalised programming and ongoing feedback, with clear expectations from the start.</p></div>
+          <div className="membershipHeroNote"><p className="planStrap">Simple and transparent</p><strong>One complete coaching offer.</strong><span>£150 per calendar month. An initial three-calendar-month commitment, then monthly rolling coaching.</span></div>
+        </div>
+        <div className="membershipShowcase">
+          <article className="membershipPlan">
+            <div className="membershipPlanTop"><div><p className="planIndex">01</p><p className="planStrap">True Gain Performance</p></div></div>
+            <h3>Online coaching</h3>
+            <div className="membershipPriceRow"><p className="price">£150<span>/calendar month</span></p></div>
+            <p className="membershipCommitment">Initial 3-calendar-month commitment</p>
+            <p className="membershipOutcome">£450 across three monthly payments, then monthly rolling. Coaching designed around your goals, experience and available equipment.</p>
+            <div className="membershipDivider" />
+            <p className="membershipIncludes">Your coaching includes</p>
+            <ul><li>Personalised programme and adjustments</li><li>Weekly check-ins and individual feedback</li><li>Up to 3 technique videos per week</li><li>Movement quality and injury-risk reduction exercises where appropriate</li><li>WhatsApp support within 1–2 working days, Monday–Saturday</li></ul>
+            <div className="membershipIdealFor"><span>How it works</span><p>Payments are made monthly in advance, starting when you join. Programmes use Google Sheets, check-ins use Google Forms, and support takes place through WhatsApp. See <a href="#terms">payment and cancellation details</a>.</p></div>
+            <a className="button buttonGold" href="#contact">Arrange a free consultation</a>
+          </article>
+        </div>
       </section>
       <section className="section onlineSection" id="how-it-works"><p className="eyebrow">Your next steps</p><h2>Clear from the start.</h2><div className="onlineGrid onlineSteps">
         <article className="onlineCard"><span className="planStrap">01 / Consult</span><h3>Have a conversation</h3><p>Start with a complimentary 30-minute phone or video consultation about your goals, training experience and whether online coaching suits you.</p></article>
@@ -120,7 +136,7 @@ export default function Home() {
         </div>
 
         <div className="coachCopy">
-          <p className="eyebrow">Meet your coach</p>
+          <p className="eyebrow" style={{ color: "#e5bd72" }}>Meet your coach</p>
           <h2>Expert coaching. Individual attention.</h2>
           <p className="coachLead">
             True Gain is built around one clear standard: every client receives thoughtful,
