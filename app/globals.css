@@ -10967,3 +10967,28 @@ header .desktopCta {
     grid-template-columns: 1fr;
   }
 }
+
+/* Online coaching launch additions */
+.onlineSection { border-top:1px solid var(--line); }
+.onlineLead {max-width:720px;color:var(--muted);line-height:1.8;font-size:1.05rem;}
+.onlineGrid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:40px;}
+.onlineCard {padding:32px;background:var(--panel);border:1px solid var(--line);}
+.onlineCard h3 {font-size:1.35rem;line-height:1.2;margin-top:20px;}
+.onlineCard p,.onlineTerms p,.onlineFaq p {color:var(--muted);line-height:1.8;}
+.onlinePricing {display:grid;grid-template-columns:1fr 1fr;gap:60px;background:#0b0b0b;align-items:start;}
+.onlinePriceCard {border:1px solid var(--gold);padding:40px;background:var(--panel);}
+.onlinePriceCard h3 {font-size:1.6rem;margin-top:18px;}
+.onlinePrice {font-size:3.8rem;color:var(--gold-light);font-weight:700;margin:25px 0;}
+.onlinePrice span {font-size:.9rem;font-weight:400;display:block;}
+.onlinePriceCard p,.onlinePriceCard li {line-height:1.8;}
+.onlinePriceCard ul {padding-left:20px;margin:25px 0;}
+.onlineSmall {font-size:.85rem;color:var(--muted);line-height:1.7;}
+.onlineSmall a {text-decoration:underline;color:var(--gold-light);}
+.onlineTerms {max-width:900px;}
+.onlineFaq details {padding:22px 0;border-bottom:1px solid var(--line);}
+.onlineFaq summary {cursor:pointer;font-weight:700;font-size:1.1rem;line-height:1.5;}
+.onlineEnquiry {margin-top:40px;max-width:900px;}
+.onlineFooterLinks {display:flex;justify-content:center;flex-wrap:wrap;gap:24px;margin:25px 0;color:var(--gold-light);font-size:.85rem;}
+:focus-visible {outline:2px solid var(--gold-light);outline-offset:5px;}
+@media(max-width:1000px){.onlineGrid{grid-template-columns:repeat(2,minmax(0,1fr));}.onlinePricing{grid-template-columns:1fr;gap:30px;}}
+@media(max-width:640px){.onlineGrid{grid-template-columns:1fr;}.onlineCard,.onlinePriceCard{padding:24px;}.onlinePrice{font-size:3rem;}.onlineSection h2,.onlinePricing h2{font-size:2.5rem;}.proofStrip div span{font-size:.68rem;}.onlineEnquiry{padding:24px;}}
