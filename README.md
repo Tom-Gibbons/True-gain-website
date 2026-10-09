@@ -1,65 +1,24 @@
-# True Gain Website Master
+# True Gain — Online Coaching Launch
 
-This is the complete True Gain private-studio website using flexible single
-appointments and prepaid strength and sports-massage blocks.
+Adapted from the October 2026 studio website. Existing branding and assets are retained. The public homepage offers online coaching only; studio prices, bookings, images presented as premises, and illustrative testimonials are removed from the rendered page.
 
-This version intentionally has no monthly memberships, client app, member
-portal, independent programming or between-session coaching support.
+## Agreed offer
+£150 per calendar month in advance. Initial three-calendar-month commitment (£450 across three payments), then monthly rolling. Seven calendar days’ email notice before renewal; statutory rights preserved. Personalised programming, weekly form-based check-ins, up to three technique clips weekly, WhatsApp replies within 1–2 working days Monday–Saturday, and suitable movement quality/injury-risk reduction exercises. Delivery: Google Sheets, Google Forms and WhatsApp.
 
-## Main website files
+## Run locally
+`npm ci`, then `npm run dev`. Validate with `npm run build`.
 
-- `app/page.tsx`
-- `app/layout.tsx`
-- `app/globals.css`
+## Studio preservation
+`archive/studio-original/` contains exact original copies of the homepage, metadata, booking component, testimonials and original documentation as text files. These are not public routes. Original reusable assets remain in `public/`; they are not secret or access-protected, but unavailable studio sections are not rendered. Restore selectively when studio services are ready, keeping online coaching as its own offer.
 
-## Brand assets
+## Before publishing
+- Verify hello@truegainperformance.co.uk exists and receives email. The enquiry form deliberately prepares an email draft; visitors must send it from their email app. It is not a server-backed form. A future direct submission form needs an actual configured provider or backend.
+- Confirm the exact BSc certificate wording; no Level 7 or postgraduate claim has been added.
+- Finalise full coaching terms, privacy notice and onboarding paperwork, including health screening, appropriate handling/retention of health information and videos, and the cooling-off/early-start request process. The page contains a summary, not a complete legal agreement.
+- Configure payments, month-end billing dates and cancellation handling. There is no checkout, recurring billing integration, client portal or live calendar in this ZIP.
+- Create client-specific restricted programme sheets, the weekly check-in form, a private client tracker and a dedicated coaching WhatsApp channel. Share links privately after onboarding.
+- Check whether bank holidays are excluded from working days and update the published promise if needed; the current agreed wording is Monday–Saturday with Sundays excluded.
+- Check all imagery and qualifications are accurate and you have rights to use the retained assets. The existing training hero is used as illustrative training imagery, not proof of studio premises.
 
-- `public/true-gain-logo.png`
-- `public/true-gain-sled-hero.webp`
-
-## Coded design system
-
-- `styles/design-tokens.css`
-- `components/Button.tsx`
-- `components/SectionHeading.tsx`
-- `components/ServiceCard.tsx`
-
-## Documentation
-
-- `docs/BRAND-GUIDE.md`
-- `docs/DESIGN-SYSTEM.md`
-
-## Uploading to GitHub
-
-Upload the contents of this folder to the root of your GitHub repository.
-
-GitHub should show these folders on the first page:
-
-- `app`
-- `components`
-- `docs`
-- `public`
-- `styles`
-
-It should also show:
-
-- `package.json`
-- `tsconfig.json`
-- `next-env.d.ts`
-
-Vercel will redeploy automatically after the GitHub commit.
-
-## Confirmed pricing
-
-- 45-minute strength: £47.50 single / £213.75 for 5 / £403.75 for 10
-- 60-minute strength: £65 single / £292.50 for 5 / £552.50 for 10
-- 30-minute massage: £35 single / £157.50 for 5 / £297.50 for 10
-- 60-minute massage: £60 single / £270 for 5 / £510 for 10
-
-5-session blocks save 10%; 10-session blocks save 15%. Strength blocks
-require twice-weekly attendance and massage blocks require fortnightly attendance.
-
-Combined bundles:
-
-- Strength + Reset: 5 × 60-minute strength sessions and 2 × 30-minute massages for £355.
-- Strength + Recover: 10 × 60-minute strength sessions and 2 × 60-minute massages for £655.
+## Future studio launch
+Reintroduce studio content from the archive only when services are available. Update navigation, service options, imagery, search metadata and consultation options together. Add genuine permission-approved testimonials when available.
