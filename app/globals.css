@@ -11046,3 +11046,16 @@ main[data-site-version="online-coaching-gold-pricing-v3"] #pricing .membershipSh
     margin-bottom: 40px;
   }
 }
+
+/* Meet your coach: hover and keyboard link feedback */
+#about .manifestoCopy a.inlineLink[href="#coach"] {
+  cursor: pointer;
+  text-decoration: none;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: currentColor;
+}
+#about .manifestoCopy a.inlineLink[href="#coach"]:hover,
+#about .manifestoCopy a.inlineLink[href="#coach"]:focus-visible {
+  text-decoration-line: underline;
+}
