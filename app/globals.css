@@ -11059,3 +11059,31 @@ main[data-site-version="online-coaching-gold-pricing-v3"] #pricing .membershipSh
 #about .manifestoCopy a.inlineLink[href="#coach"]:focus-visible {
   text-decoration-line: underline;
 }
+
+/* Meet your coach: underline draws from left to right */
+#about .manifestoCopy a.inlineLink[href="#coach"] {
+  position: relative;
+  text-decoration: none !important;
+}
+#about .manifestoCopy a.inlineLink[href="#coach"]::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 300ms ease;
+  pointer-events: none;
+}
+#about .manifestoCopy a.inlineLink[href="#coach"]:hover::after,
+#about .manifestoCopy a.inlineLink[href="#coach"]:focus-visible::after {
+  transform: scaleX(1);
+}
+@media (prefers-reduced-motion: reduce) {
+  #about .manifestoCopy a.inlineLink[href="#coach"]::after {
+    transition: none;
+  }
+}
